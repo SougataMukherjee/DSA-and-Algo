@@ -43,3 +43,18 @@ output:[2*3*4,1*3*4,1*2*4,1*2*3]
 //Q15 check string is Anagram or not
 input: str1='listen' str2='silent'
 output:yes
+//Q16 find middle value
+input: a=10,b=12,c=15
+output:12
+//Q17 shuffle an array elements like [x1,y1,x2,y2,...xn,yn]
+input: arr=[2,5,1,3,4,7]
+output:[2,3,5,4,1,7]
+//Q18 find common element from 3 sorted array
+input: a=[1,2,3,4,6],b=[1,2,3],c=[2,3,5,8]
+output:[2,3]
+//Q19 find majority elements in an array
+input: arr=[1,2,2,6,6,6,6,7,10]
+output:[6]
+//Q20 reverse 1st half of the elements in an array
+input: arr=[5,7,11,10,12,6]
+output:[11,7,5,10,12,6]
