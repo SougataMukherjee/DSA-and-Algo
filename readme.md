@@ -58,3 +58,21 @@ output:[6]
 //Q20 reverse 1st half of the elements in an array
 input: arr=[5,7,11,10,12,6]
 output:[11,7,5,10,12,6]
+//Q21 check two array are equal or not
+input: arr1=[1,2,3] arr2=[1,2,3]
+output:true
+//Q22 minimum number of swap required to sort the array
+input: arr=[4,3,2,1]
+output:2
+//Q23 dividing a string in n equals part
+input: str='aaabbbccc',equalPart=3
+output:abc
+//Q24 find longest common subpath
+input: str1='testing',str2='test'
+output:test
+//Q25 check number is perfect square or not
+input: num=36,100
+output:yes
+//Q26 how many capital and small letter in a string
+input: str='AbbaBaa12'
+output:2 5

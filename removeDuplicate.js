@@ -7,6 +7,7 @@ let arr = [1, 2, 0, 0, 2, 1],
 for (let i = 0; i < arr.length; i++) {
   //check consecutively and remove last element if it's same else add current element
   if (arr[i] === arr[i + 1]) {
+    //arr[i]===arr[j]&& (i!=j)
     result.pop();
   } else {
     result.push(arr[i]);
