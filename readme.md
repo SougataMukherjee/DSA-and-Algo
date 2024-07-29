@@ -76,3 +76,15 @@ output:yes
 //Q26 how many capital and small letter in a string
 input: str='AbbaBaa12'
 output:2 5
+//Q27 check weather a triangle is valid or not
+input: a1=9,a2=40,a3=41
+output:valid 180
+//Q28 check weather a year is leap year or not
+input: year=2024
+output:leap year
+//Q29 check weather a number is prime number or not
+input: n=7
+output:prime
+//Q30 print all prime number between 1 to 10
+input: 1-10
+output:prime
