@@ -88,3 +88,69 @@ output:prime
 //Q30 print all prime number between 1 to 10
 input: 1-10
 output:prime
+//Q31 check whether number or string is palindrome or not (1,121,1221)
+//Q32 print fibonacci sequence f(n)=f(n-1)+f(n-2) where f(0)=0,f(1)=1
+//Q33 create a program related climbing stairs
+input: n = 3 output:3
+//Q34 check whether number is armstrong number or not
+1634=>1^4+6^4+3^4+4^4=1634
+//Q35 find HCF/GCD(Highest common factor) and LCM(Least common multiple)
+Input: a = 12, b = 18 output:hcf=6,lcm=36
+//Q36 check weather number is perfect or not
+6=>1+2+3,28=>1+2+4+7+14
+//Q37 find the longest common prefix among all the strings.
+example club,clao,clove=>cl
+//Q38 count number of vowels in a string
+//Q39 The task is to compute the average salary of the employees, excluding the minimum and maximum salary values
+//Q40 write a function to rotate the matrix by 90 degrees clockwise.
+//Q41 wap to check if the matrix is a lower triangular matrix
+input const matrix = [
+[1, 0, 0],
+[4, 5, 0],
+[7, 8, 9]
+];
+output:true
+//Q42 find the maximum area of water a container can store
+Input: [4, 3, 2, 1, 4]
+output:16
+//Q43 check balanced parentheses
+//Q44 Star Pattern 1
+
+<!-- *
+     ***
+     ***** -->
+
+//Q45 Star Pattern 2
+
+<!-- *****
+     *   *
+     *   *
+     *   *
+     ***** -->
+
+//Q46 Star Pattern 3
+
+<!-- 4
+     43
+     432
+     4321 -->
+
+//Q47 Star Pattern 4
+
+<!-- 1
+    123
+   12345 -->
+
+//Q48 Linear Search
+//Q49 implementing binary search in a sorted array(divide and conquer)
+//Q50 extract multiple whitespace from string
+//Q51 longest substring without repeating characters
+"abcabcbb" and "bbbb" ans is "abc" and "b"
+//Q52 find the maximum sum of the contiguous subarray.
+Input: [1, -2, 3, 4, -1, 2, 1, -5, 4]
+output:10 [3, 4, -1, 2, 1]
+//Q53 find the sum of all numbers divisible by 2 and 3
+//Q54 implement merge sort
+input: [4, 2, 7, 1, 9, 3] output:[1, 2, 3, 4, 7, 9]
+//Q55 implement quick sort
+input:[3, 6, 8, 10, 1, 2, 1] output:[1, 1, 2, 3, 6, 8, 10]
