@@ -154,3 +154,20 @@ output:10 [3, 4, -1, 2, 1]
 input: [4, 2, 7, 1, 9, 3] output:[1, 2, 3, 4, 7, 9]
 //Q55 implement quick sort
 input:[3, 6, 8, 10, 1, 2, 1] output:[1, 1, 2, 3, 6, 8, 10]
+
+//Q60 remove Node from linked List
+//Q61 detect a cycle in a linked list
+input: 1 -> 2 -> 3 -> 4 -> 5 -> 3
+output:true
+//Q62 Find the Middle of a Linked List
+Input: 1 -> 2 -> 3 -> 4->5
+output:3
+//Q63 You are given the head of a singly linked list. Your task is to reverse the linked list and return the new head of the reversed list
+Input: 1 -> 2 -> 3 -> 4 -> 5
+Output: 5 -> 4 -> 3 -> 2 -> 1
+//Q64 find oddEven linked list
+input:1 -> 2 -> 3 -> 4 -> 5
+Output: 1->3->5->2->4
+//Q65 merge two sorted linked list
+Input: list1 = [1, 2, 4], list2 = [3, 5, 6]
+Output: [1, 2, 3, 4, 5, 6]
