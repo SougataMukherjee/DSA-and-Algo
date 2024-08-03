@@ -37,10 +37,7 @@ node2.next = node4;
 const node3 = ListNode(3);
 const node5 = ListNode(5);
 const node6 = ListNode(6);
-
 node3.next = node5;
 node5.next = node6;
-
 const mergedList = mergeTwoLists(node1, node3);
-
 print(mergedList);

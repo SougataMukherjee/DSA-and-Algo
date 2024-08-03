@@ -154,20 +154,39 @@ output:10 [3, 4, -1, 2, 1]
 input: [4, 2, 7, 1, 9, 3] output:[1, 2, 3, 4, 7, 9]
 //Q55 implement quick sort
 input:[3, 6, 8, 10, 1, 2, 1] output:[1, 1, 2, 3, 6, 8, 10]
-
-//Q60 remove Node from linked List
-//Q61 detect a cycle in a linked list
+//Q56 flatten a nested array
+input: arr = [1, [2, [3, 4], 5], 6] output: [1, 2, 3, 4, 5, 6]
+//Q57 convert an array of objects to a single object:
+input: arr = [{id: 1, value: 10}, {id: 2, value: 20}, {id: 3, value: 30}]
+output: {1: 10, 2: 20, 3: 30}
+/Q58 write a function to find all keys in an object with a specific value.
+input: obj = {a: 1, b: 2, c: 1}, value = 1
+output: ['a', 'c']
+//Q59 merge two objects:
+input: obj1 = {a: 1, b: 2}, obj2 = {b: 3, c: 4}
+output: {a: 1, b: 3, c: 4}
+//Q60 convert an object to an array of key-value pairs:
+input: obj = {a: 1, b: 2, c: 3} output: [['a', 1], ['b', 2], ['c', 3]]
+//Q61 find the intersection of two arrays:
+input: arr1 = [1, 2, 2, 1], arr2 = [2, 2] output: [2, 2]
+//Q62 update nested object property
+//Q63 remove Properties from an Object
+//Q64 check if Two Objects are Equal
+//Q65 check if Object is Empty
+//Q66count Properties in an Object
+//Q67 remove Node from linked List
+//Q68 detect a cycle in a linked list
 input: 1 -> 2 -> 3 -> 4 -> 5 -> 3
 output:true
-//Q62 Find the Middle of a Linked List
+//Q69 Find the Middle of a Linked List
 Input: 1 -> 2 -> 3 -> 4->5
 output:3
-//Q63 You are given the head of a singly linked list. Your task is to reverse the linked list and return the new head of the reversed list
+//Q70 You are given the head of a singly linked list. Your task is to reverse the linked list and return the new head of the reversed list
 Input: 1 -> 2 -> 3 -> 4 -> 5
 Output: 5 -> 4 -> 3 -> 2 -> 1
-//Q64 find oddEven linked list
+//Q71 find oddEven linked list
 input:1 -> 2 -> 3 -> 4 -> 5
 Output: 1->3->5->2->4
-//Q65 merge two sorted linked list
+//Q72 merge two sorted linked list
 Input: list1 = [1, 2, 4], list2 = [3, 5, 6]
 Output: [1, 2, 3, 4, 5, 6]
