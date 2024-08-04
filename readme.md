@@ -186,7 +186,13 @@ Input: 1 -> 2 -> 3 -> 4 -> 5
 Output: 5 -> 4 -> 3 -> 2 -> 1
 //Q71 find oddEven linked list
 input:1 -> 2 -> 3 -> 4 -> 5
-Output: 1->3->5->2->4
+Output: 1 -> 3 -> 5 -> 2 -> 4
 //Q72 merge two sorted linked list
 Input: list1 = [1, 2, 4], list2 = [3, 5, 6]
 Output: [1, 2, 3, 4, 5, 6]
+
+//Q73 basic understanding of curring and closure
+//Q74 create a utils functions of debouncing
+//Q75 create a utils functions of throttling
+//Q76 create a memorize functions
+//Q77 basic understanding of for of loop
