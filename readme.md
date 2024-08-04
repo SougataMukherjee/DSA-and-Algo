@@ -196,3 +196,5 @@ Output: [1, 2, 3, 4, 5, 6]
 //Q75 create a utils functions of throttling
 //Q76 create a memorize functions
 //Q77 basic understanding of for of loop
+//Q78 create a polyfills of map method and forEach method
+//Q79 create a polyfills of filter method
