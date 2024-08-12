@@ -198,3 +198,7 @@ Output: [1, 2, 3, 4, 5, 6]
 //Q77 basic understanding of for of loop
 //Q78 create a polyfills of map method and forEach method
 //Q79 create a polyfills of filter method
+//Q80 Find the shortest string in array
+Input:['aaaa', 'aaaaaa', 'aaaaaaaa', 'aaa'] output 'aaa'
+//Q81 swap two number with or without using third variable
+Input: a=10,b=20 Output: a=20,b=10
