@@ -202,3 +202,4 @@ Output: [1, 2, 3, 4, 5, 6]
 Input:['aaaa', 'aaaaaa', 'aaaaaaaa', 'aaa'] output 'aaa'
 //Q81 swap two number with or without using third variable
 Input: a=10,b=20 Output: a=20,b=10
+//Q82 create a simple breadcrumb using an array of object
