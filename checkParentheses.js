@@ -1,3 +1,5 @@
+//Q43 check balanced parentheses
+
 function checkParenthesis(str) {
   let stack = [];
   for (let c of str) {

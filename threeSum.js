@@ -1,3 +1,6 @@
+//Q10 find a triplet that sum to a given value in an array or 3 sum or sum od zeros
+//input: arr=[-1,0,1,2,-1,-4],target=0
+
 let arr = [-1, 0, 1, 2, -1, -4],
   target = 0;
 let uniqueTriplets = 0;
