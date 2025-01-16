@@ -17,14 +17,43 @@ if (temp === rev) {
 
 //for string
 let str = "madam";
-let len = str.length;
-let mid = Math.floor(len / 2);
-let flag = 1;
-for (let i = 0; i < mid; i++) {
-  if (str[i] !== str[len - i - 1]) {
-    flag = 0;
-    break;
+function isPalindrome(s) {
+  let len = s.length;
+  let mid = Math.floor(len / 2);
+  for (let i = 0; i < mid; i++) {
+    if (s[i] !== s[len - i - 1]) {
+      return false;
+    }
   }
+  return true;
 }
-if (flag === 1) console.log("palindrome");
-else console.log("not palindrome");
+if (isPalindrome(str)) {
+  console.log("palindrome");
+} else {
+  console.log("not palindrome");
+}
+let str2 = "Geeks";
+function longestPalindromeSubstring(s) {
+  let longest = "";
+
+  for (let i = 0; i < s.length; i++) {
+    for (let j = i; j < s.length; j++) {
+      let substr = s.slice(i, j + 1);
+      if (isPalindrome(substr) && substr.length > longest.length) {
+        longest = substr;
+      }
+    }
+  }
+
+  return longest;
+}
+console.log("Longest Palindromic Substring:", longestPalindromeSubstring(str2)); //ee
+
+//using recursion technique
+function IsPalindrome(str, l, r) {
+  if (l >= r) return true;
+  if (str[l] !== str[r]) return false;
+  return IsPalindrome(str, l + 1, r - 1);
+}
+const str1 = "madam";
+console.log(IsPalindrome(str1, 0, str1.length - 1));
