@@ -5,12 +5,14 @@ application of recursion and backtracking is render tree solving puzzle game
 Recursive solutions work as a a basis for Dynamic Programming and Divide and Conquer algorithms
 its a approach that allows us to shorten our code it must have a base case and recursive case
 
+```
 methodName(n parameters){
 if(haltCondition){
 return result
 }
 return methodName(n parameters)
 }
+```
 
 ![Recursion Stack](./rec.png)
 concept of Function Call Stack and stack Frame in recursive function
@@ -28,6 +30,8 @@ problem related to choice mainly related to recursion and in recursion if there 
 approaches:
 
 //print 1st n natural number
+
+```
 function print(c,n){
 if(c===n)return
 else {
@@ -36,6 +40,7 @@ print(c+1,n)
 }
 }
 print(1,5)
+```
 
 //print sum of 1st n natural number
 function print(c,n,s){
