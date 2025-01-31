@@ -223,3 +223,8 @@ Input:['aaaa', 'aaaaaa', 'aaaaaaaa', 'aaa'] output 'aaa'
 //Q84 swap two number with or without using third variable
 Input: a=10,b=20 Output: a=20,b=10
 //Q85 create a simple breadcrumb using an array of object
+//Q86 Check If Two String Arrays are Equivalent Input: word1 = ["ab", "c"], word2 = ["a", "bc"] Output: true "ab" + "c" === "a" + "bc" === "abc"
+//Q87 Rectangle Overlap
+Input: rec1 = [0,0,2,2], rec2 = [1,1,3,3] Output: true
+//Q88 Water and Jug Problem
+Input: x = 3, y = 5, target = 4 Output: true
