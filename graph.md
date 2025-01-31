@@ -42,7 +42,7 @@ Space Complexity: O(V + E),V=total list of vertex and E=number of edges(1,2,3)
 2 → [1, 3]
 3 → [1, 2]
 
-#adjacency matrix(n\*n):
+#adjacency matrix(n\*n):<br>
 ![Directed graph](./img/am-graph.png) <br>
 here 1 connected with 2 and 2 connected with 3 and 3 to 1
 A matrix where a[i][j] = 1 if there is an edge between i and j, otherwise 0
