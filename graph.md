@@ -2,7 +2,7 @@
 
 A graph is a data structure consisting of vertices (nodes) and edges (connections). It is commonly used to represent networks like social connections, maps, and web pages.
 
-Types of Graphs
+Types of Graphs<br>
 1)undirected graph<br>
 ![UnDirected graph](./img/ud-graph.png) <br>
 The edges have no direction.
