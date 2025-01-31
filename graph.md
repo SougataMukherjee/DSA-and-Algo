@@ -3,20 +3,20 @@
 A graph is a data structure consisting of vertices (nodes) and edges (connections). It is commonly used to represent networks like social connections, maps, and web pages.
 
 Types of Graphs
-1)undirected graph
+1)undirected graph<br>
 ![UnDirected graph](./img/ud-graph.png) <br>
 The edges have no direction.
 a-b
-2)directed Graph (digraph):
+2)directed Graph (digraph):<br>
 ![Directed graph](./img/dg-graph.png) <br>
 The edges have a direction.
 a->b
-3)weighted graph
+3)weighted graph<br>
 ![weighted graph](./img/wg-graph.png) <br>
 The edges have weights (costs).
 4
 a->b
-4)cyclic graph
+4)cyclic graph<br>
 ![Cyclic graph](./img/cg-graph.png) <br>
 A graph that contains at least one cycle.
 a->b->c->d->a
@@ -34,7 +34,7 @@ indegree:Number of edges coming into a vertex (only for directed graphs)
 outdegree:Number of edges going out from a vertex (only for directed graphs)
 
 Graph Representation
-adjacency list
+adjacency list<br>
 ![Directed graph](./img/al-graph.png) <br>
 Each node stores a list of its adjacent nodes.its kind a list of lists
 Space Complexity: O(V + E),V=total list of vertex and E=number of edges(1,2,3)
