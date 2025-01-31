@@ -228,3 +228,35 @@ Input: a=10,b=20 Output: a=20,b=10
 Input: rec1 = [0,0,2,2], rec2 = [1,1,3,3] Output: true
 //Q88 Water and Jug Problem
 Input: x = 3, y = 5, target = 4 Output: true
+//Q89 find unique paths in a 2d grid
+Input: m = 3, n = 7 Output: 28
+//Q90 maximum amount of money you can rob from a row of houses, represented by an integer array nums, without robbing two adjacent houses
+Input: nums = [1,2,3,1] so output is 1+3=4
+//Q91 finding all possible paths in a 2D grid or rat in a maze(in 4 direction)
+
+# tree
+
+//Q92 Check if a tree is a BST or BT
+//Q93 find the lowest common ancestor (LCA) of two given nodes in the tree.
+//Q94 Level Order Traversal of Binary Tree
+//Q95 Preorder traversal in binary tree
+//Q96 Right/Left side View of Binary Tree
+//Q97 Merge Two Binary Trees
+Input: root1 = [1,3,2,5], root2 = [2,1,3,null,4,null,7]
+Output: [3,4,5,5,4,null,7]
+//Q98 Sum of Left Leaves
+Input: root = [3,9,20,null,null,15,7]
+Output: 9+15=24
+//Q99 Maximum or Minimum Depth in Binary Tree
+//Q100 check a tree is Balanced Binary Tree or AVL tree
+//Q101 Given the root of a binary tree, check whether it is a mirror(symmetric) of itself
+Input: root = [1,2,2,3,4,4,3] Output: true
+//Q102 Check it two trees are Identical(have the same value) or Not
+//Q103 Subtree of Another Tree
+//Q104 Count total Nodes in a complete Binary Tree
+//Q105 Invert/Flip Binary Tree
+Input: root = [4,2,7,1,3,6,9]
+Output: [4,7,2,9,6,3,1]
+//Q106 whether a binary tree is a full binary tree or not
+
+# two pointer

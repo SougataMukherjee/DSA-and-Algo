@@ -14,16 +14,26 @@ return methodName(n parameters)
 }
 ```
 
-![Recursion Stack](./rec.png)
+![Recursion Stack](./img/rec.png)
 concept of Function Call Stack and stack Frame in recursive function
 
-# Dynamic Program
+# Dynamic Programming
 
 is mainly an optimization over plain recursion. Wherever we see a recursive solution that has repeated calls for the same inputs, we can optimize it using Dynamic Programming.
 application of dp is optimize and memorize rendering,overlapping subproblem
 problem related to choice mainly related to recursion and in recursion if there are overlapping problem and max/min related problem are there there use dynamic problem
-![Dynamic Programming](./dp.png)
+![Dynamic Programming](./img/dp.png)
 approaches:
+
+//find nth fibonacci number
+0 1 1 2 3 5
+
+```
+function nthFibo(n){
+if(n==0||n==1)return n
+return nthFibo(n-1)+nthFibo(n-2)
+}
+```
 
 //print 1st n natural number
 
@@ -93,16 +103,6 @@ if(n===0)return 1
 else return n * fact(n-1)
 }
 console.log(fact(5))
-```
-
-//find nth fibonacci number
-0 1 1 2 3 5
-
-```
-function nthFibo(n){
-if(n==0||n==1)return n
-return nthFibo(n-1)+nthFibo(n-2)
-}
 ```
 
 //Power Of Numbers Pow(x, n)
