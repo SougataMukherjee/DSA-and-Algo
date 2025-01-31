@@ -6,25 +6,25 @@ Types of Graphs
 1)undirected graph<br>
 ![UnDirected graph](./img/ud-graph.png) <br>
 The edges have no direction.
-a-b
+a-b<br>
 2)directed Graph (digraph):<br>
 ![Directed graph](./img/dg-graph.png) <br>
 The edges have a direction.
-a->b
+a->b<br>
 3)weighted graph<br>
 ![weighted graph](./img/wg-graph.png) <br>
 The edges have weights (costs).
 4
-a->b
+a->b<br>
 4)cyclic graph<br>
 ![Cyclic graph](./img/cg-graph.png) <br>
 A graph that contains at least one cycle.
-a->b->c->d->a
+a->b->c->d->a<br>
 5)acyclic Graph:
 A graph with no cycles.
-a → b → c → d.
+a → b → c → d.<br>
 6)connected Graph
-every vertex is reachable from any other vertex.
+every vertex is reachable from any other vertex.<br>
 7)disconnected Graph
 some vertices are not reachable from others
 
@@ -33,8 +33,8 @@ degree of graph: The degree of a vertex is the number of edges connected to it.
 indegree:Number of edges coming into a vertex (only for directed graphs)
 outdegree:Number of edges going out from a vertex (only for directed graphs)
 
-Graph Representation
-adjacency list<br>
+#Graph Representation<br>
+#adjacency list:<br>
 ![Directed graph](./img/al-graph.png) <br>
 Each node stores a list of its adjacent nodes.its kind a list of lists
 Space Complexity: O(V + E),V=total list of vertex and E=number of edges(1,2,3)
@@ -42,9 +42,9 @@ Space Complexity: O(V + E),V=total list of vertex and E=number of edges(1,2,3)
 2 → [1, 3]
 3 → [1, 2]
 
-adjacency matrix(n\*n):
+#adjacency matrix(n\*n):
 ![Directed graph](./img/am-graph.png) <br>
-here 1 conected with 2 and 2 conected with 3 and 3 to 1
+here 1 connected with 2 and 2 connected with 3 and 3 to 1
 A matrix where a[i][j] = 1 if there is an edge between i and j, otherwise 0
 Space Complexity: O(n²).
 1 2 3
