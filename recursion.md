@@ -22,11 +22,7 @@ concept of Function Call Stack and stack Frame in recursive function
 is mainly an optimization over plain recursion. Wherever we see a recursive solution that has repeated calls for the same inputs, we can optimize it using Dynamic Programming.
 application of dp is optimize and memorize rendering,overlapping subproblem
 problem related to choice mainly related to recursion and in recursion if there are overlapping problem and max/min related problem are there there use dynamic problem
-// fun(3)
-// |
-// fun2 (fun1)
-// |
-// (fun1) fun0
+![Dynamic Programming](./dp.png)
 approaches:
 
 //print 1st n natural number
