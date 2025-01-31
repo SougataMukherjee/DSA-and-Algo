@@ -2,7 +2,7 @@
 
 // A tree is a non-linear hierarchical data structure consisting of nodes linked together to simulate a hierarchy.<br>
 // If a tree has N nodes, there are exactly N-1 edges.<br>
-![Dynamic Programming](./img/tree.png)
+![Dynamic Programming](./img/tree.png) <br>
 // Tree Terminology:<br>
 // Root node: The topmost node in a tree.<br>
 // Parent node: The immediate predecessor of a node.<br>
