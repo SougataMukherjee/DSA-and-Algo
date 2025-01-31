@@ -26,6 +26,7 @@
 
 // Binary Tree:<br>
 // A binary tree is a tree where each node has at most two children, referred to as the left child and the right child.
+![Dynamic Programming](./img/tree-type.png) <br>
 // Types:<br>
 // 1. Strict binary tree: A binary tree where each node has either 0 or 2 children.<br>
 // 2. Complete binary tree: All levels except possibly the last are completely filled, and the last level has nodes as left as possible.<br>
