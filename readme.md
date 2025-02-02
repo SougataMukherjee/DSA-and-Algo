@@ -13,7 +13,7 @@ output:[4]
 //Q5 swap first and last character of a string or an array
 input: str="Test" arr=[5,17,11,10,12,6]
 output:"tesT" or [6,17,11,10,12,5]
-//Q6 find the second largest element in an array
+//Q6 find the second(k) largest element in an array
 input: arr=[0,1,2,3,5]
 output:[3]
 //Q7 reverse a string without affecting special character
@@ -388,3 +388,24 @@ Output:[[1,4],[6,8],[9,10]]
 Input:prices[]={1,3,6,9,11} output:10
 
 # graph
+
+//Q152 Find if Path Exists in Graph using bfs Input: n = 3, edges = [[0,1],[1,2],[2,0]], source = 0, destination = 2
+Output: true
+//Q153 Check if all nodes of Undirected Graph can be visited from given Node using bfs
+//Q154 Number of Islands using dfs
+//Q155 Flood Fill Algorithm using dfs
+Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2
+Output: [[2,2,2],[2,2,0],[2,0,1]]
+//Q156 Max Area of Island
+Input: grid = [[0,0,0,0,0,0,0,0]]
+Output: 0
+//Q157 Detect Cycle in a Directed Graph using DFS.
+//Q158 Print all paths from a given source to a destination/target
+Input: graph = [[1,2],[3],[3],[]]
+Output: [[0,1,3],[0,2,3]]
+//Q159 clone graph
+Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
+Output: [[2,4],[1,3],[2,4],[1,3]]
+//Q160 Egg Drop With 2 Eggs and N Floors
+Input: n = 2
+Output: 2

@@ -112,6 +112,76 @@ console.log(root.data);
 // (height of left subtree - height of right subtree) must be in the range {-1, 0, 1}.
 
 // Heap Tree:
-// A complete binary tree where:
+A Heap is a complete binary tree(in arrays in between elements there should not be any gap) data structure that satisfies the heap property: for every node, the value of its children is greater than or equal to its own value. Heaps are usually used to implement priority queues
+Note: The heap tree is a special balanced binary tree data structure where the root node is compared with its children and arrange accordingly.
+Note: Node always added from the left
+if a Node is at index i,
+its left child is at 2*i,
+its right child is at 2*i+1,
+its parent is at [i/2]
+A
+/ \
+ B C
+/ \ / \
+D E F G
+ABCDEFG
 // - Min-Heap: The root node is the smallest element, and every parent is smaller than its children.
 // - Max-Heap: The root node is the largest element, and every parent is larger than its children.
+//Insert Operation in Max Heap
+Add the element at the last free space in the heap (i.e., at the end of the array).
+Heapify Up: Compare the inserted element with its parent. If the element is larger than its parent, swap them.
+Repeat the process until the element is in the correct position to maintain the max-heap property (i.e., every parent node is greater than its children).
+
+T.C in best-case O(1) and in normal O(logn)
+
+```
+function maxHeapify(arr, i, n) {
+    let l = 2 * i + 1; // left child
+    let r = 2 * i + 2; // right child
+    let largest = i; // assume the current index is the largest
+
+    // If left child is greater than the current largest
+    if (l < n && arr[l] > arr[largest]) {
+        largest = l;
+    }
+
+    // If right child is greater than the current largest
+    if (r < n && arr[r] > arr[largest]) {
+        largest = r;
+    }
+
+    // If largest is not the current element, swap and heapify the affected subtree
+    if (largest !== i) {
+        // Swap elements
+        [arr[i], arr[largest]] = [arr[largest], arr[i]];
+
+        // Recursively heapify the affected subtree
+        maxHeapify(arr, largest, n);
+    }
+}
+
+```
+
+//heap sort
+create a max heap then delete all the elements from heap
+
+```
+function heapSort(arr) {
+    let heapSize = arr.length;
+
+    // Build the max heap
+    buildMaxHeap(arr);
+
+    // Perform the sorting
+    for (let i = arr.length - 1; i >= 1; i--) {
+        // Swap the first element (max) with the current element
+        [arr[0], arr[i]] = [arr[i], arr[0]];
+
+        // Reduce the heap size
+        heapSize--;
+
+        // Re-heapify the reduced heap
+        maxHeapify(arr, 0, heapSize);
+    }
+}
+```
