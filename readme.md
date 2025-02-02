@@ -291,37 +291,64 @@ Output: 2
 //Q115 subarry sum divisible by k
 Input: nums = [4,5,0,-2,-3,1], k = 5
 Output: 7
+//Q116 Maximum Average Subarray Input: nums = [1,12,-5,-6,50,3], k = 4
+Output: 12.75000
+Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75
+//Q117 find Maximum Subarray
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
 
 # binary search
 
-//Q116 check weather a value is exist or not in array(recursion binary search)
-//Q117 search in 2D matrix
+//Q118 check weather a value is exist or not in array(recursion binary search)
+//Q119 search in 2D matrix
 Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
 Output: true
-//Q118 Search in a Rotated Sorted Array with or without duplicate elements
+//Q120 Search in a Rotated Sorted Array with or without duplicate elements
 Note:we can not find the sorted segment like mid less end because it might be same number for mid and end in terms of duplicate
 Input: nums = [2,5,6,0,0,1,2], target = 0
 Output: true
-//Q119 Find Peak Element in a Mountain Array
+//Q121 Find Peak Element in a Mountain Array
 Input: nums = [1,2,3,1]
 Output: 2
 Explanation: 3 is a peak element and your function should return the index number 2.
-//Q120 Find Minimum in Rotated Sorted Array
+//Q122 Find Minimum in Rotated Sorted Array
 Input: nums = [3,4,5,1,2]
 Output: 1
 Explanation: The original array was [1,2,3,4,5] rotated 3 times.
-//Q121 Spiral Matrix
+//Q123 Spiral Matrix
 Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
 Output: [1,2,3,6,9,8,7,4,5]
 
 # Linked List
 
-//Q122 find nth node from the end of linked list
-//Q123 remove nth node from the end of linked list
-//Q124 Swap Nodes in Pairs in linked list
+//Q124 find nth node from the end of linked list
+//Q125 remove nth node from the end of linked list
+//Q126 Swap Nodes in Pairs in linked list
 Input: head = [1,2,3,4]
 Output: [2,1,4,3]
-//Q125 find intersection node of two linked list using two pointer
+//Q127 find intersection node of two linked list using two pointer
 Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
 Output: Intersected at '8'
-//Q126 remove duplicate from a sorted linked list
+//Q128 remove duplicate from a sorted linked list
+
+# stack & queue
+
+//Q129 sort a stack
+//Q130 reverse a stack
+//Q131 delete mid element of stack
+//Q132 remove consecutive subsequence 1 2 2 3 4 4 ->1 2 3 4
+//Q133 Palindrome Linked List Input: head = [1,2,2,1] Output: true
+//Q134 queue reversal
+//Q135 reverse 1st k element from queue
+//Q136 Time need to buy a tickets Input: tickets:[5,1,1,1],k=0 Output: 8 [4,0,0,0] 4+1+1+1+1
+//Q137 remove invalid parenthesis and make it balanced by removing min number of bracket
+//Q138 next greater element arr=[6,0,8,1,3] nge_arr=[8,8,-1,3,-1] like 6's next greater element 8 and 0's next greater element 8 and so on
+//Q139 next smaller element arr=[4,8,5,2,2,5] nge_arr=[2,5,2,-1,-1]
+
+# sorting
+
+//Q140 bubble sort
+//Q141 selection sort
+//Q142 Insertion sort
