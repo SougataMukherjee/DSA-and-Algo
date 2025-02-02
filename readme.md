@@ -313,3 +313,15 @@ Explanation: The original array was [1,2,3,4,5] rotated 3 times.
 //Q121 Spiral Matrix
 Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
 Output: [1,2,3,6,9,8,7,4,5]
+
+# Linked List
+
+//Q122 find nth node from the end of linked list
+//Q123 remove nth node from the end of linked list
+//Q124 Swap Nodes in Pairs in linked list
+Input: head = [1,2,3,4]
+Output: [2,1,4,3]
+//Q125 find intersection node of two linked list using two pointer
+Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
+Output: Intersected at '8'
+//Q126 remove duplicate from a sorted linked list
