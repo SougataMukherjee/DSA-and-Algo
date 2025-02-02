@@ -352,3 +352,37 @@ Output: Intersected at '8'
 //Q140 bubble sort
 //Q141 selection sort
 //Q142 Insertion sort
+
+# greedy algo
+
+//Q143 min number of coins
+Input: coins[] = [25, 10, 5], sum = 30
+Output: 2
+//Q144 Minimum Cost of Buying Candies With Discount
+Input: cost = [1,2,3]
+Output: 5
+//Q145 Distribute Candies
+array candyType of length n (where n is always even), return the maximum number of different types of candies Alice can eat if she can only consume n / 2 candies.
+
+Input: candyType = [1,1,2,2,3,3]
+Output: 3
+//Q146 Non-overlapping Intervals
+Input: intervals = [[1,2],[2,3],[3,4],[1,3]]
+Output: 1
+//Q147 Maximum Number of Balloons
+Input: text = "nlaebolko"
+Output: 1
+//Q148 jump game
+each element in the array represents your maximum jump length at that position.
+Return true if you can reach the last index, or false otherwise
+Input: nums = [2,3,1,1,4]
+Output: true
+Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+//Q149 Minimum Platforms Required for Given Arrival and Departure Times
+Input: arr[] = {9:00, 9:40, 9:50, 11:00, 15:00, 18:00}, dep[] = {9:10, 12:00, 11:20, 11:30, 19:00, 20:00}
+Output: 3
+//Q150 merge overlapping intervals
+Input:arr[]=[[1,3],[2,4],[6,8],[9,10]]
+Output:[[1,4],[6,8],[9,10]]
+//Q151 best time to sell stock and find max profit
+Input:prices[]={1,3,6,9,11} output:10

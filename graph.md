@@ -33,6 +33,36 @@ degree of graph: The degree of a vertex is the number of edges connected to it.
 indegree:Number of edges coming into a vertex (only for directed graphs)
 outdegree:Number of edges going out from a vertex (only for directed graphs)
 
+##Graph and its representations
+
+```
+function addEdge(adj, i, j) {
+    adj[i][j] = 1;
+    adj[j][i] = 1; //undirected
+}
+
+function displayMatrix(adj) {
+    for (let i = 0; i < adj.length; i++) {
+        let row = `${i}: `;
+        for (let j = 0; j < adj[i].length; j++) {
+            row += `${adj[i][j]} `;
+        }
+        console.log(row);
+    }
+}
+
+const V = 4;//number of vertices
+const adj = Array.from({ length: V }, () => Array(V).fill(0));// Initialize the adjacency matrix (4x4, filled with 0)
+
+// Add edges between vertices
+addEdge(adj, 0, 1);
+addEdge(adj, 0, 2);
+addEdge(adj, 1, 2);
+addEdge(adj, 2, 3);
+
+displayMatrix(adj);
+```
+
 #Graph Representation<br>
 #adjacency list:<br>
 ![Directed graph](./img/al-graph.png) <br>
@@ -53,13 +83,47 @@ Space Complexity: O(n²).
 3 1 1 0
 
 graph traversal
-1)Breadth-First Search (BFS)
-Uses: Finds the shortest path in an unweighted graph.
-Implementation: Uses a queue (FIFO).
-Steps:
-Start from a node and mark it as visited.
-Visit all its neighbors before going deeper.
-Continue until all nodes are visited.
+
+1. Breadth-First Search (BFS)
+   Uses: Finds the shortest path in an unweighted graph.
+   Implementation: Uses a queue (FIFO).
+   Steps:
+   Start from a node and mark it as visited.
+   Visit all its neighbors before going deeper.
+   Continue until all nodes are visited.
+
+   ```
+   function bfs(graph, start) {
+   //initialize queue,Track visited nodes
+    let queue = [start], visited = { [start]: true };
+
+    while (queue.length) {
+   //remove front node from the queue.
+        let node = queue.shift();
+   //visit/print node
+        console.log(node);
+   //check immediate neighbors of the current node.if a neighbor is not visited, add it to the queue and mark it as visited.
+        for (let neighbor of graph[node]) {
+            if (!visited[neighbor]) {
+                visited[neighbor] = true;
+                queue.push(neighbor);
+            }
+        }
+    }
+   }
+   ```
+
+const graph = {
+'0': ['1', '2'],
+'1': ['0', '3', '4'],
+'2': ['0'],
+'3': ['1'],
+'4': ['2', '3']
+};
+
+bfs(graph, '0');
+
+```
 
 2. Depth-First Search (DFS)
    Uses: Detects cycles, finds connected components.
@@ -68,6 +132,34 @@ Continue until all nodes are visited.
    Start from a node and mark it as visited.
    Visit the first unvisited neighbor recursively.
    Backtrack if no unvisited neighbor is found.
+```
+
+function dfs(graph, start, visited = {}) {
+//start is current node,we are use visited node for keep track that graph is not becoming cycle
+//Create a visited object to track visited nodes.If the node is already visited, return
+if (visited[start]) return;
+//else mark it as visited and print it.
+visited[start] = true;
+console.log(start);
+//Recursively visit neighbors,if neighbour visited then backtrack
+for (let neighbor of graph[start]) {
+dfs(graph, neighbor, visited);
+}
+}
+
+```
+
+const graph = {
+'0': ['1', '2'],
+'1': ['0', '3', '4'],
+'2': ['0'],
+'3': ['1'],
+'4': ['2', '3']
+};
+
+dfs(graph, '0');
+
+```
 
 spanning tree
 in a spaning tree in a graph all the vertices are same as given graph but number of vertices is 1 edge less
@@ -113,3 +205,7 @@ Used for: Graphs with negative weights.
 Initialize all distances to infinity.
 Relax all edges V-1 times
 If any distance updates in the V-th iteration, a negative cycle exists.
+
+```
+
+```
