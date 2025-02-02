@@ -133,6 +133,7 @@ bfs(graph, '0');
    Visit the first unvisited neighbor recursively.
    Backtrack if no unvisited neighbor is found.
 
+
 ```
 
 function dfs(graph, start, visited = {}) {
@@ -159,6 +160,7 @@ const graph = {
 dfs(graph, '0');
 
 ```
+
 
 spanning tree
 in a spaning tree in a graph all the vertices are same as given graph but number of vertices is 1 edge less
