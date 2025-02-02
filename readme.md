@@ -260,3 +260,22 @@ Output: [4,7,2,9,6,3,1]
 //Q106 whether a binary tree is a full binary tree or not
 
 # two pointer
+
+//Q107 Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+Input: s = "abc", t = "ahbgdc"
+Output: true
+//Q108 Remove Duplicates from Sorted Array
+Input: nums = [1,1,2]
+Output: 2, nums = [1,2,_]
+//Q109 trapping rain water
+Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+Output: 6
+//Q110 Container With Most Water
+Input: height = [1,8,6,2,5,4,8,3,7]
+Output: 49
+//Q111 count the number of positive triangle
+Input: arr[] = [4, 6, 3, 7]
+Output: 3
+//Q112 Segregate 0s and 1s in an array or move all even integer followed by all odd integer
+Input : [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
+Output : [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
