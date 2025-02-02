@@ -279,3 +279,37 @@ Output: 3
 //Q112 Segregate 0s and 1s in an array or move all even integer followed by all odd integer
 Input : [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
 Output : [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+
+# prefix sum
+
+//Q113 print the sum of value in a array in given range(l=3 an r=5 follow 1 based index)
+a=[2,4,1,3,6,5]=1+3+6
+1 2 3 4 5 6
+//Q114 subarray sum equals k
+Input: nums = [1,1,1], k = 2
+Output: 2
+//Q115 subarry sum divisible by k
+Input: nums = [4,5,0,-2,-3,1], k = 5
+Output: 7
+
+# binary search
+
+//Q116 check weather a value is exist or not in array(recursion binary search)
+//Q117 search in 2D matrix
+Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
+Output: true
+//Q118 Search in a Rotated Sorted Array with or without duplicate elements
+Note:we can not find the sorted segment like mid less end because it might be same number for mid and end in terms of duplicate
+Input: nums = [2,5,6,0,0,1,2], target = 0
+Output: true
+//Q119 Find Peak Element in a Mountain Array
+Input: nums = [1,2,3,1]
+Output: 2
+Explanation: 3 is a peak element and your function should return the index number 2.
+//Q120 Find Minimum in Rotated Sorted Array
+Input: nums = [3,4,5,1,2]
+Output: 1
+Explanation: The original array was [1,2,3,4,5] rotated 3 times.
+//Q121 Spiral Matrix
+Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+Output: [1,2,3,6,9,8,7,4,5]
