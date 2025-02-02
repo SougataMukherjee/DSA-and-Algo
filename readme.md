@@ -1,3 +1,5 @@
+# Array & String
+
 //Q1 in integer array move all 0's to the end of the array
 input: arr=[1,2,0,2,1,0]
 output:arr=[1,2,2,1,0,0]
