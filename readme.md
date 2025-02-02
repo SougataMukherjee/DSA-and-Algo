@@ -386,3 +386,5 @@ Input:arr[]=[[1,3],[2,4],[6,8],[9,10]]
 Output:[[1,4],[6,8],[9,10]]
 //Q151 best time to sell stock and find max profit
 Input:prices[]={1,3,6,9,11} output:10
+
+# graph

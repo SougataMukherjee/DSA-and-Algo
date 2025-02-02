@@ -132,6 +132,7 @@ bfs(graph, '0');
    Start from a node and mark it as visited.
    Visit the first unvisited neighbor recursively.
    Backtrack if no unvisited neighbor is found.
+
 ```
 
 function dfs(graph, start, visited = {}) {
@@ -146,8 +147,6 @@ for (let neighbor of graph[start]) {
 dfs(graph, neighbor, visited);
 }
 }
-
-```
 
 const graph = {
 '0': ['1', '2'],
@@ -206,6 +205,6 @@ Initialize all distances to infinity.
 Relax all edges V-1 times
 If any distance updates in the V-th iteration, a negative cycle exists.
 
-```
+
 
 ```
