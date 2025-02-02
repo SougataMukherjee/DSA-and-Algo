@@ -306,23 +306,22 @@ Output: [1,2,3,6,9,8,7,4,5]
 
 # Linked List
 
-//Q70 remove Node from linked List
-//Q71 detect a cycle in a linked list
+//Q70 remove Node from linked List<br>
+//Q71 detect a cycle in a linked list<br>
 input: 1 -> 2 -> 3 -> 4 -> 5 -> 3
-output:true
-//Q72 Find the Middle of a Linked List
+output:true<br>
+//Q72 Find the Middle of a Linked List<br>
 Input: 1 -> 2 -> 3 -> 4->5
-output:3
-//Q73 You are given the head of a singly linked list. Your task is to reverse the linked list and return the new head of the reversed list
+output:3<br>
+//Q73 You are given the head of a singly linked list. Your task is to reverse the linked list and return the new head of the reversed list<br>
 Input: 1 -> 2 -> 3 -> 4 -> 5
-Output: 5 -> 4 -> 3 -> 2 -> 1
-//Q74 find oddEven linked list
+Output: 5 -> 4 -> 3 -> 2 -> 1<br>
+//Q74 find oddEven linked list<br>
 input:1 -> 2 -> 3 -> 4 -> 5
-Output: 1 -> 3 -> 5 -> 2 -> 4
-//Q75 merge two sorted linked list
+Output: 1 -> 3 -> 5 -> 2 -> 4<br>
+//Q75 merge two sorted linked list<br>
 Input: list1 = [1, 2, 4], list2 = [3, 5, 6]
-Output: [1, 2, 3, 4, 5, 6]
-
+Output: [1, 2, 3, 4, 5, 6]<br>
 //Q124 find nth node from the end of linked list<br>
 //Q125 remove nth node from the end of linked list<br>
 //Q126 Swap Nodes in Pairs in linked list<br>
