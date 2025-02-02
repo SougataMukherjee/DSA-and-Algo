@@ -107,7 +107,7 @@ console.log(root.data);
 // - The left subtree contains nodes with values less than the parent node.
 // - The right subtree contains nodes with values greater than the parent node.
 
-// AVL Tree:
+// AVL Tree or self balancing tree:
 // A self-balancing binary search tree where the balance factor
 // (height of left subtree - height of right subtree) must be in the range {-1, 0, 1}.
 

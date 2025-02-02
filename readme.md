@@ -236,28 +236,28 @@ Input: nums = [1,2,3,1] so output is 1+3=4
 
 # tree
 
-//Q92 Check if a tree is a BST or BT
-//Q93 find the lowest common ancestor (LCA) of two given nodes in the tree.
-//Q94 Level Order Traversal of Binary Tree
-//Q95 Preorder traversal in binary tree
-//Q96 Right/Left side View of Binary Tree
-//Q97 Merge Two Binary Trees
+//Q92 Check if a tree is a BST or BT<br>
+//Q93 find the lowest common ancestor (LCA) of two given nodes in the tree.<br>
+//Q94 Level Order Traversal of Binary Tree<br>
+//Q95 Preorder traversal in binary tree<br>
+//Q96 Right/Left side View of Binary Tree<br>
+//Q97 Merge Two Binary Trees<br>
 Input: root1 = [1,3,2,5], root2 = [2,1,3,null,4,null,7]
 Output: [3,4,5,5,4,null,7]
-//Q98 Sum of Left Leaves
+//Q98 Sum of Left Leaves<br>
 Input: root = [3,9,20,null,null,15,7]
 Output: 9+15=24
-//Q99 Maximum or Minimum Depth in Binary Tree
-//Q100 check a tree is Balanced Binary Tree or AVL tree
-//Q101 Given the root of a binary tree, check whether it is a mirror(symmetric) of itself
+//Q99 Maximum or Minimum Depth in Binary Tree<br>
+//Q100 check a tree is Balanced Binary Tree or AVL tree<br>
+//Q101 Given the root of a binary tree, check whether it is a mirror(symmetric) of itself<br>
 Input: root = [1,2,2,3,4,4,3] Output: true
-//Q102 Check it two trees are Identical(have the same value) or Not
-//Q103 Subtree of Another Tree
-//Q104 Count total Nodes in a complete Binary Tree
-//Q105 Invert/Flip Binary Tree
+//Q102 Check it two trees are Identical(have the same value) or Not <br>
+//Q103 Subtree of Another Tree<br>
+//Q104 Count total Nodes in a complete Binary Tree<br>
+//Q105 Invert/Flip Binary Tree<br>
 Input: root = [4,2,7,1,3,6,9]
 Output: [4,7,2,9,6,3,1]
-//Q106 whether a binary tree is a full binary tree or not
+//Q106 whether a binary tree is a full binary tree or not<br>
 
 # two pointer
 
