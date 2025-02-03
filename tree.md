@@ -113,7 +113,7 @@ console.log(root.data);
 
 ### Heap Tree:
 
-A Heap is a complete binary tree(in arrays in between elements there should not be any gap) data structure that satisfies the heap property: for every node, the value of its children is greater than or equal to its own value. Heaps are usually used to implement priority queues
+A Heap is a complete binary tree(in arrays in between elements there should not be any gap) data structure that satisfies the heap property: for every node, the value of its children is greater than or equal to its own value. Heaps are usually used to implement priority queues<br>
 ![Heap tree](./img/heap-1.png) <br>
 Note: The heap tree is a special balanced binary tree data structure where the root node is compared with its children and arrange accordingly.
 Note: Node always added from the left
@@ -126,9 +126,9 @@ A
  B C
 / \ / \
 D E F G
-ABCDEFG
-// - Min-Heap: The root node is the smallest element, and every parent is smaller than its children.
-// - Max-Heap: The root node is the largest element, and every parent is larger than its children.
+ABCDEFG<br>
+// - Min-Heap: The root node is the smallest element, and every parent is smaller than its children.<br>
+// - Max-Heap: The root node is the largest element, and every parent is larger than its children.<br>
 ![min max Heap tree](./img/heap.png) <br>
 //Insert Operation in Max Heap
 Add the element at the last free space in the heap (i.e., at the end of the array).
