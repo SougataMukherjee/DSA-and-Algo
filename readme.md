@@ -159,9 +159,11 @@ output:16<br>
 
 //Q50 Star Pattern 7<br>
 
-<!-- 1   1
+````
+     1   1
      12 22
-     12333 -->
+     12333
+     ```
 
 //Q53 extract multiple whitespace from string<br>
 //Q54 longest substring without repeating characters<br>
@@ -410,3 +412,4 @@ Output: [[2,4],[1,3],[2,4],[1,3]]<br>
 //Q160 Egg Drop With 2 Eggs and N Floors<br>
 Input: n = 2
 Output: 2<br>
+````
