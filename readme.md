@@ -118,9 +118,11 @@ output:16<br>
 //Q43 check balanced parentheses<br>
 //Q44 Star Pattern 1<br>
 
-<!-- *
+````
+     *
      ***
-     ***** -->
+     *****
+     ```
 
 //Q45 Star Pattern 2<br>
 
@@ -249,7 +251,7 @@ Output: [4,7,2,9,6,3,1]<br>
 //Q107 Recover BST <br>
 Input: root = [1,3,null,null,2]
 Output: [3,1,null,null,2]<br>
-//Zig-Zag Level Order Traversal  
+//Zig-Zag Level Order Traversal
 ![zic zag](./img/zig-zag%20traversal.png)
 Input: root = [3,9,20,null,null,15,7]
 Output: [[3],[20,9],[15,7]]
@@ -268,7 +270,7 @@ Output: 6<br>
 //Q110 Container With Most Water<br>
 Input: height = [1,8,6,2,5,4,8,3,7]
 Output: 49<br>
-//Q111 Largest Rectangle in Histogram  
+//Q111 Largest Rectangle in Histogram
 Input: heights = [2,1,5,6,2,3]
 Output: 10
 ![roadmap](./img/largest-rectangle.png)
@@ -433,3 +435,4 @@ Output: [[2,4],[1,3],[2,4],[1,3]]<br>
 //Q160 Egg Drop With 2 Eggs and N Floors<br>
 Input: n = 2
 Output: 2<br>
+````
