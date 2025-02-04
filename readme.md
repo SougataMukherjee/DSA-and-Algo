@@ -188,9 +188,9 @@ output: ['a', 'c']<br>
 input: obj1 = {a: 1, b: 2}, obj2 = {b: 3, c: 4}
 output: {a: 1, b: 3, c: 4}<br>
 //Q61 convert an object to an array of key-value pairs:<br>
-input: obj = {a: 1, b: 2, c: 3} output: [['a', 1], ['b', 2], ['c', 3]]
+input: obj = {a: 1, b: 2, c: 3} output: [['a', 1], ['b', 2], ['c', 3]]<br>
 //Q62 find the intersection of two arrays:<br>
-input: arr1 = [1, 2, 2, 1], arr2 = [2, 2] output: [2, 2]
+input: arr1 = [1, 2, 2, 1], arr2 = [2, 2] output: [2, 2]<br>
 //Q63 update nested object property<br>
 //Q64 remove Properties from an Object<br>
 //Q65 check if Two Objects are Equal<br>
@@ -233,14 +233,14 @@ Input: nums = [1,2,3,1] so output is 1+3=4<br>
 //Q93 Right/Left side View of Binary Tree<br>
 //Q94 Merge Two Binary Trees<br>
 Input: root1 = [1,3,2,5], root2 = [2,1,3,null,4,null,7]
-Output: [3,4,5,5,4,null,7]
+Output: [3,4,5,5,4,null,7]<br>
 //Q95 Sum of Left Leaves<br>
 Input: root = [3,9,20,null,null,15,7]
-Output: 9+15=24
+Output: 9+15=24<br>
 //Q96 Maximum or Minimum Depth in Binary Tree<br>
 //Q97 check a tree is Balanced Binary Tree or AVL tree<br>
 //Q98 Given the root of a binary tree, check whether it is a mirror(symmetric) of itself<br>
-Input: root = [1,2,2,3,4,4,3] Output: true
+Input: root = [1,2,2,3,4,4,3] Output: true<br>
 //Q99 Check it two trees are Identical(have the same value) or Not <br>
 //Q100 Subtree of Another Tree<br>
 //Q101 Count total Nodes in a complete Binary Tree<br>
@@ -251,10 +251,10 @@ Output: [4,7,2,9,6,3,1]<br>
 //Q104 Recover BST <br>
 Input: root = [1,3,null,null,2]
 Output: [3,1,null,null,2]<br>
-//Q105 Zig-Zag Level Order Traversal  
-![zic zag](./img/zig-zag%20traversal.png)
+//Q105 Zig-Zag Level Order Traversal <br>
 Input: root = [3,9,20,null,null,15,7]
-Output: [[3],[20,9],[15,7]]
+Output: [[3],[20,9],[15,7]]<br>
+![zic zag](./img/zig-zag%20traversal.png)<br>
 
 # two pointer
 
@@ -272,8 +272,8 @@ Input: height = [1,8,6,2,5,4,8,3,7]
 Output: 49<br>
 //Q110 Largest Rectangle in Histogram  
 Input: heights = [2,1,5,6,2,3]
-Output: 10
-![roadmap](./img/largest-rectangle.png)
+Output: 10<br>
+![roadmap](./img/largest-rectangle.png)<br>
 //Q111 count the number of positive triangle<br>
 Input: arr[] = [4, 6, 3, 7]
 Output: 3<br>
@@ -360,7 +360,7 @@ Output: Intersected at '8'<br>
 //Q140 Palindrome Linked List <br>Input: head = [1,2,2,1] Output: true
 //Q141 queue reversal<br>
 //Q142 reverse 1st k element from queue<br>
-//Q143 Time need to buy a tickets<br> Input: tickets:[5,1,1,1],k=0 Output: 8 [4,0,0,0] 4+1+1+1+1
+//Q143 Time need to buy a tickets<br> Input: tickets:[5,1,1,1],k=0 Output: 8 [4,0,0,0] 4+1+1+1+1<br>
 //Q144 remove invalid parenthesis and make it balanced by removing min number of bracket<br>
 //Q145 next greater element <br>arr=[6,0,8,1,3] nge_arr=[8,8,-1,3,-1] like 6's next greater element 8 and 0's next greater element 8 and so on<br>
 //Q146 next smaller element<br> arr=[4,8,5,2,2,5] nge_arr=[2,5,2,-1,-1]<br>
@@ -371,7 +371,7 @@ Output: Intersected at '8'<br>
 //Q148 bubble sort<br>
 //Q149 selection sort<br>
 //Q150 Insertion sort<br>
-//Q151 Linear Search
+//Q151 Linear Search<br>
 //Q152 implementing binary search in a sorted array(divide and conquer)
 
 # greedy algo
