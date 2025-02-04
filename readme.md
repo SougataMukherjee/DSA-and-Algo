@@ -216,6 +216,11 @@ Input: m = 3, n = 7 Output: 28<br>
 //Q90 maximum amount of money you can rob from a row of houses, represented by an integer array nums, without robbing two adjacent houses<br>
 Input: nums = [1,2,3,1] so output is 1+3=4<br>
 //Q91 finding all possible paths in a 2D grid or rat in a maze(in 4 direction)<br>
+//Q92 Sum of Array Elements and find max<br>
+//Q93 reverse an array<br>
+//Q94 Transpose of a Matrix<br>
+//Q95 remove all even numbers<br>
+//Q96 Convert UPPERCASE to lowercase<br>
 
 # tree
 
@@ -241,6 +246,13 @@ Input: root = [1,2,2,3,4,4,3] Output: true
 Input: root = [4,2,7,1,3,6,9]
 Output: [4,7,2,9,6,3,1]<br>
 //Q106 whether a binary tree is a full binary tree or not<br>
+//Q107 Recover BST <br>
+Input: root = [1,3,null,null,2]
+Output: [3,1,null,null,2]<br>
+//Zig-Zag Level Order Traversal  
+![zic zag](./img/zig-zag%20traversal.png)
+Input: root = [3,9,20,null,null,15,7]
+Output: [[3],[20,9],[15,7]]
 
 # two pointer
 
@@ -256,6 +268,10 @@ Output: 6<br>
 //Q110 Container With Most Water<br>
 Input: height = [1,8,6,2,5,4,8,3,7]
 Output: 49<br>
+//Q111 Largest Rectangle in Histogram  
+Input: heights = [2,1,5,6,2,3]
+Output: 10
+![roadmap](./img/largest-rectangle.png)
 //Q111 count the number of positive triangle<br>
 Input: arr[] = [4, 6, 3, 7]
 Output: 3<br>
@@ -323,6 +339,7 @@ Output: 1 -> 3 -> 5 -> 2 -> 4<br>
 Input: list1 = [1, 2, 4], list2 = [3, 5, 6]
 Output: [1, 2, 3, 4, 5, 6]<br>
 //Q124 find nth node from the end of linked list<br>
+//Q129 Insert Node at Head/Tail of Linked List<br>
 //Q125 remove nth node from the end of linked list<br>
 //Q126 Swap Nodes in Pairs in linked list<br>
 Input: head = [1,2,3,4]
@@ -344,7 +361,8 @@ Output: Intersected at '8'<br>
 //Q136 Time need to buy a tickets<br> Input: tickets:[5,1,1,1],k=0 Output: 8 [4,0,0,0] 4+1+1+1+1
 //Q137 remove invalid parenthesis and make it balanced by removing min number of bracket<br>
 //Q138 next greater element <br>arr=[6,0,8,1,3] nge_arr=[8,8,-1,3,-1] like 6's next greater element 8 and 0's next greater element 8 and so on<br>
-//Q139 next smaller element<br> arr=[4,8,5,2,2,5] nge_arr=[2,5,2,-1,-1]
+//Q139 next smaller element<br> arr=[4,8,5,2,2,5] nge_arr=[2,5,2,-1,-1]<br>
+//Q140 Queue Using Two Stacks
 
 # searching & sorting
 
@@ -387,6 +405,11 @@ Input:arr[]=[[1,3],[2,4],[6,8],[9,10]]
 Output:[[1,4],[6,8],[9,10]]<br>
 //Q151 best time to sell stock and find max profit<br>
 Input:prices[]={1,3,6,9,11} output:10
+
+# Dynamic Programming
+
+152. Count number of ways to cover a distance
+153. Number of Dice Rolls With Target Sum
 
 # graph
 
