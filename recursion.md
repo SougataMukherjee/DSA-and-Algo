@@ -1,9 +1,10 @@
 # Recursion
 
-when a function calls itself until a specific condition met is called recursion
+`when a function calls itself until a specific condition meet is called recursion`
 application of recursion and backtracking is render tree solving puzzle game
 Recursive solutions work as a a basis for Dynamic Programming and Divide and Conquer algorithms
-its a approach that allows us to shorten our code it must have a base case and recursive case
+
+> its a approach that allows us to shorten our code it must have a base case and recursive case
 
 ```
 methodName(n parameters){
@@ -14,7 +15,7 @@ return methodName(n parameters)
 }
 ```
 
-![Recursion Stack](./img/rec.png)
+![Recursion Stack](./img/rec.png)<br>
 concept of Function Call Stack and stack Frame in recursive function
 
 # Dynamic Programming
@@ -22,11 +23,12 @@ concept of Function Call Stack and stack Frame in recursive function
 is mainly an optimization over plain recursion. Wherever we see a recursive solution that has repeated calls for the same inputs, we can optimize it using Dynamic Programming.
 application of dp is optimize and memorize rendering,overlapping subproblem
 problem related to choice mainly related to recursion and in recursion if there are overlapping problem and max/min related problem are there there use dynamic problem
-![Dynamic Programming](./img/dp.png)
-approaches:
+![Dynamic Programming](./img/dp.png)<br>
+
+### approaches:
 
 //find nth fibonacci number
-0 1 1 2 3 5
+`0 1 1 2 3 5`
 
 ```
 function nthFibo(n){
@@ -191,7 +193,7 @@ return search(arr,n,target,i+1)
 }
 ```
 
-//remove all the occurence of a from the string "abcax"
+//remove all the occurence of a from the string "abcax"<br>
 //f(s,5)->'',f(s,4)=>'x',f(s,3)=>"cx",f(s,2)=>"cx",f(s,1)=>bcx,f(s,0) return bcx
 
 ```
