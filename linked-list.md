@@ -2,10 +2,8 @@
 
 A linked list is a linear data structure where each element (called a node) contains two main parts:
 
-`Data`: The value or information stored in the node.
-`Next` (in Singly Linked List) or Next and Prev (in Doubly Linked List): Pointers to the `next` node in the sequence (and previous node for doubly linked list).
-
-![linked list](./img/linked-list.png)<br>
+`Data`: The value or information stored in the node.<br>
+`Next` (in Singly Linked List) or Next and Prev (in Doubly Linked List): Pointers to the next node in the sequence (and previous node for doubly linked list).<br>
 
 ### Limitations of Arrays
 
@@ -37,6 +35,8 @@ In a singly linked list, each node contains:
 `Data`: The value of the node.
 `Next`: A pointer to the next node in the list (null for the last node).
 
+![linked list](./img/linked-list.png)<br>
+
 ```
 class Node {
     constructor(data) {
@@ -63,9 +63,11 @@ while (node != null) {
 
 In a doubly linked list, each node contains:
 
-`Data`: The value of the node.
-`Next`: A pointer to the next node.
-`Prev`: A pointer to the previous node.
+`Data`: The value of the node.<br>
+`Next`: A pointer to the next node.<br>
+`Prev`: A pointer to the previous node.<br>
+
+![double linked list](./img/dubly-ll.png)<br>
 
 ```
 class Node {
