@@ -2,16 +2,31 @@
 
 A linked list is a linear data structure where each element (called a node) contains two main parts:
 
-Data: The value or information stored in the node.
-Next (in Singly Linked List) or Next and Prev (in Doubly Linked List): Pointers to the next node in the sequence (and previous node for doubly linked list).
+`Data`: The value or information stored in the node.
+`Next` (in Singly Linked List) or Next and Prev (in Doubly Linked List): Pointers to the `next` node in the sequence (and previous node for doubly linked list).
+
+![linked list](./img/linked-list.png)<br>
 
 ### Limitations of Arrays
 
-Fixed Size: The size of an array is fixed at the time of its creation.
-Contiguous Memory Allocation: Arrays store elements in contiguous memory locations, leading to inefficient insertions and deletions (since shifting elements is required).
-Time Complexity: Insert and delete operations are costly in terms of time complexity. Insertion or deletion at the beginning or in the middle of the array takes O(n) time.
-Memory Wastage: Arrays may also waste memory if allocated space is more than needed, or they may require resizing when they become full.
-Advantages of Linked Lists
+#### Fixed Size:
+
+The size of an array is fixed at the time of its creation.
+
+#### Contiguous Memory Allocation:
+
+Arrays store elements in contiguous memory locations, leading to inefficient insertions and deletions (since shifting elements is required).
+
+#### Time Complexity:
+
+Insert and delete operations are costly in terms of time complexity. Insertion or deletion at the beginning or in the middle of the array takes O(n) time.
+
+#### Memory Wastage:
+
+Arrays may also waste memory if allocated space is more than needed, or they may require resizing when they become full.
+
+### Advantages of Linked Lists
+
 Dynamic Size: Linked lists don’t have a fixed size, and memory is allocated dynamically as elements are added.
 Efficient Insertions/Deletions: Insertions and deletions can be performed more efficiently in linked lists, especially at the beginning or middle of the list (without needing to shift other elements).
 
@@ -19,8 +34,8 @@ Efficient Insertions/Deletions: Insertions and deletions can be performed more e
 
 In a singly linked list, each node contains:
 
-Data: The value of the node.
-Next: A pointer to the next node in the list (null for the last node).
+`Data`: The value of the node.
+`Next`: A pointer to the next node in the list (null for the last node).
 
 ```
 class Node {
@@ -48,9 +63,9 @@ while (node != null) {
 
 In a doubly linked list, each node contains:
 
-Data: The value of the node.
-Next: A pointer to the next node.
-Prev: A pointer to the previous node.
+`Data`: The value of the node.
+`Next`: A pointer to the next node.
+`Prev`: A pointer to the previous node.
 
 ```
 class Node {

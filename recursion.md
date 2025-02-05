@@ -1,6 +1,6 @@
 # Recursion
 
-`when a function calls itself until a specific condition meet is called recursion`
+`when a function calls itself until a specific condition meet is called recursion`<br>
 application of recursion and backtracking is render tree solving puzzle game
 Recursive solutions work as a a basis for Dynamic Programming and Divide and Conquer algorithms
 

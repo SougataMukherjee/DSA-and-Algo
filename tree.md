@@ -164,6 +164,7 @@ Heapify Up: Compare the inserted element with its parent. If the element is larg
 Repeat the process until the element is in the correct position to maintain the max-heap property (i.e., every parent node is greater than its children).
 
 T.C in best-case O(1) and in normal O(logn)
+![max-heap](./img/max_heap.png) <br>
 
 ```
 function maxHeapify(arr, i, n) {
