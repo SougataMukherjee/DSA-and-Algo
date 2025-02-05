@@ -1,24 +1,37 @@
+# Stack:
+
 A stack is an ordered list that follows the LIFO (Last In, First Out) principle. Elements can only be inserted and deleted from one end, called the top of the stack. It uses variable size allocation.
 
-example
-Reverse a string or list
-Checking balanced parentheses
-Finding the next greater element
-Solving the Tower of Hanoi problem
-Sorting a stack
+> example
+> Reverse a string or list
+> Checking balanced parentheses
+> Finding the next greater element
+> Solving the Tower of Hanoi problem
+> Sorting a stack
 
-key operation:
-push(): adds an element to the top of the stack
-Pop():removes and returns the top elements
-peek/Top():return the top element without removing it
-isEmpty():check if stack is empty
-isFull():check if stack is full
-overflow:if stack is full and you try to push an element
-underflow:if stack is empty and you try to pop an element
-Prefix expression:operand are follow operator
-Postfix expression:Operator are follw operands
-//convert Infix expression to postfix expression
-A+(B-C)\*D^E/F
+### key operation:
+
+#### push(): adds an element to the top of the stack
+
+#### Pop():removes and returns the top elements
+
+#### peek/Top():return the top element without removing it
+
+#### isEmpty():check if stack is empty
+
+#### isFull():check if stack is full
+
+#### overflow:if stack is full and you try to push an element
+
+#### underflow:if stack is empty and you try to pop an element
+
+#### Prefix expression:operand are follow operator
+
+#### Postfix expression:Operator are follow operands
+
+### //convert Infix expression to postfix expression
+
+`A+(B-C)\*D^E/F`
 
 A - A Operand A is directly added to the postfix.
 
@@ -33,7 +46,7 @@ A - A Operand A is directly added to the postfix.
 - - - A B C - Operator _ is pushed onto the stack.
       D + _ A B C - D Operand D is added to the postfix.
 
-//convert Infix expression to prefixfix expression
+### //convert Infix expression to prefixfix expression
 
 D / ^ F E D Operand D is added to the postfix.
 
@@ -48,7 +61,9 @@ D / ^ F E D Operand D is added to the postfix.
 - - F E D ^ C B - _ Pop _ (higher precedence); push +.
     A + F E D ^ C B - \* A Operand A is added to the postfix.
 
-Implementation:
+### Implementation:
+
+`
 let stack = [];
 let top = -1;
 const N = 10; // Maximum size of the stack
@@ -89,30 +104,36 @@ push(20);
 console.log(peek()); // 20
 console.log(pop()); // 20
 console.log(isEmpty()); // false
+`
 
-Queue:
+# Queue:
+
 A queue is an ordered list that follows the FIFO (First In, First Out) principle. Elements are inserted at one end (rear) and removed from the other end (front).
 
-key operation
+> example
+> ticket booking line,print queue
+> application of queue:
+> handleing request in a server
+> scheduling in os
+> managing share resource
+
+### key operation
+
 enqueue
 dequeue
 peek
 size
 isEmpty
 
-example
-ticket booking line,print queue
-application of queue:
-handleing request in a server
-scheduling in os
-managing share resource
-Key Operations of a Queue:
+### Key Operations of a Queue:
 
 enqueue(x): Adds an element to the rear of the queue.
 dequeue(): Removes and returns the element at the front of the queue.
 peek(): Returns the element at the front without removing it.
 isEmpty(): Checks if the queue is empty.
 size(): Returns the number of elements in the queue.
+
+### Implementation:
 
 const N = 5;
 let queue = new Array(N);
