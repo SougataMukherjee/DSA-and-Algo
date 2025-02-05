@@ -234,225 +234,225 @@ Output: true<br>
 
 # tree
 
-//Q89 Check if a tree is a BST or BT<br>
-//Q90 find the lowest common ancestor (LCA) of two given nodes in the tree.<br>
-//Q91 Level Order Traversal of Binary Tree<br>
-//Q92 Preorder traversal in binary tree<br>
-//Q93 Right/Left side View of Binary Tree<br>
-//Q94 Merge Two Binary Trees<br>
+//Q93 Check if a tree is a BST or BT<br>
+//Q94 find the lowest common ancestor (LCA) of two given nodes in the tree.<br>
+//Q95 Level Order Traversal of Binary Tree<br>
+//Q96 Preorder traversal in binary tree<br>
+//Q97 Right/Left side View of Binary Tree<br>
+//Q98 Merge Two Binary Trees<br>
 Input: root1 = [1,3,2,5], root2 = [2,1,3,null,4,null,7]
 Output: [3,4,5,5,4,null,7]<br>
-//Q95 Sum of Left Leaves<br>
+//Q99 Sum of Left Leaves<br>
 Input: root = [3,9,20,null,null,15,7]
 Output: 9+15=24<br>
-//Q96 Maximum or Minimum Depth in Binary Tree<br>
-//Q97 check a tree is Balanced Binary Tree or AVL tree<br>
-//Q98 Given the root of a binary tree, check whether it is a mirror(symmetric) of itself<br>
+//Q100 Maximum or Minimum Depth in Binary Tree<br>
+//Q101 check a tree is Balanced Binary Tree or AVL tree<br>
+//Q102 Given the root of a binary tree, check whether it is a mirror(symmetric) of itself<br>
 Input: root = [1,2,2,3,4,4,3] Output: true<br>
-//Q99 Check it two trees are Identical(have the same value) or Not <br>
-//Q100 Subtree of Another Tree<br>
-//Q101 Count total Nodes in a complete Binary Tree<br>
-//Q102 Invert/Flip Binary Tree<br>
+//Q103 Check it two trees are Identical(have the same value) or Not <br>
+//Q104 Subtree of Another Tree<br>
+//Q105 Count total Nodes in a complete Binary Tree<br>
+//Q106 Invert/Flip Binary Tree<br>
 Input: root = [4,2,7,1,3,6,9]
 Output: [4,7,2,9,6,3,1]<br>
-//Q103 whether a binary tree is a full binary tree or not<br>
-//Q104 Recover BST <br>
+//Q107 whether a binary tree is a full binary tree or not<br>
+//Q108 Recover BST <br>
 Input: root = [1,3,null,null,2]
 Output: [3,1,null,null,2]<br>
-//Q105 Zig-Zag Level Order Traversal <br>
+//Q109 Zig-Zag Level Order Traversal <br>
 Input: root = [3,9,20,null,null,15,7]
 Output: [[3],[20,9],[15,7]]<br>
 ![zic zag](./img/zig-zag%20traversal.png)<br>
 
 # two pointer
 
-//Q106 Given two strings s and t, return true if s is a subsequence of t, or false otherwise.<br>
+//Q110 Given two strings s and t, return true if s is a subsequence of t, or false otherwise.<br>
 Input: s = "abc", t = "ahbgdc"
 Output: true<br>
-//Q107 Remove Duplicates from Sorted Array<br>
+//Q111 Remove Duplicates from Sorted Array<br>
 Input: nums = [1,1,2]
 Output: 2, nums = [1,2,_]<br>
-//Q108 trapping rain water<br>
+//Q112 trapping rain water<br>
 Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
 Output: 6<br>
-//Q109 Container With Most Water<br>
+//Q113 Container With Most Water<br>
 Input: height = [1,8,6,2,5,4,8,3,7]
 Output: 49<br>
-//Q110 Largest Rectangle in Histogram  
+//Q114 Largest Rectangle in Histogram  
 Input: heights = [2,1,5,6,2,3]
 Output: 10<br>
 ![roadmap](./img/largest-rectangle.png)<br>
-//Q111 count the number of positive triangle<br>
+//Q115 count the number of positive triangle<br>
 Input: arr[] = [4, 6, 3, 7]
 Output: 3<br>
-//Q112 Segregate 0s and 1s in an array or move all even integer followed by all odd integer<br>
+//Q116 Segregate 0s and 1s in an array or move all even integer followed by all odd integer<br>
 Input : [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
 Output : [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]<br>
 
 # prefix sum
 
-//Q113 print the sum of value in a array in given range(l=3 an r=5 follow 1 based index)<br>
+//Q117 print the sum of value in a array in given range(l=3 an r=5 follow 1 based index)<br>
 a=[2,4,1,3,6,5]=1+3+6
 1 2 3 4 5 6<br>
-//Q114 subarray sum equals k<br>
+//Q118 subarray sum equals k<br>
 Input: nums = [1,1,1], k = 2
 Output: 2<br>
-//Q115 subarry sum divisible by k<br>
+//Q119 subarry sum divisible by k<br>
 Input: nums = [4,5,0,-2,-3,1], k = 5
 Output: 7<br>
-//Q116 Maximum Average Subarray<br> Input: nums = [1,12,-5,-6,50,3], k = 4
+//Q120 Maximum Average Subarray<br> Input: nums = [1,12,-5,-6,50,3], k = 4
 Output: 12.75000
 Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75<br>
-//Q117 find Maximum Subarray<br>
+//Q121 find Maximum Subarray<br>
 Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
 Output: 6
 Explanation: The subarray [4,-1,2,1] has the largest sum 6.
 
 # binary search
 
-//Q118 check weather a value is exist or not in array(recursion binary search)<br>
-//Q119 search in 2D matrix<br>
+//Q122 check weather a value is exist or not in array(recursion binary search)<br>
+//Q123 search in 2D matrix<br>
 Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
 Output: true<br>
-//Q120 Search in a Rotated Sorted Array with or without duplicate elements<br>
+//Q124 Search in a Rotated Sorted Array with or without duplicate elements<br>
 Note:we can not find the sorted segment like mid less end because it might be same number for mid and end in terms of duplicate
 Input: nums = [2,5,6,0,0,1,2], target = 0
 Output: true<br>
-//Q121 Find Peak Element in a Mountain Array<br>
+//Q125 Find Peak Element in a Mountain Array<br>
 Input: nums = [1,2,3,1]
 Output: 2<br>
 Explanation: 3 is a peak element and your function should return the index number 2.<br>
-//Q122 Find Minimum in Rotated Sorted Array
+//Q126 Find Minimum in Rotated Sorted Array
 Input: nums = [3,4,5,1,2]
 Output: 1<br>
 Explanation: The original array was [1,2,3,4,5] rotated 3 times.<br>
-//Q123 Spiral Matrix<br>
+//Q127 Spiral Matrix<br>
 Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
 Output: [1,2,3,6,9,8,7,4,5]
 
 # Linked List
 
-//Q124 remove Node from linked List<br>
-//Q125 detect a cycle in a linked list<br>
+//Q128 remove Node from linked List<br>
+//Q129 detect a cycle in a linked list<br>
 input: 1 -> 2 -> 3 -> 4 -> 5 -> 3
 output:true<br>
-//Q126 Find the Middle of a Linked List<br>
+//Q130 Find the Middle of a Linked List<br>
 Input: 1 -> 2 -> 3 -> 4->5
 output:3<br>
-//Q127 You are given the head of a singly linked list. Your task is to reverse the linked list and return the new head of the reversed list<br>
+//Q131 You are given the head of a singly linked list. Your task is to reverse the linked list and return the new head of the reversed list<br>
 Input: 1 -> 2 -> 3 -> 4 -> 5
 Output: 5 -> 4 -> 3 -> 2 -> 1<br>
-//Q128 find oddEven linked list<br>
+//Q132 find oddEven linked list<br>
 input:1 -> 2 -> 3 -> 4 -> 5
 Output: 1 -> 3 -> 5 -> 2 -> 4<br>
-//Q129 merge two sorted linked list<br>
+//Q133 merge two sorted linked list<br>
 Input: list1 = [1, 2, 4], list2 = [3, 5, 6]
 Output: [1, 2, 3, 4, 5, 6]<br>
-//Q130 find nth node from the end of linked list<br>
-//Q131 Insert Node at Head/Tail of Linked List<br>
-//Q132 remove nth node from the end of linked list<br>
-//Q133 Swap Nodes in Pairs in linked list<br>
+//Q134 find nth node from the end of linked list<br>
+//Q135 Insert Node at Head/Tail of Linked List<br>
+//Q136 remove nth node from the end of linked list<br>
+//Q137 Swap Nodes in Pairs in linked list<br>
 Input: head = [1,2,3,4]
 Output: [2,1,4,3]<br>
-//Q134 find intersection node of two linked list using two pointer<br>
+//Q138 find intersection node of two linked list using two pointer<br>
 Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
 Output: Intersected at '8'<br>
-//Q135 remove duplicate from a sorted linked list<br>
-//Q135 merge two sorted linked list<br>
+//Q139 remove duplicate from a sorted linked list<br>
+//Q140 merge two sorted linked list<br>
 Input: list1 = [1,2,4], list2 = [1,3,4]
 Output: [1,1,2,3,4,4]
 
 # stack & queue
 
-//Q136 sort a stack<br>
-//Q137 reverse a stack<br>
-//Q138 delete mid element of stack<br>
-//Q139 remove consecutive subsequence<br> 1 2 2 3 4 4 ->1 2 3 4
-//Q140 Palindrome Linked List <br>Input: head = [1,2,2,1] Output: true
-//Q141 queue reversal<br>
-//Q142 reverse 1st k element from queue<br>
-//Q143 Time need to buy a tickets<br> Input: tickets:[5,1,1,1],k=0 Output: 8 [4,0,0,0] 4+1+1+1+1<br>
-//Q144 remove invalid parenthesis and make it balanced by removing min number of bracket<br>
-//Q145 next greater element <br>arr=[6,0,8,1,3] nge_arr=[8,8,-1,3,-1] like 6's next greater element 8 and 0's next greater element 8 and so on<br>
-//Q146 next smaller element<br> arr=[4,8,5,2,2,5] nge_arr=[2,5,2,-1,-1]<br>
-//Q147 Queue Using Two Stacks<br>
-//Q148 Implement Stack using Queues<br>
-//Q149 remove all adjacent duplicate in string using stack<br>
+//Q141 sort a stack<br>
+//Q142 reverse a stack<br>
+//Q143 delete mid element of stack<br>
+//Q144 remove consecutive subsequence<br> 1 2 2 3 4 4 ->1 2 3 4
+//Q145 Palindrome Linked List <br>Input: head = [1,2,2,1] Output: true
+//Q146 queue reversal<br>
+//Q147 reverse 1st k element from queue<br>
+//Q148 Time need to buy a tickets<br> Input: tickets:[5,1,1,1],k=0 Output: 8 [4,0,0,0] 4+1+1+1+1<br>
+//Q149 remove invalid parenthesis and make it balanced by removing min number of bracket<br>
+//Q150 next greater element <br>arr=[6,0,8,1,3] nge_arr=[8,8,-1,3,-1] like 6's next greater element 8 and 0's next greater element 8 and so on<br>
+//Q151 next smaller element<br> arr=[4,8,5,2,2,5] nge_arr=[2,5,2,-1,-1]<br>
+//Q152 Queue Using Two Stacks<br>
+//Q153 Implement Stack using Queues<br>
+//Q154 remove all adjacent duplicate in string using stack<br>
 Input: s = "abbaca" Output: "ca"
 
 # searching & sorting
 
-//Q148 bubble sort<br>
-//Q149 selection sort<br>
-//Q150 Insertion sort<br>
-//Q151 Linear Search<br>
-//Q152 implementing binary search in a sorted array(divide and conquer)
+//Q155 bubble sort<br>
+//Q156 selection sort<br>
+//Q157 Insertion sort<br>
+//Q158 Linear Search<br>
+//Q159 implementing binary search in a sorted array(divide and conquer)
 
 # greedy algo
 
-//Q153 min number of coins<br>
+//Q160 min number of coins<br>
 Input: coins[] = [25, 10, 5], sum = 30
 Output: 2<br>
-//Q154 Minimum Cost of Buying Candies With Discount<br>
+//Q161 Minimum Cost of Buying Candies With Discount<br>
 Input: cost = [1,2,3]
 Output: 5<br>
-//Q155 Distribute Candies<br>
+//Q162 Distribute Candies<br>
 array candyType of length n (where n is always even), return the maximum number of different types of candies Alice can eat if she can only consume n / 2 candies.
 
 Input: candyType = [1,1,2,2,3,3]
 Output: 3<br>
-//Q156 Non-overlapping Intervals<br>
+//Q163 Non-overlapping Intervals<br>
 Input: intervals = [[1,2],[2,3],[3,4],[1,3]]
 Output: 1<br>
-//Q157 Maximum Number of Balloons<br>
+//Q164 Maximum Number of Balloons<br>
 Input: text = "nlaebolko"
 Output: 1<br>
-//Q158 jump game<br>
+//Q165 jump game<br>
 each element in the array represents your maximum jump length at that position.
 Return true if you can reach the last index, or false otherwise
 Input: nums = [2,3,1,1,4]
 Output: true
 Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.<br>
-//Q159 Minimum Platforms Required for Given Arrival and Departure Times<br>
+//Q166 Minimum Platforms Required for Given Arrival and Departure Times<br>
 Input: arr[] = {9:00, 9:40, 9:50, 11:00, 15:00, 18:00}, dep[] = {9:10, 12:00, 11:20, 11:30, 19:00, 20:00}
 Output: 3<br>
-//Q160 merge overlapping intervals<br>
+//Q167 merge overlapping intervals<br>
 Input:arr[]=[[1,3],[2,4],[6,8],[9,10]]
 Output:[[1,4],[6,8],[9,10]]<br>
-//Q161 best time to sell stock and find max profit<br>
+//Q168 best time to sell stock and find max profit<br>
 Input:prices[]={1,3,6,9,11} output:10
 
 # Recursion
 
-//Q162 Find the longest common subsequence(lcs) of two strings.<br>
+//Q169 Find the longest common subsequence(lcs) of two strings.<br>
 Input: text1 = "abcde", text2 = "ace"
 Output: 3
 
 # Dynamic Programming
 
-//162 Count number of ways to cover a distance<br>
-//163 Number of Dice Rolls With Target Sum<br>
-//164 solve the word break problem
+//Q170 Count number of ways to cover a distance<br>
+//Q171 Number of Dice Rolls With Target Sum<br>
+//Q172 solve the word break problem
 
 # graph
 
-//Q164 Find if Path Exists in Graph using bfs<br> Input: n = 3, edges = [[0,1],[1,2],[2,0]], source = 0, destination = 2
+//Q173 Find if Path Exists in Graph using bfs<br> Input: n = 3, edges = [[0,1],[1,2],[2,0]], source = 0, destination = 2
 Output: true<br>
-//Q165 Check if all nodes of Undirected Graph can be visited from given Node using bfs<br>
-//Q166 Number of Islands using dfs<br>
-//Q167 Flood Fill Algorithm using dfs<br>
+//Q174 Check if all nodes of Undirected Graph can be visited from given Node using bfs<br>
+//Q175 Number of Islands using dfs<br>
+//Q176 Flood Fill Algorithm using dfs<br>
 Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2
 Output: [[2,2,2],[2,2,0],[2,0,1]]<br>
-//Q167 Max Area of Island<br>
+//Q177 Max Area of Island<br>
 Input: grid = [[0,0,0,0,0,0,0,0]]
 Output: 0<br>
-//Q168 Detect Cycle in a Directed Graph using DFS.<br>
-//Q169 Print all paths from a given source to a destination/target<br>
+//Q178 Detect Cycle in a Directed Graph using DFS.<br>
+//Q179 Print all paths from a given source to a destination/target<br>
 Input: graph = [[1,2],[3],[3],[]]
 Output: [[0,1,3],[0,2,3]]<br>
-//Q170 clone graph<br>
+//Q180 clone graph<br>
 Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
 Output: [[2,4],[1,3],[2,4],[1,3]]<br>
-//Q171 Egg Drop With 2 Eggs and N Floors<br>
+//Q181 Egg Drop With 2 Eggs and N Floors<br>
 Input: n = 2
 Output: 2<br>
