@@ -24,10 +24,10 @@ if Feasible(x) then
 in a bag we have max capacity=20 kg we want max profit?
 also known as the job sequencing problem with deadlines, aims to maximize the profit of scheduled tasks within given constraints such as time or capacity.
 
-        obj1   obj2    obj3
-
-profit 25 24 15
-weight 18 15 10
+|        | obj1 | obj2 | obj3 |
+| ------ | ---- | ---- | ---- |
+| profit | 25   | 24   | 15   |
+| weight | 18   | 15   | 10   |
 
 1. greedy about profit
    obj1 so out of 20 2(20-18)capacity weight is empty profit 25
