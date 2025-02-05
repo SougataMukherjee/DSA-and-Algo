@@ -19,7 +19,7 @@ if Feasible(x) then
 }
 ```
 
-### job sequencing problem
+## job sequencing problem
 
 in a bag we have max capacity=20 kg we want max profit?
 also known as the job sequencing problem with deadlines, aims to maximize the profit of scheduled tasks within given constraints such as time or capacity.
