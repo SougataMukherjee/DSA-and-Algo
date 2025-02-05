@@ -63,7 +63,7 @@ D / ^ F E D Operand D is added to the postfix.
 
 ### Implementation:
 
-`
+```
 let stack = [];
 let top = -1;
 const N = 10; // Maximum size of the stack
@@ -104,7 +104,7 @@ push(20);
 console.log(peek()); // 20
 console.log(pop()); // 20
 console.log(isEmpty()); // false
-`
+```
 
 # Queue:
 
@@ -135,6 +135,7 @@ size(): Returns the number of elements in the queue.
 
 ### Implementation:
 
+```
 const N = 5;
 let queue = new Array(N);
 let front = -1, rear = -1; // f,r [][][]
@@ -179,3 +180,4 @@ enqueue(20);
 enqueue(30);
 console.log(dequeue()); // 10
 displayQueue(); // [20, 30]
+```
