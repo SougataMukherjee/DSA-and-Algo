@@ -1,9 +1,9 @@
 # Tree
 
 // A tree is a non-linear hierarchical data structure consisting of nodes linked together to simulate a hierarchy.<br>
+![Dynamic Programming](./img/tree.png) <br>
 
 > If a tree has N nodes, there are exactly N-1 edges.<br>
-> ![Dynamic Programming](./img/tree.png) <br>
 
 ### Tree Terminology:<br>
 
@@ -45,12 +45,18 @@
 
 // A binary tree is a tree where each node has at most two children, referred to as the left child and the right child.
 ![Dynamic Programming](./img/tree-type.png) <br>
-// Types:<br>
-// 1. Strict binary tree: A binary tree where each node has either 0 or 2 children.<br>
-// 2. Complete binary tree: All levels except possibly the last are completely filled, and the last level has nodes as left as possible.<br>
-// 3. Perfect binary tree: A binary tree where all internal nodes have two children, and all leaf nodes are on the same level.<br>
-// 4. Full binary tree: Every node other than the leaves has two children.<br>
-// 5. Balanced binary tree: The height difference between the left and right subtrees of every node is at most 1.<br>
+
+#### Types:<br>
+
+##### 1. Strict binary tree: A binary tree where each node has either 0 or 2 children.<br>
+
+##### 2. Complete binary tree: All levels except possibly the last are completely filled, and the last level has nodes as left as possible.<br>
+
+##### 3. Perfect binary tree: A binary tree where all internal nodes have two children, and all leaf nodes are on the same level.<br>
+
+##### 4. Full binary tree: Every node other than the leaves has two children.<br>
+
+##### 5. Balanced binary tree: The height difference between the left and right subtrees of every node is at most 1.<br>
 
 // Binary Tree Node Structure in JavaScript:
 
@@ -146,8 +152,11 @@ A
 / \ / \
 D E F G
 ABCDEFG<br>
-// - Min-Heap: The root node is the smallest element, and every parent is smaller than its children.<br>
-// - Max-Heap: The root node is the largest element, and every parent is larger than its children.<br>
+
+#### Min-Heap: The root node is the smallest element, and every parent is smaller than its children.<br>
+
+#### Max-Heap: The root node is the largest element, and every parent is larger than its children.<br>
+
 ![min max Heap tree](./img/heap.png) <br>
 //Insert Operation in Max Heap
 Add the element at the last free space in the heap (i.e., at the end of the array).
