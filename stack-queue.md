@@ -9,6 +9,8 @@ A stack is an ordered list that follows the LIFO (Last In, First Out) principle.
 > Solving the Tower of Hanoi problem
 > Sorting a stack
 
+![Stack and Queue](./img/stack-queue.png) <br>
+
 ### key operation:
 
 #### push(): adds an element to the top of the stack
