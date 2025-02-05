@@ -74,6 +74,8 @@ input: str1='testing',str2='test'
 output:test<br>
 //Q25 check number is perfect square or not<br>
 input: num=36,100
+//Q26 square root of a number<br>
+Input: n = 4 Output: 2
 output:yes<br>
 //Q26 how many capital and small letter in a string<br>
 input: str='AbbaBaa12'
@@ -223,6 +225,12 @@ Input: nums = [1,2,3,1] so output is 1+3=4<br>
 //Q86 Transpose of a Matrix<br>
 //Q87 remove all even numbers<br>
 //Q88 Convert UPPERCASE to lowercase<br>
+//Q89 check rotated and sorted<br>
+Input: nums = [3,4,5,1,2]
+Output: true<br>
+//Q90 binary to decimal<br>
+//Q91 decimal to binary<br>
+//Q92 Fahrenheit to Celsius<br>
 
 # tree
 
@@ -350,6 +358,9 @@ Output: [2,1,4,3]<br>
 Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
 Output: Intersected at '8'<br>
 //Q135 remove duplicate from a sorted linked list<br>
+//Q135 merge two sorted linked list<br>
+Input: list1 = [1,2,4], list2 = [1,3,4]
+Output: [1,1,2,3,4,4]
 
 # stack & queue
 
@@ -364,7 +375,10 @@ Output: Intersected at '8'<br>
 //Q144 remove invalid parenthesis and make it balanced by removing min number of bracket<br>
 //Q145 next greater element <br>arr=[6,0,8,1,3] nge_arr=[8,8,-1,3,-1] like 6's next greater element 8 and 0's next greater element 8 and so on<br>
 //Q146 next smaller element<br> arr=[4,8,5,2,2,5] nge_arr=[2,5,2,-1,-1]<br>
-//Q147 Queue Using Two Stacks
+//Q147 Queue Using Two Stacks<br>
+//Q148 Implement Stack using Queues<br>
+//Q149 remove all adjacent duplicate in string using stack<br>
+Input: s = "abbaca" Output: "ca"
 
 # searching & sorting
 
@@ -408,10 +422,17 @@ Output:[[1,4],[6,8],[9,10]]<br>
 //Q161 best time to sell stock and find max profit<br>
 Input:prices[]={1,3,6,9,11} output:10
 
+# Recursion
+
+//Q162 Find the longest common subsequence(lcs) of two strings.<br>
+Input: text1 = "abcde", text2 = "ace"
+Output: 3
+
 # Dynamic Programming
 
-//162. Count number of ways to cover a distance<br>
-//163. Number of Dice Rolls With Target Sum
+//162 Count number of ways to cover a distance<br>
+//163 Number of Dice Rolls With Target Sum<br>
+//164 solve the word break problem
 
 # graph
 
