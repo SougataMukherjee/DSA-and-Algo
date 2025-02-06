@@ -36,20 +36,40 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
 
    - Example: Common in binary search or balanced binary search trees (BST)
 
-4. **O(n^2) - Quadratic Time**
+4. **O(n log n) - Time**
 
    - Example:
+     -Merge Sort
+     -Quick Sort
 
    ```javascript
-   let count = 0;
-   for (let i = N; i > 0; i /= 2) {
-     for (let j = 0; j < i; j++) {
-       statement1;
-     }
+   function mergeSort(arr) {
+     if (arr.length <= 1) return arr;
+
+     const mid = Math.floor(arr.length / 2);
+     const left = mergeSort(arr.slice(0, mid));
+     const right = mergeSort(arr.slice(mid));
+
+     return merge(left, right);
    }
    ```
 
-5. **O(n^3) - Cubic Time**
+- Example: Common in binary search or balanced binary search trees (BST)
+
+5. **O(n^2) - Quadratic Time**
+
+- Example:
+
+```javascript
+let count = 0;
+for (let i = N; i > 0; i /= 2) {
+  for (let j = 0; j < i; j++) {
+    statement1;
+  }
+}
+```
+
+6. **O(n^3) - Cubic Time**
 
    ```javascript
    for (let i = 0; i < n; i++) {
@@ -61,7 +81,7 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
    }
    ```
 
-6. **O(2^n) - Exponential Time**
+7. **O(2^n) - Exponential Time**
 
    ```javascript
    function fibonacci(n) {
@@ -69,6 +89,9 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
      return fibonacci(n - 1) + fibonacci(n - 2);
    }
    ```
+
+8. **O(n!)**
+   -Example
 
 ### Simplifying Time Complexity
 
