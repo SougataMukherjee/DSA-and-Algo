@@ -34,35 +34,35 @@ degree of graph: The degree of a vertex is the number of edges connected to it.
 indegree:Number of edges coming into a vertex (only for directed graphs)
 outdegree:Number of edges going out from a vertex (only for directed graphs)
 
-##Graph and its representations
+### Graph and its representations
 
-```
-function addEdge(adj, i, j) {
-    adj[i][j] = 1;
-    adj[j][i] = 1; //undirected
-}
-
-function displayMatrix(adj) {
-    for (let i = 0; i < adj.length; i++) {
-        let row = `${i}: `;
-        for (let j = 0; j < adj[i].length; j++) {
-            row += `${adj[i][j]} `;
-        }
-        console.log(row);
+    ```
+    function addEdge(adj, i, j) {
+        adj[i][j] = 1;
+        adj[j][i] = 1; //undirected
     }
-}
 
-const V = 4;//number of vertices
-const adj = Array.from({ length: V }, () => Array(V).fill(0));// Initialize the adjacency matrix (4x4, filled with 0)
+    function displayMatrix(adj) {
+        for (let i = 0; i < adj.length; i++) {
+            let row = `${i}: `;
+            for (let j = 0; j < adj[i].length; j++) {
+                row += `${adj[i][j]} `;
+            }
+            console.log(row);
+        }
+    }
 
-// Add edges between vertices
-addEdge(adj, 0, 1);
-addEdge(adj, 0, 2);
-addEdge(adj, 1, 2);
-addEdge(adj, 2, 3);
+    const V = 4;//number of vertices
+    const adj = Array.from({ length: V }, () => Array(V).fill(0));// Initialize the adjacency matrix (4x4, filled with 0)
 
-displayMatrix(adj);
-```
+    // Add edges between vertices
+    addEdge(adj, 0, 1);
+    addEdge(adj, 0, 2);
+    addEdge(adj, 1, 2);
+    addEdge(adj, 2, 3);
+
+    displayMatrix(adj);
+    ```
 
 ### Graph Representation<br>
 
