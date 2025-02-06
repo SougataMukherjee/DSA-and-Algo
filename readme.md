@@ -361,6 +361,9 @@ Output: Intersected at '8'<br>
 //Q140 merge two sorted linked list<br>
 Input: list1 = [1,2,4], list2 = [1,3,4]
 Output: [1,1,2,3,4,4]
+//Q141 Sort a singly linked list using insertion sort and return its head
+Input: head = [4,2,1,3]
+Output: [1,2,3,4]
 
 # stack & queue
 
