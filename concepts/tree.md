@@ -1,7 +1,7 @@
 # Tree
 
 // A tree is a non-linear hierarchical data structure consisting of nodes linked together to simulate a hierarchy.<br>
-![Dynamic Programming](./img/tree.png) <br>
+![Dynamic Programming](../img/tree.png) <br>
 
 > If a tree has N nodes, there are exactly N-1 edges.<br>
 

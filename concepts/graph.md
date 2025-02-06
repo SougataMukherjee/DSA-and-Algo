@@ -63,8 +63,10 @@ addEdge(adj, 2, 3);
 displayMatrix(adj);
 ```
 
-#Graph Representation<br>
-#adjacency list:<br>
+# Graph Representation<br>
+
+### adjacency list:<br>
+
 ![Directed graph](../img/al-graph.png) <br>
 Each node stores a list of its adjacent nodes.its kind a list of lists
 Space Complexity: O(V + E),V=total list of vertex and E=number of edges(1,2,3)
@@ -72,7 +74,8 @@ Space Complexity: O(V + E),V=total list of vertex and E=number of edges(1,2,3)
 2 → [1, 3]
 3 → [1, 2]
 
-#adjacency matrix(n\*n):<br>
+### adjacency matrix(n\*n):<br>
+
 ![Directed graph](../img/am-graph.png) <br>
 here 1 connected with 2 and 2 connected with 3 and 3 to 1
 A matrix where a[i][j] = 1 if there is an edge between i and j, otherwise 0
@@ -82,9 +85,9 @@ Space Complexity: O(n²).
 2 1 0 1
 3 1 1 0
 
-graph traversal
+### graph traversal
 
-1. Breadth-First Search (BFS)
+1. **Breadth-First Search (BFS)**
    Uses: Finds the shortest path in an unweighted graph.
    Implementation: Uses a queue (FIFO).
    Steps:
@@ -111,21 +114,17 @@ graph traversal
         }
     }
    }
+   const graph = {
+   '0': ['1', '2'],
+   '1': ['0', '3', '4'],
+   '2': ['0'],
+   '3': ['1'],
+   '4': ['2', '3']
+   };
+   bfs(graph, '0');
    ```
 
-const graph = {
-'0': ['1', '2'],
-'1': ['0', '3', '4'],
-'2': ['0'],
-'3': ['1'],
-'4': ['2', '3']
-};
-
-bfs(graph, '0');
-
-```
-
-2. Depth-First Search (DFS)
+2. **Depth-First Search (DFS)**
    Uses: Detects cycles, finds connected components.
    Implementation: Uses a stack (LIFO) or recursion.
    Steps:
@@ -133,51 +132,52 @@ bfs(graph, '0');
    Visit the first unvisited neighbor recursively.
    Backtrack if no unvisited neighbor is found.
 
+   ```
 
-```
+   function dfs(graph, start, visited = {}) {
+   //start is current node,we are use visited node for keep track that graph is not becoming cycle
+   //Create a visited object to track visited nodes.If the node is already visited, return
+   if (visited[start]) return;
+   //else mark it as visited and print it.
+   visited[start] = true;
+   console.log(start);
+   //Recursively visit neighbors,if neighbour visited then backtrack
+   for (let neighbor of graph[start]) {
+   dfs(graph, neighbor, visited);
+   }
+   }
 
-function dfs(graph, start, visited = {}) {
-//start is current node,we are use visited node for keep track that graph is not becoming cycle
-//Create a visited object to track visited nodes.If the node is already visited, return
-if (visited[start]) return;
-//else mark it as visited and print it.
-visited[start] = true;
-console.log(start);
-//Recursively visit neighbors,if neighbour visited then backtrack
-for (let neighbor of graph[start]) {
-dfs(graph, neighbor, visited);
-}
-}
+   const graph = {
+   '0': ['1', '2'],
+   '1': ['0', '3', '4'],
+   '2': ['0'],
+   '3': ['1'],
+   '4': ['2', '3']
+   };
 
-const graph = {
-'0': ['1', '2'],
-'1': ['0', '3', '4'],
-'2': ['0'],
-'3': ['1'],
-'4': ['2', '3']
-};
+   dfs(graph, '0');
 
-dfs(graph, '0');
+   ```
 
-```
+### spanning tree
 
-
-spanning tree
 in a spaning tree in a graph all the vertices are same as given graph but number of vertices is 1 edge less
 spaning tree can not have a cycle and does not disconnected
 adding one edge to the spanning tree will create a loop
 every connected and undirected graph has atleast one spaning tree
 
-minimum spanning tree
-A Minimum Spanning Tree (MST) is a spanning tree where the sum of edge weights is minimized.
-1)Prim's Algorithm (Greedy Approach)
-Start from any node.
-Pick the smallest weighted edge that connects to an unvisited node.
-Repeat until all nodes are connected.
-2)Kruskal's Algorithm (Greedy + Sorting)
-Sort all edges by weight.
-Pick the smallest edge that doesn’t create a cycle.
-Repeat until all nodes are connected.
+### minimum spanning tree
+
+A Minimum Spanning Tree (MST) is a spanning tree where the sum of edge weights is minimized.<br>
+
+1. Prim's Algorithm (Greedy Approach)
+   Start from any node.
+   Pick the smallest weighted edge that connects to an unvisited node.
+   Repeat until all nodes are connected.
+2. Kruskal's Algorithm (Greedy + Sorting)
+   Sort all edges by weight.
+   Pick the smallest edge that doesn’t create a cycle.
+   Repeat until all nodes are connected.
 
 detect cycle in directed graph
 Approach: Use DFS with a visited array.
@@ -188,12 +188,14 @@ start every node indicate as -1 it mean unvisited
 detect cycle in undirected graph
 Approach: Use DFS with parent tracking.
 
-Topological sort
+### Topological sort
+
 Used for: Ordering tasks with dependencies (e.g., course scheduling).
 graph should be directed and acyclic graph,if its there then we have atleast one topological ordering
 find in-degree of the graph and start with node having 0 in-degree,remove edges and update in-degree,update untill node are processed
 
-Find the shortest path (Dijkstra's Algorithm)
+### Find the shortest path (Dijkstra's Algorithm)
+
 Used for: Finding the shortest path in a graph with non-negative weights.
 Set all distances to infinity, except the start node (0)
 Use a priority queue to pick the smallest distance node.
@@ -206,7 +208,3 @@ Used for: Graphs with negative weights.
 Initialize all distances to infinity.
 Relax all edges V-1 times
 If any distance updates in the V-th iteration, a negative cycle exists.
-
-
-
-```
