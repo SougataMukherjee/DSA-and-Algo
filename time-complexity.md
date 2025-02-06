@@ -4,7 +4,7 @@ Time complexity is the amount of time taken by an algorithm as a function of the
 
 ![min max Heap tree](./img/time-complexity.png)
 
-## Big O Notation
+### Big O Notation
 
 Big O Notation gives the worst-case complexity of an algorithm. It describes the upper bound of the growth rate of the algorithm's runtime.
 
@@ -38,31 +38,33 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
 
 4. **O(n^2) - Quadratic Time**
 
-```javascript
-let count = 0;
-for (let i = N; i > 0; i /= 2) for (let j = 0; j < i; j++) count++;
-```
+   - Example:
+
+   ```javascript
+   let count = 0;
+   for (let i = N; i > 0; i /= 2) for (let j = 0; j < i; j++) count++;
+   ```
 
 5. **O(n^3) - Cubic Time**
 
-```javascript
-for (let i = 0; i < n; i++) {
-  for (let j = 0; j < n; j++) {
-    for (let k = 0; k < n; k++) {
-      statement1;
-    }
-  }
-}
-```
+   ```javascript
+   for (let i = 0; i < n; i++) {
+     for (let j = 0; j < n; j++) {
+       for (let k = 0; k < n; k++) {
+         statement1;
+       }
+     }
+   }
+   ```
 
 6. **O(2^n) - Exponential Time**
 
-```javascript
-function fibonacci(n) {
-  if (n <= 1) return n;
-  return fibonacci(n - 1) + fibonacci(n - 2);
-}
-```
+   ```javascript
+   function fibonacci(n) {
+     if (n <= 1) return n;
+     return fibonacci(n - 1) + fibonacci(n - 2);
+   }
+   ```
 
 ### Simplifying Time Complexity
 
