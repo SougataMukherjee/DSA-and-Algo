@@ -35,7 +35,7 @@ In a singly linked list, each node contains:
 `Data`: The value of the node.
 `Next`: A pointer to the next node in the list (null for the last node).
 
-![linked list](./img/linked-list.png)<br>
+![linked list](../img/linked-list.png)<br>
 
 ```
 class Node {
@@ -67,7 +67,7 @@ In a doubly linked list, each node contains:
 `Next`: A pointer to the next node.<br>
 `Prev`: A pointer to the previous node.<br>
 
-![double linked list](./img/dubly-ll.png)<br>
+![double linked list](../img/dubly-ll.png)<br>
 
 ```
 class Node {

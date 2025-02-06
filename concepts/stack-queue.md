@@ -9,27 +9,45 @@ A stack is an ordered list that follows the LIFO (Last In, First Out) principle.
 > Solving the Tower of Hanoi problem
 > Sorting a stack
 
-![Stack and Queue](./img/stack-queue.png) <br>
+![Stack and Queue](../img/stack-queue.png) <br>
 
 ### key operation:
 
-#### push(): adds an element to the top of the stack
+#### push():
 
-#### Pop():removes and returns the top elements
+adds an element to the top of the stack
 
-#### peek/Top():return the top element without removing it
+#### Pop():
 
-#### isEmpty():check if stack is empty
+removes and returns the top elements
 
-#### isFull():check if stack is full
+#### peek/Top():
 
-#### overflow:if stack is full and you try to push an element
+return the top element without removing it
 
-#### underflow:if stack is empty and you try to pop an element
+#### isEmpty():
 
-#### Prefix expression:operand are follow operator
+check if stack is empty
 
-#### Postfix expression:Operator are follow operands
+#### isFull():
+
+check if stack is full
+
+#### overflow:
+
+if stack is full and you try to push an element
+
+#### underflow:
+
+if stack is empty and you try to pop an element
+
+#### Prefix expression:
+
+operand are follow operator
+
+#### Postfix expression:
+
+Operator are follow operands
 
 ### //convert Infix expression to postfix expression
 

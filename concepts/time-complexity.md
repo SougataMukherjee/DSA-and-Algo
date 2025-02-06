@@ -2,7 +2,7 @@
 
 Time complexity is the amount of time taken by an algorithm as a function of the input size (n). It helps us understand how the runtime of an algorithm grows as the input size increases.
 
-![min max Heap tree](./img/time-complexity.png)
+![min max Heap tree](../img/time-complexity.png)
 
 ### Big O Notation
 

@@ -1,3 +1,3 @@
 # Roadmap for DSA
 
-![roadmap](./img/dsa-roadmap.svg)
+![roadmap](../img/dsa-roadmap.svg)

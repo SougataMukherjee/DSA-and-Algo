@@ -7,33 +7,61 @@
 
 ### Tree Terminology:<br>
 
-#### Root node: The topmost node in a tree.<br>
+#### Root node:
 
-#### Parent node: The immediate predecessor of a node.<br>
+The topmost node in a tree.<br>
 
-#### Child node: The immediate successor of a node.<br>
+#### Parent node:
 
-#### Leaf node: A node that has no child.<br>
+The immediate predecessor of a node.<br>
 
-#### Non-leaf node: A node that has at least one child.<br>
+#### Child node:
 
-#### Sibling: Nodes that share the same parent.<br>
+The immediate successor of a node.<br>
 
-#### Degree of a node: The number of children a node has.<br>
+#### Leaf node:
 
-#### Depth of a node: The length of the path from the root to the node.<br>
+A node that has no child.<br>
 
-#### Height of a node: The number of edges on the longest path from the node to a leaf.<br>
+#### Non-leaf node:
 
-#### Path: A collection of edges from the source node to the destination node.<br>
+A node that has at least one child.<br>
 
-#### Subtree: A portion of a tree consisting of a node and its descendants. A tree can have left and right subtrees.<br>
+#### Sibling:
 
-#### Diameter: The longest path between any two nodes in the tree, measured in the number of edges.<br>
+Nodes that share the same parent.<br>
 
-#### Right view: Nodes visible when the tree is viewed from the right.<br>
+#### Degree of a node:
 
-#### Top view: Nodes visible when the tree is viewed from the top.<br>
+The number of children a node has.<br>
+
+#### Depth of a node:
+
+The length of the path from the root to the node.<br>
+
+#### Height of a node:
+
+The number of edges on the longest path from the node to a leaf.<br>
+
+#### Path:
+
+A collection of edges from the source node to the destination node.<br>
+
+#### Subtree:
+
+A portion of a tree consisting of a node and its descendants. A tree can have left and right subtrees.<br>
+
+#### Diameter:
+
+The longest path between any two nodes in the tree, measured in the number of edges.<br>
+
+#### Right view:
+
+Nodes visible when the tree is viewed from the right.<br>
+
+#### Top view:
+
+Nodes visible when the tree is viewed from the top.<br>
 
 ### Applications of Trees:<br>
 
@@ -44,19 +72,29 @@
 ### Binary Tree:<br>
 
 // A binary tree is a tree where each node has at most two children, referred to as the left child and the right child.
-![Dynamic Programming](./img/tree-type.png) <br>
+![Dynamic Programming](../img/tree-type.png) <br>
 
 #### Types:<br>
 
-##### 1. Strict binary tree: A binary tree where each node has either 0 or 2 children.<br>
+##### 1. Strict binary tree:
 
-##### 2. Complete binary tree: All levels except possibly the last are completely filled, and the last level has nodes as left as possible.<br>
+A binary tree where each node has either 0 or 2 children.<br>
 
-##### 3. Perfect binary tree: A binary tree where all internal nodes have two children, and all leaf nodes are on the same level.<br>
+##### 2. Complete binary tree:
 
-##### 4. Full binary tree: Every node other than the leaves has two children.<br>
+All levels except possibly the last are completely filled, and the last level has nodes as left as possible.<br>
 
-##### 5. Balanced binary tree: The height difference between the left and right subtrees of every node is at most 1.<br>
+##### 3. Perfect binary tree:
+
+A binary tree where all internal nodes have two children, and all leaf nodes are on the same level.<br>
+
+##### 4.
+
+Full binary tree: Every node other than the leaves has two children.<br>
+
+##### 5. Balanced binary tree:
+
+The height difference between the left and right subtrees of every node is at most 1.<br>
 
 // Binary Tree Node Structure in JavaScript:
 
@@ -139,7 +177,7 @@ console.log(root.data);
 ### Heap Tree:
 
 A Heap is a complete binary tree(in arrays in between elements there should not be any gap) data structure that satisfies the heap property: for every node, the value of its children is greater than or equal to its own value. Heaps are usually used to implement priority queues<br>
-![Heap tree](./img/heap-1.png) <br>
+![Heap tree](../img/heap-1.png) <br>
 Note: The heap tree is a special balanced binary tree data structure where the root node is compared with its children and arrange accordingly.
 Note: Node always added from the left
 if a Node is at index i,
@@ -157,14 +195,14 @@ ABCDEFG<br>
 
 #### Max-Heap: The root node is the largest element, and every parent is larger than its children.<br>
 
-![min max Heap tree](./img/heap.png) <br>
+![min max Heap tree](../img/heap.png) <br>
 //Insert Operation in Max Heap
 Add the element at the last free space in the heap (i.e., at the end of the array).
 Heapify Up: Compare the inserted element with its parent. If the element is larger than its parent, swap them.
 Repeat the process until the element is in the correct position to maintain the max-heap property (i.e., every parent node is greater than its children).
 
 T.C in best-case O(1) and in normal O(logn)
-![max-heap](./img/max_heap.png) <br>
+![max-heap](../img/max_heap.png) <br>
 
 ```
 function maxHeapify(arr, i, n) {

@@ -4,20 +4,20 @@ A graph is a data structure consisting of vertices (nodes) and edges (connection
 
 Types of Graphs<br>
 1)undirected graph<br>
-![UnDirected graph](./img/ud-graph.png) <br>
+![UnDirected graph](../img/ud-graph.png) <br>
 The edges have no direction.
 a-b<br>
 2)directed Graph (digraph):<br>
-![Directed graph](./img/dg-graph.png) <br>
+![Directed graph](../img/dg-graph.png) <br>
 The edges have a direction.
 a->b<br>
 3)weighted graph<br>
-![weighted graph](./img/wg-graph.png) <br>
+![weighted graph](../img/wg-graph.png) <br>
 The edges have weights (costs).
 4
 a->b<br>
 4)cyclic graph<br>
-![Cyclic graph](./img/cg-graph.png) <br>
+![Cyclic graph](../img/cg-graph.png) <br>
 A graph that contains at least one cycle.
 a->b->c->d->a<br>
 5)acyclic Graph:
@@ -65,7 +65,7 @@ displayMatrix(adj);
 
 #Graph Representation<br>
 #adjacency list:<br>
-![Directed graph](./img/al-graph.png) <br>
+![Directed graph](../img/al-graph.png) <br>
 Each node stores a list of its adjacent nodes.its kind a list of lists
 Space Complexity: O(V + E),V=total list of vertex and E=number of edges(1,2,3)
 1 → [2, 3]
@@ -73,7 +73,7 @@ Space Complexity: O(V + E),V=total list of vertex and E=number of edges(1,2,3)
 3 → [1, 2]
 
 #adjacency matrix(n\*n):<br>
-![Directed graph](./img/am-graph.png) <br>
+![Directed graph](../img/am-graph.png) <br>
 here 1 connected with 2 and 2 connected with 3 and 3 to 1
 A matrix where a[i][j] = 1 if there is an edge between i and j, otherwise 0
 Space Complexity: O(n²).
