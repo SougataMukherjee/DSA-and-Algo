@@ -4,35 +4,36 @@ A graph is a data structure consisting of vertices (nodes) and edges (connection
 
 ### Types of Graphs<br>
 
-1. undirected graph<br>
+1. `undirected graph`<br>
    ![UnDirected graph](../img/ud-graph.png) <br>
    The edges have no direction.
    a-b<br>
-2. directed Graph (digraph):<br>
+2. `directed Graph` (digraph):<br>
    ![Directed graph](../img/dg-graph.png) <br>
    The edges have a direction.
    a->b<br>
-3. weighted graph<br>
+3. `weighted graph`<br>
    ![weighted graph](../img/wg-graph.png) <br>
    The edges have weights (costs).
    4
    a->b<br>
-4. cyclic graph<br>
+4. `cyclic graph`<br>
    ![Cyclic graph](../img/cg-graph.png) <br>
    A graph that contains at least one cycle.
    a->b->c->d->a<br>
-5. acyclic Graph:
+5. `acyclic Graph`:
    A graph with no cycles.
    a → b → c → d.<br>
-6. connected Graph
+6. `connected Graph`
    every vertex is reachable from any other vertex.<br>
-7. disconnected Graph
+7. `disconnected Graph`
    some vertices are not reachable from others
 
-graph properties
-degree of graph: The degree of a vertex is the number of edges connected to it.
-indegree:Number of edges coming into a vertex (only for directed graphs)
-outdegree:Number of edges going out from a vertex (only for directed graphs)
+### graph properties
+
+    `degree of graph`: The degree of a vertex is the number of edges connected to it.
+    `indegree`:Number of edges coming into a vertex (only for directed graphs)
+    `outdegree`:Number of edges going out from a vertex (only for directed graphs)
 
 ### Graph and its representations
 
@@ -66,7 +67,7 @@ outdegree:Number of edges going out from a vertex (only for directed graphs)
 
 ### Graph Representation<br>
 
-### adjacency list:<br>
+#### adjacency list:<br>
 
 ![Directed graph](../img/al-graph.png) <br>
 Each node stores a list of its adjacent nodes.its kind a list of lists
