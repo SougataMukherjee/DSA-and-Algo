@@ -42,7 +42,11 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
 
    ```javascript
    let count = 0;
-   for (let i = N; i > 0; i /= 2) for (let j = 0; j < i; j++) count++;
+   for (let i = N; i > 0; i /= 2) {
+     for (let j = 0; j < i; j++) {
+       statement1;
+     }
+   }
    ```
 
 5. **O(n^3) - Cubic Time**
