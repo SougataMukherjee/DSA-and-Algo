@@ -2,11 +2,21 @@
 
 Time complexity is the amount of time taken by an algorithm as a function of the input size (n). It helps us understand how the runtime of an algorithm grows as the input size increases.
 
+### Asymptotic Analysis
+
+- Time complexity is the number of operations as a function of inputs.
+- It focuses on the growth rate of the algorithm's runtime as the input size increases.
+
 ![min max Heap tree](../img/time-complexity.png)
 
 ### Big O Notation
 
 Big O Notation gives the worst-case complexity of an algorithm. It describes the upper bound of the growth rate of the algorithm's runtime.
+
+### Time Limit Considerations
+
+- A time limit of 1 second typically allows for about 10^8 operations on modern machines.
+- This can vary based on the specific system and programming language used.
 
 ### Common Time Complexities
 
@@ -23,9 +33,23 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
        statement2;
      }
      ```
-3. **O(log n) - Logarithmic Time**
+3. **O(n + m) - Linear Time**
 
-   - Example:
+   ```javascript
+   let n = arr1.length;
+   let m = arr2.length;
+
+   for (let i = 0; i < n; i++) {
+     statement1;
+   }
+   for (let i = 0; i < m; i++) {
+     statement2;
+   }
+   ```
+
+4. **O(log n) - Logarithmic Time**
+
+   - Example:(log₂(n))
 
    ```javascript
    for (i = 1; i <= n; i *= 2) {
@@ -34,9 +58,18 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
    }
    ```
 
+   - Example:logₖ(n)
+
+   ```javascript
+   for (i = 1; i <= n; i *= k) {
+     statement1;
+     statement2;
+   }
+   ```
+
    - Example: Common in binary search or balanced binary search trees (BST)
 
-4. **O(n log n) - Time**
+5. **O(n log n) - Time**
 
    - Example:
      -Merge Sort
@@ -56,7 +89,7 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
 
 - Example: Common in binary search or balanced binary search trees (BST)
 
-5. **O(n^2) - Quadratic Time**
+6. **O(n^2) - Quadratic Time**
 
 - Example:
 
@@ -69,7 +102,7 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
   }
   ```
 
-6. **O(n^3) - Cubic Time**
+7. **O(n^3) - Cubic Time**
 
    ```javascript
    for (let i = 0; i < n; i++) {
@@ -81,7 +114,7 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
    }
    ```
 
-7. **O(2^n) - Exponential Time**
+8. **O(2^n) - Exponential Time**
 
    ```javascript
    function fibonacci(n) {
@@ -90,7 +123,7 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
    }
    ```
 
-8. **O(n!)**
+9. **O(n!)**
    -Example
 
 ### Simplifying Time Complexity
@@ -100,12 +133,13 @@ When analyzing time complexity:
 1. Ignore constants
 2. Consider only the largest term
 
-For example, if f(n) = 2n^2 + 5n + 9, the time complexity is O(n^2).
+For example, if `f(n) = 2n^2 + 5n + 9`, the time complexity is O(n^2).
 
 ### Constraints and Acceptable Time Complexities
 
 Based on common constraints in competitive programming:
 
+- n > 10^8: O(log n) is acceptable
 - n ≤ 10^8: O(n) is acceptable
 - n ≤ 10^6: O(n log n) is acceptable
 - n ≤ 10^4: O(n^2) is acceptable
