@@ -31,9 +31,9 @@ A graph is a data structure consisting of vertices (nodes) and edges (connection
 
 ### graph properties
 
-    `degree of graph`: The degree of a vertex is the number of edges connected to it.
-    `indegree`:Number of edges coming into a vertex (only for directed graphs)
-    `outdegree`:Number of edges going out from a vertex (only for directed graphs)
+    - degree of graph: The degree of a vertex is the number of edges connected to it.
+    - indegree:Number of edges coming into a vertex (only for directed graphs)
+    - outdegree:Number of edges going out from a vertex (only for directed graphs)
 
 ### Graph and its representations
 
