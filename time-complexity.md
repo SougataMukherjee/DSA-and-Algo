@@ -60,14 +60,14 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
 
 - Example:
 
-```javascript
-let count = 0;
-for (let i = N; i > 0; i /= 2) {
-  for (let j = 0; j < i; j++) {
-    statement1;
+  ```javascript
+  let count = 0;
+  for (let i = N; i > 0; i /= 2) {
+    for (let j = 0; j < i; j++) {
+      statement1;
+    }
   }
-}
-```
+  ```
 
 6. **O(n^3) - Cubic Time**
 
