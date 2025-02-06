@@ -8,7 +8,7 @@ function allPathsSourceTarget(graph) {
     if (node === target) {
       paths.push([...path]);
     } else {
-      //neighobour traversal
+      // Neighbor traversal
       for (let neighbor of graph[node]) {
         dfs(neighbor, path);
       }
