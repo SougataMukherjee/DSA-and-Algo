@@ -1,6 +1,6 @@
 # Achievement
 
-![Achievement Title](./img/dsa-certification.png)<br>
+![Achievement Title](./img/dsa-certification.png){ width=400 height=250 }<br>
 
 # Array & String
 
