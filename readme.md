@@ -1,7 +1,3 @@
-# Achievement
-
-![Achievement Title](./img/dsa-certification.png){ width=400 height=250 }<br>
-
 # Array & String
 
 //Q1 in integer array move all 0's to the end of the array<br>
@@ -463,3 +459,7 @@ Output: [[2,4],[1,3],[2,4],[1,3]]<br>
 //Q181 Egg Drop With 2 Eggs and N Floors<br>
 Input: n = 2
 Output: 2<br>
+
+# Achievement
+
+![Achievement Title](./img/dsa-certification.png)
