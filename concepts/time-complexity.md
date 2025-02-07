@@ -76,14 +76,14 @@ Big O Notation gives the worst-case complexity of an algorithm. It describes the
      -Quick Sort
 
    ```javascript
-   function mergeSort(arr) {
+   function mergeSort(arr,begin,end) {
      if (arr.length <= 1) return arr;
 
-     const mid = Math.floor(arr.length / 2);
-     const left = mergeSort(arr.slice(0, mid));
-     const right = mergeSort(arr.slice(mid));
-
-     return merge(left, right);
+     if(begin>=end) return;
+   let mid=begin+(end-begin)/2;
+   let mergeSort(arr,begin,mid)
+   mergeSort(arr,mid+1,end)
+   merge(arr,begin,mid,end)
    }
    ```
 
