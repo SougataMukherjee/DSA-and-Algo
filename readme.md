@@ -231,6 +231,18 @@ Output: true<br>
 //Q90 binary to decimal<br>
 //Q91 decimal to binary<br>
 //Q92 Fahrenheit to Celsius<br>
+//Q93 WAP to count total number of punctuation characters exist in a string<br>
+//Q93 wap to count number of words present in a string<br>
+//Q93 WAP to find distance between two points<br>
+//Q93 wap all prime factor of given number<br>
+//Q93 calculates the sum of the diagonal elements in 3\*3 matrix<br>
+//Q93 count number of even and odd digit in a number<br>
+//Q93 check given input character is alphabet or not<br>
+//Q93 wap to swap two number<br>
+//Q93 wap to check for Armstrong number(1,153,370)<br>
+//Q93 wap to calculate simple internet<br>
+//Q93 add an element at a given index<br>
+![add-array](./img/insert-in-array.png)<br>
 
 # tree
 
@@ -263,6 +275,11 @@ Output: [3,1,null,null,2]<br>
 Input: root = [3,9,20,null,null,15,7]
 Output: [[3],[20,9],[15,7]]<br>
 ![zic zag](./img/zig-zag%20traversal.png)<br>
+//Q110 find height of binary tree<br>
+//Q111 find diameter of binary tree<br>
+Input: root = [1,2,3,4,5]
+Output: 3
+Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].<br>
 
 # two pointer
 
@@ -289,6 +306,21 @@ Output: 3<br>
 Input : [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
 Output : [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]<br>
 
+# Sliding window
+
+//Q116 Given an array of positive integers nums and a positive integer target, return the minimal length of a sub array
+whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.<br>
+Input: target = 7, nums = [2,3,1,2,4,3]
+Output: 2[4,3]<br>
+//Q117 Find the longest contiguous subarray (baskets) containing at most two distinct integers (fruits).<br>
+Input: fruits = [1,2,1]
+Output: 3
+Explanation: We can pick from all 3 trees.<br>
+//Q118 Given an array of integers nums and an integer k. A continuous subarray is called nice if there are k odd numbers on it.<br>
+Input: nums = [1,1,2,1,1], k = 3
+Output: 2
+Explanation: The only sub-arrays with 3 odd numbers are [1,1,2,1] and [1,2,1,1].<br>
+
 # prefix sum
 
 //Q117 print the sum of value in a array in given range(l=3 an r=5 follow 1 based index)<br>
@@ -306,7 +338,23 @@ Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75<br>
 //Q121 find Maximum Subarray<br>
 Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
 Output: 6
-Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.<br>
+//Q122 partition of the array into two subarray<br>
+//Q123 product of array except self<br>
+//Q124 Given n flights labeled 1 to n and an array bookings where each entry [firsti, lasti, seatsi] represents seatsi seats booked for flights firsti to lasti, return an array where each element represents the total seats reserved for the corresponding flight.<br>
+Input: bookings = [[1,2,10],[2,3,20],[2,5,25]], n = 5
+10 seats booked from flight 1 to 2.
+Output: [10,55,45,25,25]<br>
+![flight-book](./img/corporate-flight-book.png)<br>
+//Q125 zero array transformation<br>
+Input: nums = [1,0,1], queries = [[0,2]]
+Output: true<br>
+//Q126 maximum count of distinct integers you can select from the range while avoiding banned number and keeping the sum ≤ maxSum<br>
+Input: banned = [1,6,5], n = 5, maxSum = 6
+Output: 2<br>
+//Q127 Find if there is a subarray with 0 sums<br>
+Input: {4, 2, -3, 1, 6}
+Output: true <br>
 
 # binary search
 
@@ -363,7 +411,8 @@ Input: list1 = [1,2,4], list2 = [1,3,4]
 Output: [1,1,2,3,4,4]
 //Q141 Sort a singly linked list using insertion sort and return its head
 Input: head = [4,2,1,3]
-Output: [1,2,3,4]
+Output: [1,2,3,4]<br>
+//Q142 delete last element in linked list<br>
 
 # stack & queue
 
@@ -381,7 +430,8 @@ Output: [1,2,3,4]
 //Q152 Queue Using Two Stacks<br>
 //Q153 Implement Stack using Queues<br>
 //Q154 remove all adjacent duplicate in string using stack<br>
-Input: s = "abbaca" Output: "ca"
+Input: s = "abbaca" Output: "ca"<br>
+//Q155 implement stack using array<br>
 
 # searching & sorting
 
@@ -423,7 +473,20 @@ Output: 3<br>
 Input:arr[]=[[1,3],[2,4],[6,8],[9,10]]
 Output:[[1,4],[6,8],[9,10]]<br>
 //Q168 best time to sell stock and find max profit<br>
-Input:prices[]={1,3,6,9,11} output:10
+Input:prices[]={1,3,6,9,11} output:10<br>
+//Q168 Find the starting gas station index to complete a circular route if possible; otherwise, return -1<br>
+Input: gas = [1,2,3,4,5], cost = [3,4,5,1,2]
+Output: 3<br>
+//Q168 Find the minimum money required to complete all transactions in any order.<br>
+Input: transactions = [[2,1],[5,0],[4,2]]
+Output: 10<br>
+//Q168 if an array can become non-decreasing by modifying at most one element<br>
+Input: nums = [4,2,3]
+Output: true
+Explanation: You could modify the first 4 to 1 to get a non-decreasing array.<br>
+//Q168 Find the minimum insertions needed to make a given parentheses string s valid.<br>
+Input: s = "())"
+Output: 1<br>
 
 # Recursion
 
@@ -435,7 +498,14 @@ Output: 3
 
 //Q170 Count number of ways to cover a distance<br>
 //Q171 Number of Dice Rolls With Target Sum<br>
-//Q172 solve the word break problem
+//Q172 solve the word break problem<br>
+//Q173 Unique Paths<br>
+Input: m = 3, n = 7
+Output: 28<br>
+//Q174 Maximum Length of Repeated Subarray<br>
+Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
+Output: 3
+Explanation: The repeated subarray with maximum length is [3,2,1].<br>
 
 # graph
 
