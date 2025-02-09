@@ -21,7 +21,7 @@ Insert and delete operations are costly in terms of time complexity. Insertion o
 
 #### Memory Wastage:
 
-Arrays may also waste memory if allocated space is more than needed, or they may require resizing when they become full.
+Arrays may also waste memory if allocated space is more than needed, or they may require resizing when they became full.
 
 ### Advantages of Linked Lists
 
