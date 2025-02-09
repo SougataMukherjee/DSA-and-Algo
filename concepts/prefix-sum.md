@@ -35,8 +35,6 @@ Initial Array: [0, 0, 0, 0, 0]
 Update Querys=[(1,3,2),(2,4,3),(0,2,-2)]
 steps:
 
----
-
 1. Query (1, 3, 2):
    Index: 0 1 2 3 4
    Array: [0, 2, 0, 0, -2]
