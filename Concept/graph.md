@@ -14,7 +14,7 @@ A graph is a data structure consisting of vertices (nodes) and edges (connection
    a->b<br>
 3. `weighted graph`<br>
    ![weighted graph](../img/wg-graph.png) <br>
-   The edges have weights (costs).
+   The edges have weights (costs)
    4
    a->b<br>
 4. `cyclic graph`<br>
