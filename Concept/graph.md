@@ -1,6 +1,8 @@
 # Graph
 
-A graph is a data structure consisting of vertices (nodes) and edges (connections). It is commonly used to represent networks like social connections, maps, and web pages.
+A graph is a non-linear data structure consisting of vertices (nodes) and edges (connections). It is commonly used to represent networks like social connections, maps, and web pages.<br>
+
+![graph](../img/graph.png) <br>
 
 ### Types of Graphs<br>
 

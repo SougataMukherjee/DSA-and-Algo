@@ -5,6 +5,12 @@ A linked list is a linear data structure where each element (called a node) cont
 `Data`: The value or information stored in the node.<br>
 `Next` (in Singly Linked List) or Next and Prev (in Doubly Linked List): Pointers to the next node in the sequence (and previous node for doubly linked list).<br>
 
+### list vs linked list
+
+A list is a linear collection of elements stored in contiguous memory locations (e.g. an array).
+
+A linked list is a linear data structure where elements (nodes) are connected via pointers, allowing dynamic memory allocation
+
 ### Limitations of Arrays
 
 #### Fixed Size:
