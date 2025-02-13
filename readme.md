@@ -243,6 +243,7 @@ Output: true<br>
 //Q93 wap to calculate simple internet<br>
 //Q93 add an element at a given index<br>
 ![add-array](./img/insert-in-array.png)<br>
+//Q93 First Missing Positive<br>
 
 # tree
 
@@ -376,7 +377,8 @@ Output: 1<br>
 Explanation: The original array was [1,2,3,4,5] rotated 3 times.<br>
 //Q127 Spiral Matrix<br>
 Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
-Output: [1,2,3,6,9,8,7,4,5]
+Output: [1,2,3,6,9,8,7,4,5]<br>
+//Q128 Find K Closest Elements ,Given a sorted array arr, and integers k and x, return the k closest integers to x in the array, sorted in ascending order, with ties broken by the smaller integer.<br>
 
 # Linked List
 
@@ -492,7 +494,8 @@ Output: 1<br>
 
 //Q169 Find the longest common subsequence(lcs) of two strings.<br>
 Input: text1 = "abcde", text2 = "ace"
-Output: 3
+Output: 3<br>
+//Q170 sort and reverse a stack using recursion<br>
 
 # Dynamic Programming
 
@@ -506,6 +509,37 @@ Output: 28<br>
 Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
 Output: 3
 Explanation: The repeated subarray with maximum length is [3,2,1].<br>
+//Q175 Find the minimum path sum from the top-left to the bottom-right of an m×n grid filled with non-negative numbers, moving only right or down<br>
+Input: grid = [[1,3,1],[1,5,1],[4,2,1]]
+Output: 7
+Explanation: Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.<br>
+//Q176 Target sum in array nums and an integer target, count the number of ways to assign + or - to each element in nums such that the resulting expression evaluates to target.<br>
+![findtargetsum](./img/target-sum.png)<br>
+//Q177 Longest Increasing Subsequence<br>
+Input: nums = [10,9,2,5,3,7,101,18]
+Output: 4
+Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.<br>
+//Q178 Use backtracking with DFS to explore all possible paths, collecting the path with maximum gold while marking visited cells temporarily.<br>
+Input: grid = [[0,6,0],[5,8,7],[0,9,0]]
+Output: 24
+Explanation:
+[[0,6,0],
+ [5,8,7],
+ [0,9,0]]
+Path to get the maximum gold, 9 -> 8 -> 7.<br>
+//Q179 Maximum Product Subarray<br>
+Input: nums = [2,3,-2,4]
+Output: 6
+Explanation: [2,3] has the largest product 6.<br>
+//Q180 Palindromic Substrings<br>
+Input: s = "abc"
+Output: 3
+Explanation: Three palindromic strings: "a", "b", "c".<br>
+//Q181 Find the minimum number of coin change to make up the given amount using coins of different denominations, or return -1 if it's not possible.<br>
+//Q182 print all the subsequence<br>
+//Q183 Number of Subsequences That Satisfy the Given Sum Condition<br>
+Input: nums = [3,5,6,7], target = 9
+Output: 4<br>
 
 # graph
 
@@ -529,6 +563,67 @@ Output: [[2,4],[1,3],[2,4],[1,3]]<br>
 //Q181 Egg Drop With 2 Eggs and N Floors<br>
 Input: n = 2
 Output: 2<br>
+//Q182 Find the minimum time required for all fresh oranges in an m x n grid to rot, where rotten oranges spread to adjacent fresh ones every minute, or return -1 if impossible.<br>
+Input: grid = [[2,1,1],[1,1,0],[0,1,1]]
+Output: 4<br>
+//Q183 Find the minimum time for all n nodes in a directed network delay time (given as times[i] = (ui, vi, wi)) to receive a signal sent from node k, or return -1 if unreachable<br>
+Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
+Output: 2<br>
+//Q184 Find the minimum number of dice rolls required to reach the last square n×n snake and ladder board, where you move based on a 6-sided die and follow snakes or ladders when landed on.<br>
+Input: board = [[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]
+Output: 4<br>
+//Q185 Check if a given graph is Bipartite using DFS<br>
+
+# Bit manipulation
+
+//Q182 count set bit ina integer
+Input: n = 2
+Output: [0,1,1]
+Explanation:
+0 --> 0
+1 --> 1
+2 --> 10
+//Q184 find weather a number is power of twoInput: n = 16
+Output: true
+Explanation: 24 = 16
+//Q185 find the single element in a non-empty array where every element appears twice except for one,
+Input: nums = [2,2,1]
+
+Output: 1
+
+# Backtracking
+
+//Q186 generating all possible subsets (the power set) of a unique integer array<br>
+Input: nums = [1,2,3]
+Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]<br>
+//Q187 Given an array nums of distinct integers, return all the possible permutations<br>
+Input: nums = [1,2,3]
+Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]<br>
+//Q188 Palindrome Partitioning<br>
+Input: s = "aab"
+Output: [["a","a","b"],["aa","b"]]<br>
+//Q189 Partition Equal Subset Sum<br>
+Input: nums = [1,5,11,5]
+Output: true<br>
+//Q190 generating all possible letter combinations for a phone number<br>
+Input: digits = "23"
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]<br>
+//Q191 Given an n x n grid representing a knight's movement on a chessboard, return true if the knight visits every cell exactly once and follows valid knight moves, otherwise return false.<br>
+Input: grid = [[0,11,16,5,20],[17,4,19,10,15],[12,1,8,21,6],[3,18,23,14,9],[24,13,2,7,22]]
+Output: true
+Explanation: The above diagram represents the grid. It can be shown that it is a valid configuration.<br>
+//Q192 given 9x9 Sudoku board valid, ensuring each row, column, and 3x3 sub-box contains unique digits 1-9 in filled cells<br>
+Input: board =
+[["5","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]]
+Output: true<br>
 
 # Achievement
 
