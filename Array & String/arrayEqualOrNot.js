@@ -10,3 +10,16 @@ for (let i = 0; i < arr1.length; i++) {
     console.log(false);
   }
 }
+
+//solution 2
+function checkEqual(a, b) {
+  if (a.length !== b.length) return false;
+  a.sort();
+  b.sort();
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) return false;
+  }
+
+  // If all elements were same.
+  return true;
+}

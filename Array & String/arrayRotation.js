@@ -1,11 +1,3 @@
-let arr = [1, 2, 0, 2, 1, 0],
-  k = 3;
-for (let i = 0; i < k; i++) {
-  arr.unshift(arr.pop());
-  console.log(`step${i + 1}`, arr);
-}
-
-//solution 2
 function rotateArr(arr, d) {
   let n = arr.length;
 
@@ -19,5 +11,15 @@ function rotateArr(arr, d) {
   }
   for (let i = 0; i < d; i++) {
     arr[n - d + i] = temp[i];
+  }
+}
+
+//if rotate array by one
+function rotate(arr) {
+  let i = 0,
+    j = arr.length - 1;
+  while (i !== j) {
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+    i++;
   }
 }

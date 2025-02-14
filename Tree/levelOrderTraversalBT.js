@@ -5,6 +5,7 @@ function levelOrder(root) {
   if (!root) return [];
 
   const res = [];
+  let currLevel = 0;
   // Create a queue initialized with the root node
   const queue = [root];
 
@@ -25,6 +26,7 @@ function levelOrder(root) {
 
     // Push the collected nodes of this level to the result
     res.push(levelNodes);
+    currLevel++;
   }
 
   return res;

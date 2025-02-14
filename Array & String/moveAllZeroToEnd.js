@@ -4,11 +4,11 @@ let arr = [1, 2, 0, 2, 1, 0],
 for (let i = 0; i < arr.length; i++) {
   //if index is zero remove that current index and push to end
   // arr[i] === 0 && arr.splice(i, 1) && arr.push(0);
-  if (arr[i] !== 0) {
+  if (arr[i] != 0) {
     if (i !== j) {
-      temp = a[i];
-      a[i] = a[j];
-      a[j] = temp;
+      temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
     }
     j++;
   }

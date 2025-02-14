@@ -25,3 +25,22 @@ function fib(n, memo = {}) {
   return memo[n];
 }
 console.log(fib(3));
+
+//solution 3
+
+function findFibonacci(n) {
+  if (n === 0) {
+    return 0;
+  } else if (n === 1) {
+    return 1;
+  } else {
+    return findFibonacci(n - 2) + findFibonacci(n - 1);
+  }
+}
+function fibonacciNumbers(N) {
+  let ans = [];
+  for (let i = 0; i < N; i++) {
+    ans.push(findFibonacci(i));
+  }
+  return ans;
+}

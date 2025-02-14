@@ -1,17 +1,22 @@
 function isPalindrome(head) {
-  let temp = head; //temp point to head
+  let slow = head;
   let stack = [];
 
-  // push the elements to the stack and move the temp value
-  while (temp !== null) {
-    stack.push(temp.val);
-    temp = temp.next;
+  // Traverse the list and push all elements onto the stack
+  while (slow !== null) {
+    stack.push(slow.data);
+    slow = slow.next;
   }
-  temp = head;
-  // check temp with top elements of stack if its match temp value move
-  while (temp !== null) {
-    if (temp.val != stack.pop()) return false;
-    temp = temp.next;
+
+  // Traverse the list again and compare with the stack
+  while (head !== null) {
+    let topElement = stack.pop();
+
+    if (head.data !== topElement) {
+      return false;
+    }
+
+    head = head.next;
   }
 
   return true;

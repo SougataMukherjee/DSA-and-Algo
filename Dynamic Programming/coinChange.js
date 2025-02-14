@@ -17,3 +17,17 @@ function coinChange(coins, amount) {
   // Return -1 if amount can't be made, otherwise return minimum coins needed
   return dp[amount] === amount + 1 ? -1 : dp[amount];
 }
+
+//solution 2
+function count(coins, sum) {
+  const dp = new Array(sum + 1).fill(0);
+  dp[0] = 1; // There's one way to make sum 0 (by not using any coin)
+
+  for (let c of coins) {
+    for (let a = c; a <= sum; a++) {
+      dp[a] += dp[a - c]; // Add ways to make (a - c) to ways to make (a)
+    }
+  }
+
+  return dp[sum];
+}

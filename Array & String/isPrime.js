@@ -10,7 +10,7 @@ if (n === 1) {
     }
   }
   if (isPrime) {
-    console.log("prime");
+    console.log("prime"); //return true
   } else {
     console.log("not a prime");
   }

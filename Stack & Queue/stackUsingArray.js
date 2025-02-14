@@ -30,3 +30,16 @@ function isEmpty() {
 function isFull() {
   return topIndex >= MAX_CAP - 1;
 }
+
+//solution 2
+MyStack.prototype.push = function (x) {
+  this.top++;
+  this.arr[this.top] = x;
+};
+
+MyStack.prototype.pop = function () {
+  if (this.top == -1) return -1;
+  let x = this.arr[this.top];
+  this.top--;
+  return x;
+};

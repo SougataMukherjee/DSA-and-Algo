@@ -18,3 +18,18 @@ function isSameTree(p, q) {
 
   return false;
 }
+
+//solution 2
+function isIdentical(r1, r2) {
+  if (!r1 && !r2) return true;
+
+  if (r1 && r2) {
+    if (r1.data !== r2.data) return false;
+
+    return (
+      this.isIdentical(r1.left, r2.left) && this.isIdentical(r1.right, r2.right)
+    );
+  }
+
+  return false;
+}
