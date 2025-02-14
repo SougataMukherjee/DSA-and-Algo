@@ -44,3 +44,21 @@ node4.next = node5;
 deleteNode(node5);
 
 printList(node1);
+
+//solution 2
+function deleteNode(head, k) {
+  if (!head) {
+    return null;
+  }
+
+  if (k === 1) {
+    // Remove the first node and return the next node
+    let newHead = head.next;
+    head = null; // JavaScript automatically handles memory cleanup
+    return newHead;
+  }
+
+  // Recursively traverse to the k-th node and delete it
+  head.next = deleteNode(head.next, k - 1);
+  return head;
+}

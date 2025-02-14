@@ -7,4 +7,4 @@ for (let i = 1; i <= Math.min(n1, n2); i++) {
   }
 }
 let lcm = (n1 * n2) / hcf;
-console.log(`HCF: ${hcf}, LCM: ${lcm}`);
+console.log(`HCF: ${hcf}, LCM: ${lcm}`); //return [lcm,hcf]

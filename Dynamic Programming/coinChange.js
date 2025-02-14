@@ -31,3 +31,17 @@ function count(coins, sum) {
 
   return dp[sum];
 }
+
+//solution 3 for min coins
+function minCoins(coins, V) {
+  const dp = new Array(V + 1).fill(Infinity);
+  dp[0] = 0; // Minimum 0 coins needed for sum 0
+
+  for (let c of coins) {
+    for (let a = c; a <= V; a++) {
+      dp[a] = Math.min(dp[a], 1 + dp[a - c]); // Take the minimum number of coins
+    }
+  }
+
+  return dp[V] === Infinity ? -1 : dp[V];
+}
