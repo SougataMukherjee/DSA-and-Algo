@@ -8,5 +8,7 @@ function lowestCommonAncestor(root, p, q) {
   const left = lowestCommonAncestor(root.left, p, q);
   const right = lowestCommonAncestor(root.right, p, q);
   //if left side retun null return right side node
-  return left === null ? right : right === null ? left : root;
+  // return left === null ? right : right === null ? left : root;
+  if (left && right) return root;
+  return left ? left : right;
 }

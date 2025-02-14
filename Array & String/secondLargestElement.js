@@ -30,3 +30,10 @@ function largest(arr) {
 
   return max;
 }
+
+//solution for kth largest
+function kLargest(arr, k) {
+  arr.sort((a, b) => b - a);
+  let res = arr.slice(0, k);
+  return res;
+}

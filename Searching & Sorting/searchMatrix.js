@@ -15,3 +15,16 @@ function searchMatrix(matrix, target) {
 
   return false;
 }
+
+//solution 2
+function searchMatrix(mat, x) {
+  for (let i = 0; i < mat.length; i++) {
+    for (let j = 0; j < mat[i].length; j++) {
+      if (mat[i][j] === x) {
+        return true; // Target found, return true
+      }
+    }
+  }
+
+  return false;
+}

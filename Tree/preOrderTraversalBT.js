@@ -15,3 +15,24 @@ function preOrderTraversal(root) {
 
   return res;
 }
+
+//solutions 2
+function preorderUtil(root, res) {
+  //preorder traversal works on Root Left Right.
+
+  //if root is null then we simply return.
+  if (root === null) return;
+
+  //first, we store the data at root in a list.
+  res.push(root.data);
+  //then we call the recursive function for left subtree.
+  this.preorderUtil(root.left, res);
+  //then we call the recursive function for right subtree.
+  this.preorderUtil(root.right, res);
+}
+function preorder(root) {
+  let res = [];
+  this.preorderUtil(root, res);
+  //returning the list.
+  return res;
+}

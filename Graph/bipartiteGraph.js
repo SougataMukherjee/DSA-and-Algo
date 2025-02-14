@@ -45,3 +45,31 @@ adj[2].push(3);
 adj[3].push(2);
 adj[3].push(0);
 adj[0].push(3);
+
+//solution 2
+
+function isBipartite(adj) {
+  let V = adj.length;
+  let color = new Array(V).fill(-1);
+
+  for (let i = 0; i < V; i++) {
+    if (color[i] === -1) {
+      let queue = [];
+      queue.push(i);
+      color[i] = 0;
+
+      while (queue.length > 0) {
+        let u = queue.shift();
+        for (let v of adj[u]) {
+          if (color[v] === -1) {
+            color[v] = 1 - color[u];
+            queue.push(v);
+          } else if (color[v] === color[u]) {
+            return false;
+          }
+        }
+      }
+    }
+  }
+  return true;
+}
