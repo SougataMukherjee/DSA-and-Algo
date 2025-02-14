@@ -32,3 +32,18 @@ function removeDuplicates(nums) {
 }
 
 console.log(result);
+
+//method 4
+function findDuplicates(arr) {
+  let seen = new Set();
+  let duplicates = new Set();
+
+  for (const num of arr) {
+    if (seen.has(num)) {
+      duplicates.add(num);
+    }
+    seen.add(num);
+  }
+
+  return [...duplicates];
+}

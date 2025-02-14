@@ -321,6 +321,10 @@ Explanation: We can pick from all 3 trees.<br>
 Input: nums = [1,1,2,1,1], k = 3
 Output: 2
 Explanation: The only sub-arrays with 3 odd numbers are [1,1,2,1] and [1,2,1,1].<br>
+//Q133 Find the first continuous subarray in a non-negative integer array arr[] whose sum equals target, and return its 1-based start and end indices; return [-1] if no such subarray exists.<br>
+Input: arr[] = [1, 2, 3, 7, 5], target = 12
+Output: [2, 4]
+Explanation: The sum of elements from 2nd to 4th position is 12.<br>
 
 # prefix sum
 
@@ -489,6 +493,10 @@ Explanation: You could modify the first 4 to 1 to get a non-decreasing array.<br
 //Q197 Find the minimum insertions needed to make a given parentheses string s valid.<br>
 Input: s = "())"
 Output: 1<br>
+//Q198 Find the minimum number of jumps required to reach the last index of a non-negative integer array, where each element represents the maximum steps that can be jumped forward, or return -1 if unreachable.<br>
+Input: arr[] = [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]
+Output: 3
+Explanation: First jump from 1st element to 2nd element with value 3. From here we jump to 5th element with value 9, and from here we will jump to the last.<br>
 
 # Recursion
 
@@ -540,6 +548,10 @@ Explanation: Three palindromic strings: "a", "b", "c".<br>
 //Q212 Number of Subsequences That Satisfy the Given Sum Condition<br>
 Input: nums = [3,5,6,7], target = 9
 Output: 4<br>
+//Q213 Kadane's Algorithm [find the maximum sum of a subarray.]<br>
+Input: arr[] = [2, 3, -8, 7, -1, 2, 3]
+Output: 11
+Explanation: The subarray {7, -1, 2, 3} has the largest sum 11.<br>
 
 # graph
 
@@ -576,20 +588,20 @@ Output: 4<br>
 
 # Bit manipulation
 
-//Q226 count set bit ina integer
+//Q226 count set bit ina integer<br>
 Input: n = 2
 Output: [0,1,1]
 Explanation:
 0 --> 0
 1 --> 1
-2 --> 10
-//Q227 find weather a number is power of twoInput: n = 16
+2 --> 10<br>
+//Q227 find weather a number is power of two<br>Input: n = 16
 Output: true
 Explanation: 24 = 16
-//Q228 find the single element in a non-empty array where every element appears twice except for one,
+//Q228 find the single element in a non-empty array where every element appears twice except for one<br>
 Input: nums = [2,2,1]
-
 Output: 1
+//Q229 Find the missing number in an array of size n−1 containing distinct integers from 1 to n<br>
 
 # Backtracking
 

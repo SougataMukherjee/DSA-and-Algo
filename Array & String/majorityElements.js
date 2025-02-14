@@ -6,3 +6,16 @@ for (let i = 0; i < n - majority; i++) {
     console.log(arr[i]);
   }
 }
+
+//method 2
+function majorityElement(arr) {
+  let n = arr.length;
+  let freq = {};
+
+  for (let num of arr) {
+    freq[num] = (freq[num] || 0) + 1;
+    if (freq[num] > Math.floor(n / 2)) return num;
+  }
+
+  return -1;
+}
