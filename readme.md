@@ -244,6 +244,13 @@ Output: true<br>
 //Q103 add an element at a given index<br>
 ![add-array](./img/insert-in-array.png)<br>
 //Q104 First Missing Positive<br>
+//Q124 find all the leaders in the array<br>
+Input: arr = [16, 17, 4, 3, 5, 2]
+Output: [17, 5, 2]<br>
+//Q125 find the Inversion Count in an array<br>
+Input: arr[] = [2, 4, 1, 3, 5]
+Output: 3
+Explanation: The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).
 
 # tree
 
@@ -325,6 +332,7 @@ Explanation: The only sub-arrays with 3 odd numbers are [1,1,2,1] and [1,2,1,1].
 Input: arr[] = [1, 2, 3, 7, 5], target = 12
 Output: [2, 4]
 Explanation: The sum of elements from 2nd to 4th position is 12.<br>
+//Q134 Longest Subarray with Sum K.<br>
 
 # prefix sum
 
@@ -419,6 +427,7 @@ Output: [1,1,2,3,4,4]
 Input: head = [4,2,1,3]
 Output: [1,2,3,4]<br>
 //Q166 delete last element in linked list<br>
+//Q167 Kth from End of Linked List<br>
 
 # stack & queue
 

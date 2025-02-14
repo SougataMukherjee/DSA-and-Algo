@@ -25,3 +25,15 @@ while (left < right) {
 }
 
 console.log(s);
+
+//method 3
+function reverseString(s) {
+  let res = [];
+
+  // Traverse on s in backward direction
+  // and add each character to the array
+  for (let i = s.length - 1; i >= 0; i--) {
+    res.push(s[i]);
+  }
+  return res.join("");
+}

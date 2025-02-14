@@ -22,6 +22,40 @@ function detectLoop(head) {
 
   return false; // No cycle
 }
+
+function removeLoop(head) {
+  if (!head) return;
+
+  let fast = head,
+    slow = head;
+
+  while (fast && fast.next) {
+    fast = fast.next.next;
+    slow = slow.next;
+
+    if (fast === slow) {
+      // Loop detected, now remove it
+      slow = head;
+
+      if (fast === slow) {
+        // Case when loop starts from head
+        while (fast.next !== slow) {
+          fast = fast.next;
+        }
+      } else {
+        while (slow.next !== fast.next) {
+          slow = slow.next;
+          fast = fast.next;
+        }
+      }
+
+      fast.next = null; // Break the loop
+      return true; // Loop removed successfully
+    }
+  }
+
+  return false;
+}
 const node1 = new ListNode(1);
 const node2 = new ListNode(2);
 const node3 = new ListNode(3);

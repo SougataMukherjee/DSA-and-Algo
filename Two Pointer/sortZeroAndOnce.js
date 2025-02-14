@@ -22,3 +22,31 @@ function sortZeroesAndOnes(arr) {
   }
   return arr;
 }
+
+//for sort 0's 1's and 2's
+function swap(arr, i, j) {
+  let temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+}
+
+function sort012(arr) {
+  let low = 0,
+    mid = 0,
+    high = arr.length - 1;
+
+  while (mid <= high) {
+    if (arr[mid] === 0) {
+      this.swap(arr, low, mid);
+      low++;
+      mid++;
+    } else if (arr[mid] === 1) {
+      mid++;
+    } else {
+      // arr[mid] === 2
+      this.swap(arr, mid, high);
+      high--; // Move high left, but do not increase mid
+    }
+  }
+  return arr;
+}

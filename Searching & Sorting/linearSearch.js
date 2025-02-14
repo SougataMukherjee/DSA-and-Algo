@@ -3,8 +3,8 @@ let n = a.length;
 let item = 12;
 for (let i = 0; i < n; i++) {
   if (a[i] === item) {
-    console.log("found at ", i);
+    console.log("found at ", i); //return i
   } else {
-    console.log("not found");
+    console.log("not found"); //return -1
   }
 }
