@@ -256,6 +256,10 @@ Input: n = 2446
 Output: 1
 Explanation: Here among 2, 4, 6 only 2 divides 2446 evenly while 4 and 6 do not.
 //Q127 find the minimum and maximum elements in the array.
+//Q128 Find the number of times a given sorted array has been right-rotated.
+Input: arr = [5, 1, 2, 3, 4]
+Output: 1
+Explanation: The given array is 5 1 2 3 4. The original sorted array is 1 2 3 4 5. We can see that the array was rotated 1 times to the right.
 
 # tree
 
@@ -293,6 +297,9 @@ Output: [[3],[20,9],[15,7]]<br>
 Input: root = [1,2,3,4,5]
 Output: 3
 Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].<br>
+//Q124 convert binary tree to mirror tree<br>
+Input: root[] = [1, 2, 3, 4, 5]
+Output: [1, 3, 2, N, N, 5, 4]<br>
 
 # two pointer
 
@@ -338,6 +345,10 @@ Input: arr[] = [1, 2, 3, 7, 5], target = 12
 Output: [2, 4]
 Explanation: The sum of elements from 2nd to 4th position is 12.<br>
 //Q134 Longest Subarray with Sum K.<br>
+//Q135 Max Sum Subarray of size K<br>
+Input: arr[] = [100, 200, 300, 400] , k = 2
+Output: 700
+Explanation: arr3 + arr4 = 700, which is maximum.<br>
 
 # prefix sum
 
@@ -433,6 +444,9 @@ Input: head = [4,2,1,3]
 Output: [1,2,3,4]<br>
 //Q166 delete last element in linked list<br>
 //Q167 Kth from End of Linked List<br>
+//Q168 Delete without head pointer<br>
+Input: Linked List = 1 -> 2, del_node = 1
+Output: 2
 
 # stack & queue
 
