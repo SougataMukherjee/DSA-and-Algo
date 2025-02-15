@@ -417,6 +417,9 @@ output:true<br>
 //Q154 Find the Middle of a Linked List<br>
 Input: 1 -> 2 -> 3 -> 4->5
 output:3<br>
+//Q155 delete Middle of Linked List<br>
+Input: LinkedList: 1->2->3->4->5
+Output: 1->2->4->5<br>
 //Q155 You are given the head of a singly linked list. Your task is to reverse the linked list and return the new head of the reversed list<br>
 Input: 1 -> 2 -> 3 -> 4 -> 5
 Output: 5 -> 4 -> 3 -> 2 -> 1<br>
@@ -463,6 +466,7 @@ Output: 2
 //Q177 next smaller element<br> arr=[4,8,5,2,2,5] nge_arr=[2,5,2,-1,-1]<br>
 //Q176 Queue Using Two Stacks<br>
 //Q177 Implement Stack using Queues<br>
+//Q178 Implement Stack using Two Queues<br>
 //Q178 remove all adjacent duplicate in string using stack<br>
 Input: s = "abbaca" Output: "ca"<br>
 //Q179 implement stack using array<br>
@@ -630,6 +634,10 @@ Explanation: 24 = 16
 Input: nums = [2,2,1]
 Output: 1
 //Q229 Find the missing number in an array of size n−1 containing distinct integers from 1 to n<br>
+//Q230 return count of set bits<br>
+Input: n = 6
+Output: 2
+Explanation: Binary representation is '110', so the count of the set bit is 2.<br>
 
 # Backtracking
 

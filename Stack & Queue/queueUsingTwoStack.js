@@ -2,6 +2,10 @@ let MyQueue = function () {
   this.s1 = []; //stack 1
   this.s2 = []; //stack 2
 };
+//constructor(){
+//  this.s1 = new Stack();
+//  this.s2 = new Stack();
+//}
 
 MyQueue.prototype.push = function (x) {
   while (this.s1.length > 0) {

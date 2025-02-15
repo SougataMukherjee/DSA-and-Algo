@@ -13,5 +13,5 @@ function wordBreak(s, wordDict) {
     }
   }
 
-  return dp[n];
+  return dp[n]; //dp[s.length] ? 1 : 0
 }
