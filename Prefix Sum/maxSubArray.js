@@ -27,3 +27,24 @@ function maxSubArray(nums) {
     return maxi;
   }
 }
+
+//for largest subarray with 0 sum
+
+let n = arr.length;
+let maxLen = 0;
+
+for (let i = 0; i < n; i++) {
+  let currSum = 0;
+
+  // Try all subarrays starting with 'i'
+  for (let j = i; j < n; j++) {
+    currSum += arr[j]; // Update sum
+
+    // If currSum becomes 0, update maxLen
+    if (currSum === 0) {
+      maxLen = Math.max(maxLen, j - i + 1);
+    }
+  }
+}
+
+return maxLen;

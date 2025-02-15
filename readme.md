@@ -251,6 +251,11 @@ Output: [17, 5, 2]<br>
 Input: arr[] = [2, 4, 1, 3, 5]
 Output: 3
 Explanation: The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).
+//Q126 Count the number of nonzero digits in a given positive integer n that evenly divide n.
+Input: n = 2446
+Output: 1
+Explanation: Here among 2, 4, 6 only 2 divides 2446 evenly while 4 and 6 do not.
+//Q127 find the minimum and maximum elements in the array.
 
 # tree
 

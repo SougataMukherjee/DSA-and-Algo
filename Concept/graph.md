@@ -100,32 +100,31 @@ Space Complexity: O(n²).
    Continue until all nodes are visited.
 
    ```
-   function bfs(graph, start) {
-   //initialize queue,Track visited nodes
-    let queue = [start], visited = { [start]: true };
+   bfsOfGraph(adj) {
+        const V = adj.length;               // Number of vertices
+        let visited = new Array(V).fill(false); // Boolean array to track visited vertices
+        let res = [];                       // Result array to store BFS traversal
+        let q = [];                         // Queue for BFS
 
-    while (queue.length) {
-   //remove front node from the queue.
-        let node = queue.shift();
-   //visit/print node
-        console.log(node);
-   //check immediate neighbors of the current node.if a neighbor is not visited, add it to the queue and mark it as visited.
-        for (let neighbor of graph[node]) {
-            if (!visited[neighbor]) {
-                visited[neighbor] = true;
-                queue.push(neighbor);
+        let s = 0; // Start BFS from vertex 0
+        visited[s] = true;
+        q.push(s);
+
+        while (q.length > 0) {
+            let t = q.shift(); // remove front node from the queue
+            res.push(t);       // Add it to the result array
+
+            // Traverse all adjacent vertices of dequeued vertex
+            for (let neighbor of adj[t]) {
+                if (!visited[neighbor]) { // If not visited, mark visited and enqueue
+                    visited[neighbor] = true;
+                    q.push(neighbor);
+                }
             }
         }
+
+        return res; // Return the BFS traversal result
     }
-   }
-   const graph = {
-   '0': ['1', '2'],
-   '1': ['0', '3', '4'],
-   '2': ['0'],
-   '3': ['1'],
-   '4': ['2', '3']
-   };
-   bfs(graph, '0');
    ```
 
 2. **Depth-First Search (DFS)**
@@ -197,6 +196,53 @@ Approach: Use DFS with parent tracking.
 Used for: Ordering tasks with dependencies (e.g., course scheduling).
 graph should be directed and acyclic graph,if its there then we have atleast one topological ordering
 find in-degree of the graph and start with node having 0 in-degree,remove edges and update in-degree,update untill node are processed
+
+```
+class Solution {
+   topo(adj, u, visited, s) {
+      // marking the current vertex as visited.
+      visited[u] = true;
+
+      // traversing over the adjacent vertices.
+      for (let i = 0; i < adj[u].length; i++) {
+            let v = adj[u][i];
+
+            // if any vertex is not visited, we call the function recursively.
+            if (!visited[v]) this.topo(adj, v, visited, s);
+      }
+      // pushing the current vertex into the stack.
+      s.push(u);
+   }
+
+   // Function to return list containing vertices in Topological order.
+   topologicalSort(adj) {
+      let V = adj.length;
+      // using boolean array to mark visited nodes and currently
+      // marking all the nodes as false.
+      let visited = new Array(V + 1);
+      visited.fill(false);
+
+      let s = new Array();
+
+      // traversing over all the vertices.
+      for (let i = 0; i < V; i++) {
+            // if the current vertex is not visited, we call the topo function.
+            if (!visited[i]) this.topo(adj, i, visited, s);
+      }
+
+      let res = new Array();
+      let i = -1;
+      while (s.length != 0) {
+            // pushing elements of stack in list and popping them from stack.
+            res.push(s[s.length - 1]);
+            s.pop();
+      }
+      // returning the list.
+      return res;
+   }
+}
+
+```
 
 ### Find the shortest path (Dijkstra's Algorithm)
 

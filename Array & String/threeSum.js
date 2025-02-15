@@ -19,3 +19,21 @@ for (let a of arr) {
   }
 }
 console.log(uniqueTriplets);
+
+//solution 2
+
+function findTriplets(arr) {
+  let target = 0;
+
+  for (let a = 0; a < arr.length - 2; a++) {
+    for (let i = a + 1; i < arr.length - 1; i++) {
+      for (let j = i + 1; j < arr.length; j++) {
+        if (arr[a] + arr[i] + arr[j] === target) {
+          return true;
+        }
+      }
+    }
+  }
+
+  return false;
+}

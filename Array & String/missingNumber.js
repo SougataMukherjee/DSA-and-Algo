@@ -29,3 +29,16 @@ for (let i = arr2[0]; i < arr2[arr2.length - 1]; i++) {
     console.log(i);
   }
 }
+
+//for smallest positive missing number
+function missingNumber(arr) {
+  arr.sort((a, b) => a - b);
+  let smallest = 1;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === smallest) {
+      smallest++;
+    }
+  }
+  return smallest;
+}

@@ -12,7 +12,7 @@ function append(head, newData) {
   // temporary variable
   let last = head;
 
-  // Traverse till the last node
+  // Traverse till the last node or while (last.next)
   while (last.next !== null) {
     last = last.next;
   }
