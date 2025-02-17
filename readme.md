@@ -349,6 +349,10 @@ Explanation: The sum of elements from 2nd to 4th position is 12.<br>
 Input: arr[] = [100, 200, 300, 400] , k = 2
 Output: 700
 Explanation: arr3 + arr4 = 700, which is maximum.<br>
+//Q136 Longest subarray with sum divisible by K<br>
+Input: arr[] = [2, 7, 6, 1, 4, 5], k = 3
+Output: 4
+Explanation: The subarray [7, 6, 1, 4] has sum = 18, which is divisible by 3.<br>
 
 # prefix sum
 
