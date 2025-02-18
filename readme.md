@@ -300,6 +300,37 @@ Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].<br>
 //Q124 convert binary tree to mirror tree<br>
 Input: root[] = [1, 2, 3, 4, 5]
 Output: [1, 3, 2, N, N, 5, 4]<br>
+//Q125 Minimum element in BST<br>
+Input: root = [5, 4, 6, 3, N, N, 7, 1]
+Output: 1<br>
+//Q126 Insert a node in a BST<br>
+Input: key = 4
+Output: 1 2 3 4<br>
+//Q127 k-th Smallest in BST<br>
+Input: root = [2, 1, 3], k = 2
+Output: 2<br>
+//Q128 Top View of Binary Tree<br>
+Input: root[] = [1, 2, 3]
+Output: [2, 1, 3]<br>
+//Q129 Check if a binary tree has a root-to-leaf path summing to targetSum<br>
+Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22
+Output: true<br>
+//Q130 Find all root to leaf paths in a binary tree, prioritizing left subtree paths before right subtree paths.<br>
+Input: root[] = [1, 2, 3, 4, 5]
+Output: [[1, 2, 4], [1, 2, 5], [1, 3]]
+Explanation: All possible paths: 1->2->4, 1->2->5 and 1->3<br>
+//Q131 Check if two binary trees are isomorphic by allowing any number of left-right child swaps.<br>
+Input: root1[] = [1, 2, 3, 4, 5, 7, 6, N, 7, 8], root2[] = [1, 3, 2, N, 6, 4, 5, 8, 7]
+Output: true<br>
+//Q132 Return the diagonal tree traversal of a binary tree as a single list, prioritizing left subtree elements before right when on the same diagonal.<br>
+Input : root = [8, 3, 10, 1, 6, N, 14, N, N, 4, 7, 13]
+Output : [8, 10, 14, 3, 6, 7, 13, 1, 4]<br>
+//Q133 Array to BST<br>
+Input: nums = [1, 2, 3, 4]
+Output: true<br>
+//Q134 Find and return all nodes at odd levels of a binary tree in sorted order.<br>
+Input: root = [1, 2, 3, 4, 5, N, 6, N, N, 7, 8, 9]
+Output: [1, 4, 5, 6]<br>
 
 # two pointer
 
