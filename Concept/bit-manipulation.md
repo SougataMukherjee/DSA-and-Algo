@@ -43,16 +43,16 @@ Right Shift (x >> k): Divides by 2^k, removes k bits.
 1 << k creates a mask with a 1 at bit position k.
 Check if the k-th bit of x is set: x & (1 << k) != 0.
 
-# Bitwise Operators Table
+### Bitwise Operators Table
 
 | Operator | Operation | Result |
 | -------- | --------- | ------ | --- |
-| XOR      | X ^ 0s    | X      |
-| XOR      | X ^ 1s    | ~X     |
-| XOR      | X ^ X     | 0      |
-| AND      | X & 0s    | 0      |
-| AND      | X & 1s    | X      |
-| AND      | X & X     | X      |
-| OR       | X         | 0s     | X   |
-| OR       | X         | 1s     | 1s  |
-| OR       | X         | X      | X   |
+| **XOR**  | X ^ 0s    | X      |
+| **XOR**  | X ^ 1s    | ~X     |
+| **XOR**  | X ^ X     | 0      |
+| **AND**  | X & 0s    | 0      |
+| **AND**  | X & 1s    | X      |
+| **AND**  | X & X     | X      |
+| **OR**   | X         | 0s     | X   |
+| **OR**   | X         | 1s     | 1s  |
+| **OR**   | X         | X      | X   |
