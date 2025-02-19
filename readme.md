@@ -349,6 +349,35 @@ into a palindrome: geeksoskeeg<br>
 Input: k = 3, arr[] = [2, 2, 1, 2]
 Output: 2
 Explanation: 2 is the most frequent element.<br>
+//Q150 Multiply two non-negative integers given as strings and return the product as a string without using built-in BigInteger or direct integer conversion<br>
+Input: num1 = "2", num2 = "3"
+Output: "6"<br>
+//Q151 Find the first non-repeating character in a lowercase Latin string, or return '$' if none exists<br>
+Input: s = "racecar"
+Output: 'e'
+Explanation: In the given string, 'e' is the only character in the string which does not repeat.<br>
+//Q152 Roman to Integer<br>
+Input: s = "III"
+Output: 3
+Explanation: III = 3.<br>
+//Q153 Find the next lexicographically greater permutation of an integer array in-place using constant extra memory.<br>
+Input: nums = [1,2,3]
+Output: [1,3,2]<br>
+//Q154 Find the total number of moves needed to transfer n disks in the Tower of Hanoi puzzle following the given rules<br>
+Input: n = 2
+Output: 3
+Explanation: For n =2 , steps will be as follows in the example and total 3 steps will be taken.
+move disk 1 from rod 1 to rod 2
+move disk 2 from rod 1 to rod 3
+move disk 1 from rod 2 to rod 3<br>
+//Q155 Find the celebrity in an
+n×n matrix where
+mat[i][j]=1 means person
+i knows person
+j, or return -1 if no celebrity exists.<br>
+Input: mat[][] = [[0 1 0], [0 0 0], [0 1 0]]
+Output: 1
+Explanation: 0th and 2nd person both know 1. Therefore, 1 is the celebrity.<br>
 
 # tree
 
@@ -573,7 +602,38 @@ Output: [1,2,3,4]<br>
 //Q167 Kth from End of Linked List<br>
 //Q168 Delete without head pointer<br>
 Input: Linked List = 1 -> 2, del_node = 1
-Output: 2
+Output: 2<br>
+//Q169 Find the length of the loop in a linked list, or return 0 if no loop exists.<br>
+Input: LinkedList: 25->14->19->33->10->21->39->90->58->45, c = 4
+Output: 7
+Explanation: The loop is from 33 to 45. So length of loop is 33->10->21->39-> 90->58->45 = 7.<br>
+//Q170 Given the head of a linked list, return the list after sorting it in ascending order.<br>
+Input: head = [4,2,1,3]
+Output: [1,2,3,4]<br>
+//Q171 Given the head of a linked list, rotate the list to the right by k places.<br>
+Input: head = [1,2,3,4,5], k = 2
+Output: [4,5,1,2,3]<br>
+//Q172 reverse the doubly linked list and return its head<br>
+Input: LinkedList: 3 <-> 4 <-> 5
+Output: 5 <-> 4 <-> 3<br>
+//Q173 Delete in a Doubly Linked List<br>
+Input: LinkedList = 1 <--> 3 <--> 4, x = 3
+Output: 1 <--> 3
+Explanation: After deleting the node at position 3 (position starts from 1),the linked list will be now as 1 <--> 3.<br>
+//Q174 Merge K sorted linked lists<br>
+Input: arr[] = [1 -> 2 -> 3, 4 -> 5, 5 -> 6, 7 -> 8]
+Output: 1 -> 2 -> 3 -> 4 -> 5 -> 5 -> 6 -> 7 -> 8<br>
+//Q175 Binary Tree to DLL<br>
+Input:
+1
+/ \
+ 3 2
+Output:
+3 1 2
+2 1 3<br>
+//Q176 Reverse a Doubly Linked List<br>
+Input: LinkedList: 3 <-> 4 <-> 5
+Output: 5 <-> 4 <-> 3<br>
 
 # stack & queue
 
@@ -594,6 +654,9 @@ Output: 2
 //Q178 remove all adjacent duplicate in string using stack<br>
 Input: s = "abbaca" Output: "ca"<br>
 //Q179 implement stack using array<br>
+//Q180 Implement a stack using a linked list<br>
+Input: [[1,2], [1,3], [2], [1,4], [2]]
+Output: [3, 4]<br>
 
 # searching & sorting
 
