@@ -450,6 +450,16 @@ Output: true<br>
 Input: root = [1, 2, 3, 4, 5, N, 6, N, N, 7, 8, 9]
 Output: [1, 4, 5, 6]<br>
 
+# heap
+
+//Q135 Does array represent Heap<br>
+n = 6
+arr[] = {90, 15, 10, 7, 12, 2}
+Output:
+1<br>
+//Q137 Efficiently match a given set of
+n nuts and bolts using only nut-to-bolt comparisons, ensuring they follow the order { !,#,$,%,&,\*,?,@,^ }.<br>
+
 # two pointer
 
 //Q124 Given two strings s and t, return true if s is a subsequence of t, or false otherwise.<br>
@@ -657,6 +667,12 @@ Input: s = "abbaca" Output: "ca"<br>
 //Q180 Implement a stack using a linked list<br>
 Input: [[1,2], [1,3], [2], [1,4], [2]]
 Output: [3, 4]<br>
+//Q181 Reverse First K elements of Queue <br>
+Input:
+5 3
+1 2 3 4 5
+Output:
+3 2 1 4 5<br>
 
 # searching & sorting
 
@@ -665,6 +681,9 @@ Output: [3, 4]<br>
 //Q182 Insertion sort<br>
 //Q183 Linear Search<br>
 //Q184 implementing binary search in a sorted array(divide and conquer)
+//Q185 find Overlapping Intervals<br>
+Input: arr[][] = [[1,3],[2,4],[6,8],[9,10]]
+Output: [[1,4], [6,8], [9,10]]
 
 # greedy algo
 
@@ -771,6 +790,19 @@ Output: 4<br>
 Input: arr[] = [2, 3, -8, 7, -1, 2, 3]
 Output: 11
 Explanation: The subarray {7, -1, 2, 3} has the largest sum 11.<br>
+//Q214 Longest Repeating Subsequence<br>
+Input: s = "axxzxy"
+Output: 2
+Explanation: The given array with indexes looks like
+a x x z x y
+0 1 2 3 4 5<br>
+//Q215 Find the maximum number of non-intersecting connecting lines between two integer arrays.<br>
+Input: nums1 = [1,4,2], nums2 = [1,2,4]
+Output: 2<br>
+//Q216 Given a number n, find the minimum number of perfect squares (square of an integer) that sum up to n. <br>
+Input: n = 100
+Output: 1
+Explanation: 10 (mul) 10 = 100
 
 # graph
 
@@ -831,7 +863,36 @@ Explanation: Binary representation is '110', so the count of the set bit is 2.<b
 //Q231 Find the position of the only set bit in a number; return -1 if it has 0 or multiple set bits.<br>
 Input: n = 2
 Output: 2
-Explanation: 2 is represented as "10" in Binary. As we see there's only one set bit and it's in position 2
+Explanation: 2 is represented as "10" in Binary. As we see there's only one set bit and it's in position 2<br>
+//Q232 Find the 1's complement of an N-bit binary number by inverting all its bits.<br>
+Input:
+N = 3
+S = 101
+Output:
+010
+Explanation:
+We get the output by converting 1's in S
+to 0 and 0s to 1<br>
+//Q233 Find the total number of set bits in all numbers from 1 to N.<br>
+Input: N = 3
+Output: 4
+Explaination:
+1 -> 01, 2 -> 10 and 3 -> 11.
+So total 4 setbits.<br>
+//Q234 Find the sum of differing bits in binary representations for all ordered pairs
+(Ai, Aj)in an array, modulo 10^9+7<br>
+Input: N = 2
+A = {2, 4}
+Output: 4
+Explaintion: We return
+f(2, 2) + f(2, 4) +
+f(4, 2) + f(4, 4) =
+0 + 2 +
+2 + 0 = 4.<br>
+//Q235 Set the kth bit of
+n (from the right) in its binary representation.<br>
+Input: n = 10, k = 2
+Output: 14<br>
 
 # Backtracking
 
