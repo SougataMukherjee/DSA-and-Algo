@@ -260,6 +260,95 @@ Explanation: Here among 2, 4, 6 only 2 divides 2446 evenly while 4 and 6 do not.
 Input: arr = [5, 1, 2, 3, 4]
 Output: 1
 Explanation: The given array is 5 1 2 3 4. The original sorted array is 1 2 3 4 5. We can see that the array was rotated 1 times to the right.
+//Q129 Rearrange a sorted array into a wave array in-place, ensuring the lexicographically smallest order.such that arr[1] >= arr[2] <= arr[3] >= arr[4] <= arr[5].....<br>
+Input: arr[] = [1, 2, 3, 4, 5]
+Output: [2, 1, 4, 3, 5]
+Explanation: Array elements after sorting it in the waveform are 2, 1, 4, 3, 5.<br>
+//Q130 Find the first repeating element in an array, returning its 1-based index.<br>
+Input: arr[] = [1, 5, 3, 4, 3, 5, 6]
+Output: 2
+Explanation: 5 appears twice and its first appearance is at index 2 which is less than 3 whose first the occurring index is 3.<br>
+//Q131 Two Sum - Pair with Given Sum<br>
+Input: arr[] = [1, 4, 45, 6, 10, 8], target = 16
+Output: true
+Explanation: arr[3] + arr[4] = 6 + 10 = 16.<br>
+//Q132 Maximum Sum of Distinct Subarrays With Length K<br>
+Input: nums = [1,5,4,2,9,9,9], k = 3
+Output: 15<br>
+//Q133 Find the index of the largest element ≤ k floor in a sorted array; return -1 if none exists<br>
+Input: arr[] = [1, 2, 8, 10, 11, 12, 19], k = 0
+Output: -1
+Explanation: No element less than 0 is found. So output is -1.<br>
+//Q134 Find the missing and repeating numbers in an unsorted array of integers from the range [1, n]<br>
+Input: arr[] = [2, 2]
+Output: [2, 1]
+Explanation: Repeating number is 2 and smallest positive missing number is 1.<br>
+//Q135 Find the number of inversions in an array, where an inversion is a pair (i,j) such that arr[i]>arr[j] and i<j.<br>
+Input: arr[] = [2, 4, 1, 3, 5]
+Output: 3
+Explanation: The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).<br>
+//Q136 Maximize the sum of an n×n matrix by flipping the signs of any two adjacent elements any number of times.<br>
+Input: matrix = [[1,-1],[-1,1]]
+Output: 4<br>
+//Q137 Median of an Array <br>
+Input: arr[] = [90, 100, 78, 89, 67]
+Output: 89
+Explanation: After sorting the array middle element is the median <br>
+//Q138 Update each element in the array to its next smaller adjacent element; if none exists, set it to -1<br>
+Input: arr[] = [4, 2, 1, 5, 3]
+Output: [2, 1, -1, 3, -1]<br>
+//Q139 Group anagrams from an array of strings while preserving their original order.<br>
+Input: arr[] = ["act", "god", "cat", "dog", "tac"]
+Output: [["act", "cat", "tac"], ["god", "dog"]]
+Explanation: There are 2 groups of anagrams "god", "dog" make group 1. "act", "cat", "tac" make group 2.<br>
+//Q140 Swap the k-th element from the start with the k-th element from the end in a 1-based indexed array.<br>
+Input: arr[] = [1, 2, 3, 4, 5, 6, 7, 8], k = 3
+Output: [1, 2, 6, 4, 5, 3, 7, 8]<br>
+//Q141 Print Matrix in snake Pattern<br>
+Input: N = 3, matrix[][] = [[45, 48, 54], [21, 89, 87], [70, 78, 15]]
+Output: 45 48 54 87 89 21 70 78 15 <br>
+//Q142 Count ways to N'th Stair(Order does not matter)<br>
+Input: n = 4
+Output: 3
+Explanation: Three ways to reach at 4th stair. They are {1, 1, 1, 1}, {1, 1, 2}, {2, 2}.<br>
+//Q143 GCD of Array<br>
+Input: N = 3, arr[] = {2, 4, 6}
+Output: 2
+Explanation: GCD of 2,4,6 is 2.<br>
+//Q144 Find the longest palindromic substring in a given string, preferring the smallest starting index in case of ties.<br>
+Input: s = "aaaabbaa"
+Output: aabbaa
+Explanation: The longest palindrome string present in
+the given string is "aabbaa".<br>
+//Q145 Matrix Diagonal(primary+secondary) Sum<br>
+Input: mat = [[1,2,3],
+              [4,5,6],
+              [7,8,9]]
+Output: 25
+Explanation: Diagonals sum: 1 + 5 + 9 + 3 + 7 = 25<br>
+//Q146 Given a mxn matrix, count the number of squares in the matrix.<br>
+Input:
+m = 2, n = 2
+Output:
+5<br>
+//Q147 Given a non null integer matrix Grid of dimensions NxM.Calculate the sum of its elements.<br>
+Input:
+N=2,M=3
+Grid=
+[[1,0,1],
+[-8,9,-2]]
+Output:
+1<br>
+//Q148 Check if the characters of string S can be rearranged to form a palindrome<br>
+Input:
+S = "geeksogeeks"
+Output: Yes
+Explanation: The string can be converted
+into a palindrome: geeksoskeeg<br>
+//Q149 Find the smallest number with the highest frequency in an array of numbers ranging from 0 to k-1.<br>
+Input: k = 3, arr[] = [2, 2, 1, 2]
+Output: 2
+Explanation: 2 is the most frequent element.<br>
 
 # tree
 
@@ -652,6 +741,9 @@ Output: 2<br>
 Input: board = [[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]
 Output: 4<br>
 //Q225 Check if a given graph is Bipartite using DFS<br>
+//Q226 Shortest path from 1 to n<br>
+Input: n = 9
+Output: 2<br>
 
 # Bit manipulation
 
@@ -673,6 +765,10 @@ Output: 1
 Input: n = 6
 Output: 2
 Explanation: Binary representation is '110', so the count of the set bit is 2.<br>
+//Q231 Find the position of the only set bit in a number; return -1 if it has 0 or multiple set bits.<br>
+Input: n = 2
+Output: 2
+Explanation: 2 is represented as "10" in Binary. As we see there's only one set bit and it's in position 2
 
 # Backtracking
 

@@ -173,6 +173,64 @@ every connected and undirected graph has atleast one spaning tree
 
 A Minimum Spanning Tree (MST) is a spanning tree where the sum of edge weights is minimized.<br>
 
+```
+  spanningTree(V, adj) {
+        // Array to store the minimum weight to include each vertex in the MST
+        const key = new Array(V).fill(Infinity);
+
+        // Array to keep track of vertices included in the MST
+        const inMST = new Array(V).fill(false);
+
+        // Initialize the first vertex's key to 0 so that it is picked first
+        key[0] = 0;
+
+        // Variable to store the total weight of the MST
+        let totalWeight = 0;
+
+        // Iterate V times to include all vertices in the MST
+        for (let count = 0; count < V; count++) {
+            // Pick the minimum key vertex from the set of vertices not yet included in
+            // MST
+            let u = this.minKey(V, key, inMST);
+
+            // Include the picked vertex in the MST
+            inMST[u] = true;
+
+            // Add its key value to the total weight
+            totalWeight += key[u];
+
+            // Update the key values of adjacent vertices of the picked vertex
+            for (let edge of adj[u]) {
+                const [v, weight] = edge;
+
+                // If v is not in MST and weight of (u,v) is smaller than current key of
+                // v
+                if (!inMST[v] && weight < key[v]) {
+                    key[v] = weight;
+                }
+            }
+        }
+
+        return totalWeight;
+    }
+
+
+    minKey(V, key, inMST) {
+        let min = Infinity;
+        let minIndex = -1;
+
+        for (let v = 0; v < V; v++) {
+            if (!inMST[v] && key[v] < min) {
+                min = key[v];
+                minIndex = v;
+            }
+        }
+
+        return minIndex;
+    }
+
+```
+
 1. Prim's Algorithm (Greedy Approach)
    Start from any node.
    Pick the smallest weighted edge that connects to an unvisited node.
