@@ -928,6 +928,31 @@ Input: board =
 ,[".",".",".",".","8",".",".","7","9"]]
 Output: true<br>
 
+# Number Theory
+
+//Q236 Find all pairs of prime numbers(x,y) with target sum such that 1≤x≤y≤n and x+y=n, returning a sorted 2D list or an empty array if no such pairs exist.<br>
+Input: n = 10
+Output: [[3,7],[5,5]]<br>
+//Q237 return the number of common factors of a and b<br>
+Input: a = 12, b = 6
+Output: 4
+Explanation: The common factors of 12 and 6 are 1, 2, 3, 6<br>
+//Q238 Check if an integer n has exactly three positive divisors<br>
+Input: n = 4
+Output: true
+Explantion: 4 has three divisors: 1, 2, and 4.<br>
+//Q239 Find the kth smallest factor of a given integer n, or return -1 if n has fewer than k factors.<br>
+Input: n = 12, k = 3
+Output: 3
+Explanation: Factors list is [1, 2, 3, 4, 6, 12], the 3rd factor is 3.<br>
+//Q240 Given an integer num, repeatedly sum its digits until a single-digit result is obtained, and return it.<br>
+Input: num = 38
+Output: 2
+Explanation: The process is
+38 --> 3 + 8 --> 11
+11 --> 1 + 1 --> 2
+Since 2 has only one digit, return it.<br>
+
 # Achievement
 
 ![Achievement Title](./img/dsa-certification.png)
