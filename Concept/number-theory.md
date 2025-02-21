@@ -1,4 +1,4 @@
-# Number Theory Notes in JavaScript
+# Number Theory
 
 ## Modular Arithmetic
 
@@ -27,12 +27,12 @@ console.log(fact);
 
 ### Bitwise Operators
 
-| A   | B   | AND(&) | OR( | )   | XOR(^) |
-| --- | --- | ------ | --- | --- | ------ |
-| 0   | 0   | 0      | 0   | 0   |
-| 0   | 1   | 0      | 1   | 1   |
-| 1   | 0   | 0      | 1   | 1   |
-| 1   | 1   | 1      | 1   | 0   |
+| A   | B   | AND(&) | OR() | XOR(^) |
+| --- | --- | ------ | ---- | ------ |
+| 0   | 0   | 0      | 0    | 0      |
+| 0   | 1   | 0      | 1    | 1      |
+| 1   | 0   | 0      | 1    | 1      |
+| 1   | 1   | 1      | 1    | 0      |
 
 ### Left Shift and Right Shift Operators
 
