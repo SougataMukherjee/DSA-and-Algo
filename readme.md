@@ -244,94 +244,94 @@ Output: true<br>
 //Q103 add an element at a given index<br>
 ![add-array](./img/insert-in-array.png)<br>
 //Q104 First Missing Positive<br>
-//Q124 find all the leaders in the array<br>
+//Q105 find all the leaders in the array<br>
 Input: arr = [16, 17, 4, 3, 5, 2]
 Output: [17, 5, 2]<br>
-//Q125 find the Inversion Count in an array<br>
-Input: arr[] = [2, 4, 1, 3, 5]
-Output: 3
-Explanation: The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).
-//Q126 Count the number of nonzero digits in a given positive integer n that evenly divide n.
-Input: n = 2446
-Output: 1
-Explanation: Here among 2, 4, 6 only 2 divides 2446 evenly while 4 and 6 do not.
-//Q127 find the minimum and maximum elements in the array.
-//Q128 Find the number of times a given sorted array has been right-rotated.
-Input: arr = [5, 1, 2, 3, 4]
-Output: 1
-Explanation: The given array is 5 1 2 3 4. The original sorted array is 1 2 3 4 5. We can see that the array was rotated 1 times to the right.
-//Q129 Rearrange a sorted array into a wave array in-place, ensuring the lexicographically smallest order.such that arr[1] >= arr[2] <= arr[3] >= arr[4] <= arr[5].....<br>
-Input: arr[] = [1, 2, 3, 4, 5]
-Output: [2, 1, 4, 3, 5]
-Explanation: Array elements after sorting it in the waveform are 2, 1, 4, 3, 5.<br>
-//Q130 Find the first repeating element in an array, returning its 1-based index.<br>
-Input: arr[] = [1, 5, 3, 4, 3, 5, 6]
-Output: 2
-Explanation: 5 appears twice and its first appearance is at index 2 which is less than 3 whose first the occurring index is 3.<br>
-//Q131 Two Sum - Pair with Given Sum<br>
-Input: arr[] = [1, 4, 45, 6, 10, 8], target = 16
-Output: true
-Explanation: arr[3] + arr[4] = 6 + 10 = 16.<br>
-//Q132 Maximum Sum of Distinct Subarrays With Length K<br>
-Input: nums = [1,5,4,2,9,9,9], k = 3
-Output: 15<br>
-//Q133 Find the index of the largest element ≤ k floor in a sorted array; return -1 if none exists<br>
-Input: arr[] = [1, 2, 8, 10, 11, 12, 19], k = 0
-Output: -1
-Explanation: No element less than 0 is found. So output is -1.<br>
-//Q134 Find the missing and repeating numbers in an unsorted array of integers from the range [1, n]<br>
-Input: arr[] = [2, 2]
-Output: [2, 1]
-Explanation: Repeating number is 2 and smallest positive missing number is 1.<br>
-//Q135 Find the number of inversions in an array, where an inversion is a pair (i,j) such that arr[i]>arr[j] and i<j.<br>
+//Q106 find the Inversion Count in an array<br>
 Input: arr[] = [2, 4, 1, 3, 5]
 Output: 3
 Explanation: The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).<br>
-//Q136 Maximize the sum of an n×n matrix by flipping the signs of any two adjacent elements any number of times.<br>
+//Q107 Count the number of nonzero digits in a given positive integer n that evenly divide n.<br>
+Input: n = 2446
+Output: 1<br>
+Explanation: Here among 2, 4, 6 only 2 divides 2446 evenly while 4 and 6 do not.<br>
+//Q108 find the minimum and maximum elements in the array.<br>
+//Q109 Find the number of times a given sorted array has been right-rotated.<br>
+Input: arr = [5, 1, 2, 3, 4]
+Output: 1
+Explanation: The given array is 5 1 2 3 4. The original sorted array is 1 2 3 4 5. We can see that the array was rotated 1 times to the right.<br>
+//Q110 Rearrange a sorted array into a wave array in-place, ensuring the lexicographically smallest order.such that arr[1] >= arr[2] <= arr[3] >= arr[4] <= arr[5].....<br>
+Input: arr[] = [1, 2, 3, 4, 5]
+Output: [2, 1, 4, 3, 5]
+Explanation: Array elements after sorting it in the waveform are 2, 1, 4, 3, 5.<br>
+//Q111 Find the first repeating element in an array, returning its 1-based index.<br>
+Input: arr[] = [1, 5, 3, 4, 3, 5, 6]
+Output: 2
+Explanation: 5 appears twice and its first appearance is at index 2 which is less than 3 whose first the occurring index is 3.<br>
+//Q112 Two Sum - Pair with Given Sum<br>
+Input: arr[] = [1, 4, 45, 6, 10, 8], target = 16
+Output: true
+Explanation: arr[3] + arr[4] = 6 + 10 = 16.<br>
+//Q113 Maximum Sum of Distinct Subarrays With Length K<br>
+Input: nums = [1,5,4,2,9,9,9], k = 3
+Output: 15<br>
+//Q114 Find the index of the largest element ≤ k floor in a sorted array; return -1 if none exists<br>
+Input: arr[] = [1, 2, 8, 10, 11, 12, 19], k = 0
+Output: -1
+Explanation: No element less than 0 is found. So output is -1.<br>
+//Q115 Find the missing and repeating numbers in an unsorted array of integers from the range [1, n]<br>
+Input: arr[] = [2, 2]
+Output: [2, 1]
+Explanation: Repeating number is 2 and smallest positive missing number is 1.<br>
+//Q116 Find the number of inversions in an array, where an inversion is a pair (i,j) such that arr[i]>arr[j] and i<j.<br>
+Input: arr[] = [2, 4, 1, 3, 5]
+Output: 3
+Explanation: The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).<br>
+//Q117 Maximize the sum of an n×n matrix by flipping the signs of any two adjacent elements any number of times.<br>
 Input: matrix = [[1,-1],[-1,1]]
 Output: 4<br>
-//Q137 Median of an Array <br>
+//Q118 Median of an Array <br>
 Input: arr[] = [90, 100, 78, 89, 67]
 Output: 89
 Explanation: After sorting the array middle element is the median <br>
-//Q138 Update each element in the array to its next smaller adjacent element; if none exists, set it to -1<br>
+//Q119 Update each element in the array to its next smaller adjacent element; if none exists, set it to -1<br>
 Input: arr[] = [4, 2, 1, 5, 3]
 Output: [2, 1, -1, 3, -1]<br>
-//Q139 Group anagrams from an array of strings while preserving their original order.<br>
+//Q120 Group anagrams from an array of strings while preserving their original order.<br>
 Input: arr[] = ["act", "god", "cat", "dog", "tac"]
 Output: [["act", "cat", "tac"], ["god", "dog"]]
 Explanation: There are 2 groups of anagrams "god", "dog" make group 1. "act", "cat", "tac" make group 2.<br>
-//Q140 Swap the k-th element from the start with the k-th element from the end in a 1-based indexed array.<br>
+//Q121 Swap the k-th element from the start with the k-th element from the end in a 1-based indexed array.<br>
 Input: arr[] = [1, 2, 3, 4, 5, 6, 7, 8], k = 3
 Output: [1, 2, 6, 4, 5, 3, 7, 8]<br>
-//Q141 Print Matrix in snake Pattern<br>
+//Q122 Print Matrix in snake Pattern<br>
 Input: N = 3, matrix[][] = [[45, 48, 54], [21, 89, 87], [70, 78, 15]]
 Output: 45 48 54 87 89 21 70 78 15 <br>
-//Q142 Count ways to N'th Stair(Order does not matter)<br>
+//Q123 Count ways to N'th Stair(Order does not matter)<br>
 Input: n = 4
 Output: 3
 Explanation: Three ways to reach at 4th stair. They are {1, 1, 1, 1}, {1, 1, 2}, {2, 2}.<br>
-//Q143 GCD of Array<br>
+//Q124 GCD of Array<br>
 Input: N = 3, arr[] = {2, 4, 6}
 Output: 2
 Explanation: GCD of 2,4,6 is 2.<br>
-//Q144 Find the longest palindromic substring in a given string, preferring the smallest starting index in case of ties.<br>
+//Q125 Find the longest palindromic substring in a given string, preferring the smallest starting index in case of ties.<br>
 Input: s = "aaaabbaa"
 Output: aabbaa
 Explanation: The longest palindrome string present in
 the given string is "aabbaa".<br>
-//Q145 Matrix Diagonal(primary+secondary) Sum<br>
+//Q126 Matrix Diagonal(primary+secondary) Sum<br>
 Input: mat = [[1,2,3],
               [4,5,6],
               [7,8,9]]
 Output: 25
 Explanation: Diagonals sum: 1 + 5 + 9 + 3 + 7 = 25<br>
-//Q146 Given a mxn matrix, count the number of squares in the matrix.<br>
+//Q127 Given a mxn matrix, count the number of squares in the matrix.<br>
 Input:
 m = 2, n = 2
 Output:
 5<br>
-//Q147 Given a non null integer matrix Grid of dimensions NxM.Calculate the sum of its elements.<br>
+//Q128 Given a non null integer matrix Grid of dimensions NxM.Calculate the sum of its elements.<br>
 Input:
 N=2,M=3
 Grid=
@@ -339,38 +339,38 @@ Grid=
 [-8,9,-2]]
 Output:
 1<br>
-//Q148 Check if the characters of string S can be rearranged to form a palindrome<br>
+//Q129 Check if the characters of string S can be rearranged to form a palindrome<br>
 Input:
 S = "geeksogeeks"
 Output: Yes
 Explanation: The string can be converted
 into a palindrome: geeksoskeeg<br>
-//Q149 Find the smallest number with the highest frequency in an array of numbers ranging from 0 to k-1.<br>
+//Q130 Find the smallest number with the highest frequency in an array of numbers ranging from 0 to k-1.<br>
 Input: k = 3, arr[] = [2, 2, 1, 2]
 Output: 2
 Explanation: 2 is the most frequent element.<br>
-//Q150 Multiply two non-negative integers given as strings and return the product as a string without using built-in BigInteger or direct integer conversion<br>
+//Q131 Multiply two non-negative integers given as strings and return the product as a string without using built-in BigInteger or direct integer conversion<br>
 Input: num1 = "2", num2 = "3"
 Output: "6"<br>
-//Q151 Find the first non-repeating character in a lowercase Latin string, or return '$' if none exists<br>
+//Q132 Find the first non-repeating character in a lowercase Latin string, or return '$' if none exists<br>
 Input: s = "racecar"
 Output: 'e'
 Explanation: In the given string, 'e' is the only character in the string which does not repeat.<br>
-//Q152 Roman to Integer<br>
+//Q133 Roman to Integer<br>
 Input: s = "III"
 Output: 3
 Explanation: III = 3.<br>
-//Q153 Find the next lexicographically greater permutation of an integer array in-place using constant extra memory.<br>
+//Q134 Find the next lexicographically greater permutation of an integer array in-place using constant extra memory.<br>
 Input: nums = [1,2,3]
 Output: [1,3,2]<br>
-//Q154 Find the total number of moves needed to transfer n disks in the Tower of Hanoi puzzle following the given rules<br>
+//Q135 Find the total number of moves needed to transfer n disks in the Tower of Hanoi puzzle following the given rules<br>
 Input: n = 2
 Output: 3
 Explanation: For n =2 , steps will be as follows in the example and total 3 steps will be taken.
 move disk 1 from rod 1 to rod 2
 move disk 2 from rod 1 to rod 3
 move disk 1 from rod 2 to rod 3<br>
-//Q155 Find the celebrity in an
+//Q136 Find the celebrity in an
 n×n matrix where
 mat[i][j]=1 means person
 i knows person
@@ -378,264 +378,264 @@ j, or return -1 if no celebrity exists.<br>
 Input: mat[][] = [[0 1 0], [0 0 0], [0 1 0]]
 Output: 1
 Explanation: 0th and 2nd person both know 1. Therefore, 1 is the celebrity.<br>
-//Q156 Rearrange Array in Max Min Form
-//Q157 At Least K Occurrences
+//Q137 Rearrange Array in Max Min Form
+//Q138 At Least K Occurrences
 
 # tree
 
-//Q105 Check if a tree is a BST or BT<br>
-//Q106 find the lowest common ancestor (LCA) of two given nodes in the tree.<br>
-//Q107 Level Order Traversal of Binary Tree<br>
-//Q108 Preorder traversal in binary tree<br>
-//Q109 Right/Left side View of Binary Tree<br>
-//Q110 Merge Two Binary Trees<br>
+//Q1 Check if a tree is a BST or BT<br>
+//Q2 find the lowest common ancestor (LCA) of two given nodes in the tree.<br>
+//Q3 Level Order Traversal of Binary Tree<br>
+//Q4 Preorder traversal in binary tree<br>
+//Q5 Right/Left side View of Binary Tree<br>
+//Q6 Merge Two Binary Trees<br>
 Input: root1 = [1,3,2,5], root2 = [2,1,3,null,4,null,7]
 Output: [3,4,5,5,4,null,7]<br>
-//Q111 Sum of Left Leaves<br>
+//Q7 Sum of Left Leaves<br>
 Input: root = [3,9,20,null,null,15,7]
 Output: 9+15=24<br>
-//Q112 Maximum or Minimum Depth in Binary Tree<br>
-//Q113 check a tree is Balanced Binary Tree or AVL tree<br>
-//Q114 Given the root of a binary tree, check whether it is a mirror(symmetric) of itself<br>
+//Q8 Maximum or Minimum Depth in Binary Tree<br>
+//Q9 check a tree is Balanced Binary Tree or AVL tree<br>
+//Q10 Given the root of a binary tree, check whether it is a mirror(symmetric) of itself<br>
 Input: root = [1,2,2,3,4,4,3] Output: true<br>
-//Q115 Check it two trees are Identical(have the same value) or Not <br>
-//Q116 Subtree of Another Tree<br>
-//Q117 Count total Nodes in a complete Binary Tree<br>
-//Q118 Invert/Flip Binary Tree<br>
+//Q11 Check it two trees are Identical(have the same value) or Not <br>
+//Q12 Subtree of Another Tree<br>
+//Q13 Count total Nodes in a complete Binary Tree<br>
+//Q14 Invert/Flip Binary Tree<br>
 Input: root = [4,2,7,1,3,6,9]
 Output: [4,7,2,9,6,3,1]<br>
-//Q119 whether a binary tree is a full binary tree or not<br>
-//Q120 Recover BST <br>
+//Q15 whether a binary tree is a full binary tree or not<br>
+//Q16 Recover BST <br>
 Input: root = [1,3,null,null,2]
 Output: [3,1,null,null,2]<br>
-//Q121 Zig-Zag Level Order Traversal <br>
+//Q17 Zig-Zag Level Order Traversal <br>
 Input: root = [3,9,20,null,null,15,7]
 Output: [[3],[20,9],[15,7]]<br>
 ![zic zag](./img/zig-zag%20traversal.png)<br>
-//Q122 find height of binary tree<br>
-//Q123 find diameter of binary tree<br>
+//Q18 find height of binary tree<br>
+//Q19 find diameter of binary tree<br>
 Input: root = [1,2,3,4,5]
 Output: 3
 Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].<br>
-//Q124 convert binary tree to mirror tree<br>
+//Q20 convert binary tree to mirror tree<br>
 Input: root[] = [1, 2, 3, 4, 5]
 Output: [1, 3, 2, N, N, 5, 4]<br>
-//Q125 Minimum element in BST<br>
+//Q21 Minimum element in BST<br>
 Input: root = [5, 4, 6, 3, N, N, 7, 1]
 Output: 1<br>
-//Q126 Insert a node in a BST<br>
+//Q22 Insert a node in a BST<br>
 Input: key = 4
 Output: 1 2 3 4<br>
-//Q127 k-th Smallest in BST<br>
+//Q23 k-th Smallest in BST<br>
 Input: root = [2, 1, 3], k = 2
 Output: 2<br>
-//Q128 Top View of Binary Tree<br>
+//Q24 Top View of Binary Tree<br>
 Input: root[] = [1, 2, 3]
 Output: [2, 1, 3]<br>
-//Q129 Check if a binary tree has a root-to-leaf path summing to targetSum<br>
+//Q25 Check if a binary tree has a root-to-leaf path summing to targetSum<br>
 Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22
 Output: true<br>
-//Q130 Find all root to leaf paths in a binary tree, prioritizing left subtree paths before right subtree paths.<br>
+//Q26 Find all root to leaf paths in a binary tree, prioritizing left subtree paths before right subtree paths.<br>
 Input: root[] = [1, 2, 3, 4, 5]
 Output: [[1, 2, 4], [1, 2, 5], [1, 3]]
 Explanation: All possible paths: 1->2->4, 1->2->5 and 1->3<br>
-//Q131 Check if two binary trees are isomorphic by allowing any number of left-right child swaps.<br>
+//Q27 Check if two binary trees are isomorphic by allowing any number of left-right child swaps.<br>
 Input: root1[] = [1, 2, 3, 4, 5, 7, 6, N, 7, 8], root2[] = [1, 3, 2, N, 6, 4, 5, 8, 7]
 Output: true<br>
-//Q132 Return the diagonal tree traversal of a binary tree as a single list, prioritizing left subtree elements before right when on the same diagonal.<br>
+//Q28 Return the diagonal tree traversal of a binary tree as a single list, prioritizing left subtree elements before right when on the same diagonal.<br>
 Input : root = [8, 3, 10, 1, 6, N, 14, N, N, 4, 7, 13]
 Output : [8, 10, 14, 3, 6, 7, 13, 1, 4]<br>
-//Q133 Array to BST<br>
+//Q29 Array to BST<br>
 Input: nums = [1, 2, 3, 4]
 Output: true<br>
-//Q134 Find and return all nodes at odd levels of a binary tree in sorted order.<br>
+//Q30 Find and return all nodes at odd levels of a binary tree in sorted order.<br>
 Input: root = [1, 2, 3, 4, 5, N, 6, N, N, 7, 8, 9]
 Output: [1, 4, 5, 6]<br>
 
 # heap
 
-//Q135 Does array represent Heap<br>
+//Q1 Does array represent Heap<br>
 n = 6
 arr[] = {90, 15, 10, 7, 12, 2}
 Output:
 1<br>
-//Q137 Efficiently match a given set of
+//Q2 Efficiently match a given set of
 n nuts and bolts using only nut-to-bolt comparisons, ensuring they follow the order { !,#,$,%,&,\*,?,@,^ }.<br>
 
 # two pointer
 
-//Q124 Given two strings s and t, return true if s is a subsequence of t, or false otherwise.<br>
+//Q1 Given two strings s and t, return true if s is a subsequence of t, or false otherwise.<br>
 Input: s = "abc", t = "ahbgdc"
 Output: true<br>
-//Q125 Remove Duplicates from Sorted Array<br>
+//Q2 Remove Duplicates from Sorted Array<br>
 Input: nums = [1,1,2]
 Output: 2, nums = [1,2,_]<br>
-//Q126 trapping rain water<br>
+//Q3 trapping rain water<br>
 Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
 Output: 6<br>
-//Q127 Container With Most Water<br>
+//Q4 Container With Most Water<br>
 Input: height = [1,8,6,2,5,4,8,3,7]
 Output: 49<br>
-//Q128 Largest Rectangle in Histogram  
+//Q5 Largest Rectangle in Histogram  
 Input: heights = [2,1,5,6,2,3]
 Output: 10<br>
 ![roadmap](./img/largest-rectangle.png)<br>
-//Q129 count the number of positive triangle<br>
+//Q6 count the number of positive triangle<br>
 Input: arr[] = [4, 6, 3, 7]
 Output: 3<br>
-//Q130 Segregate 0s and 1s in an array or move all even integer followed by all odd integer<br>
+//Q7 Segregate 0s and 1s in an array or move all even integer followed by all odd integer<br>
 Input : [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
 Output : [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]<br>
 
 # Sliding window
 
-//Q131 Given an array of positive integers nums and a positive integer target, return the minimal length of a sub array
+//Q1 Given an array of positive integers nums and a positive integer target, return the minimal length of a sub array
 whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.<br>
 Input: target = 7, nums = [2,3,1,2,4,3]
 Output: 2[4,3]<br>
-//Q132 Find the longest contiguous subarray (baskets) containing at most two distinct integers (fruits).<br>
+//Q2 Find the longest contiguous subarray (baskets) containing at most two distinct integers (fruits).<br>
 Input: fruits = [1,2,1]
 Output: 3
 Explanation: We can pick from all 3 trees.<br>
-//Q133 Given an array of integers nums and an integer k. A continuous subarray is called nice if there are k odd numbers on it.<br>
+//Q3 Given an array of integers nums and an integer k. A continuous subarray is called nice if there are k odd numbers on it.<br>
 Input: nums = [1,1,2,1,1], k = 3
 Output: 2
 Explanation: The only sub-arrays with 3 odd numbers are [1,1,2,1] and [1,2,1,1].<br>
-//Q133 Find the first continuous subarray in a non-negative integer array arr[] whose sum equals target, and return its 1-based start and end indices; return [-1] if no such subarray exists.<br>
+//Q4 Find the first continuous subarray in a non-negative integer array arr[] whose sum equals target, and return its 1-based start and end indices; return [-1] if no such subarray exists.<br>
 Input: arr[] = [1, 2, 3, 7, 5], target = 12
 Output: [2, 4]
 Explanation: The sum of elements from 2nd to 4th position is 12.<br>
-//Q134 Longest Subarray with Sum K.<br>
-//Q135 Max Sum Subarray of size K<br>
+//Q5 Longest Subarray with Sum K.<br>
+//Q6 Max Sum Subarray of size K<br>
 Input: arr[] = [100, 200, 300, 400] , k = 2
 Output: 700
 Explanation: arr3 + arr4 = 700, which is maximum.<br>
-//Q136 Longest subarray with sum divisible by K<br>
+//Q7 Longest subarray with sum divisible by K<br>
 Input: arr[] = [2, 7, 6, 1, 4, 5], k = 3
 Output: 4
 Explanation: The subarray [7, 6, 1, 4] has sum = 18, which is divisible by 3.<br>
 
 # prefix sum
 
-//Q134 print the sum of value in a array in given range(l=3 an r=5 follow 1 based index)<br>
+//Q1 print the sum of value in a array in given range(l=3 an r=5 follow 1 based index)<br>
 a=[2,4,1,3,6,5]=1+3+6
 1 2 3 4 5 6<br>
-//Q135 subarray sum equals k<br>
+//Q2 subarray sum equals k<br>
 Input: nums = [1,1,1], k = 2
 Output: 2<br>
-//Q136 subarry sum divisible by k<br>
+//Q3 subarry sum divisible by k<br>
 Input: nums = [4,5,0,-2,-3,1], k = 5
 Output: 7<br>
-//Q137 Maximum Average Subarray<br> Input: nums = [1,12,-5,-6,50,3], k = 4
+//Q4 Maximum Average Subarray<br> Input: nums = [1,12,-5,-6,50,3], k = 4
 Output: 12.75000
 Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75<br>
-//Q138 find Maximum Subarray<br>
+//Q5 find Maximum Subarray<br>
 Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
 Output: 6
 Explanation: The subarray [4,-1,2,1] has the largest sum 6.<br>
-//Q139 partition of the array into two subarray<br>
-//Q140 product of array except self<br>
-//Q141 Given n flights labeled 1 to n and an array bookings where each entry [firsti, lasti, seatsi] represents seatsi seats booked for flights firsti to lasti, return an array where each element represents the total seats reserved for the corresponding flight.<br>
+//Q6 partition of the array into two subarray<br>
+//Q7 product of array except self<br>
+//Q8 Given n flights labeled 1 to n and an array bookings where each entry [firsti, lasti, seatsi] represents seatsi seats booked for flights firsti to lasti, return an array where each element represents the total seats reserved for the corresponding flight.<br>
 Input: bookings = [[1,2,10],[2,3,20],[2,5,25]], n = 5
 10 seats booked from flight 1 to 2.
 Output: [10,55,45,25,25]<br>
 ![flight-book](./img/corporate-flight-book.png)<br>
-//Q142 zero array transformation<br>
+//Q9 zero array transformation<br>
 Input: nums = [1,0,1], queries = [[0,2]]
 Output: true<br>
-//Q143 maximum count of distinct integers you can select from the range while avoiding banned number and keeping the sum ≤ maxSum<br>
+//Q10 maximum count of distinct integers you can select from the range while avoiding banned number and keeping the sum ≤ maxSum<br>
 Input: banned = [1,6,5], n = 5, maxSum = 6
 Output: 2<br>
-//Q144 Find if there is a subarray with 0 sums<br>
+//Q11 Find if there is a subarray with 0 sums<br>
 Input: {4, 2, -3, 1, 6}
 Output: true <br>
 
 # binary search
 
-//Q145 check weather a value is exist or not in array(recursion binary search)<br>
-//Q146 search in 2D matrix<br>
+//Q1 check weather a value is exist or not in array(recursion binary search)<br>
+//Q2 search in 2D matrix<br>
 Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
 Output: true<br>
-//Q147 Search in a Rotated Sorted Array with or without duplicate elements<br>
+//Q3 Search in a Rotated Sorted Array with or without duplicate elements<br>
 Note:we can not find the sorted segment like mid less end because it might be same number for mid and end in terms of duplicate
 Input: nums = [2,5,6,0,0,1,2], target = 0
 Output: true<br>
-//Q148 Find Peak Element in a Mountain Array<br>
+//Q4 Find Peak Element in a Mountain Array<br>
 Input: nums = [1,2,3,1]
 Output: 2<br>
 Explanation: 3 is a peak element and your function should return the index number 2.<br>
-//Q149 Find Minimum in Rotated Sorted Array
+//Q5 Find Minimum in Rotated Sorted Array
 Input: nums = [3,4,5,1,2]
 Output: 1<br>
 Explanation: The original array was [1,2,3,4,5] rotated 3 times.<br>
-//Q150 Spiral Matrix<br>
+//Q6 Spiral Matrix<br>
 Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
 Output: [1,2,3,6,9,8,7,4,5]<br>
-//Q151 Find K Closest Elements ,Given a sorted array arr, and integers k and x, return the k closest integers to x in the array, sorted in ascending order, with ties broken by the smaller integer.<br>
+//Q7 Find K Closest Elements ,Given a sorted array arr, and integers k and x, return the k closest integers to x in the array, sorted in ascending order, with ties broken by the smaller integer.<br>
 
 # Linked List
 
-//Q152 remove Node from linked List<br>
-//Q153 detect a cycle in a linked list<br>
+//Q1 remove Node from linked List<br>
+//Q2 detect a cycle in a linked list<br>
 input: 1 -> 2 -> 3 -> 4 -> 5 -> 3
 output:true<br>
-//Q154 Find the Middle of a Linked List<br>
+//Q3 Find the Middle of a Linked List<br>
 Input: 1 -> 2 -> 3 -> 4->5
 output:3<br>
-//Q155 delete Middle of Linked List<br>
+//Q4 delete Middle of Linked List<br>
 Input: LinkedList: 1->2->3->4->5
 Output: 1->2->4->5<br>
-//Q155 You are given the head of a singly linked list. Your task is to reverse the linked list and return the new head of the reversed list<br>
+//Q5 You are given the head of a singly linked list. Your task is to reverse the linked list and return the new head of the reversed list<br>
 Input: 1 -> 2 -> 3 -> 4 -> 5
 Output: 5 -> 4 -> 3 -> 2 -> 1<br>
-//Q156 find oddEven linked list<br>
+//Q6 find oddEven linked list<br>
 input:1 -> 2 -> 3 -> 4 -> 5
 Output: 1 -> 3 -> 5 -> 2 -> 4<br>
-//Q157 merge two sorted linked list<br>
+//Q7 merge two sorted linked list<br>
 Input: list1 = [1, 2, 4], list2 = [3, 5, 6]
 Output: [1, 2, 3, 4, 5, 6]<br>
-//Q158 find nth node from the end of linked list<br>
-//Q159 Insert Node at Head/Tail of Linked List<br>
-//Q160 remove nth node from the end of linked list<br>
-//Q161 Swap Nodes in Pairs in linked list<br>
+//Q8 find nth node from the end of linked list<br>
+//Q9 Insert Node at Head/Tail of Linked List<br>
+//Q10 remove nth node from the end of linked list<br>
+//Q11 Swap Nodes in Pairs in linked list<br>
 Input: head = [1,2,3,4]
 Output: [2,1,4,3]<br>
-//Q162 find intersection node of two linked list using two pointer<br>
+//Q12 find intersection node of two linked list using two pointer<br>
 Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
 Output: Intersected at '8'<br>
-//Q163 remove duplicate from a sorted linked list<br>
-//Q164 merge two sorted linked list<br>
+//Q13 remove duplicate from a sorted linked list<br>
+//Q14 merge two sorted linked list<br>
 Input: list1 = [1,2,4], list2 = [1,3,4]
 Output: [1,1,2,3,4,4]
-//Q165 Sort a singly linked list using insertion sort and return its head
+//Q15 Sort a singly linked list using insertion sort and return its head
 Input: head = [4,2,1,3]
 Output: [1,2,3,4]<br>
-//Q166 delete last element in linked list<br>
-//Q167 Kth from End of Linked List<br>
-//Q168 Delete without head pointer<br>
+//Q16 delete last element in linked list<br>
+//Q17 Kth from End of Linked List<br>
+//Q18 Delete without head pointer<br>
 Input: Linked List = 1 -> 2, del_node = 1
 Output: 2<br>
-//Q169 Find the length of the loop in a linked list, or return 0 if no loop exists.<br>
+//Q19 Find the length of the loop in a linked list, or return 0 if no loop exists.<br>
 Input: LinkedList: 25->14->19->33->10->21->39->90->58->45, c = 4
 Output: 7
 Explanation: The loop is from 33 to 45. So length of loop is 33->10->21->39-> 90->58->45 = 7.<br>
-//Q170 Given the head of a linked list, return the list after sorting it in ascending order.<br>
+//Q20 Given the head of a linked list, return the list after sorting it in ascending order.<br>
 Input: head = [4,2,1,3]
 Output: [1,2,3,4]<br>
-//Q171 Given the head of a linked list, rotate the list to the right by k places.<br>
+//Q21 Given the head of a linked list, rotate the list to the right by k places.<br>
 Input: head = [1,2,3,4,5], k = 2
 Output: [4,5,1,2,3]<br>
-//Q172 reverse the doubly linked list and return its head<br>
+//Q22 reverse the doubly linked list and return its head<br>
 Input: LinkedList: 3 <-> 4 <-> 5
 Output: 5 <-> 4 <-> 3<br>
-//Q173 Delete in a Doubly Linked List<br>
+//Q23 Delete in a Doubly Linked List<br>
 Input: LinkedList = 1 <--> 3 <--> 4, x = 3
 Output: 1 <--> 3
 Explanation: After deleting the node at position 3 (position starts from 1),the linked list will be now as 1 <--> 3.<br>
-//Q174 Merge K sorted linked lists<br>
+//Q24 Merge K sorted linked lists<br>
 Input: arr[] = [1 -> 2 -> 3, 4 -> 5, 5 -> 6, 7 -> 8]
 Output: 1 -> 2 -> 3 -> 4 -> 5 -> 5 -> 6 -> 7 -> 8<br>
-//Q175 Binary Tree to DLL<br>
+//Q25 Binary Tree to DLL<br>
 Input:
 1
 / \
@@ -643,137 +643,137 @@ Input:
 Output:
 3 1 2
 2 1 3<br>
-//Q176 Reverse a Doubly Linked List<br>
+//Q26 Reverse a Doubly Linked List<br>
 Input: LinkedList: 3 <-> 4 <-> 5
 Output: 5 <-> 4 <-> 3<br>
-//Q177 Flattening a Linked List<br>
+//Q27 Flattening a Linked List<br>
 
 # stack & queue
 
-//Q167 sort a stack<br>
-//Q168 reverse a stack<br>
-//Q169 delete mid element of stack<br>
-//Q170 remove consecutive subsequence<br> 1 2 2 3 4 4 ->1 2 3 4
-//Q171 Palindrome Linked List <br>Input: head = [1,2,2,1] Output: true
-//Q172 queue reversal<br>
-//Q173 reverse 1st k element from queue<br>
-//Q174 Time need to buy a tickets<br> Input: tickets:[5,1,1,1],k=0 Output: 8 [4,0,0,0] 4+1+1+1+1<br>
-//Q175 remove invalid parenthesis and make it balanced by removing min number of bracket<br>
-//Q176 next greater element <br>arr=[6,0,8,1,3] nge_arr=[8,8,-1,3,-1] like 6's next greater element 8 and 0's next greater element 8 and so on<br>
-//Q177 next smaller element<br> arr=[4,8,5,2,2,5] nge_arr=[2,5,2,-1,-1]<br>
-//Q176 Queue Using Two Stacks<br>
-//Q177 Implement Stack using Queues<br>
-//Q178 Implement Stack using Two Queues<br>
-//Q178 remove all adjacent duplicate in string using stack<br>
+//Q1 sort a stack<br>
+//Q2 reverse a stack<br>
+//Q3 delete mid element of stack<br>
+//Q4 remove consecutive subsequence<br> 1 2 2 3 4 4 ->1 2 3 4
+//Q5 Palindrome Linked List <br>Input: head = [1,2,2,1] Output: true
+//Q6 queue reversal<br>
+//Q7 reverse 1st k element from queue<br>
+//Q8 Time need to buy a tickets<br> Input: tickets:[5,1,1,1],k=0 Output: 8 [4,0,0,0] 4+1+1+1+1<br>
+//Q9 remove invalid parenthesis and make it balanced by removing min number of bracket<br>
+//Q10 next greater element <br>arr=[6,0,8,1,3] nge_arr=[8,8,-1,3,-1] like 6's next greater element 8 and 0's next greater element 8 and so on<br>
+//Q11 next smaller element<br> arr=[4,8,5,2,2,5] nge_arr=[2,5,2,-1,-1]<br>
+//Q12 Queue Using Two Stacks<br>
+//Q13 Implement Stack using Queues<br>
+//Q14 Implement Stack using Two Queues<br>
+//Q15 remove all adjacent duplicate in string using stack<br>
 Input: s = "abbaca" Output: "ca"<br>
-//Q179 implement stack using array<br>
-//Q180 Implement a stack using a linked list<br>
+//Q16 implement stack using array<br>
+//Q17 Implement a stack using a linked list<br>
 Input: [[1,2], [1,3], [2], [1,4], [2]]
 Output: [3, 4]<br>
-//Q181 Reverse First K elements of Queue <br>
+//Q18 Reverse First K elements of Queue <br>
 Input:
 5 3
 1 2 3 4 5
 Output:
 3 2 1 4 5<br>
-//Q182 Design Circular Queue<br>
+//Q19 Design Circular Queue<br>
 
 # searching & sorting
 
-//Q180 bubble sort<br>
-//Q181 selection sort<br>
-//Q182 Insertion sort<br>
-//Q183 Linear Search<br>
-//Q184 implementing binary search in a sorted array(divide and conquer)
-//Q185 find Overlapping Intervals<br>
+//Q1 bubble sort<br>
+//Q2 selection sort<br>
+//Q3 Insertion sort<br>
+//Q4 Linear Search<br>
+//Q5 implementing binary search in a sorted array(divide and conquer)
+//Q6 find Overlapping Intervals<br>
 Input: arr[][] = [[1,3],[2,4],[6,8],[9,10]]
 Output: [[1,4], [6,8], [9,10]]
-//Q186 Sort an array of 0s, 1s, and 2s
-//Q187 Merge Two Sorted Arrays Without Extra Space
+//Q7 Sort an array of 0s, 1s, and 2s
+//Q8 Merge Two Sorted Arrays Without Extra Space
 
 # greedy algo
 
-//Q185 min number of coins<br>
+//Q1 min number of coins<br>
 Input: coins[] = [25, 10, 5], sum = 30
 Output: 2<br>
-//Q186 Minimum Cost of Buying Candies With Discount<br>
+//Q2 Minimum Cost of Buying Candies With Discount<br>
 Input: cost = [1,2,3]
 Output: 5<br>
-//Q187 Distribute Candies<br>
+//Q3 Distribute Candies<br>
 array candyType of length n (where n is always even), return the maximum number of different types of candies Alice can eat if she can only consume n / 2 candies.
 
 Input: candyType = [1,1,2,2,3,3]
 Output: 3<br>
-//Q188 Non-overlapping Intervals<br>
+//Q4 Non-overlapping Intervals<br>
 Input: intervals = [[1,2],[2,3],[3,4],[1,3]]
 Output: 1<br>
-//Q189 Maximum Number of Balloons<br>
+//Q5 Maximum Number of Balloons<br>
 Input: text = "nlaebolko"
 Output: 1<br>
-//Q190 jump game<br>
+//Q6 jump game<br>
 each element in the array represents your maximum jump length at that position.
 Return true if you can reach the last index, or false otherwise
 Input: nums = [2,3,1,1,4]
 Output: true
 Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.<br>
-//Q191 Minimum Platforms Required for Given Arrival and Departure Times<br>
+//Q7 Minimum Platforms Required for Given Arrival and Departure Times<br>
 Input: arr[] = {9:00, 9:40, 9:50, 11:00, 15:00, 18:00}, dep[] = {9:10, 12:00, 11:20, 11:30, 19:00, 20:00}
 Output: 3<br>
-//Q192 merge overlapping intervals<br>
+//Q8 merge overlapping intervals<br>
 Input:arr[]=[[1,3],[2,4],[6,8],[9,10]]
 Output:[[1,4],[6,8],[9,10]]<br>
-//Q193 best time to sell stock and find max profit<br>
+//Q9 best time to sell stock and find max profit<br>
 Input:prices[]={1,3,6,9,11} output:10<br>
-//Q194 Find the starting gas station index to complete a circular route if possible; otherwise, return -1<br>
+//Q10 Find the starting gas station index to complete a circular route if possible; otherwise, return -1<br>
 Input: gas = [1,2,3,4,5], cost = [3,4,5,1,2]
 Output: 3<br>
-//Q195 Find the minimum money required to complete all transactions in any order.<br>
+//Q11 Find the minimum money required to complete all transactions in any order.<br>
 Input: transactions = [[2,1],[5,0],[4,2]]
 Output: 10<br>
-//Q196 if an array can become non-decreasing by modifying at most one element<br>
+//Q12 if an array can become non-decreasing by modifying at most one element<br>
 Input: nums = [4,2,3]
 Output: true
 Explanation: You could modify the first 4 to 1 to get a non-decreasing array.<br>
-//Q197 Find the minimum insertions needed to make a given parentheses string s valid.<br>
+//Q13 Find the minimum insertions needed to make a given parentheses string s valid.<br>
 Input: s = "())"
 Output: 1<br>
-//Q198 Find the minimum number of jumps required to reach the last index of a non-negative integer array, where each element represents the maximum steps that can be jumped forward, or return -1 if unreachable.<br>
+//Q14 Find the minimum number of jumps required to reach the last index of a non-negative integer array, where each element represents the maximum steps that can be jumped forward, or return -1 if unreachable.<br>
 Input: arr[] = [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]
 Output: 3
 Explanation: First jump from 1st element to 2nd element with value 3. From here we jump to 5th element with value 9, and from here we will jump to the last.<br>
-//Q199 Chocolate Distribution Problem<br>
-//Q200 Meeting Rooms
+//Q15 Chocolate Distribution Problem<br>
+//Q16 Meeting Rooms
 
 # Recursion
 
-//Q198 Find the longest common subsequence(lcs) of two strings.<br>
+//Q1 Find the longest common subsequence(lcs) of two strings.<br>
 Input: text1 = "abcde", text2 = "ace"
 Output: 3<br>
-//Q199 sort and reverse a stack using recursion<br>
+//Q2 sort and reverse a stack using recursion<br>
 
 # Dynamic Programming
 
-//Q200 Count number of ways to cover a distance<br>
-//Q201 Number of Dice Rolls With Target Sum<br>
-//Q202 solve the word break problem<br>
-//Q203 Unique Paths<br>
+//Q1 Count number of ways to cover a distance<br>
+//Q2 Number of Dice Rolls With Target Sum<br>
+//Q3 solve the word break problem<br>
+//Q4 Unique Paths<br>
 Input: m = 3, n = 7
 Output: 28<br>
-//Q204 Maximum Length of Repeated Subarray<br>
+//Q5 Maximum Length of Repeated Subarray<br>
 Input: nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
 Output: 3
 Explanation: The repeated subarray with maximum length is [3,2,1].<br>
-//Q205 Find the minimum path sum from the top-left to the bottom-right of an m×n grid filled with non-negative numbers, moving only right or down<br>
+//Q6 Find the minimum path sum from the top-left to the bottom-right of an m×n grid filled with non-negative numbers, moving only right or down<br>
 Input: grid = [[1,3,1],[1,5,1],[4,2,1]]
 Output: 7
 Explanation: Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.<br>
-//Q176 Target sum in array nums and an integer target, count the number of ways to assign + or - to each element in nums such that the resulting expression evaluates to target.<br>
+//Q7 Target sum in array nums and an integer target, count the number of ways to assign + or - to each element in nums such that the resulting expression evaluates to target.<br>
 ![findtargetsum](./img/target-sum.png)<br>
-//Q206 Longest Increasing Subsequence<br>
+//Q8 Longest Increasing Subsequence<br>
 Input: nums = [10,9,2,5,3,7,101,18]
 Output: 4
 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.<br>
-//Q207 Use backtracking with DFS to explore all possible paths, collecting the path with maximum gold while marking visited cells temporarily.<br>
+//Q9 Use backtracking with DFS to explore all possible paths, collecting the path with maximum gold while marking visited cells temporarily.<br>
 Input: grid = [[0,6,0],[5,8,7],[0,9,0]]
 Output: 24
 Explanation:
@@ -781,98 +781,98 @@ Explanation:
  [5,8,7],
  [0,9,0]]
 Path to get the maximum gold, 9 -> 8 -> 7.<br>
-//Q208 Maximum Product Subarray<br>
+//Q10 Maximum Product Subarray<br>
 Input: nums = [2,3,-2,4]
 Output: 6
 Explanation: [2,3] has the largest product 6.<br>
-//Q209 Palindromic Substrings<br>
+//Q11 Palindromic Substrings<br>
 Input: s = "abc"
 Output: 3
 Explanation: Three palindromic strings: "a", "b", "c".<br>
-//Q210 Find the minimum number of coin change to make up the given amount using coins of different denominations, or return -1 if it's not possible.<br>
-//Q211 print all the subsequence<br>
-//Q212 Number of Subsequences That Satisfy the Given Sum Condition<br>
+//Q12 Find the minimum number of coin change to make up the given amount using coins of different denominations, or return -1 if it's not possible.<br>
+//Q13 print all the subsequence<br>
+//Q14 Number of Subsequences That Satisfy the Given Sum Condition<br>
 Input: nums = [3,5,6,7], target = 9
 Output: 4<br>
-//Q213 Kadane's Algorithm [find the maximum sum of a subarray.]<br>
+//Q15 Kadane's Algorithm [find the maximum sum of a subarray.]<br>
 Input: arr[] = [2, 3, -8, 7, -1, 2, 3]
 Output: 11
 Explanation: The subarray {7, -1, 2, 3} has the largest sum 11.<br>
-//Q214 Longest Repeating Subsequence<br>
+//Q16 Longest Repeating Subsequence<br>
 Input: s = "axxzxy"
 Output: 2
 Explanation: The given array with indexes looks like
 a x x z x y
 0 1 2 3 4 5<br>
-//Q215 Find the maximum number of non-intersecting connecting lines between two integer arrays.<br>
+//Q17 Find the maximum number of non-intersecting connecting lines between two integer arrays.<br>
 Input: nums1 = [1,4,2], nums2 = [1,2,4]
 Output: 2<br>
-//Q216 Given a number n, find the minimum number of perfect squares (square of an integer) that sum up to n. <br>
+//Q18 Given a number n, find the minimum number of perfect squares (square of an integer) that sum up to n. <br>
 Input: n = 100
 Output: 1
 Explanation: 10 (mul) 10 = 100
 
 # graph
 
-//Q213 Find if Path Exists in Graph using bfs<br> Input: n = 3, edges = [[0,1],[1,2],[2,0]], source = 0, destination = 2
+//Q1 Find if Path Exists in Graph using bfs<br> Input: n = 3, edges = [[0,1],[1,2],[2,0]], source = 0, destination = 2
 Output: true<br>
-//Q214 Check if all nodes of Undirected Graph can be visited from given Node using bfs<br>
-//Q215 Number of Islands using dfs<br>
-//Q216 Flood Fill Algorithm using dfs<br>
+//Q2 Check if all nodes of Undirected Graph can be visited from given Node using bfs<br>
+//Q3 Number of Islands using dfs<br>
+//Q4 Flood Fill Algorithm using dfs<br>
 Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2
 Output: [[2,2,2],[2,2,0],[2,0,1]]<br>
-//Q217 Max Area of Island<br>
+//Q5 Max Area of Island<br>
 Input: grid = [[0,0,0,0,0,0,0,0]]
 Output: 0<br>
-//Q218 Detect Cycle in a Directed Graph using DFS.<br>
-//Q219 Print all paths from a given source to a destination/target<br>
+//Q6 Detect Cycle in a Directed Graph using DFS.<br>
+//Q7 Print all paths from a given source to a destination/target<br>
 Input: graph = [[1,2],[3],[3],[]]
 Output: [[0,1,3],[0,2,3]]<br>
-//Q220 clone graph<br>
+//Q8 clone graph<br>
 Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
 Output: [[2,4],[1,3],[2,4],[1,3]]<br>
-//Q221 Egg Drop With 2 Eggs and N Floors<br>
+//Q9 Egg Drop With 2 Eggs and N Floors<br>
 Input: n = 2
 Output: 2<br>
-//Q222 Find the minimum time required for all fresh oranges in an m x n grid to rot, where rotten oranges spread to adjacent fresh ones every minute, or return -1 if impossible.<br>
+//Q10 Find the minimum time required for all fresh oranges in an m x n grid to rot, where rotten oranges spread to adjacent fresh ones every minute, or return -1 if impossible.<br>
 Input: grid = [[2,1,1],[1,1,0],[0,1,1]]
 Output: 4<br>
-//Q223 Find the minimum time for all n nodes in a directed network delay time (given as times[i] = (ui, vi, wi)) to receive a signal sent from node k, or return -1 if unreachable<br>
+//Q11 Find the minimum time for all n nodes in a directed network delay time (given as times[i] = (ui, vi, wi)) to receive a signal sent from node k, or return -1 if unreachable<br>
 Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
 Output: 2<br>
-//Q224 Find the minimum number of dice rolls required to reach the last square n×n snake and ladder board, where you move based on a 6-sided die and follow snakes or ladders when landed on.<br>
+//Q12 Find the minimum number of dice rolls required to reach the last square n×n snake and ladder board, where you move based on a 6-sided die and follow snakes or ladders when landed on.<br>
 Input: board = [[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]
 Output: 4<br>
-//Q225 Check if a given graph is Bipartite using DFS<br>
-//Q226 Shortest path from 1 to n<br>
+//Q13 Check if a given graph is Bipartite using DFS<br>
+//Q14 Shortest path from 1 to n<br>
 Input: n = 9
 Output: 2<br>
 
 # Bit manipulation
 
-//Q226 count set bit ina integer<br>
+//Q1 count set bit ina integer<br>
 Input: n = 2
 Output: [0,1,1]
 Explanation:
 0 --> 0
 1 --> 1
 2 --> 10<br>
-//Q227 find weather a number is power of two<br>Input: n = 16
+//Q2 find weather a number is power of two<br>Input: n = 16
 Output: true
 Explanation: 24 = 16
-//Q228 find the single element in a non-empty array where every element appears twice except for one<br>
+//Q3 find the single element in a non-empty array where every element appears twice except for one<br>
 Input: nums = [2,2,1]
 Output: 1
-//Q229 Find the missing number in an array of size n−1 containing distinct integers from 1 to n<br>
-//Q230 return count of set bits<br>
+//Q4 Find the missing number in an array of size n−1 containing distinct integers from 1 to n<br>
+//Q5 return count of set bits<br>
 Input: n = 6
 Output: 2
 Explanation: Binary representation is '110', so the count of the set bit is 2.<br>
-//Q231 Find the position of the only set bit in a number; return -1 if it has 0 or multiple set bits.<br>
+//Q6 Find the position of the only set bit in a number; return -1 if it has 0 or multiple set bits.<br>
 Input: n = 2
 Output: 2
 Explanation: 2 is represented as "10" in Binary. As we see there's only one set bit and it's in position 2<br>
-//Q232 Find the 1's complement of an N-bit binary number by inverting all its bits.<br>
+//Q7 Find the 1's complement of an N-bit binary number by inverting all its bits.<br>
 Input:
 N = 3
 S = 101
@@ -881,13 +881,13 @@ Output:
 Explanation:
 We get the output by converting 1's in S
 to 0 and 0s to 1<br>
-//Q233 Find the total number of set bits in all numbers from 1 to N.<br>
+//Q8 Find the total number of set bits in all numbers from 1 to N.<br>
 Input: N = 3
 Output: 4
 Explaination:
 1 -> 01, 2 -> 10 and 3 -> 11.
 So total 4 setbits.<br>
-//Q234 Find the sum of differing bits in binary representations for all ordered pairs
+//Q9 Find the sum of differing bits in binary representations for all ordered pairs
 (Ai, Aj)in an array, modulo 10^9+7<br>
 Input: N = 2
 A = {2, 4}
@@ -897,34 +897,34 @@ f(2, 2) + f(2, 4) +
 f(4, 2) + f(4, 4) =
 0 + 2 +
 2 + 0 = 4.<br>
-//Q235 Set the kth bit of
+//Q10 Set the kth bit of
 n (from the right) in its binary representation.<br>
 Input: n = 10, k = 2
 Output: 14<br>
-//Q236 Division without using multiplication, division, and mod operator
+//Q11 Division without using multiplication, division, and mod operator
 
 # Backtracking
 
-//Q229 generating all possible subsets (the power set) of a unique integer array<br>
+//Q1 generating all possible subsets (the power set) of a unique integer array<br>
 Input: nums = [1,2,3]
 Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]<br>
-//Q230 Given an array nums of distinct integers, return all the possible permutations<br>
+//Q2 Given an array nums of distinct integers, return all the possible permutations<br>
 Input: nums = [1,2,3]
 Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]<br>
-//Q231 Palindrome Partitioning<br>
+//Q3 Palindrome Partitioning<br>
 Input: s = "aab"
 Output: [["a","a","b"],["aa","b"]]<br>
-//Q232 Partition Equal Subset Sum<br>
+//Q4 Partition Equal Subset Sum<br>
 Input: nums = [1,5,11,5]
 Output: true<br>
-//Q233 generating all possible letter combinations for a phone number<br>
+//Q5 generating all possible letter combinations for a phone number<br>
 Input: digits = "23"
 Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]<br>
-//Q234 Given an n x n grid representing a knight's movement on a chessboard, return true if the knight visits every cell exactly once and follows valid knight moves, otherwise return false.<br>
+//Q6 Given an n x n grid representing a knight's movement on a chessboard, return true if the knight visits every cell exactly once and follows valid knight moves, otherwise return false.<br>
 Input: grid = [[0,11,16,5,20],[17,4,19,10,15],[12,1,8,21,6],[3,18,23,14,9],[24,13,2,7,22]]
 Output: true
 Explanation: The above diagram represents the grid. It can be shown that it is a valid configuration.<br>
-//Q235 given 9x9 Sudoku board valid, ensuring each row, column, and 3x3 sub-box contains unique digits 1-9 in filled cells<br>
+//Q7 given 9x9 Sudoku board valid, ensuring each row, column, and 3x3 sub-box contains unique digits 1-9 in filled cells<br>
 Input: board =
 [["5","3",".",".","7",".",".",".","."]
 ,["6",".",".","1","9","5",".",".","."]
@@ -936,26 +936,26 @@ Input: board =
 ,[".",".",".","4","1","9",".",".","5"]
 ,[".",".",".",".","8",".",".","7","9"]]
 Output: true<br>
-//Q237 n queen problem
+//Q8 n queen problem
 
 # Number Theory
 
-//Q236 Find all pairs of prime numbers(x,y) with target sum such that 1≤x≤y≤n and x+y=n, returning a sorted 2D list or an empty array if no such pairs exist.<br>
+//Q1 Find all pairs of prime numbers(x,y) with target sum such that 1≤x≤y≤n and x+y=n, returning a sorted 2D list or an empty array if no such pairs exist.<br>
 Input: n = 10
 Output: [[3,7],[5,5]]<br>
-//Q237 return the number of common factors of a and b<br>
+//Q2 return the number of common factors of a and b<br>
 Input: a = 12, b = 6
 Output: 4
 Explanation: The common factors of 12 and 6 are 1, 2, 3, 6<br>
-//Q238 Check if an integer n has exactly three positive divisors<br>
+//Q3 Check if an integer n has exactly three positive divisors<br>
 Input: n = 4
 Output: true
 Explantion: 4 has three divisors: 1, 2, and 4.<br>
-//Q239 Find the kth smallest factor of a given integer n, or return -1 if n has fewer than k factors.<br>
+//Q4 Find the kth smallest factor of a given integer n, or return -1 if n has fewer than k factors.<br>
 Input: n = 12, k = 3
 Output: 3
 Explanation: Factors list is [1, 2, 3, 4, 6, 12], the 3rd factor is 3.<br>
-//Q240 Given an integer num, repeatedly sum its digits until a single-digit result is obtained, and return it.<br>
+//Q5 Given an integer num, repeatedly sum its digits until a single-digit result is obtained, and return it.<br>
 Input: num = 38
 Output: 2
 Explanation: The process is
