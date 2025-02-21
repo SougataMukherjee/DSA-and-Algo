@@ -378,6 +378,8 @@ j, or return -1 if no celebrity exists.<br>
 Input: mat[][] = [[0 1 0], [0 0 0], [0 1 0]]
 Output: 1
 Explanation: 0th and 2nd person both know 1. Therefore, 1 is the celebrity.<br>
+//Q156 Rearrange Array in Max Min Form
+//Q157 At Least K Occurrences
 
 # tree
 
@@ -644,6 +646,7 @@ Output:
 //Q176 Reverse a Doubly Linked List<br>
 Input: LinkedList: 3 <-> 4 <-> 5
 Output: 5 <-> 4 <-> 3<br>
+//Q177 Flattening a Linked List<br>
 
 # stack & queue
 
@@ -673,6 +676,7 @@ Input:
 1 2 3 4 5
 Output:
 3 2 1 4 5<br>
+//Q182 Design Circular Queue<br>
 
 # searching & sorting
 
@@ -684,6 +688,8 @@ Output:
 //Q185 find Overlapping Intervals<br>
 Input: arr[][] = [[1,3],[2,4],[6,8],[9,10]]
 Output: [[1,4], [6,8], [9,10]]
+//Q186 Sort an array of 0s, 1s, and 2s
+//Q187 Merge Two Sorted Arrays Without Extra Space
 
 # greedy algo
 
@@ -735,6 +741,8 @@ Output: 1<br>
 Input: arr[] = [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]
 Output: 3
 Explanation: First jump from 1st element to 2nd element with value 3. From here we jump to 5th element with value 9, and from here we will jump to the last.<br>
+//Q199 Chocolate Distribution Problem<br>
+//Q200 Meeting Rooms
 
 # Recursion
 
@@ -893,6 +901,7 @@ f(4, 2) + f(4, 4) =
 n (from the right) in its binary representation.<br>
 Input: n = 10, k = 2
 Output: 14<br>
+//Q236 Division without using multiplication, division, and mod operator
 
 # Backtracking
 
@@ -927,6 +936,7 @@ Input: board =
 ,[".",".",".","4","1","9",".",".","5"]
 ,[".",".",".",".","8",".",".","7","9"]]
 Output: true<br>
+//Q237 n queen problem
 
 # Number Theory
 
