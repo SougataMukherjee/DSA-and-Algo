@@ -45,14 +45,9 @@ Check if the k-th bit of x is set: x & (1 << k) != 0.
 
 ### Bitwise Operators Table
 
-| Operator | Operation | Result |
-| -------- | --------- | ------ | --- |
-| **XOR**  | X ^ 0s    | X      |
-| **XOR**  | X ^ 1s    | ~X     |
-| **XOR**  | X ^ X     | 0      |
-| **AND**  | X & 0s    | 0      |
-| **AND**  | X & 1s    | X      |
-| **AND**  | X & X     | X      |
-| **OR**   | X         | 0s     | X   |
-| **OR**   | X         | 1s     | 1s  |
-| **OR**   | X         | X      | X   |
+| A   | B   | AND(&) | OR() | XOR(^) |
+| --- | --- | ------ | ---- | ------ |
+| 0   | 0   | 0      | 0    | 0      |
+| 0   | 1   | 0      | 1    | 1      |
+| 1   | 0   | 0      | 1    | 1      |
+| 1   | 1   | 1      | 1    | 0      |

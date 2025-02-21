@@ -25,6 +25,8 @@ console.log(fact);
 
 ## Binary Numbers
 
+> JavaScript can store numbers up to 2^1024, but beyond 2^53(Number.MAX_SAFE_INTEGER), precision issues arise
+
 ### Bitwise Operators
 
 | A   | B   | AND(&) | OR() | XOR(^) |
@@ -33,6 +35,91 @@ console.log(fact);
 | 0   | 1   | 0      | 1    | 1      |
 | 1   | 0   | 0      | 1    | 1      |
 | 1   | 1   | 1      | 1    | 0      |
+
+### Most Significant Bit (MSB) & Least Significant Bit (LSB)
+
+#### Definition:
+
+- **Most Significant Bit (MSB)**: The highest-order bit in a binary number, which holds the highest value. In an 8-bit number, it is the leftmost bit.
+- **Least Significant Bit (LSB)**: The lowest-order bit in a binary number, which holds the lowest value. In an 8-bit number, it is the rightmost bit.
+
+#### Example in JavaScript:
+
+```js
+function getMSB(num) {
+  let msb = 1;
+  while (msb <= num) {
+    msb <<= 1;
+  }
+  return msb >> 1;
+}
+
+function getLSB(num) {
+  return num & 1;
+}
+
+console.log(getMSB(18)); // Output: 16 (10010 -> MSB is 16)
+console.log(getLSB(18)); // Output: 0 (10010 -> LSB is 0)
+```
+
+---
+
+### Set Bit & Unset Bit
+
+#### Definition:
+
+- **Set Bit**: A bit that is set to `1`.
+- **Unset Bit**: A bit that is set to `0`.
+
+#### Example in JavaScript:
+
+```js
+function isBitSet(num, pos) {
+  return (num & (1 << pos)) !== 0;
+}
+
+function setBit(num, pos) {
+  return num | (1 << pos);
+}
+
+function unsetBit(num, pos) {
+  return num & ~(1 << pos);
+}
+
+console.log(isBitSet(5, 0)); // Output: true (5 = 101, LSB is 1)
+console.log(setBit(5, 1)); // Output: 7 (5 = 101, setting 2nd bit gives 111)
+console.log(unsetBit(5, 2)); // Output: 1 (5 = 101, unsetting 3rd bit gives 001)
+```
+
+---
+
+### Left Shift & Right Shift Operators
+
+#### Definition:
+
+- **Left Shift (`<<`)**: Shifts bits to the left, filling with `0`s on the right. Equivalent to multiplying by `2^n`.
+- **Right Shift (`>>`)**: Shifts bits to the right, discarding bits on the right. Equivalent to integer division by `2^n`.
+
+#### Example in JavaScript:
+
+```js
+let num = 5;
+console.log(num << 1); // Output: 10 (5 * 2 = 10)
+console.log(num >> 1); // Output: 2  (5 / 2 = 2)
+```
+
+#### Notes:
+
+- Left shift is useful for fast multiplication by powers of 2.
+  ```js
+  let n = 5;
+  console.log(n * 5 === n << 2); // Output: false (n * 5 ≠ n << 2, but works for powers of 2)
+  ```
+- Right shift is useful for fast integer division by powers of 2.
+  ```js
+  let n = 20;
+  console.log(n / 4 === n >> 2); // Output: true (n / 4 = n >> 2)
+  ```
 
 ### Left Shift and Right Shift Operators
 
@@ -69,8 +156,6 @@ function checkOdd() {
   }
 }
 ```
-
-## Bit Manipulation Tricks
 
 ### Multiplication and Division using Bitwise Operators
 
@@ -202,5 +287,3 @@ console.log(sumModuloK(10, 7));
 ```
 
 ---
-
-These JavaScript implementations cover fundamental number theory concepts efficiently using bitwise operations and modular arithmetic.
