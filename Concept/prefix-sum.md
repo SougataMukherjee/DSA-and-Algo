@@ -1,6 +1,19 @@
 # Prefix Sum/Running sum
 
 A prefix sum is the cumulative sum of elements in an array from the 0th index to a given index. It is a common technique used in array processing, often applied in range sum queries, sub array problems
+Range queries involve calculating properties over a range of values in an array, such as:
+
+### Sum Query (sumq(a, b)):
+
+Calculate the sum of values in the range [a, b].
+
+### Minimum Query (minq(a, b)):
+
+Find the minimum value in the range [a, b].
+
+### Maximum Query (maxq(a, b)):
+
+Find the maximum value in the range [a, b].
 
 The prefix sum at index i is the sum of all elements from index 0 to i
 sab array arr[] of size N A prefix sum array is another array prefixSum[] of the same size is arr[0] + arr[1] + arr[2] . . . arr[i]
