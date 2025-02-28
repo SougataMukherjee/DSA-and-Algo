@@ -1,3 +1,16 @@
+# Abstract Data Type (ADT)
+
+An Abstract Data Type (ADT) is a data structure that is defined by its behavior (operations) rather than its implementation.
+
+### Common ADTs
+
+1. List
+2. Stack
+3. Queue
+4. Deque
+5. Map
+6. Set
+
 # Stack:
 
 A stack is an ordered list that follows the LIFO (Last In, First Out) principle. Elements can only be inserted and deleted from one end, called the top of the stack. It uses variable size allocation.
@@ -201,3 +214,23 @@ enqueue(30);
 console.log(dequeue()); // 10
 displayQueue(); // [20, 30]
 ```
+
+# Priority Queue
+
+A Priority Queue is a type of queue where each element is associated with a priority, and elements are served based on their priority rather than their insertion order.
+
+### Types
+
+Max Priority Queue → Higher priority elements are served first.<br>
+
+Min Priority Queue → Lower priority elements are served first.
+
+### Operations
+
+insert(element, priority) → Insert an element with its priority.<br>
+
+getHighestPriority() → Return the element with the highest priority without removing it.<br>
+
+deleteHighestPriority() → Remove and return the element with the highest priority.<br>
+
+isEmpty() → Check if the queue is empty.<br>
