@@ -60,7 +60,7 @@ Return All Keys
 console.log([...mapObj.keys()]); // Output: [ 'Sam', 'Rik', 'Lav' ]
 ```
 
-### HashMap vs HashTable
+### HashMap vs HashTable.
 
 | HashMap          | HashTable                |
 | ---------------- | ------------------------ |
