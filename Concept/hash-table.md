@@ -60,6 +60,8 @@ Return All Keys
 console.log([...mapObj.keys()]); // Output: [ 'Sam', 'Rik', 'Lav' ]
 ```
 
+### HashMap vs HashTable
+
 | HashMap          | HashTable                |
 | ---------------- | ------------------------ |
 | Allows null keys | Does not allow null keys |
