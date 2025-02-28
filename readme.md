@@ -429,6 +429,22 @@ Output: [2, 4]
 Highest records broken: 20 → 25 (2 times)
 Lowest records broken: 5 → 4 → 2 → 1 (4 times)<br>
 ![zic zag](./img/min-and-max-score.png)<br>
+//Q147 Given an array of bird observations, find the bird type that appears most frequently. If multiple bird types have the same frequency, return the smallest bird type ID<br>
+Input: [1, 4, 4, 4, 5, 3]
+Output: 4<br>
+//Q148 Given an array of integers and a positive integer k, count the number of pairs (i, j) where i < j and the sum of arr[i] + arr[j] is divisible by k.<br>
+Example
+ar=[1,2,3,4,5,6]
+k=5 3 pairs meet the criteria:[1,4],[2,3] and[4,6] <br>
+//Q149 A student wants to reach page p in a book with n total pages by turning pages either from the front or the back. Each page turn flips two pages at a time. Find the minimum number of pages the student needs to turn.
+considering each turn flips two pages.
+n = 6, p = 5
+output 1
+From the front: (1 → 2), (3 → 4), (5 → 6) → 2 turns
+From the back: (6 → 5) → 1 turn (minimum)
+//Q150 Find the longest contiguous subarray where the absolute difference between any two elements is less than or equal to 1.<br>
+a = [1,1,2,2,4,4,5,5,5]
+5 (The longest subarray is [4,4,5,5,5])<br>
 
 # tree
 
