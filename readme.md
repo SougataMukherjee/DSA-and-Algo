@@ -380,6 +380,55 @@ Output: 1
 Explanation: 0th and 2nd person both know 1. Therefore, 1 is the celebrity.<br>
 //Q137 Rearrange Array in Max Min Form
 //Q138 At Least K Occurrences
+//Q139 Alice and Bob each created one problem for coding round. A reviewer rates the two challenges, awarding points on a scale from 1 to 100 for three categories: problem clarity, originality, and difficulty.<br>
+The rating for Alice's challenge is the triplet a = (a, a, a), and the rating for Bob's challenge is the triplet b = (b, b, b).
+Your task is to compare these triplets.
+For each category, if a[i] > b[i], Alice gets 1 point.
+If b[i] > a[i], Bob gets 1 point.
+If a[i] == b[i], neither Alice nor Bob gets a point.
+Return the total points for Alice and Bob as an array [Alice's points, Bob's points]
+a = [5, 6, 7]
+b = [3, 6, 10]
+output [1, 1]<br>
+//Q140 Given a square matrix of size n x n, find the absolute difference between the sums of its two diagonals.<br>
+n = 3
+matrix = [
+[11, 2, 4],
+[4, 5, 6],
+[10, 8, -12]
+]
+output:3<br>
+//Q141 Convert a given time in numerals into words. The time is represented as hours and minutes.<br>
+If the minutes are 0, use "o' clock."
+If the minutes are between 1 and 30 (inclusive), use "minutes past."
+If the minutes are greater than 30, use "minutes to" the next hour.
+hour = 5
+minute = 10
+"ten minutes past five"<br>
+//Q142 Given an array of integers, find the minimum sum and the maximum sum that can be obtained by adding all but one element of the array.<br>
+arr=[1,2,5,7,9]
+minimum sum=1+2+5+7
+maximum sum=2+5+7+9<br>
+//Q143 You are given a list of integers representing the heights of birthday candles on a cake. The child can only blow out the tallest candles. Your task is to count the number of tallest candles on the cake.
+The first line contains an integer n, which is the number of candles on the cake.
+The second line contains n space-separated integers representing the heights of the candles.
+Return the number of tallest candles.<br>
+4<br>
+3 2 1 3<br>
+2<br>
+//Q144 Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.<br>
+07:05:45PM<br>
+19:05:45<br>
+//Q145 Two kangaroos start at positions x1 and x2 on a number line and jump distances v1 and v2, respectively. Determine if they will land on the same position at the same time.<br>
+Example:
+Input: x1 = 2, v1 = 3, x2 = 4, v2 = 2
+Output: "YES" (They meet at position 8 after 3 jumps)<br>
+//Q146 Find how many times Maria breaks her highest and lowest scoring records in a season.<br>
+Input: [10, 5, 20, 20, 4, 5, 2, 25, 1]
+Output: [2, 4]
+Highest records broken: 20 → 25 (2 times)
+Lowest records broken: 5 → 4 → 2 → 1 (4 times)<br>
+![zic zag](./img/min-and-max-score.png)<br>
 
 # tree
 
