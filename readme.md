@@ -446,6 +446,12 @@ From the back: (6 → 5) → 1 turn (minimum)
 a = [1,1,2,2,4,4,5,5,5]
 5 (The longest subarray is [4,4,5,5,5])<br>
 
+# hashing
+
+//Q1 Check for Valid Anagram
+//Q2 Check if Strings are Isomorphic
+//Q3 Two Sum Problem
+
 # tree
 
 //Q1 Check if a tree is a BST or BT<br>
