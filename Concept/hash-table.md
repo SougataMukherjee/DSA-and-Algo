@@ -4,6 +4,18 @@ Hashing is a technique used in data structures that efficiently stores and retri
 
 Hashing allows search, insert, and delete operations in O(1) time on average.
 
+### Advantage
+
+Fast Data Retrieval: Provides constant-time complexity (O(1)) for search operations in average cases.
+
+Efficient Insertions and Deletions: Enables quick updates to data.
+
+Flexible Data Size: Can dynamically handle varying amounts of data.
+
+Handles Large Datasets Well: Efficiently manages large collections of data.
+
+Direct Access Using Keys: Allows immediate access to data using unique keys.
+
 ### Internal Working of Hashing
 
 ![hashing](../img/hashing.png) <br>
@@ -68,3 +80,53 @@ console.log([...mapObj.keys()]); // Output: [ 'Sam', 'Rik', 'Lav' ]
 | Not synchronized | Synchronized             |
 | Faster           | Slower                   |
 | Unordered        | Ordered                  |
+
+### Hash Function
+
+For the same input, always gives the same output.
+
+A perfect hash function always produces unique keys for unique inputs.
+
+A non-perfect hash function might result in collisions (multiple inputs producing the same output).
+Example:
+k = 20 % 9 = 2
+
+k = 29 % 9 = 2
+
+k = 38 % 9 = 2
+
+### Hashing Methods
+
+1.  Modulo Method
+    The index is calculated using the formula: H(k) = k % m
+    7:1 → 7 % 9 = 7
+
+11:2 → 11 % 9 = 2
+
+20:9 → 20 % 9 = 2
+
+23:5 → 23 % 9 = 5 2. Mid-Square Method
+Square the key and select the middle digits.
+Example:
+
+H(16) = 16 \* 16 = 256
+
+Take 25 or 56 as the hash index. 3. Multiplication Method
+Uses a constant multiplication factor to calculate the hash index.
+Formula: H(k) = floor(m _ (k _ A % 1)), where 0 < A < 1
+
+### Collision Resolution Techniques
+
+1. Chaining (Open Hashing)
+   Store collided elements in a linked list at the same index.
+   ![hash](../img/open-hashing.png) <br>
+
+### Load Factor
+
+Load Factor (λ): Measures how full the hash table is.
+Formula: λ = n / m
+
+n = Number of elements
+
+m = Table capacity
+When the load factor reaches a threshold (usually 0.75), the hash table is resized (doubled) to maintain performance.
