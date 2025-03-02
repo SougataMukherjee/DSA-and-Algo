@@ -451,6 +451,28 @@ a = [1,1,2,2,4,4,5,5,5]
 //Q1 Check for Valid Anagram
 //Q2 Check if Strings are Isomorphic
 //Q3 Two Sum Problem
+//Q4 You are given an integer array nums of length n, where nums contains numbers from 1 to n with exactly one duplicate and one missing number.
+Write a function to return an array of two elements:
+The first element is the number that occurs twice.
+The second element is the missing number.<br>
+Input: nums = [1, 2, 2, 4]
+Output: [2, 3]<br>
+//Q5 Given an array of integers nums and an integer k, find the number of unique pairs (nums[i], nums[j]) such that the absolute difference between the pair is equal to k and i != j.<br>
+Input: nums = [3,1,4,1,5], k = 2
+Output: 2(1,3),(3,5)<br>
+//Q6 Given an array nums of n integers where nums[i] is in the range [1, n], return an array of all the integers in the range [1, n] that do not appear in nums.<br>
+Input: nums = [4,3,2,7,8,2,3,1]
+Output: [5,6]<br>
+//Q7 Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.<br>
+Input: s = "leetcode"
+Output: 0<br>
+//Q8 Given a pattern string and a sentence s consisting of words separated by spaces, write a function to determine if there is a one-to-one correspondence between each character in the pattern and each unique word in the sentence.<br>
+Input: pattern = "abba", s = "dog cat cat dog"
+Output: true<br>
+//Q9 Design an LRUCache class that implements a Least Recently Used cache with get(key) and put(key, value) methods, where both operations run in O(1) time complexity. Use appropriate data structures to maintain the cache ordering.
+
+Constraints:
+The cache should have a fixed capacity and automatically evict the least recently used entry when the capacity is exceeded.
 
 # tree
 
