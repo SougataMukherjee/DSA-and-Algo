@@ -11,6 +11,15 @@ A list is a linear collection of elements stored in contiguous memory locations 
 
 A linked list is a linear data structure where elements (nodes) are connected via pointers, allowing dynamic memory allocation
 
+## ArrayList vs LinkedList
+
+| ArrayList                                                           | LinkedList                                                             |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ArrayList internally uses a dynamic array to store the elements.    | LinkedList internally uses a doubly linked list to store the elements. |
+| Manipulation with ArrayList is slow.                                | Manipulation with LinkedList is faster.                                |
+| ArrayList is better for storing and accessing data.                 | LinkedList is better for manipulating data.                            |
+| The memory location for the elements of an ArrayList is contiguous. | The location for the elements of a LinkedList is not contiguous.       |
+
 ### Limitations of Arrays
 
 #### Fixed Size:

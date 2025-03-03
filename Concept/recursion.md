@@ -27,6 +27,17 @@ problem related to choice mainly related to recursion and in recursion if there 
 
 ### approaches:
 
+Dynamic programming can be achieved using two approaches:
+
+1. Top-Down Approach (Memoization)
+   Top-Down breaks the large problem into multiple subproblems.
+   if the subproblem solved already just reuse the answer. <br>
+2. Bottom-Up Approach (Tabulation)
+   Start computing result for the subproblem. Using the subproblem result solve another subproblem and finally solve the whole problem.
+   ![top down dp](../img/top-down-dp.png)
+
+### Example
+
 //find nth fibonacci number
 `0 1 1 2 3 5`
 

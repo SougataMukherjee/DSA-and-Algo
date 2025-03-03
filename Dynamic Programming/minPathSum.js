@@ -24,3 +24,19 @@ function minPathSum(grid) {
 
   return grid[m - 1][n - 1];
 }
+
+//solution 2
+
+function minPathSum(arr, i = 0, j = 0, memo = {}) {
+  if (i >= arr.length || j >= arr[0].length) return Infinity;
+  if (i === arr.length - 1 && j === arr[0].length - 1) return arr[i][j];
+
+  let key = `${i},${j}`;
+  if (memo[key] !== undefined) return memo[key];
+
+  let rightPath = minPathSum(arr, i, j + 1, memo);
+  let bottomPath = minPathSum(arr, i + 1, j, memo);
+
+  memo[key] = arr[i][j] + Math.min(rightPath, bottomPath);
+  return memo[key];
+}
