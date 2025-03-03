@@ -74,9 +74,12 @@ A graph is a non-linear data structure consisting of vertices (nodes) and edges 
 ![Directed graph](../img/al-graph.png) <br>
 Each node stores a list of its adjacent nodes.its kind a list of lists
 Space Complexity: O(V + E),V=total list of vertex and E=number of edges(1,2,3)
-1 → [2, 3]
-2 → [1, 3]
-3 → [1, 2]
+1 → [2, 3]<br>
+2 → [1, 3]<br>
+3 → [1, 2,4]<br>
+4 → [3]<br>
+adjacency-list
+![adjacency-list](../img/adjacency-list.png)
 
 ### adjacency matrix(n\*n):<br>
 
@@ -84,10 +87,14 @@ Space Complexity: O(V + E),V=total list of vertex and E=number of edges(1,2,3)
 here 1 connected with 2 and 2 connected with 3 and 3 to 1
 A matrix where a[i][j] = 1 if there is an edge between i and j, otherwise 0
 Space Complexity: O(n²).
-1 2 3
-1 0 1 1
-2 1 0 1
-3 1 1 0
+
+> here row represent a node and column represent neighbor
+
+|     | 1   | 2   | 3   |
+| --- | --- | --- | --- |
+| 1   | 0   | 1   | 1   |
+| 2   | 1   | 0   | 1   |
+| 3   | 1   | 1   | 0   |
 
 ### graph traversal
 
@@ -102,16 +109,16 @@ Space Complexity: O(n²).
    ```
    bfsOfGraph(adj) {
         const V = adj.length;               // Number of vertices
-        let visited = new Array(V).fill(false); // Boolean array to track visited vertices
+        let visited = new Array(V).fill(false); //boolean array to avoid infinite loop
         let res = [];                       // Result array to store BFS traversal
         let q = [];                         // Queue for BFS
 
         let s = 0; // Start BFS from vertex 0
-        visited[s] = true;
+        visited[s] = true; //mark visited as true
         q.push(s);
 
         while (q.length > 0) {
-            let t = q.shift(); // remove front node from the queue
+            let t = q.shift(); // remove front element from the queue
             res.push(t);       // Add it to the result array
 
             // Traverse all adjacent vertices of dequeued vertex
@@ -144,9 +151,9 @@ Space Complexity: O(n²).
    //else mark it as visited and print it.
    visited[start] = true;
    console.log(start);
-   //Recursively visit neighbors,if neighbour visited then backtrack
+   //Recursively visit neighbors,until all neighbor visited backtrack
    for (let neighbor of graph[start]) {
-   dfs(graph, neighbor, visited);
+   dfs(graph, neighbor, visited); //visiting neighbor
    }
    }
 

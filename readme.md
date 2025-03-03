@@ -1058,4 +1058,5 @@ Since 2 has only one digit, return it.<br>
 
 # Achievement
 
-![Achievement Title](./img/dsa-certification.png)
+![Achievement Title1](./img/dsa-certification.png)
+![Achievement Title2](./img/scaller-dsa.png)
