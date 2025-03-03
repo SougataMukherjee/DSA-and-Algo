@@ -4,6 +4,14 @@ A graph is a non-linear data structure consisting of vertices (nodes) and edges 
 
 ![graph](../img/graph.png) <br>
 
+### Tree vs Graph
+
+| **Characteristics** | **Tree**                                          | **Graph**                          |
+| ------------------- | ------------------------------------------------- | ---------------------------------- |
+| **Definition**      | A set of nodes and edges with a unique root node. | A set of vertices/nodes and edges. |
+| **Root Node**       | Has a unique root node.                           | No unique root node.               |
+| **Cycles**          | Cannot form cycles.                               | Can form cycles.                   |
+
 ### Types of Graphs<br>
 
 1. `undirected graph`<br>

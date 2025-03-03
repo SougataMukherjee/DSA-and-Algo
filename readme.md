@@ -770,6 +770,7 @@ Input:
 Output:
 3 2 1 4 5<br>
 //Q19 Design Circular Queue<br>
+//Q20 Queue using linked list
 
 # searching & sorting
 
