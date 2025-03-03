@@ -11,7 +11,7 @@ A list is a linear collection of elements stored in contiguous memory locations 
 
 A linked list is a linear data structure where elements (nodes) are connected via pointers, allowing dynamic memory allocation
 
-## ArrayList vs LinkedList
+### ArrayList vs LinkedList
 
 | ArrayList                                                           | LinkedList                                                             |
 | ------------------------------------------------------------------- | ---------------------------------------------------------------------- |
