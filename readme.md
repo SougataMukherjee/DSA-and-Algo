@@ -445,6 +445,14 @@ From the back: (6 → 5) → 1 turn (minimum)
 //Q150 Find the longest contiguous subarray where the absolute difference between any two elements is less than or equal to 1.<br>
 a = [1,1,2,2,4,4,5,5,5]
 5 (The longest subarray is [4,4,5,5,5])<br>
+//Q151 Sort string based frequency of characters
+Input:
+"tree"
+Output"
+"eert" or "eetr"
+//Q152 remove prime number from an array
+//Q153 remove vowel from string
+//Q154 reverse vowel of a string code
 
 # hashing
 
@@ -473,87 +481,7 @@ Output: true<br>
 
 Constraints:
 The cache should have a fixed capacity and automatically evict the least recently used entry when the capacity is exceeded.
-
-# tree
-
-//Q1 Check if a tree is a BST or BT<br>
-//Q2 find the lowest common ancestor (LCA) of two given nodes in the tree.<br>
-//Q3 Level Order Traversal of Binary Tree<br>
-//Q4 Preorder traversal in binary tree<br>
-//Q5 Right/Left side View of Binary Tree<br>
-//Q6 Merge Two Binary Trees<br>
-Input: root1 = [1,3,2,5], root2 = [2,1,3,null,4,null,7]
-Output: [3,4,5,5,4,null,7]<br>
-//Q7 Sum of Left Leaves<br>
-Input: root = [3,9,20,null,null,15,7]
-Output: 9+15=24<br>
-//Q8 Maximum or Minimum Depth in Binary Tree<br>
-//Q9 check a tree is Balanced Binary Tree or AVL tree<br>
-//Q10 Given the root of a binary tree, check whether it is a mirror(symmetric) of itself<br>
-Input: root = [1,2,2,3,4,4,3] Output: true<br>
-//Q11 Check it two trees are Identical(have the same value) or Not <br>
-//Q12 Subtree of Another Tree<br>
-//Q13 Count total Nodes in a complete Binary Tree<br>
-//Q14 Invert/Flip Binary Tree<br>
-Input: root = [4,2,7,1,3,6,9]
-Output: [4,7,2,9,6,3,1]<br>
-//Q15 whether a binary tree is a full binary tree or not<br>
-//Q16 Recover BST <br>
-Input: root = [1,3,null,null,2]
-Output: [3,1,null,null,2]<br>
-//Q17 Zig-Zag Level Order Traversal <br>
-Input: root = [3,9,20,null,null,15,7]
-Output: [[3],[20,9],[15,7]]<br>
-![zic zag](./img/zig-zag%20traversal.png)<br>
-//Q18 find height of binary tree<br>
-//Q19 find diameter of binary tree<br>
-Input: root = [1,2,3,4,5]
-Output: 3
-Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].<br>
-//Q20 convert binary tree to mirror tree<br>
-Input: root[] = [1, 2, 3, 4, 5]
-Output: [1, 3, 2, N, N, 5, 4]<br>
-//Q21 Minimum element in BST<br>
-Input: root = [5, 4, 6, 3, N, N, 7, 1]
-Output: 1<br>
-//Q22 Insert a node in a BST<br>
-Input: key = 4
-Output: 1 2 3 4<br>
-//Q23 k-th Smallest in BST<br>
-Input: root = [2, 1, 3], k = 2
-Output: 2<br>
-//Q24 Top View of Binary Tree<br>
-Input: root[] = [1, 2, 3]
-Output: [2, 1, 3]<br>
-//Q25 Check if a binary tree has a root-to-leaf path summing to targetSum<br>
-Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22
-Output: true<br>
-//Q26 Find all root to leaf paths in a binary tree, prioritizing left subtree paths before right subtree paths.<br>
-Input: root[] = [1, 2, 3, 4, 5]
-Output: [[1, 2, 4], [1, 2, 5], [1, 3]]
-Explanation: All possible paths: 1->2->4, 1->2->5 and 1->3<br>
-//Q27 Check if two binary trees are isomorphic by allowing any number of left-right child swaps.<br>
-Input: root1[] = [1, 2, 3, 4, 5, 7, 6, N, 7, 8], root2[] = [1, 3, 2, N, 6, 4, 5, 8, 7]
-Output: true<br>
-//Q28 Return the diagonal tree traversal of a binary tree as a single list, prioritizing left subtree elements before right when on the same diagonal.<br>
-Input : root = [8, 3, 10, 1, 6, N, 14, N, N, 4, 7, 13]
-Output : [8, 10, 14, 3, 6, 7, 13, 1, 4]<br>
-//Q29 Array to BST<br>
-Input: nums = [1, 2, 3, 4]
-Output: true<br>
-//Q30 Find and return all nodes at odd levels of a binary tree in sorted order.<br>
-Input: root = [1, 2, 3, 4, 5, N, 6, N, N, 7, 8, 9]
-Output: [1, 4, 5, 6]<br>
-
-# heap
-
-//Q1 Does array represent Heap<br>
-n = 6
-arr[] = {90, 15, 10, 7, 12, 2}
-Output:
-1<br>
-//Q2 Efficiently match a given set of
-n nuts and bolts using only nut-to-bolt comparisons, ensuring they follow the order { !,#,$,%,&,\*,?,@,^ }.<br>
+//Q10 hashing first repeating character
 
 # two pointer
 
@@ -579,92 +507,6 @@ Output: 3<br>
 //Q7 Segregate 0s and 1s in an array or move all even integer followed by all odd integer<br>
 Input : [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
 Output : [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]<br>
-
-# Sliding window
-
-//Q1 Given an array of positive integers nums and a positive integer target, return the minimal length of a sub array
-whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.<br>
-Input: target = 7, nums = [2,3,1,2,4,3]
-Output: 2[4,3]<br>
-//Q2 Find the longest contiguous subarray (baskets) containing at most two distinct integers (fruits).<br>
-Input: fruits = [1,2,1]
-Output: 3
-Explanation: We can pick from all 3 trees.<br>
-//Q3 Given an array of integers nums and an integer k. A continuous subarray is called nice if there are k odd numbers on it.<br>
-Input: nums = [1,1,2,1,1], k = 3
-Output: 2
-Explanation: The only sub-arrays with 3 odd numbers are [1,1,2,1] and [1,2,1,1].<br>
-//Q4 Find the first continuous subarray in a non-negative integer array arr[] whose sum equals target, and return its 1-based start and end indices; return [-1] if no such subarray exists.<br>
-Input: arr[] = [1, 2, 3, 7, 5], target = 12
-Output: [2, 4]
-Explanation: The sum of elements from 2nd to 4th position is 12.<br>
-//Q5 Longest Subarray with Sum K.<br>
-//Q6 Max Sum Subarray of size K<br>
-Input: arr[] = [100, 200, 300, 400] , k = 2
-Output: 700
-Explanation: arr3 + arr4 = 700, which is maximum.<br>
-//Q7 Longest subarray with sum divisible by K<br>
-Input: arr[] = [2, 7, 6, 1, 4, 5], k = 3
-Output: 4
-Explanation: The subarray [7, 6, 1, 4] has sum = 18, which is divisible by 3.<br>
-
-# prefix sum
-
-//Q1 print the sum of value in a array in given range(l=3 an r=5 follow 1 based index)<br>
-a=[2,4,1,3,6,5]=1+3+6
-1 2 3 4 5 6<br>
-//Q2 subarray sum equals k<br>
-Input: nums = [1,1,1], k = 2
-Output: 2<br>
-//Q3 subarry sum divisible by k<br>
-Input: nums = [4,5,0,-2,-3,1], k = 5
-Output: 7<br>
-//Q4 Maximum Average Subarray<br> Input: nums = [1,12,-5,-6,50,3], k = 4
-Output: 12.75000
-Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75<br>
-//Q5 find Maximum Subarray<br>
-Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
-Output: 6
-Explanation: The subarray [4,-1,2,1] has the largest sum 6.<br>
-//Q6 partition of the array into two subarray<br>
-//Q7 product of array except self<br>
-//Q8 Given n flights labeled 1 to n and an array bookings where each entry [firsti, lasti, seatsi] represents seatsi seats booked for flights firsti to lasti, return an array where each element represents the total seats reserved for the corresponding flight.<br>
-Input: bookings = [[1,2,10],[2,3,20],[2,5,25]], n = 5
-10 seats booked from flight 1 to 2.
-Output: [10,55,45,25,25]<br>
-![flight-book](./img/corporate-flight-book.png)<br>
-//Q9 zero array transformation<br>
-Input: nums = [1,0,1], queries = [[0,2]]
-Output: true<br>
-//Q10 maximum count of distinct integers you can select from the range while avoiding banned number and keeping the sum ≤ maxSum<br>
-Input: banned = [1,6,5], n = 5, maxSum = 6
-Output: 2<br>
-//Q11 Find if there is a subarray with 0 sums<br>
-Input: {4, 2, -3, 1, 6}
-Output: true <br>
-
-# binary search
-
-//Q1 check weather a value is exist or not in array(recursion binary search)<br>
-//Q2 search in 2D matrix<br>
-Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
-Output: true<br>
-//Q3 Search in a Rotated Sorted Array with or without duplicate elements<br>
-Note:we can not find the sorted segment like mid less end because it might be same number for mid and end in terms of duplicate
-Input: nums = [2,5,6,0,0,1,2], target = 0
-Output: true<br>
-//Q4 Find Peak Element in a Mountain Array<br>
-Input: nums = [1,2,3,1]
-Output: 2<br>
-Explanation: 3 is a peak element and your function should return the index number 2.<br>
-//Q5 Find Minimum in Rotated Sorted Array
-Input: nums = [3,4,5,1,2]
-Output: 1<br>
-Explanation: The original array was [1,2,3,4,5] rotated 3 times.<br>
-//Q6 Spiral Matrix<br>
-Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
-Output: [1,2,3,6,9,8,7,4,5]<br>
-//Q7 Find K Closest Elements ,Given a sorted array arr, and integers k and x, return the k closest integers to x in the array, sorted in ascending order, with ties broken by the smaller integer.<br>
 
 # Linked List
 
@@ -740,6 +582,105 @@ Output:
 Input: LinkedList: 3 <-> 4 <-> 5
 Output: 5 <-> 4 <-> 3<br>
 //Q27 Flattening a Linked List<br>
+//Q28 length of linked list<br>
+//Q29 search k in linked list<br>
+
+# heap
+
+//Q1 Does array represent Heap<br>
+n = 6
+arr[] = {90, 15, 10, 7, 12, 2}
+Output:
+1<br>
+//Q2 Efficiently match a given set of
+n nuts and bolts using only nut-to-bolt comparisons, ensuring they follow the order { !,#,$,%,&,\*,?,@,^ }.<br>
+
+# Sliding window
+
+//Q1 Given an array of positive integers nums and a positive integer target, return the minimal length of a sub array
+whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.<br>
+Input: target = 7, nums = [2,3,1,2,4,3]
+Output: 2[4,3]<br>
+//Q2 Find the longest contiguous subarray (baskets) containing at most two distinct integers (fruits).<br>
+Input: fruits = [1,2,1]
+Output: 3
+Explanation: We can pick from all 3 trees.<br>
+//Q3 Given an array of integers nums and an integer k. A continuous subarray is called nice if there are k odd numbers on it.<br>
+Input: nums = [1,1,2,1,1], k = 3
+Output: 2
+Explanation: The only sub-arrays with 3 odd numbers are [1,1,2,1] and [1,2,1,1].<br>
+//Q4 Find the first continuous subarray in a non-negative integer array arr[] whose sum equals target, and return its 1-based start and end indices; return [-1] if no such subarray exists.<br>
+Input: arr[] = [1, 2, 3, 7, 5], target = 12
+Output: [2, 4]
+Explanation: The sum of elements from 2nd to 4th position is 12.<br>
+//Q5 Longest Subarray with Sum K.<br>
+//Q6 Max Sum Subarray of size K<br>
+Input: arr[] = [100, 200, 300, 400] , k = 2
+Output: 700
+Explanation: arr3 + arr4 = 700, which is maximum.<br>
+//Q7 Longest subarray with sum divisible by K<br>
+Input: arr[] = [2, 7, 6, 1, 4, 5], k = 3
+Output: 4
+Explanation: The subarray [7, 6, 1, 4] has sum = 18, which is divisible by 3.<br>
+
+# prefix sum
+
+//Q0 print all subarrays of array
+//Q1 print the sum of value in a array in given range(l=3 an r=5 follow 1 based index)<br>
+a=[2,4,1,3,6,5]=1+3+6
+1 2 3 4 5 6<br>
+//Q2 subarray sum equals k<br>
+Input: nums = [1,1,1], k = 2
+Output: 2<br>
+//Q3 subarry sum divisible by k<br>
+Input: nums = [4,5,0,-2,-3,1], k = 5
+Output: 7<br>
+//Q4 Maximum Average Subarray<br> Input: nums = [1,12,-5,-6,50,3], k = 4
+Output: 12.75000
+Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75<br>
+//Q5 find Maximum Subarray<br>
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.<br>
+//Q6 partition of the array into two subarray<br>
+//Q7 product of array except self<br>
+//Q8 Given n flights labeled 1 to n and an array bookings where each entry [firsti, lasti, seatsi] represents seatsi seats booked for flights firsti to lasti, return an array where each element represents the total seats reserved for the corresponding flight.<br>
+Input: bookings = [[1,2,10],[2,3,20],[2,5,25]], n = 5
+10 seats booked from flight 1 to 2.
+Output: [10,55,45,25,25]<br>
+![flight-book](./img/corporate-flight-book.png)<br>
+//Q9 zero array transformation<br>
+Input: nums = [1,0,1], queries = [[0,2]]
+Output: true<br>
+//Q10 maximum count of distinct integers you can select from the range while avoiding banned number and keeping the sum ≤ maxSum<br>
+Input: banned = [1,6,5], n = 5, maxSum = 6
+Output: 2<br>
+//Q11 Find if there is a subarray with 0 sums<br>
+Input: {4, 2, -3, 1, 6}
+Output: true <br>
+
+# binary search
+
+//Q1 check weather a value is exist or not in array(recursion binary search)<br>
+//Q2 search in 2D matrix<br>
+Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
+Output: true<br>
+//Q3 Search in a Rotated Sorted Array with or without duplicate elements<br>
+Note:we can not find the sorted segment like mid less end because it might be same number for mid and end in terms of duplicate
+Input: nums = [2,5,6,0,0,1,2], target = 0
+Output: true<br>
+//Q4 Find Peak Element in a Mountain Array<br>
+Input: nums = [1,2,3,1]
+Output: 2<br>
+Explanation: 3 is a peak element and your function should return the index number 2.<br>
+//Q5 Find Minimum in Rotated Sorted Array
+Input: nums = [3,4,5,1,2]
+Output: 1<br>
+Explanation: The original array was [1,2,3,4,5] rotated 3 times.<br>
+//Q6 Spiral Matrix<br>
+Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+Output: [1,2,3,6,9,8,7,4,5]<br>
+//Q7 Find K Closest Elements ,Given a sorted array arr, and integers k and x, return the k closest integers to x in the array, sorted in ascending order, with ties broken by the smaller integer.<br>
 
 # stack & queue
 
@@ -905,6 +846,79 @@ Output: 2<br>
 Input: n = 100
 Output: 1
 Explanation: 10 (mul) 10 = 100
+
+# tree
+
+//Q1 Check if a tree is a BST or BT<br>
+//Q2 find the lowest common ancestor (LCA) of two given nodes in the tree.<br>
+//Q3 Level Order Traversal of Binary Tree<br>
+//Q4 Preorder traversal in binary tree<br>
+//Q5 Right/Left side View of Binary Tree<br>
+//Q6 Merge Two Binary Trees<br>
+Input: root1 = [1,3,2,5], root2 = [2,1,3,null,4,null,7]
+Output: [3,4,5,5,4,null,7]<br>
+//Q7 Sum of Left Leaves<br>
+Input: root = [3,9,20,null,null,15,7]
+Output: 9+15=24<br>
+//Q8 Maximum or Minimum Depth in Binary Tree<br>
+//Q9 check a tree is Balanced Binary Tree or AVL tree<br>
+//Q10 Given the root of a binary tree, check whether it is a mirror(symmetric) of itself<br>
+Input: root = [1,2,2,3,4,4,3] Output: true<br>
+//Q11 Check it two trees are Identical(have the same value) or Not <br>
+//Q12 Subtree of Another Tree<br>
+//Q13 Count total Nodes in a complete Binary Tree<br>
+//Q14 Invert/Flip Binary Tree<br>
+Input: root = [4,2,7,1,3,6,9]
+Output: [4,7,2,9,6,3,1]<br>
+//Q15 whether a binary tree is a full binary tree or not<br>
+//Q16 Recover BST <br>
+Input: root = [1,3,null,null,2]
+Output: [3,1,null,null,2]<br>
+//Q17 Zig-Zag Level Order Traversal <br>
+Input: root = [3,9,20,null,null,15,7]
+Output: [[3],[20,9],[15,7]]<br>
+![zic zag](./img/zig-zag%20traversal.png)<br>
+//Q18 find height of binary tree<br>
+//Q19 find diameter of binary tree<br>
+Input: root = [1,2,3,4,5]
+Output: 3
+Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].<br>
+//Q20 convert binary tree to mirror tree<br>
+Input: root[] = [1, 2, 3, 4, 5]
+Output: [1, 3, 2, N, N, 5, 4]<br>
+//Q21 Minimum element in BST<br>
+Input: root = [5, 4, 6, 3, N, N, 7, 1]
+Output: 1<br>
+//Q22 Insert a node in a BST<br>
+Input: key = 4
+Output: 1 2 3 4<br>
+//Q23 k-th Smallest in BST<br>
+Input: root = [2, 1, 3], k = 2
+Output: 2<br>
+//Q24 Top View of Binary Tree<br>
+Input: root[] = [1, 2, 3]
+Output: [2, 1, 3]<br>
+//Q25 Check if a binary tree has a root-to-leaf path summing to targetSum<br>
+Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22
+Output: true<br>
+//Q26 Find all root to leaf paths in a binary tree, prioritizing left subtree paths before right subtree paths.<br>
+Input: root[] = [1, 2, 3, 4, 5]
+Output: [[1, 2, 4], [1, 2, 5], [1, 3]]
+Explanation: All possible paths: 1->2->4, 1->2->5 and 1->3<br>
+//Q27 Check if two binary trees are isomorphic by allowing any number of left-right child swaps.<br>
+Input: root1[] = [1, 2, 3, 4, 5, 7, 6, N, 7, 8], root2[] = [1, 3, 2, N, 6, 4, 5, 8, 7]
+Output: true<br>
+//Q28 Return the diagonal tree traversal of a binary tree as a single list, prioritizing left subtree elements before right when on the same diagonal.<br>
+Input : root = [8, 3, 10, 1, 6, N, 14, N, N, 4, 7, 13]
+Output : [8, 10, 14, 3, 6, 7, 13, 1, 4]<br>
+//Q29 Array to BST<br>
+Input: nums = [1, 2, 3, 4]
+Output: true<br>
+//Q30 Find and return all nodes at odd levels of a binary tree in sorted order.<br>
+Input: root = [1, 2, 3, 4, 5, N, 6, N, N, 7, 8, 9]
+Output: [1, 4, 5, 6]<br>
+//Q31 find sum of tree<br>
+//Q32 max of tree<br>
 
 # graph
 
