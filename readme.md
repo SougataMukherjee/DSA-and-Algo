@@ -508,6 +508,7 @@ Find the fastest runner.<br>
 //Q168 Convert String to Title Case<br>
 GUYS, hello world->Guys, Hello World<br>
 //Q169 Rearrange each row of a square grid alphabetically. Check if all columns are also in ascending order; return "YES" if true, otherwise return "NO"<br>
+//Q170 Given a grid of size n x 3, find the number of ways to paint each cell using three colors (Red, Yellow, Green) such that no two adjacent cells (vertically or horizontally) share the same color. Return the result modulo 10^9 + 7.<br>
 
 # hashing
 
