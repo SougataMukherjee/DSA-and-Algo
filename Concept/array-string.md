@@ -2,6 +2,7 @@
 
 An **array** is a linear data structure used to store multiple elements.
 It is a collection of elements of the same data type stored at contiguous memory locations.
+![array](../img/array.png) <br>
 
 ### Types of Arrays
 
@@ -10,6 +11,7 @@ It is a collection of elements of the same data type stored at contiguous memory
 3. 1-Dimensional Array
 4. 2-Dimensional Array
    - A 2-dimensional array, known as a matrix, is arranged in rows and columns.
+     ![2darray](../img/2-D-array.png) <br>
 
 ### Initialization of Array
 
@@ -52,6 +54,7 @@ for (let element of arr) {
 # String
 
 A **string** is a sequence of characters.
+![string](../img/string.png) <br>
 
 ### Creation and Initialization
 
