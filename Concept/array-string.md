@@ -53,7 +53,7 @@ for (let element of arr) {
 
 # String
 
-A **string** is a sequence of characters.
+A **string** is a sequence of characters.<br>
 ![string](../img/string.png) <br>
 
 ### Creation and Initialization
