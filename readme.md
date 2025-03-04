@@ -124,6 +124,13 @@ output:16<br>
 <!-- *
      ***
      ***** -->
+//Q44.1 Star Pattern 1.2<br>
+
+<!--  #
+     ##
+    ###
+   #### -->
+
 
 //Q45 Star Pattern 2<br>
 
@@ -445,14 +452,62 @@ From the back: (6 → 5) → 1 turn (minimum)
 //Q150 Find the longest contiguous subarray where the absolute difference between any two elements is less than or equal to 1.<br>
 a = [1,1,2,2,4,4,5,5,5]
 5 (The longest subarray is [4,4,5,5,5])<br>
-//Q151 Sort string based frequency of characters
+//Q151 Sort string based frequency of characters<br>
 Input:
 "tree"
 Output"
-"eert" or "eetr"
-//Q152 remove prime number from an array
-//Q153 remove vowel from string
-//Q154 reverse vowel of a string code
+"eert" or "eetr"<br>
+//Q152 remove prime number from an array<br>
+//Q153 remove vowel from string<br>
+//Q154 reverse vowel of a string code<br>
+//Q155 Given an array of hurdle heights and a character's maximum jump height, determine the minimum number of magic potion doses required to jump over all hurdles. Each dose increases the jump height by 1 unit. If the character can already clear all hurdles, return 0.<br>
+k (maxJump)= 4  
+height (hurdle)= [1, 6, 3, 5, 2]
+2<br>
+//Q156 A professor will cancel the class if fewer than k students arrive on time (arrival time ≤ 0). Given the arrival times of n students in array a, determine if the class is Cancelled or Not Cancelled<br>
+n = 5, k = 3
+a = [-2, -1, 0, 1, 2]
+Output: No<br>
+//Q157 Calculate the library fine based on return and due dates, where fines apply only for late returns: 15/day (same month), 500/month (same year), and 10,000 (next year).<br>
+//Q158 Encrypt a given string by removing spaces and arranging characters in a grid with rows and columns based on its length. Read column-wise and return the encoded message.<br>
+Example:
+Input: "if man was meant to stay on the ground god would have given us roots"
+Output: "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn sseoau"<br>
+//Q159 You want to buy video games during a sale where the first game costs p dollars. Each subsequent game is d dollars cheaper until the price reaches m dollars, after which all games cost m. Given a budget s, determine how many games you can buy<br>
+where p =initial game price,d=discount per game,m=minimum possible price,s=total budget
+20 3 6 80<br>
+6<br>
+//Q160 A strange counter starts at t = 1 with an initial value of 3 and decreases by 1 each second until it reaches 1. At that point, it resets to twice the initial value of the previous cycle and continues. Given a time t, find the value displayed by the counter at that moment.<br>
+input 4
+output 6<br>
+//Q161 Given a CamelCase string s, count the number of words it contains. The first word starts with a lowercase letter, and each subsequent word starts with an uppercase letter.<br>
+Input:
+oneTwoThree
+Output:
+3<br>
+//Q162 Check if a given string contains "hackerrank" as a subsequence while maintaining character order.
+For each query, print "YES" if the string contains "hackerrank," otherwise print "NO".<br>
+input:
+hereiamstackerrank
+output:
+yes<br>
+//Q163 Given a string of 'A' and 'B', remove the minimum number of adjacent matching characters so that no two consecutive characters are the same<br>
+input:
+AAAA
+AAABBB
+output:
+3
+4<br>
+//Q164 You are given N events, each with a unique start time, represented as [start_i, end_i]. For each event i, find the next event j with the smallest start time such that start_j ≥ end_i; if no such event exists, return -1<br>
+//Q165 Alice, Bob, and Charlie participated in a 400-metre race, finishing in X, Y, and Z seconds respectively (X, Y, and Z are distinct).
+Find the fastest runner.<br>
+//Q166 you have X five-rupee coins and Y ten-rupee coins. If each chocolate costs Z rupees, find the maximum chocolates you can buy.<br>
+//Q167 You are given a large number N. You need to print the number N+1.<br>
+599->600
+10000000000000000000->10000000000000000001<br>
+//Q168 Convert String to Title Case<br>
+GUYS, hello world->Guys, Hello World<br>
+//Q169 Rearrange each row of a square grid alphabetically. Check if all columns are also in ascending order; return "YES" if true, otherwise return "NO"<br>
 
 # hashing
 
@@ -481,7 +536,10 @@ Output: true<br>
 
 Constraints:
 The cache should have a fixed capacity and automatically evict the least recently used entry when the capacity is exceeded.
-//Q10 hashing first repeating character
+//Q10 hashing first repeating character<br>
+//Q11 You are given two integer arrays, A and B, each of size n. A pair (i, j) is called beautiful if A[i] == B[j], and a beautiful set contains such pairs without index repetition.
+
+Your task is to modify exactly one element in A to maximize the size of the pairwise disjoint beautiful set. Find and return this maximum size.<br>
 
 # two pointer
 
@@ -711,7 +769,12 @@ Input:
 Output:
 3 2 1 4 5<br>
 //Q19 Design Circular Queue<br>
-//Q20 Queue using linked list
+//Q20 Queue using linked list<br>
+//Q21 Given a string consisting of lowercase English letters, repeatedly remove adjacent pairs of matching letters until no such pairs remain. If the final string is empty, return "Empty String"<br>
+Input:
+aaabccddd
+Output:
+abd<br>
 
 # searching & sorting
 
@@ -723,8 +786,16 @@ Output:
 //Q6 find Overlapping Intervals<br>
 Input: arr[][] = [[1,3],[2,4],[6,8],[9,10]]
 Output: [[1,4], [6,8], [9,10]]
-//Q7 Sort an array of 0s, 1s, and 2s
-//Q8 Merge Two Sorted Arrays Without Extra Space
+//Q7 Sort an array of 0s, 1s, and 2s<br>
+//Q8 Merge Two Sorted Arrays Without Extra Space<br>
+//Q9 Given an array where the first element is the pivot, partition it into three subarrays: left (elements < pivot), equal (elements = pivot), and right (elements > pivot). Return a new array with elements from left, equal, and right combined in order<br>
+n = 5  
+arr = [4, 5, 3, 7, 2]  
+[3, 2, 4, 5, 7]<br>
+//Q10 Given an array of item(toys) weights, find the minimum number of containers needed to ship them, where each container can hold items within 4 units of the lightest item inside.<br>
+
+For w = [1, 2, 3, 21, 22, 23], the minimum number of containers required is 2 ([1, 2, 3] and [21, 22, 23]).<br>
+//Q11 Find three stick lengths that form a non-degenerate triangle with the maximum perimeter. If multiple exist, choose the one with the longest maximum side, then the longest minimum side. If none exist, return [-1].<br>
 
 # greedy algo
 
@@ -778,6 +849,15 @@ Output: 3
 Explanation: First jump from 1st element to 2nd element with value 3. From here we jump to 5th element with value 9, and from here we will jump to the last.<br>
 //Q15 Chocolate Distribution Problem<br>
 //Q16 Meeting Rooms
+//Q17 Given an array c of n clouds (0 = safe, 1 = thunderhead), find the minimum jumps needed to reach the last cloud, where you can jump 1 or 2 steps at a time<br>
+n = 7  
+c = [0, 0, 1, 0, 0, 1, 0] <br>
+output=4<br>
+//Q18 Given an array B where each element represents the number of loaves a person has, distribute the minimum number of loaves such that each person has an even count. You can only give a loaf to a person and their immediate neighbor at the same time. Return the minimum loaves distributed as a string or "NO" if it's impossible.<br>
+N = 5  
+B = [2, 3, 4, 5, 6]
+
+output 4<br>
 
 # Recursion
 
@@ -1009,7 +1089,13 @@ f(4, 2) + f(4, 4) =
 n (from the right) in its binary representation.<br>
 Input: n = 10, k = 2
 Output: 14<br>
-//Q11 Division without using multiplication, division, and mod operator
+//Q11 Division without using multiplication, division, and mod operator<br>
+//Q12 Find the maximum XOR value between any two integers in the range [l, r].<br>
+//Q13 Given a 32-bit unsigned integer , flip all its bits (convert 0 to 1 and 1 to 0) and return the result as an unsigned integer<br>
+//Q14 Find count of numbers whose sum with n equals XOR with n<br>
+5 <br>
+2<br>
+//Q15 Find the unique number in an array where all other elements appear twice<br>
 
 # Backtracking
 
@@ -1070,6 +1156,11 @@ Explanation: The process is
 38 --> 3 + 8 --> 11
 11 --> 1 + 1 --> 2
 Since 2 has only one digit, return it.<br>
+//Q6 In a circular jail with n prisoners, m sweets are distributed starting from prisoner s. Each prisoner gets one sweet in order until all are given out. The last sweet is poisoned. Find the prisoner who gets it.<br>
+n = 5, m = 2, s = 1
+output 2<br>
+//Q7 Given n piles of chips and a maximum add limit k, two players take turns either adding or removing chips from a single pile. The player who removes the last chip wins. Determine whether the first or second player wins if both play optimally.<br>
+//Q8 Given n towers of height m, two players take turns reducing a tower's height to any divisor of its current height (except itself). If a player cannot move, they lose. Determine if the first player (1) wins or the second player (2) wins.<br>
 
 # Achievement
 

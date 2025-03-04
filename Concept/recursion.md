@@ -112,10 +112,10 @@ logic: n!=n (n-1) (n-2)...1 =>fact(5)=5\*fact(4)
 
 ```
 function fact(n){
-if(n===0)return 1
-else return n * fact(n-1)
+if(n===0)return BigInt(1)
+else return BigInt(n) * fact(n-1)
 }
-console.log(fact(5))
+console.log(fact(5).toString())
 ```
 
 //Power Of Numbers Pow(x, n)
