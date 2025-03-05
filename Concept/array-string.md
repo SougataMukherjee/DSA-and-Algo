@@ -51,6 +51,29 @@ for (let element of arr) {
 }
 ```
 
+### Sum Formula Notes
+
+1. The sum formula is used to calculate the total sum of a series.
+2. General Formula:
+   - Sum of first n natural numbers: **S = n(n+1)/2**
+3. Example:
+   - If n = 5, then S = 5(5+1)/2 = 15
+4. This formula helps in quickly finding the sum without looping through numbers.
+
+### Sum of Geometric Progression
+
+Formula: **2^(n-1)**  
+ This formula represents the sum of a geometric progression where each term is double the previous one.  
+ Example: If n = 4, then  
+ Sum = 2^(4-1) = 2^3 = 8
+
+### Sum of Squares of First n Natural Numbers
+
+Formula: **n(n+1)(2n+1)/6**  
+ This formula calculates the sum of the squares of the first n natural numbers.  
+ Example: If n = 3, then  
+ Sum = 3(3+1)(2\*3+1)/6 = 3(4)(7)/6 = 14
+
 # String
 
 A **string** is a sequence of characters.<br>
