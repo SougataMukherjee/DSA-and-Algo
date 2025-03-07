@@ -697,7 +697,7 @@ Output: 7<br>
 //Q4 Maximum Average Subarray<br> Input: nums = [1,12,-5,-6,50,3], k = 4
 Output: 12.75000
 Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75<br>
-//Q5 find Maximum Subarray<br>
+//Q5 find Maximum Subarray (Kadane’s Algorithm)<br>
 Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
 Output: 6
 Explanation: The subarray [4,-1,2,1] has the largest sum 6.<br>
