@@ -26,6 +26,56 @@ let arr4 = [
 ];
 ```
 
+### Postfix (i++) vs. Prefix (++i) Increment
+
+Both ++i and i++ increase a variable by 1, but they behave differently in expressions.
+
+```js
+i++; // Post-increment (returns value before incrementing)
+++i; // Pre-increment (returns value after incrementing)
+```
+
+### Example
+
+```js
+let x = 5;
+console.log(x++); // 5 (returns x, then increments)
+console.log(x); // 6
+
+let y = 5;
+console.log(++y); // 6 (increments y, then returns)
+console.log(y); // 6
+```
+
+### Difference Between `for` and `while` Loops
+
+| Feature         | `for` Loop                                           | `while` Loop                                                                  |
+| --------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Syntax          | `for(initialization; condition; update) { // code }` | `while(condition) { // code }`                                                |
+| Use Case        | Best when the number of iterations is known          | Best when the number of iterations is unknown                                 |
+| Initialization  | Declared within the loop header                      | Declared outside the loop                                                     |
+| Condition Check | Checked before every iteration                       | Checked before every iteration, but requires external control for termination |
+
+### Example:
+
+#### `for` Loop Example:
+
+```js
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+```
+
+#### `while` Loop Example:
+
+```js
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+```
+
 ### Array Traversal
 
 1. **Using a for loop**
@@ -166,6 +216,16 @@ console.log(Math.abs(-1.2)); // 1.2
 console.log(Math.abs(null)); // 0
 ```
 
+### `Math.abs()`
+
+Convert Negative to Positive number and give absolute value
+
+```js
+console.log(Math.abs(-10)); // 10
+console.log(Math.abs(5)); // 5
+console.log(Math.abs(0)); // 0
+```
+
 ## BigInt
 
 **BigInt** values represent integers which are too high or too low.
@@ -183,4 +243,14 @@ console.log(a); // 9007199254740991n
 ```js
 console.log(Number.POSITIVE_INFINITY); // Infinity
 console.log(Number.NEGATIVE_INFINITY); // -Infinity
+```
+
+### isNaN()
+
+Check if a Value is Not a Number
+
+```js
+console.log(isNaN(123)); // false
+console.log(isNaN("123")); // false
+console.log(isNaN("sam")); // true
 ```
