@@ -208,22 +208,13 @@ console.log(Math.floor(1.2)); // 1
 
 ### `Math.abs()`
 
-Returns the **absolute value** of a number.
+Returns the **absolute value** of a number.and convert Negative to Positive number
 
 ```js
 console.log(Math.abs(1.2)); // 1.2
 console.log(Math.abs(-1.2)); // 1.2
-console.log(Math.abs(null)); // 0
-```
-
-### `Math.abs()`
-
-Convert Negative to Positive number and give absolute value
-
-```js
 console.log(Math.abs(-10)); // 10
-console.log(Math.abs(5)); // 5
-console.log(Math.abs(0)); // 0
+console.log(Math.abs(null)); // 0
 ```
 
 ## BigInt

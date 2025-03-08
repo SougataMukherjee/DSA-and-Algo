@@ -522,6 +522,14 @@ Output: "[23,98,42,70]"<br>
 
 //Q173 Convert Two-Dimensional Array Into an Object<br>
 //Q174 How to remove falsy values from an array<br>
+//Q175 Given an amount, apply a discount based on the given discount table and return the final amount after the discount.<br>
+| Amount Range | Discount |
+|-----------------|----------|
+| 0 - 5000 | 0% |
+| 5001 - 7000 | 5% |
+| 7001 - 9000 | 10% |
+| More than 9000 | 20% |
+<br>
 
 # hashing
 
