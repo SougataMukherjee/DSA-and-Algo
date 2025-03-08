@@ -5,3 +5,6 @@ for (let i = 0; i < arr.length; i++) {
   sum += arr[i];
   if (max < arr[i]) max = arr[i];
 }
+
+//solution 2
+const sumTwo = arr.reduce((acc, num) => acc + num, 0);

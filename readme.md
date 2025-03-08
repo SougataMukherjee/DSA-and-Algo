@@ -509,6 +509,19 @@ Find the fastest runner.<br>
 GUYS, hello world->Guys, Hello World<br>
 //Q169 Rearrange each row of a square grid alphabetically. Check if all columns are also in ascending order; return "YES" if true, otherwise return "NO"<br>
 //Q170 Given a grid of size n x 3, find the number of ways to paint each cell using three colors (Red, Yellow, Green) such that no two adjacent cells (vertically or horizontally) share the same color. Return the result modulo 10^9 + 7.<br>
+//Q171 Implement a counter function that starts from a given integer n and increments by 1 each time it is called.<br>
+Input:
+n = 10
+["call","call","call"]
+Output: [10,11,12]<br>
+//Q172 Design a class ArrayWrapper that supports the + operator to return the sum of elements from two instances.<br>
+Input: nums = [[1,2],[3,4]], operation = "Add"
+Output: 10
+Input: nums = [[23,98,42,70]], operation = "String"
+Output: "[23,98,42,70]"<br>
+
+//Q173 Convert Two-Dimensional Array Into an Object<br>
+//Q174 How to remove falsy values from an array<br>
 
 # hashing
 
@@ -717,6 +730,11 @@ Output: 2<br>
 //Q11 Find if there is a subarray with 0 sums<br>
 Input: {4, 2, -3, 1, 6}
 Output: true <br>
+//Q12 Given an array arr and an integer size, split arr into subarrays of length size, ensuring the last subarray may be shorter if necessary.
+Input: arr = [1,2,3,4,5], size = 1
+Output: [[1],[2],[3],[4],[5]]
+Input: arr = [1,9,6,3,2], size = 3
+Output: [[1,9,6],[3,2]]
 
 # binary search
 
@@ -866,6 +884,7 @@ output 4<br>
 Input: text1 = "abcde", text2 = "ace"
 Output: 3<br>
 //Q2 sort and reverse a stack using recursion<br>
+//Q3 generate all combination of a string
 
 # Dynamic Programming
 
