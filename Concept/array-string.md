@@ -101,6 +101,14 @@ for (let element of arr) {
 }
 ```
 
+### Difference Between for, for...of, and for...in Loops
+
+| Loop Type  | Use Case                    | Works On                    | Iterates Over                                     | Best For                            |
+| ---------- | --------------------------- | --------------------------- | ------------------------------------------------- | ----------------------------------- |
+| `for`      | General-purpose loop        | Arrays, Strings             | Index-based iteration                             | When you need an index              |
+| `for...of` | Iterating values            | Arrays, Strings, Maps, Sets | Values of iterable objects                        | When you only need values           |
+| `for...in` | Iterating object properties | Objects (including Arrays)  | Keys (indexes for arrays, properties for objects) | When looping over object properties |
+
 ### Sum Formula Notes
 
 1. The sum formula is used to calculate the total sum of a series.

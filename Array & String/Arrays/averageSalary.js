@@ -1,3 +1,4 @@
+//Note: calculates the average salary excluding the minimum and maximum salary values
 const a = [1000, 2000, 3000, 4000];
 let sum = 0,
   avg = 0;

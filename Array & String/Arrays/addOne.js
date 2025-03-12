@@ -1,14 +1,14 @@
-function addOne(N) {
-  let result = "";
+function addOne(arr) {
   let carry = 1; // Start with 1 to add
-  let i = N.length - 1;
-
-  while (i >= 0 || carry) {
-    let digit = (i >= 0 ? N[i] - "0" : 0) + carry;
-    result = (digit % 10) + result; // Append new digit at the front
-    carry = Math.floor(digit / 10); // Update carry
-    i--;
+  for (let i = arr.length - 1; i >= 0; i--) {
+    let sum = arr[i] + carry;
+    arr[i] = sum % 10; // Append new digit at the front
+    carry = Math.floor(sum / 10); //update carry
   }
 
-  console.log(result);
+  if (carry > 0) {
+    arr.unshift(carry);
+  }
+  return arr;
 }
+console.log(addOne([9, 9, 9])); //[ 1, 0, 0, 0 ]

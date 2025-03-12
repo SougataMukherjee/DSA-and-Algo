@@ -1,14 +1,19 @@
 function arrayToObject(arr) {
-  const result = {};
-  arr.forEach((obj) => {
-    result[obj.id] = obj.value;
-  });
-  return result;
+  return { ...arr };
 }
-const arr = [
-  { id: 1, value: 10 },
-  { id: 2, value: 20 },
-  { id: 3, value: 30 },
-];
+function arrayToObjects(arr) {
+  const [one, two, three] = arr;
+  const obj = { one, two, three };
+  return obj;
+}
+const arr = [10, 20, 30];
 
 console.log(arrayToObject(arr)); // {1: 10, 2: 20, 3: 30}
+console.log(arrayToObjects(arr)); // {one: 10, two: 20, three: 30}
+
+let a = [
+  ["name", "Sam"],
+  ["age", 30],
+];
+let obj = Object.fromEntries(a);
+console.log(obj); //{name: 'Sam', age: 30}

@@ -1,3 +1,6 @@
+//Input: n = 4 Output: 5
+//Way1: 1 → 1 → 1 → 1 Way2:1 → 1 → 2 Way3:1 → 2 → 1 Way4: 2 → 1 → 1 Way5: 2 → 2
+
 let climbingStairs = (n) => {
   if (n === 1 || n === 0) return 1;
   let first = 1;

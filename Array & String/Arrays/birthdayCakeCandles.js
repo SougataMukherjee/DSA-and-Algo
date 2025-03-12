@@ -1,3 +1,4 @@
+//Note: candles are list of integers representing the heights of birthday candles on a cake find the most tallest candles
 function birthdayCakeCandles(candles) {
   let maximum = 0;
   let result = 0;
