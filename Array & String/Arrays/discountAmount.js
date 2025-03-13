@@ -1,5 +1,5 @@
 let amount = Number(input);
-let dis = 0;
+let dis;
 
 if (amount > 0 && amount <= 5000) {
   dis = 0;

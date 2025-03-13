@@ -1,3 +1,4 @@
+//Note: Given an integer n, count how many of its digits evenly divide n
 function evenlyDivides(n) {
   let count = 0,
     temp = n;

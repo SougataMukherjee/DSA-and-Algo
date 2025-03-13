@@ -8,10 +8,6 @@ let commonElements = a.filter(
 console.log(commonElements);
 
 //check array is subset of another array
-b.every((val) => a.includes(val));
-
-//get all subset of an array
-[1, 2, 3].reduce(
-  (acc, val) => acc.concat(acc.map((set) => [...set, val])),
-  [[]]
-);
+let a1 = [1, 2, 3, 4, 6],
+  b1 = [1, 2, 3];
+console.log(b1.every((val) => a1.includes(val)));

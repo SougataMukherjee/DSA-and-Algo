@@ -1,3 +1,6 @@
+//Note: find the Inversion Count in an array
+//Input: arr[] = [2, 4, 1, 3, 5] Output: 3 (2, 1), (4, 1), (4, 3)
+
 function inversionCount(arr) {
   // your code here
   let n = arr.length;
