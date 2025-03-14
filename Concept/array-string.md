@@ -77,7 +77,7 @@ console.log(person.age); // null
 | Data Types        | Primitive types (`Number`, `String`, etc.)        | Non-primitive types (`Object`, `Array`, `Function`)                       |
 | Example           | `let x = 10; let y = x; y = 20; // x is still 10` | `let obj1 = { a: 10 }; let obj2 = obj1; obj2.a = 20; // obj1.a is now 20` |
 
-# Array 🚀
+# Array ✔
 
 An **array** is a linear data structure used to store multiple elements.
 It is a collection of elements of the same data type stored at contiguous memory locations.
@@ -180,7 +180,7 @@ for (let element of arr) {
 }
 ```
 
-### Difference Between for, for...of, and for...in Loops 🚀
+### Difference Between for, for...of, and for...in Loops ✔
 
 | Loop Type  | Use Case                    | Works On                    | Iterates Over                                     | Best For                            |
 | ---------- | --------------------------- | --------------------------- | ------------------------------------------------- | ----------------------------------- |
@@ -211,7 +211,7 @@ Formula: **n(n+1)(2n+1)/6**
  Example: If n = 3, then  
  Sum = 3(3+1)(2\*3+1)/6 = 3(4)(7)/6 = 14
 
-# String 🚀
+# String ✔
 
 A **string** is a sequence of characters.<br>
 ![string](../img/string.png) <br>
@@ -240,7 +240,7 @@ console.log(str.toUpperCase()); // "HELLO, SOUGATA"
 console.log(str.slice(0, 5)); // "Hello"
 ```
 
-# Object 🚀
+# Object ✔
 
 An **object** is a collection of key-value pairs where each key is a property.
 
