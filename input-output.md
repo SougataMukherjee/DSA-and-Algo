@@ -245,3 +245,606 @@ console.log(x + x++);
 ### Answer:
 
 **Output:** `2`
+
+### Question 21: What will be the output?
+
+```js
+let a = 10;
+let b = (a, a + 10);
+console.log(b);
+```
+
+### Answer:
+
+**Output:** `20`
+
+### Question 22: What will be the output?
+
+```js
+let x = [1, 2, 3, 4];
+let [a, ...b] = x.reverse();
+console.log(b);
+```
+
+### Answer:
+
+**Output:** `[3,2,1]`
+
+### Question 23: What will be the output?
+
+```js
+let x = 0;
+let y = "0";
+console.log(false == x);
+console.log(false == y);
+```
+
+### Answer:
+
+**Output:** `true true`
+
+### Question 24: What will be the output?
+
+```js
+const a = [1, 2, 3];
+const b = [...a];
+b.push(4);
+console.log(a);
+```
+
+### Answer:
+
+**Output:** `[ 1, 2, 3 ]`
+
+### Question 25: What will be the output?
+
+```js
+for (var i = 0; i < 3; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 1000);
+}
+```
+
+### Answer:
+
+**Output:** `3 3 3` if iteration was let then ` 0 1 2`
+
+### Question 26: What will be the output?
+
+```js
+var a = 10;
+(function () {
+  console.log(a);
+  var a = 5;
+})();
+```
+
+### Answer:
+
+**Output:** `undefined`
+
+### Question 27: What will be the output?
+
+```js
+var x = 5;
+(function () {
+  console.log(x);
+})();
+```
+
+### Answer:
+
+**Output:** `5`
+
+### Question 28: What will be the output?
+
+```js
+let lang = "js";
+(function () {
+  let lang = "java";
+})();
+console.log(lang);
+```
+
+### Answer:
+
+**Output:** `js`
+
+### Question 29: What will be the output?
+
+```js
+console.log(typeof NaN);
+console.log(typeof typeof 1);
+```
+
+### Answer:
+
+**Output:** `number  string`
+
+### Question 30: What will be the output?
+
+```js
+function sayHi() {
+  console.log(name);
+  console.log(age);
+  var name = "Sam";
+  let age = 29;
+}
+sayHi();
+```
+
+### Answer:
+
+**Output:** `undefined   Refference error`
+
+### Question 31: What will be the output?
+
+```js
+[...'Sam'] or 'Sam'.split('');
+```
+
+### Answer:
+
+**Output:** `["S","a","m"]`
+
+### Question 32: What will be the output?
+
+```js
+function getAge(...args) {
+  console.log(typeof args);
+}
+getAge(21);
+```
+
+### Answer:
+
+**Output:** `object`
+
+### Question 33: What will be the output?
+
+```js
+const obj = { 1: "a", 2: "b", 3: "c" };
+const set = new Set([1, 2, 3, 4, 5]);
+obj.hasOwnProperty("1");
+obj.hasOwnProperty(1);
+set.has("1");
+set.has(1);
+```
+
+### Answer:
+
+**Output:** `true  true  false  true`
+
+### Question 34: What will be the output?
+
+```js
+[1, 2, 3].map((num) => {
+  if (typeof num === "number") return;
+  return num * 2;
+});
+```
+
+### Answer:
+
+**Output:** `[undefined, undefined, undefined]`
+
+### Question 35: What will be the output?
+
+```js
+let obj = {
+  x: 2,
+  getX: function () {
+    let x = 4;
+    console.log(this.x);
+  },
+};
+obj.getX();
+```
+
+### Answer:
+
+**Output:** `2`
+
+### Question 36: What will be the output?
+
+```js
+var x = 5;
+function test() {
+  console.log(x);
+  var x = 10;
+}
+test();
+```
+
+### Answer:
+
+**Output:** `5`
+
+### Question 37: What will be the output?
+
+```js
+let a = { x: 1, y: 2 };
+let b = a;
+b.x = 3;
+console.log(a);
+console.log(b);
+```
+
+### Answer:
+
+**Output:** `both { x: 3, y: 2 }`
+
+### Question 38: What will be the output?
+
+```js
+console.log({} == {}); //false
+console.log({} === {}); //false
+```
+
+### Answer:
+
+**Output:** `false  false`
+
+### Question 39: What will be the output?
+
+```js
+const arr = [2, 3, 5, 2, 8, 10, 5];
+console.log(arr.indexOf(5));
+```
+
+### Answer:
+
+**Output:** `2`
+
+### Question 40: What will be the output?
+
+```js
+function checkValue(value) {
+  var result = Array.isArray(value);
+  console.log(result);
+}
+checkValue([1, 2, 3]);
+```
+
+### Answer:
+
+**Output:** `true`
+
+### Question 41: What will be the output?
+
+```js
+const a = { x: 1 };
+const b = { x: 1 };
+console.log(a === b);
+console.log(a.x === b.x);
+```
+
+### Answer:
+
+**Output:** ` false  true`
+
+### Question 42: What will be the output?
+
+```js
+const person = {
+  firstName: "Sam",
+};
+const { firstName = "Rupai" } = person;
+console.log(firstName);
+const { lastName = "Muk" } = person;
+console.log(lastName);
+```
+
+### Answer:
+
+**Output:** ` Sam  Muk`
+
+### Question 43: What will be the output?
+
+```js
+const shape = {
+  radius: 10,
+  diameter() {
+    return this.radius * 2;
+  },
+  perimeter: () => 2 * Math.PI * this.radius,
+};
+console.log(shape.diameter());
+console.log(shape.perimeter());
+```
+
+### Answer:
+
+**Output:** `20  NaN`
+
+### Question 44: What will be the output?
+
+```js
+function bark() {
+  console.log("Woof!");
+}
+bark.animal = "dog";
+```
+
+### Answer:
+
+**Output:** `dog`
+
+### Question 45: What will be the output?
+
+```js
+function getPersonInfo(one, two, three) {
+  console.log(one);
+  console.log(two);
+  console.log(three);
+}
+const person = "Sam";
+const age = 29;
+getPersonInfo`${person} is ${age} years old`;
+```
+
+### Answer:
+
+**Output:** `["", " is ", " years old"] "Sam" 29`
+
+### Question 46: What will be the output?
+
+```js
+const sum = eval("10*10+5");
+const num = parseInt("7*6", 10);
+```
+
+### Answer:
+
+**Output:** `105   7`
+
+### Question 47: What will be the output?
+
+```js
+const a = {};
+const b = { key: "b" };
+const c = { key: "c" };
+a[b] = 123;
+a[c] = 456;
+console.log(a[b]);
+```
+
+### Answer:
+
+**Output:** `456`
+
+### Question 48: What will be the output?
+
+```js
+<div onclick="console.log('div')">
+  <p onclick="console.log('p')">Click here!</p>
+</div>
+```
+
+### Answer:
+
+**Output:** `p  div`
+
+### Question 49: What will be the output?
+
+```js
+[
+  [0, 1],
+  [2, 3],
+].reduce(
+  (acc, cur) => {
+    return acc.concat(cur);
+  },
+  [1, 2]
+);
+```
+
+### Answer:
+
+**Output:** `[1, 2, 0, 1, 2, 3]`
+
+### Question 50: What will be the output?
+
+```js
+[1, 2, 3, 4].reduce((x, y) => console.log(x, y));
+```
+
+### Answer:
+
+**Output:** `1 2 and undefined 3 and undefined 4`
+
+### Question 51: What will be the output?
+
+```js
+const firstPromise = new Promise((res, rej) => {
+  setTimeout(res, 500, "one");
+});
+const secondPromise = new Promise((res, rej) => {
+  setTimeout(res, 100, "two");
+});
+Promise.race([firstPromise, secondPromise]).then((res) => console.log(res));
+```
+
+### Answer:
+
+**Output:** `two`
+
+### Question 52: What will be the output?
+
+```js
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+Dog.prototype.bark = function () {
+  console.log(`Woof I am ${this.name}`);
+};
+const pet = new Dog("Mara");
+pet.bark();
+delete Dog.prototype.bark;
+pet.bark();
+```
+
+### Answer:
+
+**Output:** `"Woof I am Mara"      TypeError`
+
+### Question 53: What will be the output?
+
+```js
+const set = new Set([1, 1, 2, 3, 4]);
+console.log(set);
+```
+
+### Answer:
+
+**Output:** `{1, 2, 3, 4}`
+
+### Question 54: What will be the output?
+
+```js
+const name = "Lydia";
+age = 21;
+console.log(delete name); //false
+console.log(delete age); //true
+```
+
+### Answer:
+
+**Output:** `false   true`
+
+### Question 55: What will be the output?
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+const [y] = numbers;
+console.log(y);
+```
+
+### Answer:
+
+**Output:** `1`
+
+### Question 56: What will be the output?
+
+```js
+const value = { number: 10 };
+const multiply = (x = { ...value }) => {
+  console.log((x.number *= 2));
+};
+multiply(); //20
+multiply(); //20
+multiply(value); //20
+multiply(value); //40
+```
+
+### Answer:
+
+**Output:** `20  20  20  40`
+
+### Question 57: What will be the output?
+
+```js
+console.log(Number(2) === Number(2));
+console.log(Boolean(false) === Boolean(false));
+console.log(Symbol("foo") === Symbol("foo"));
+```
+
+### Answer:
+
+**Output:** `true  true  false`
+
+### Question 58: What will be the output?
+
+```js
+async function getData() {
+  return await Promise.resolve("I made it!");
+}
+const data = getData();
+console.log(data);
+```
+
+### Answer:
+
+**Output:** `Promise {<pending>}`
+
+### Question 59: What will be the output?
+
+```js
+fetch("https://www.website.com/api/user/1")
+  .then((res) => res.json())
+  .then((res) => console.log(res));
+```
+
+### Answer:
+
+**Output:** `The result of the callback in the previous .then()`
+
+### Question 60: What will be the output?
+
+```js
+const person = {
+  name: "Sam",
+  age: 29,
+};
+for (const [x, y] of Object.entries(person)) {
+  console.log(x, y);
+}
+```
+
+### Answer:
+
+**Output:** `name Sam and age 29`
+
+### Question 61: What will be the output?
+
+```js
+function sumValues(x, y, z) {
+  return x + y + z;
+}
+sumValues(...[1, 2, 3]);
+```
+
+### Answer:
+
+**Output:** `6`
+
+### Question 62: What will be the output?
+
+```js
+function compareMembers(person1, person2 = person) {
+  if (person1 !== person2) {
+    console.log("Not the same!");
+  } else {
+    console.log("They are the same!");
+  }
+}
+const person = { name: "Sam" };
+compareMembers(person);
+```
+
+### Answer:
+
+**Output:** `They are the same!`
+
+### Question 63: What will be the output?
+
+```js
+function* generatorOne() {
+  yield ["a", "b", "c"];
+}
+function* generatorTwo() {
+  yield* ["a", "b", "c"];
+}
+const one = generatorOne();
+const two = generatorTwo();
+console.log(one.next().value);
+console.log(two.next().value);
+```
+
+### Answer:
+
+**Output:** `['a', 'b', 'c']  a `
