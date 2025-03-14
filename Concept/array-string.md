@@ -10,6 +10,53 @@
 
 ---
 
+### Undefined vs Null in JavaScript
+
+#### Undefined:
+
+- A variable is `undefined` when it has been declared but has not been assigned a value.
+- Default value assigned to uninitialized variables.
+- Functions that do not explicitly return a value return `undefined`.
+- Accessing object properties or array elements that do not exist returns `undefined`.
+- Example:
+
+```javascript
+let x;
+console.log(x); // undefined
+
+function test() {}
+console.log(test()); // undefined
+
+let obj = {};
+console.log(obj.property); // undefined
+```
+
+#### Null:
+
+- `null` is an intentional absence of any object value.
+- It is a primitive value that represents the absence of a value.
+- Unlike `undefined`, `null` is explicitly assigned by the developer.
+- Example:
+
+```javascript
+let y = null;
+console.log(y); // null
+
+let person = { name: "Alice", age: null };
+console.log(person.age); // null
+```
+
+### Key Differences:
+
+| Feature        | Undefined                             | Null                             |
+| -------------- | ------------------------------------- | -------------------------------- |
+| Type           | Primitive                             | Primitive                        |
+| Default Value? | Yes (for uninitialized variables)     | No (must be assigned explicitly) |
+| Use Case       | Missing value, uninitialized variable | Intentional absence of value     |
+| Typeof         | `undefined`                           | `object` (historical bug in JS)  |
+
+---
+
 ### Implicit vs Explicit Type Conversion
 
 | Feature       | Implicit Type Conversion                 | Explicit Type Conversion                  |

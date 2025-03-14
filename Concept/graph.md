@@ -151,6 +151,14 @@ Space Complexity: O(n²).
    Backtrack if no unvisited neighbor is found.
 
    ```
+   function dfs(node, callback) {
+    if (!node) return; // Base case: If the node is null, return
+    callback(node); // Process the current node
+    node.children.forEach(child => dfs(child, callback)); // Recursively visit children
+   }
+   ```
+
+   ```
 
    function dfs(graph, start, visited = {}) {
    //start is current node,we are use visited node for keep track that graph is not becoming cycle
