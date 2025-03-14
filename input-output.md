@@ -848,3 +848,65 @@ console.log(two.next().value);
 ### Answer:
 
 **Output:** `['a', 'b', 'c']  a `
+
+### Question 64: What will be the output?
+
+```js
+var output = (function (x) {
+  return x;
+})(0);
+```
+
+### Answer:
+
+**Output:** `0 `
+
+### Question 65: What will be the output?
+
+```js
+(function () {
+  var objA = {
+    foo: "foo",
+    bar: "bar",
+  };
+  var objB = {
+    foo: "foo",
+    bar: "bar",
+  };
+  console.log(objA == objB);
+  console.log(objA === objB);
+})();
+```
+
+### Answer:
+
+**Output:** `false  false`
+
+### Question 66: What will be the output?
+
+```js
+var fruit = ["mango", "banana", "apple", "melon", "cherry"];
+delete fruit[3];
+```
+
+### Answer:
+
+**Output:** `["mango", "banana", "apple", empty, "cherry"]`
+
+### Question 67: What will be the output?
+
+```js
+function mul(x) {
+  return function (y) {
+    return function (z) {
+      return x * y * z;
+    };
+  };
+}
+
+console.log(mul(2)(3)(4));
+```
+
+### Answer:
+
+**Output:** `24`
