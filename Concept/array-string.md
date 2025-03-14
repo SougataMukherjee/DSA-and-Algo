@@ -1,3 +1,35 @@
+### Primitive vs Non-Primitive Types
+
+| Feature    | Primitive Types                                                        | Non-Primitive Types                                           |
+| ---------- | ---------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Definition | Basic data types that store single values                              | Complex data structures that store multiple values or objects |
+| Data Types | `String`, `Number`, `Boolean`, `Null`, `Undefined`, `Symbol`, `BigInt` | `Object`, `Array`, `Function`, `Date`, `RegExp`               |
+| Mutability | Immutable (cannot be changed)                                          | Mutable (can be modified)                                     |
+| Stored in  | Stack memory                                                           | Heap memory                                                   |
+| Example    | `let a = 10; let b = "Hello";`                                         | `let obj = {name: "John"}; let arr = [1, 2, 3];`              |
+
+---
+
+### Implicit vs Explicit Type Conversion
+
+| Feature       | Implicit Type Conversion                 | Explicit Type Conversion                  |
+| ------------- | ---------------------------------------- | ----------------------------------------- |
+| Definition    | JavaScript automatically converts types  | Manually converting types using functions |
+| Also Known As | Type Coercion                            | Type Casting                              |
+| Example       | `"5" + 2 → `"52"` (String concatenation) | `Number("5") + 2 → 7`                     |
+| Control       | Done automatically by JavaScript         | Done explicitly by the developer          |
+
+---
+
+### Pass by Value vs Pass by Reference
+
+| Feature           | Pass by Value                                     | Pass by Reference                                                         |
+| ----------------- | ------------------------------------------------- | ------------------------------------------------------------------------- |
+| Definition        | A copy of the value is passed                     | A reference to the actual data is passed                                  |
+| Affects Original? | No, changes do not affect the original value      | Yes, changes affect the original object                                   |
+| Data Types        | Primitive types (`Number`, `String`, etc.)        | Non-primitive types (`Object`, `Array`, `Function`)                       |
+| Example           | `let x = 10; let y = x; y = 20; // x is still 10` | `let obj1 = { a: 10 }; let obj2 = obj1; obj2.a = 20; // obj1.a is now 20` |
+
 # Array
 
 An **array** is a linear data structure used to store multiple elements.
