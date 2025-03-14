@@ -30,7 +30,7 @@
 | Data Types        | Primitive types (`Number`, `String`, etc.)        | Non-primitive types (`Object`, `Array`, `Function`)                       |
 | Example           | `let x = 10; let y = x; y = 20; // x is still 10` | `let obj1 = { a: 10 }; let obj2 = obj1; obj2.a = 20; // obj1.a is now 20` |
 
-# Array
+# Array 🚀
 
 An **array** is a linear data structure used to store multiple elements.
 It is a collection of elements of the same data type stored at contiguous memory locations.
@@ -79,7 +79,7 @@ console.log(++y); // 6 (increments y, then returns)
 console.log(y); // 6
 ```
 
-### Difference Between `for` and `while` Loops
+### Difference Between `for` and `while` Loops 🚀
 
 | Feature         | `for` Loop                                           | `while` Loop                                                                  |
 | --------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -133,7 +133,7 @@ for (let element of arr) {
 }
 ```
 
-### Difference Between for, for...of, and for...in Loops
+### Difference Between for, for...of, and for...in Loops 🚀
 
 | Loop Type  | Use Case                    | Works On                    | Iterates Over                                     | Best For                            |
 | ---------- | --------------------------- | --------------------------- | ------------------------------------------------- | ----------------------------------- |
@@ -164,7 +164,7 @@ Formula: **n(n+1)(2n+1)/6**
  Example: If n = 3, then  
  Sum = 3(3+1)(2\*3+1)/6 = 3(4)(7)/6 = 14
 
-# String
+# String 🚀
 
 A **string** is a sequence of characters.<br>
 ![string](../img/string.png) <br>
@@ -193,7 +193,7 @@ console.log(str.toUpperCase()); // "HELLO, SOUGATA"
 console.log(str.slice(0, 5)); // "Hello"
 ```
 
-# Object
+# Object 🚀
 
 An **object** is a collection of key-value pairs where each key is a property.
 
@@ -285,3 +285,120 @@ console.log(isNaN(123)); // false
 console.log(isNaN("123")); // false
 console.log(isNaN("sam")); // true
 ```
+
+## Strict Mode in JavaScript
+
+Strict Mode in JavaScript helps catch common coding errors and makes the code more secure. It prevents the use of undeclared variables, duplicate function parameters, and other bad practices.
+
+### Enabling Strict Mode
+
+To enable strict mode, add `'use strict';` at the beginning of a script or function.
+
+```js
+"use strict";
+
+x = 10; // ReferenceError: x is not defined
+```
+
+### Benefits of Strict Mode
+
+- Prevents the use of undeclared variables.
+- Disallows duplicate parameter names.
+- Throws an error on assignment to read-only properties.
+- Makes debugging easier.
+
+---
+
+## Scope in JavaScript
+
+Scope determines the accessibility (visibility) of variables in JavaScript. There are three types of scope:
+
+1. **Global Scope**
+2. **Local/Function Scope**
+3. **Block Scope**
+
+### Global Scope
+
+Variables declared outside a function are in the global scope and can be accessed anywhere in the script.
+
+```js
+var globalVar = "I am global";
+
+function showGlobal() {
+  console.log(globalVar); // Accessible
+}
+
+showGlobal();
+console.log(globalVar); // Also accessible
+```
+
+### Local or Function Scope
+
+Variables declared inside a function are local and cannot be accessed outside of it.
+
+```js
+function showLocal() {
+  var localVar = "I am local";
+  console.log(localVar); // Accessible inside the function
+}
+
+showLocal();
+console.log(localVar); // ReferenceError: localVar is not defined
+```
+
+### Block Scope
+
+Variables declared with `let` and `const` inside `{}` (curly braces) are block-scoped and cannot be accessed outside the block.
+
+```js
+{
+  let blockVar = "I am block scoped";
+  console.log(blockVar); // Accessible here
+}
+
+console.log(blockVar); // ReferenceError: blockVar is not defined
+```
+
+### Difference Between `var`, `let`, and `const`
+
+| Feature            | `var`                     | `let`                                | `const`                              |
+| ------------------ | ------------------------- | ------------------------------------ | ------------------------------------ |
+| **Global Scope**   | Yes, attaches to `window` | Yes, but does not attach to `window` | Yes, but does not attach to `window` |
+| **Function Scope** | Yes                       | Yes                                  | Yes                                  |
+| **Block Scope**    | No                        | Yes                                  | Yes                                  |
+| **Hoisting**       | Hoisted with `undefined`  | Hoisted but not initialized          | Hoisted but not initialized          |
+
+---
+
+## IIFE (Immediately Invoked Function Expression)
+
+### What is IIFE?
+
+An **Immediately Invoked Function Expression (IIFE)** is a function that runs immediately after being defined.
+
+### Syntax:
+
+```javascript
+(function () {
+  console.log("I am an IIFE");
+})();
+```
+
+### Why Use IIFE in DSA?
+
+1. **Encapsulation**: Prevents variable pollution in the global scope.
+2. **Avoiding Conflicts**: Useful when dealing with recursive functions
+3. **Data Privacy**: Keeps data safe from external modifications.
+4. **Efficient Memory Usage**: Helps in optimizing space by keeping temporary data in function scope.
+
+### Example in DSA (Factorial Using IIFE)
+
+```javascript
+const factorial = (function fact(n) {
+  return n <= 1 ? 1 : n * fact(n - 1);
+})(5);
+
+console.log(factorial); // Output: 120
+```
+
+---
