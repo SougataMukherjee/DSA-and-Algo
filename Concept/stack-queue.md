@@ -1,3 +1,29 @@
+# call stack
+
+The call stack is a data structure that keeps track of function calls in JavaScript, following the LIFO (Last In, First Out) principle. When a function is invoked, it gets pushed onto the stack, and when it finishes execution, it gets popped off.
+![call stack](../img/call-stack.png) <br>
+
+```js
+function one() {
+  console.log("one");
+  second();
+}
+function two() {
+  console.log("two");
+  third();
+}
+function three() {
+  console.log("three");
+}
+one();
+```
+
+```js
+one;
+two;
+three;
+```
+
 # Abstract Data Type (ADT)
 
 An Abstract Data Type (ADT) is a data structure that is defined by its behavior (operations) rather than its implementation.
@@ -10,6 +36,17 @@ An Abstract Data Type (ADT) is a data structure that is defined by its behavior 
 4. Deque
 5. Map
 6. Set
+
+## FIFO vs LIFO in JavaScript
+
+| Feature             | FIFO (First-In-First-Out)                        | LIFO (Last-In-First-Out)                              |
+| ------------------- | ------------------------------------------------ | ----------------------------------------------------- |
+| **Definition**      | Elements are processed in the order they arrive. | Elements are processed in reverse order of arrival.   |
+| **Insertion**       | New elements are added at the back.              | New elements are added on top.                        |
+| **Removal**         | Oldest element is removed first.                 | Newest element is removed first.                      |
+| **Usage**           | Used in OS scheduling, networking, etc.          | Used in undo/redo operations, function calls (stack). |
+| **Time Complexity** | O(1) for insertion and removal.                  | O(1) for insertion and removal.                       |
+| **Data Structure**  | Implemented using Queue.                         | Implemented using Stack.                              |
 
 # Stack:
 
@@ -234,3 +271,35 @@ getHighestPriority() → Return the element with the highest priority without re
 deleteHighestPriority() → Remove and return the element with the highest priority.<br>
 
 isEmpty() → Check if the queue is empty.<br>
+
+### Out of Memory (OOM) error
+
+An Out of Memory (OOM) error in JavaScript occurs when the application tries to allocate more memory than is available, leading to crashes or unresponsive behavior. This often happens due to memory leaks or excessive data processing
+
+```js
+let arr = [];
+while (true) {
+  arr.push(new Array(1000000).fill("*"));
+}
+```
+
+to prevent that Process large datasets in chunks instead of loading everything at once.
+If running a Node.js application, you can increase the V8 heap size using: node --max-old-space-size=4096 script.js
+
+### empty stack exception error
+
+In JavaScript, an "Empty Stack Exception" is not a built-in error like in languages such as Java. However, it typically refers to an attempt to pop or peek from an empty stack, which may return undefined or cause unintended behavior.
+
+```js
+let stack = [];
+console.log(stack.pop()); // undefined (no error, but stack is empty)
+console.log(stack[stack.length - 1]);
+```
+
+To handle this, always check if the stack is empty before accessing elements
+
+```js
+if (stack.length === 0) {
+  console.error("Stack is empty!");
+}
+```

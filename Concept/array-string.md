@@ -219,7 +219,8 @@ A **string** is a sequence of characters.<br>
 ### Creation and Initialization
 
 ```js
-let s = "Hello, World!";
+const s = "A string primitive";
+const s2 = new String("A String object");
 ```
 
 ### String Methods
@@ -240,17 +241,43 @@ console.log(str.toUpperCase()); // "HELLO, SOUGATA"
 console.log(str.slice(0, 5)); // "Hello"
 ```
 
+### indexOf()
+
+Finds the index of the first occurrence of a substring within a string. Returns -1 if not found.
+
+```js
+console.log("hello world".indexOf("world")); // Output: 6
+console.log([1, 2, 3, 4].indexOf(3)); // Output: 2
+```
+
+### substring()
+
+Extracts a portion of a string between two indices (start and end but excludes end).
+
+```js
+console.log("hello world".substring(0, 5)); // Output: "hello"
+console.log("abcdef".substring(2)); // Output: "cdef" (if `end` is omitted, extracts till the end)
+```
+
 # Object ✔
 
 An **object** is a collection of key-value pairs where each key is a property.
 
 ### Initialization
 
+// object literal syntax
+
 ```js
 let bio = {
   name: "Sam",
   address: "J.P.Nagar",
 };
+```
+
+// object constructor syntax
+
+```js
+let user = new Object();
 ```
 
 ### Accessing Properties

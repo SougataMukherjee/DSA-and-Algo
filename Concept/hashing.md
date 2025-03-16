@@ -154,6 +154,11 @@ Take 25 or 56 as the hash index. 3. Multiplication Method
 Uses a constant multiplication factor to calculate the hash index.
 Formula: H(k) = floor(m _ (k _ A % 1)), where 0 < A < 1
 
+### collision
+
+In hashing, a collision(collision-hash function generate the same index for more than one key) occurs when two different keys produce the same hash code and are placed in the same bucket(indexed storage location for one or more entries can store multiple entries) in a hash table. To handle collisions, techniques like chaining (linked lists in buckets) or open addressing are used.
+![collision](../img/collision.png) <br>
+
 ### Collision Resolution Techniques
 
 1. Chaining (Open Hashing)

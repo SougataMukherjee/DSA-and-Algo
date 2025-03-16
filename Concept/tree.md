@@ -164,6 +164,8 @@ console.log(root.data);
 }
 ```
 
+![tree traversal](../img/tree-traversal.png) <br>
+
 ### Binary Search Tree (BST):
 
 // A BST is a binary tree where:

@@ -1,3 +1,15 @@
+## Difference between Recursion and Iteration
+
+| S.No. | Recursion                                                              | Iteration                                                |
+| ----- | ---------------------------------------------------------------------- | -------------------------------------------------------- |
+| 1     | Recursion is a method where a function calls itself.                   | Iteration repeatedly executes a set of instructions.     |
+| 2     | Requires a termination condition inside the recursive function.        | Requires a termination condition in the loop definition. |
+| 3     | Code size is smaller.                                                  | Code size is larger compared to recursion.               |
+| 4     | Slower in execution.                                                   | Faster compared to recursion.                            |
+| 5     | Preferred when code simplicity is more important than time complexity. | Preferred when time complexity and performance matter.   |
+| 6     | Has higher time complexity.                                            | Has lower time complexity.                               |
+| 7     | Requires more memory (stack space).                                    | Requires less memory.                                    |
+
 # Recursion
 
 `when a function calls itself until a specific condition meet is called recursion`<br>
