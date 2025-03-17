@@ -1,3 +1,5 @@
+//problem is similar to finding the smallest number
+
 function findFastestRunner(X, Y, Z) {
   let fastest = "Alice";
   let minTime = X;
