@@ -530,6 +530,9 @@ Output: "[23,98,42,70]"<br>
 | 7001 - 9000 | 10% |
 | More than 9000 | 20% |
 <br>
+//Q176 You are given an encoded array where encoded[i] = arr[i] XOR arr[i + 1] and an integer first representing arr[0]. Reconstruct and return the original array arr
+Input: encoded = [1,2,3], first = 1
+Output: [1,0,2,1]
 
 # hashing
 
