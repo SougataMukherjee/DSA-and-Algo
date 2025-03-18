@@ -378,6 +378,7 @@ for (const key in object) {
 ### 2. **Using `Object.entries()` and `map()`**
 
 ```javascript
+const object = { a: 1, b: 2, c: 3 };
 Object.entries(object).map(([key, value]) => {
   console.log(key, value);
 });
@@ -386,6 +387,7 @@ Object.entries(object).map(([key, value]) => {
 ### 3. **Using `Object.keys()` and `forEach()`**
 
 ```javascript
+const object = { a: 1, b: 2, c: 3 };
 Object.keys(object).forEach((key) => {
   console.log(key, object[key]);
 });
@@ -394,6 +396,7 @@ Object.keys(object).forEach((key) => {
 ### 4. **Using `Object.values()` (for values only)**
 
 ```javascript
+const object = { a: 1, b: 2, c: 3 };
 Object.values(object).forEach((value) => {
   console.log(value);
 });
@@ -498,6 +501,7 @@ x = 10; // ReferenceError: x is not defined
 ## Scope in JavaScript
 
 Scope determines the accessibility (visibility) of variables in JavaScript. There are three types of scope:
+![scope](../img/scope.png)<br>
 
 1. **Global Scope**
 2. **Local/Function Scope**
