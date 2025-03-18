@@ -159,3 +159,17 @@ function deleteAtHead(head) {
     return head;
 }
 ```
+
+# Circular Linked list
+
+A circular linked list is a special type of linked list where all the nodes are connected to form a circle. Unlike a regular linked list, which ends with a node pointing to NULL, the last node in a circular linked list points back to the first node<br>
+![circular linked list](../img/circular-linked-list.png)<br>
+
+```js
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+```

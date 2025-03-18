@@ -180,6 +180,66 @@ for (let element of arr) {
 }
 ```
 
+### Adding an Element
+
+There are multiple ways to add elements to an array:
+
+### 1. Using Index Assignment
+
+```javascript
+const myArray = [1, 2, 3];
+myArray[3] = 4;
+console.log(myArray); // [1, 2, 3, 4]
+```
+
+### 2. Using `push()` (Adds to the End)
+
+```javascript
+const myArray = [1, 2, 3];
+myArray.push(4);
+console.log(myArray); // [1, 2, 3, 4]
+```
+
+### 3. Using `unshift()` (Adds to the Beginning)
+
+```javascript
+const myArray = [1, 2, 3];
+myArray.unshift(10);
+console.log(myArray); // [10, 1, 2, 3]
+```
+
+---
+
+### Removing an Element
+
+There are multiple ways to remove elements from an array:
+
+### 1. Using `pop()` (Removes from the End)
+
+```javascript
+const myArray = [1, 2, 3];
+const element = myArray.pop();
+console.log(myArray); // [1, 2]
+console.log(element); // 3
+```
+
+### 2. Using `shift()` (Removes from the Beginning)
+
+```javascript
+const myArray = [1, 2, 3];
+const element = myArray.shift();
+console.log(myArray); // [2, 3]
+console.log(element); // 1
+```
+
+### 3. Using `splice()` (Removes Elements at a Specific Index)
+
+```javascript
+const myArray = [1, 2, 3];
+myArray.splice(1, 2); // Removes 2 elements starting from index 1
+console.log(myArray); // [1]
+```
+
 ### Difference Between for, for...of, and for...in Loops ✔
 
 | Loop Type  | Use Case                    | Works On                    | Iterates Over                                     | Best For                            |
@@ -241,6 +301,23 @@ console.log(str.toUpperCase()); // "HELLO, SOUGATA"
 console.log(str.slice(0, 5)); // "Hello"
 ```
 
+### Get All Combinations of a String
+
+```javascript
+function combinations(str) {
+  let arr = [];
+  for (let i = 0; i < str.length; i++) {
+    var comb = "";
+    for (let j = i; j < str.length; j++) {
+      comb += str[j];
+      arr.push(comb);
+    }
+  }
+  return arr;
+}
+console.log(combinations("car"));
+```
+
 ### indexOf()
 
 Finds the index of the first occurrence of a substring within a string. Returns -1 if not found.
@@ -285,6 +362,41 @@ let user = new Object();
 ```js
 console.log(bio.name); // "Sam"
 console.log(bio["address"]); // "J.P.Nagar"
+```
+
+### Traversing an Object
+
+### 1. **Using `for...in` Loop**
+
+```javascript
+const object = { a: 1, b: 2, c: 3 };
+for (const key in object) {
+  console.log(`${key}: ${object[key]}`);
+}
+```
+
+### 2. **Using `Object.entries()` and `map()`**
+
+```javascript
+Object.entries(object).map(([key, value]) => {
+  console.log(key, value);
+});
+```
+
+### 3. **Using `Object.keys()` and `forEach()`**
+
+```javascript
+Object.keys(object).forEach((key) => {
+  console.log(key, object[key]);
+});
+```
+
+### 4. **Using `Object.values()` (for values only)**
+
+```javascript
+Object.values(object).forEach((value) => {
+  console.log(value);
+});
 ```
 
 ### Object Methods
