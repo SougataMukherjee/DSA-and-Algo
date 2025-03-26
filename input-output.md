@@ -910,3 +910,18 @@ console.log(mul(2)(3)(4));
 ### Answer:
 
 **Output:** `24`
+
+### Question 68: What will be the output?
+
+```js
+let arr = [1, 2, 3, 4, 5];
+arr["10"] = 30;
+console.log(arr.length);
+let arr2 = [1, 2, 3, 4, 5];
+arr2["sam"] = 40;
+console.log(arr2.length);
+```
+
+### Answer:
+
+**Output:** `11 5`
