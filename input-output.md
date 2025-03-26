@@ -925,3 +925,29 @@ console.log(arr2.length);
 ### Answer:
 
 **Output:** `11 5`
+
+### Question 69: What will be the output?
+
+```js
+let x = { a: 1, b: 2, c: [10, 20], d: 4 };
+let y = JSON.parse(JSON.stringify(x));
+y.c[1] = 30;
+console.log(x, y, "deep copy");
+```
+
+### Answer:
+
+**Output:** `only y updated with 30`
+
+### Question 70: What will be the output?
+
+```js
+let x1 = { a: 1, b: 2, c: [10, 20], d: 4 };
+let y1 = { ...x1 };
+y1.c[1] = 30;
+console.log(x1, y1, "shallow copy");
+```
+
+### Answer:
+
+**Output:** `both x1 and y1 updated with 30`
