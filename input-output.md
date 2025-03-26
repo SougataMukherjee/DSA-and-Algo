@@ -951,3 +951,40 @@ console.log(x1, y1, "shallow copy");
 ### Answer:
 
 **Output:** `both x1 and y1 updated with 30`
+
+### Question 71: What will be the output?
+
+```js
+const numbers = [1, 2, 3, 4, 5, 6];
+const myReduce = numbers.reduce((acc, num) => {
+  if (num % 2 === 0) acc.push(num * 2);
+  return acc;
+}, []);
+
+const myMap = numbers.map((num) => {
+  if (num % 2 === 0) return num * 2;
+});
+
+console.log(myReduce, myMap);
+```
+
+### Answer:
+
+**Output:** `[4, 8, 12]  [ undefined, 4, undefined, 8, undefined, 12 ]  `
+
+### Question 72: What will be the output?
+
+```js
+const numbers = [10, 20, 30, 40];
+
+const obj = numbers.reduce((acc, num, index) => {
+  acc[index] = num;
+  return acc;
+}, {});
+
+console.log(obj);
+```
+
+### Answer:
+
+**Output:** ` { '0': 10, '1': 20, '2': 30, '3': 40 }`
