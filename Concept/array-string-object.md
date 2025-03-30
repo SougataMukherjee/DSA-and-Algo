@@ -79,8 +79,8 @@ console.log(person.age); // null
 
 # Array ✔
 
-An **array** is a linear data structure used to store multiple elements.
-It is a collection of elements of the same data type stored at contiguous memory locations.
+An **array** is a <mark>linear data structure</mark> used to store multiple elements.
+It is a collection of elements of the <mark>same data type</mark> stored at contiguous memory locations.
 ![array](../img/array.png) <br>
 
 ### Types of Arrays

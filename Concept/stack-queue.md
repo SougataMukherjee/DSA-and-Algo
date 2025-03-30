@@ -131,7 +131,7 @@ D / ^ F E D Operand D is added to the postfix.
 - - F E D ^ C B - _ Pop _ (higher precedence); push +.
     A + F E D ^ C B - \* A Operand A is added to the postfix.
 
-### Implementation:
+### Array Implementation of Stack:
 
 ```
 let stack = [];
@@ -203,7 +203,7 @@ peek(): Returns the element at the front without removing it.
 isEmpty(): Checks if the queue is empty.
 size(): Returns the number of elements in the queue.
 
-### Implementation:
+### Array Implementation of Queue:
 
 ```
 const N = 5;
