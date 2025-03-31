@@ -77,6 +77,8 @@ console.log(person.age); // null
 | Data Types        | Primitive types (`Number`, `String`, etc.)        | Non-primitive types (`Object`, `Array`, `Function`)                       |
 | Example           | `let x = 10; let y = x; y = 20; // x is still 10` | `let obj1 = { a: 10 }; let obj2 = obj1; obj2.a = 20; // obj1.a is now 20` |
 
+![linear](../img/linear.png) <br>
+
 # Array ✔
 
 An **array** is a <mark>linear data structure</mark> used to store multiple elements.
@@ -591,4 +593,45 @@ const factorial = (function fact(n) {
 console.log(factorial); // Output: 120
 ```
 
----
+## Class vs Interface
+
+| Feature        | Class                                 | Interface                                  |
+| -------------- | ------------------------------------- | ------------------------------------------ |
+| Definition     | A blueprint for creating objects.     | A contract that defines method signatures. |
+| Implementation | Contains both methods and properties. | Only contains method declarations.         |
+| Instantiation  | Can be instantiated using `new`.      | Cannot be instantiated directly.           |
+| Inheritance    | Supports `extends`.                   | Supports multiple `implements`.            |
+| Usage          | Used for creating objects.            | Used for defining a structure.             |
+
+```typescript
+class Animal {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+  makeSound(): void {
+    console.log("Some generic sound");
+  }
+}
+
+const dog = new Animal("Dog");
+dog.makeSound(); // Output: Some generic sound
+
+interface Animal {
+  name: string;
+  makeSound(): void;
+}
+
+class Dog implements Animal {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+  makeSound(): void {
+    console.log("Woof Woof");
+  }
+}
+
+const myDog = new Dog("Buddy");
+myDog.makeSound(); // Output: Woof Woof
+```

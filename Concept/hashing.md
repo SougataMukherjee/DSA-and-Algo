@@ -174,3 +174,18 @@ n = Number of elements
 
 m = Table capacity
 When the load factor reaches a threshold (usually 0.75), the hash table is resized (doubled) to maintain performance.
+
+## Set
+
+A Set in JavaScript is a collection of unique values. It does not maintain insertion order strictly (though in modern JavaScript engines, it does maintain order for primitive values).
+
+```javascript
+const mySet = new Set();
+mySet.add(10);
+mySet.add(20);
+mySet.add(10); // Duplicate, ignored
+console.log(mySet); // Output: Set { 10, 20 }
+console.log(mySet.has(20)); // true
+mySet.delete(10);
+console.log(mySet); // Output: Set { 20 }
+```

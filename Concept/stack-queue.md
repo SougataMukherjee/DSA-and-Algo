@@ -24,6 +24,17 @@ two;
 three;
 ```
 
+## Stack vs Linked List
+
+| Feature            | Stack                                             | Linked List                                               |
+| ------------------ | ------------------------------------------------- | --------------------------------------------------------- |
+| Definition         | A linear data structure that follows LIFO.        | A collection of nodes where each node points to the next. |
+| Implementation     | Can use arrays or linked lists.                   | Uses nodes with pointers.                                 |
+| Insertion/Deletion | Only from one end (top).                          | Can be done at any position.                              |
+| Efficiency         | Push and pop in O(1).                             | O(1) at head/tail, O(n) in the middle.                    |
+| Memory Usage       | Uses contiguous memory.                           | Uses extra memory for pointers.                           |
+| Use Cases          | Function calls, undo/redo, expression evaluation. | Dynamic memory allocation, graphs, queues.                |
+
 # Abstract Data Type (ADT)
 
 An Abstract Data Type (ADT) is a data structure that is defined by its behavior (operations) rather than its implementation.
@@ -176,9 +187,25 @@ console.log(pop()); // 20
 console.log(isEmpty()); // false
 ```
 
+## Stack vs Queue
+
+| Parameter             | Stack Data Structure                                                                  | Queue Data Structure                                                                         |
+| --------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Design                | A Stack is a linear data structure where removal and insertion occur at the same end. | A Queue is also a linear data structure, but removal and insertion happen at different ends. |
+| Principle             | A Stack follows the Last In, First Out (LIFO) principle.                              | A Queue follows the First In, First Out (FIFO) principle.                                    |
+| Pointers              | A Stack uses a single pointer, the top.                                               | A Queue uses two pointers, the front and the rear.                                           |
+| Operations            | A Stack uses push and pop operations.                                                 | A Queue uses enqueue and dequeue operations.                                                 |
+| Structure             | In a Stack, both insertion and deletion happen at the top.                            | In a Queue, insertion happens at the rear and deletion at the front.                         |
+| Full Condition Check  | A Stack is full when top equals max-1.                                                | A Queue is full when rear equals max-1.                                                      |
+| Empty Condition Check | A Stack is empty when top equals -1.                                                  | A Queue is empty when front equals rear+1 or front equals -1.                                |
+| Variants              | A Stack has no variants.                                                              | A Queue has variants: circular queue, priority queue, and double-ended queue.                |
+| Visualization         | A Stack can be visualized as a vertical arrangement.                                  | A Queue can be visualized as a horizontal arrangement.                                       |
+
 # Queue:
 
-A queue is an ordered list that follows the FIFO (First In, First Out) principle. Elements are inserted at one end (rear) and removed from the other end (front).
+A queue is an ordered list that follows the <mark>FIFO</mark> (First In, First Out) principle. Elements are inserted at one end (rear) and removed from the other end (front).
+
+![queue](../img/queue.png) <br>
 
 > example
 > ticket booking line,print queue
@@ -197,11 +224,11 @@ isEmpty
 
 ### Key Operations of a Queue:
 
-enqueue(x): Adds an element to the rear of the queue.
-dequeue(): Removes and returns the element at the front of the queue.
-peek(): Returns the element at the front without removing it.
-isEmpty(): Checks if the queue is empty.
-size(): Returns the number of elements in the queue.
+1. enqueue(x): Adds an element to the rear of the queue.
+2. dequeue(): Removes and returns the element at the front of the queue.
+3. peek(): Returns the element at the front without removing it.
+4. isEmpty(): Checks if the queue is empty.
+5. size(): Returns the number of elements in the queue.
 
 ### Array Implementation of Queue:
 
@@ -271,6 +298,16 @@ getHighestPriority() → Return the element with the highest priority without re
 deleteHighestPriority() → Remove and return the element with the highest priority.<br>
 
 isEmpty() → Check if the queue is empty.<br>
+
+## Queue vs Priority Queue
+
+| Queue                                                              | Priority Queue                                                                      |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Queue is a linear data structure.                                  | Priority Queue is an extension of Queue with priority factor embedded.              |
+| Follows First In First Out (FIFO) algorithm to serve the elements. | Serves the element with higher priority first.                                      |
+| Enqueue and dequeue done in O(1).                                  | Enqueue and dequeue done in O(log n) using binary heaps.                            |
+| Used in algorithms such as Breadth First Search.                   | Used in algorithms such as Dijkstra’s Algorithm, Prim’s Algorithms, CPU Scheduling. |
+| It is an ordered queue making searching easy.                      | It is a randomly organized queue.                                                   |
 
 ### Out of Memory (OOM) error
 

@@ -1,3 +1,7 @@
+## Why is Recursion an Application of Stack?
+
+Recursion is an application of stack because each recursive function call is stored in the call stack until it resolves, following a Last In First Out (LIFO) order.
+
 ## Difference between Recursion and Iteration
 
 | S.No. | Recursion                                                              | Iteration                                                |
