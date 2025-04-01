@@ -194,7 +194,7 @@ printList(head); // 2 -> 3
 
 ```
 
-## Null Pointer Dereference in Linked List
+### Null Pointer Dereference in Linked List
 
 A null pointer dereference in a linked list in JavaScript happens when you try to access a property on null or undefined:
 
