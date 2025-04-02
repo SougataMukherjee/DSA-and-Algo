@@ -144,3 +144,43 @@ Based on common constraints in competitive programming:
 - n ≤ 10^6: O(n log n) is acceptable
 - n ≤ 10^4: O(n^2) is acceptable
 - n ≤ 500: O(n^3) is acceptable
+
+### **Push vs Unshift**
+
+- `push()` is better than `unshift()` in JavaScript in terms of time complexity.
+
+```js
+let arr = [1, 2, 3, 4, 5];
+arr.push(6); // [1, 2, 3, 4, 5, 6] - No shifting needed (O(1))
+arr.unshift(0); // [0, 1, 2, 3, 4, 5, 6] - All elements must shift right (O(n))
+```
+
+### **`includes()` vs `Set.has()`**
+
+- `array.includes(value)` on a large array is inefficient because its time complexity is **O(n)** in the worst case.
+- `array.includes(value)` checks each element one by one until it finds a match or reaches the end.
+- **Alternative:** Use a `Set`, which has **O(1)** average time complexity.
+
+```js
+const bigArray = [1, 2, 3, 4, 5, 6, ...];
+const bigSet = new Set(bigArray);
+console.time("set");
+console.log(bigSet.has(1)); // O(1) lookup
+console.timeEnd("set");
+```
+
+### **Object Operations**
+
+| **Operation**                                    | **Time Complexity** | **Explanation**                               |
+| ------------------------------------------------ | ------------------- | --------------------------------------------- |
+| **Insertion (`obj[key] = value`)**               | **O(1)**            | Hashing provides constant-time insertion.     |
+| **Access (`obj[key]`)**                          | **O(1)**            | Direct key lookup using a hash table.         |
+| **Deletion (`delete obj[key]`)**                 | **O(1)**            | Removes the key-value pair efficiently.       |
+| **Searching for a key (`key in obj`)**           | **O(1)**            | Direct lookup using hashing.                  |
+| **Iterating (`for...in` or `Object.keys(obj)`)** | **O(n)**            | Must check all keys, so it takes linear time. |
+
+### **General Recommendations**
+
+- Use **`push()`** instead of `unshift()` to avoid shifting elements.
+- Use **`Set.has()`** instead of `array.includes()` for faster lookups.
+- Use **objects `{}`** for key-value storage, but prefer **`Map`** for large datasets and non-string keys.
