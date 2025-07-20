@@ -988,3 +988,95 @@ console.log(obj);
 ### Answer:
 
 **Output:** ` { '0': 10, '1': 20, '2': 30, '3': 40 }`
+
+### Question 73: What will be the output?
+
+```js
+const users = [
+  { name: "Alex", age: 13 },
+  { name: "Bob", age: 50 },
+];
+for (const { name, age } of users) {
+  console.log(name, age);
+}
+```
+
+### Answer:
+
+**Output:**
+
+### Question 74: What will be the output?
+
+```js
+const users = [
+  ["Alex", 13],
+  ["Bob", 50],
+];
+for (const [name, age] of users) {
+  console.log(name, age);
+}
+```
+
+### Answer:
+
+**Output:**
+
+### Question 75: What will be the output?
+
+```js
+const users = {
+  1: <h1>Alex</h1>,
+  2: <h1>Bob</h1>,
+};
+{
+  Object.keys(users).map((key) => <div key={key}>{users[key]}</div>);
+}
+```
+
+### Answer:
+
+**Output:**
+
+### Question 75: What will be the output?
+
+```js
+const users = {
+  user1: { name: "Alex", age: 13 },
+  user2: { name: "Bob", age: 50 },
+};
+for (const { name, age } of Object.values(users)) {
+  console.log(name, age);
+}
+```
+
+### Question 76: What will be the output?
+
+```js
+function sum(a, b) {//(6,5)
+    console.log(a + b);
+  }
+  function operation(val1, val2, callback) {//(6,5,sum())
+    callback(val1, val2);
+  }
+  ->operation(6, 5, sum);
+```
+
+### Question 77: what will be the output?
+
+```js
+(function ask(question = "prompt", yes = alert, no = alert) {
+  if (confirm(question)) yes("You agreed.");
+  else no("You canceled the execution.");
+})();
+```
+
+### Question 78: what will be the output?
+
+```js
+let x = [];
+let y = [];
+let z = x + y;
+console.log(typeof z);
+```
+
+**Output:** string
