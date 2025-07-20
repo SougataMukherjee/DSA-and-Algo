@@ -11,7 +11,7 @@ for (i = 2; i <= num; i++) {
         break;
       }
     }
-    if (isPrime === 1) {
+    if (isPrime == 1) {
       console.log(i);
     }
   }
