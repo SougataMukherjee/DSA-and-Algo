@@ -1080,3 +1080,19 @@ console.log(typeof z);
 ```
 
 **Output:** string
+
+### Question 79: what will be the output?
+
+```js
+console.log([1, 2] + [3, 4]);
+console.log(1 + +2);
+console.log(1 + +"2");
+console.log("1" + +2);
+console.log(1 + true);
+```
+
+**Output:** 1,23,4
+3
+3
+12
+2
