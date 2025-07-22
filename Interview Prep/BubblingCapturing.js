@@ -1,10 +1,12 @@
-<div id="grandparent">
+{
+  /* <div id="grandparent">
   Grandparent
   <div id="parent">
     Parent
     <div id="child">Child</div>
   </div>
-</div>;
+</div>; */
+}
 const grandparent = document.getElementById("grandparent");
 const parent = document.getElementById("parent");
 const child = document.getElementById("child");
