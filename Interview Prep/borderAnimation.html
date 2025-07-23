@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            width: 200px;
+            height: 150px;
+            background: #3084AC;
+            margin: 100px auto;
+            position: relative;
+            cursor: pointer;
+            border: 2px solid transparent;
+            overflow: hidden;
+        }
+
+        .box::before,
+        .box::after,
+        .box-inner::before,
+        .box-inner::after {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            transition: all 0.4s ease;
+        }
+
+
+        .box::before {
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, red, yellow);
+            transition-delay: 1.2s;
+        }
+
+
+        .box::after {
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 0;
+            background: linear-gradient(180deg, yellow, lime);
+            transition-delay: 0.8s;
+        }
+
+
+        .box-inner::after {
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(270deg, lime, blue);
+            transition-delay: 0.4s;
+        }
+
+        .box-inner::before {
+            bottom: 0;
+            left: 0;
+            width: 2px;
+            height: 0;
+            background: linear-gradient(0deg, blue, purple);
+            transition-delay: 0s;
+
+        }
+
+        .box:hover::before {
+            width: 100%;
+            transition-delay: 0s;
+
+        }
+
+        .box:hover::after {
+            height: 100%;
+            transition-delay: 0.4s;
+        }
+
+        .box:hover .box-inner::after {
+            width: 100%;
+            transition-delay: 0.8s;
+        }
+
+        .box:hover .box-inner::before {
+            height: 100%;
+            transition-delay: 1.2s;
+        }
+    </style>
+    <div class="box">
+        <div class="box-inner"></div>
+    </div>
+</body>
+
+</html>

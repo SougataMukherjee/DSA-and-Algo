@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Tabs Example</title>
+</head>
+<style>
+    .container {
+        width: 400px;
+        height: 250px;
+        background-color: #eeeded;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .tab-list {
+        height: 50px;
+        display: flex;
+        list-style: none;
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tabs {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #80808013;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .tabs:not(:last-child) {
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .active-tabs {
+        background: #eeeded;
+    }
+
+    .active-tabs::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% + 2px);
+        height: 4px;
+        background: #5893f1;
+    }
+
+    .content {
+        display: none;
+        background-color: #eeeded;
+        padding: 10px;
+    }
+
+    .active-content {
+        display: flex;
+    }
+</style>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    <bootstrap cdn />
+    <script type="text/babel">
+        const App = () => {
+            const { useState } = React
+            const [toggleState, setToggleState] = useState(1);
+
+            const toggleTab = (index) => {
+                setToggleState(index);
+            };
+
+            const getActiveClass = (index, className) =>
+                toggleState === index ? className : "";
+
+            return (
+                <div className="container">
+                    <ul className="tab-list">
+                        <li
+                            className={`tabs ${getActiveClass(1, "active-tabs")}`}
+                            onClick={() => toggleTab(1)}
+                        >
+                            Tab 1
+                        </li>
+                        <li
+                            className={`tabs ${getActiveClass(2, "active-tabs")}`}
+                            onClick={() => toggleTab(2)}
+                        >
+                            Tab 2
+                        </li>
+                        <li
+                            className={`tabs ${getActiveClass(3, "active-tabs")}`}
+                            onClick={() => toggleTab(3)}
+                        >
+                            Tab 3
+                        </li>
+                    </ul>
+                    <div className="content-container">
+                        <div className={`content ${getActiveClass(1, "active-content")}`}>
+                            <h2>Lorem</h2>
+                        </div>
+                        <div className={`content ${getActiveClass(2, "active-content")}`}>
+                            <h2>Ipsum</h2>
+                        </div>
+                        <div className={`content ${getActiveClass(3, "active-content")}`}>
+                            <h2>Dolor</h2>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const main = ReactDOM.createRoot(document.getElementById("root"));
+        main.render(<App />);
+    </script>
+</body>
+
+</html>

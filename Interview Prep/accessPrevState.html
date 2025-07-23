@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>React Tabs Example</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+  <bootstrap cdn />
+  <script type="text/babel">
+    const App = () => {
+      const { useEffect, useRef, useState } = React
+      const [inputValue, setInputValue] = useState("");
+      const usePrevious = (value) => {
+        const ref = useRef();
+
+        useEffect(() => {
+          ref.current = value;
+        }, [value]);
+
+        return ref.current;
+      };
+      const previousInputValue = usePrevious(inputValue);
+      console.log(
+        "Previous Value:",
+        previousInputValue,
+        "New Value",
+        inputValue
+      );
+
+
+      return (
+        <div className="App">
+          <input
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+          />
+        </div>
+      );
+    };
+
+    const main = ReactDOM.createRoot(document.getElementById("root"));
+    main.render(<App />);
+  </script>
+</body>
+
+</html>

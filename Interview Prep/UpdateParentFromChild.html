@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Tabs Example</title>
+    <style>
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background: white;
+            border-radius: 4px;
+        }
+
+        button.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input {
+            margin: 0 10px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Load React and Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        // DropDown component
+        function DropDown(props) {
+            return (
+                <>
+                    <br />
+                    <input
+                        value={props.fruit.fruit1}
+                        onChange={(e) => props.onFruitChange(e, "fruit1")}
+                    />
+                    <input
+                        value={props.fruit.fruit2}
+                        onChange={(e) => props.onFruitChange(e, "fruit2")}
+                    />
+                </>
+            );
+        }
+
+        // Main App component
+        function App() {
+            const [activeTab, setActiveTab] = useState(1);
+            const [fruit, setFruit] = useState({ fruit1: "apple", fruit2: "mango" });
+
+            const handleTabChange = (tabNumber) => {
+                setActiveTab(tabNumber);
+            };
+
+            const handleFruitChange = (newFruit, key) => {
+                setFruit({
+                    ...fruit,
+                    [key]: newFruit.target.value
+                });
+            };
+
+            return (
+                <div>
+                    <div className="tabs">
+                        <button
+                            className={activeTab === 1 ? "active" : ""}
+                            onClick={() => handleTabChange(1)}
+                        >
+                            Tab1
+                        </button>
+                        <button
+                            className={activeTab === 2 ? "active" : ""}
+                            onClick={() => handleTabChange(2)}
+                        >
+                            Tab2
+                        </button>
+                    </div>
+
+                    <div className="tab-content">
+                        {activeTab === 1 && (
+                            <>
+                                <a href="#*">Tab1 Link</a>
+                                <DropDown fruit={fruit} onFruitChange={handleFruitChange} />
+                            </>
+                        )}
+
+                        {activeTab === 2 && <a href="##">Tab2 Link</a>}
+                    </div>
+                </div>
+            );
+        }
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

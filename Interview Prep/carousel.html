@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Tabs Example</title>
+</head>
+
+<style>
+    .carousel {
+        position: relative;
+        width: 80%;
+        height: 300px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .carousel-images img {
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-size: cover;
+    }
+
+    .carousel-images img.active {
+        display: block;
+        outline-offset: -1.5em;
+    }
+
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .carousel-button.prev {
+        left: 10px;
+    }
+
+    .carousel-button.next {
+        right: 10px;
+    }
+</style>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    <bootstrap cdn />
+    <script type="text/babel">
+        const App = () => {
+            const { useState } = React
+            const [currentIndex, setCurrentIndex] = useState(0);
+            const images = ["https://images.unsplash.com/photo-1683924071058-727d83504671?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80", "https://plus.unsplash.com/premium_photo-1672771923483-b94270edfefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=775&q=80", "https://images.unsplash.com/photo-1682686581797-21ec383ead02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"]
+            const prevSlide = () => {
+                let index;
+                if (currentIndex === 0) {//if index in first position make it to last slide and make cycle
+                    index = images.length - 1;
+                } else {
+                    index = currentIndex - 1;//go to its previous
+                }
+                setCurrentIndex(index);
+            };
+
+            const nextSlide = () => {
+                let index;
+                if (currentIndex === images.length - 1) {//if index in last position make it to 1st slide and make cycle
+                    index = 0;
+                } else {
+                    index = currentIndex + 1;//go to its next
+                }
+                setCurrentIndex(index);
+            };
+            const onError = (e) => {
+                console.error("Error loading image", e.target.src);
+            };
+
+
+            return (
+                <div className="carousel">
+                    <div className="carousel-images">
+                        {images.map((image, index) => (
+                            <img
+                                key={index}
+                                src={image}
+                                alt={`Image ${index}`}
+                                onError={onError}
+                                className={index === currentIndex ? "active" : "inactive"}//based on current index active the pic
+                            />
+                        ))}
+                    </div>
+                    <button className="carousel-button prev" onClick={prevSlide}>
+                        [
+                    </button>
+                    <button className="carousel-button next" onClick={nextSlide}>
+                        ]
+                    </button>
+                </div>
+            );
+        };
+
+        const main = ReactDOM.createRoot(document.getElementById("root"));
+        main.render(<App />);
+    </script>
+</body>
+
+</html>

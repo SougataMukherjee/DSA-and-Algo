@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Tabs Example</title>
+</head>
+<style>
+    .modal-wrapper {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 30rem;
+        background-color: #fff;
+        padding: 2rem 1rem;
+        border-radius: 2px;
+    }
+</style>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    <bootstrap cdn />
+    <script type="text/babel">
+        const App = () => {
+            const { useRef, useEffect } = React
+            const bodyRef = useRef(document.body);
+            useEffect(() => {
+                const bodyElement = bodyRef.current;
+                bodyElement.style.overflowY = "hidden"; //when modal true background overflow hidden
+                return () => {
+                    bodyElement.style.overflowY = "scroll"; //when modal false background overflow scroll
+                };
+            }, []);
+
+
+            return (
+                <>
+                    <div className="modal-wrapper" onClick={() => console.log('close')}></div>
+                    <div className="modal-container">
+                        <h1>Heading</h1>
+                        <p>this is a modal , pls click close</p>
+                        <button onClick={() => console.log('close')}>Close</button>
+                    </div>
+                </>
+            );
+        };
+
+        const main = ReactDOM.createRoot(document.getElementById("root"));
+        main.render(<App />);
+    </script>
+</body>
+
+</html>

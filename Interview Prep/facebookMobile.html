@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook-like App</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .login {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 100px;
+        }
+
+        .login input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login button {
+            padding: 10px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1877f2;
+        }
+
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .counter {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .userImg {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .postImg {
+            width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .interections {
+            display: flex;
+            gap: 15px;
+        }
+
+        .cardIcon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .username {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Destructure React hooks from the global React object
+        const { useState } = React;
+
+        // Posts data
+        const posts = [
+            {
+                id: 1,
+                username: "Sam",
+                fullname: "Sam Muk",
+                userImg: "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=300&h=750&dpr=1",
+                postImg: "https://source.unsplash.com/user/c_v_r",
+                like: "https://cdn-icons-png.flaticon.com/512/1077/1077035.png",
+                liked: "https://cdn-icons-png.flaticon.com/512/2589/2589175.png",
+                share: "https://cdn-icons-png.flaticon.com/512/929/929610.png",
+                comments: "https://cdn-icons-png.flaticon.com/512/3114/3114810.png"
+            },
+            {
+                id: 2,
+                username: "Ema",
+                fullname: "Ema WatSon",
+                userImg: "https://images.pexels.com/photos/372042/pexels-photo-372042.jpeg?auto=compress&cs=tinysrgb&w=300&h=750&dpr=1",
+                postImg: "https://picsum.photos/200/300",
+                like: "https://cdn-icons-png.flaticon.com/512/1077/1077035.png",
+                liked: "https://cdn-icons-png.flaticon.com/512/2589/2589175.png",
+                share: "https://cdn-icons-png.flaticon.com/512/929/929610.png",
+                comments: "https://cdn-icons-png.flaticon.com/512/3114/3114810.png"
+            }
+        ];
+
+        // Card component
+        function Card({ post }) {
+            const [liked, setLiked] = useState(false);
+
+            const handleLike = () => {
+                setLiked(!liked); // Toggle like state
+            };
+
+            return (
+                <div className="card">
+                    <div className="info">
+                        <img src={post.userImg} className="userImg" alt="" />
+                        <span>{post.fullname}</span>
+                    </div>
+                    <img src={post.postImg} className="postImg" alt="" />
+                    <div className="interections">
+                        {liked ? (
+                            <img src={post.liked} alt="" className="cardIcon" onClick={handleLike} />
+                        ) : (
+                            <img src={post.like} alt="" className="cardIcon" onClick={handleLike} />
+                        )}
+                        <img src={post.comments} alt="" className="cardIcon" />
+                        <img src={post.share} alt="" className="cardIcon" />
+                    </div>
+                </div>
+            );
+        }
+
+        // Main App component
+        function App() {
+            const [username, setUsername] = useState("");
+            const [user, setUser] = useState("");
+
+            return (
+                <div className="container">
+                    {user ? (
+                        <>
+                            <div className="navbar">
+                                <span className="logo">Facebook</span>
+                                <div className="icons">
+                                    <div className="icon">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/3239/3239952.png" height="20" alt="" className="iconImg" />
+                                        <div className="counter">3</div>
+                                    </div>
+                                    <div className="icon">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/953/953810.png" height="20" alt="" className="iconImg" />
+                                        <div className="counter">2</div>
+                                    </div>
+                                    <div className="icon">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/2040/2040504.png" height="20" alt="" className="iconImg" />
+                                        <div className="counter">1</div>
+                                    </div>
+                                </div>
+                            </div>
+                            {posts.map((post) => (
+                                <Card key={post.id} post={post} />
+                            ))}
+                            <span className="username">{user}</span>
+                        </>
+                    ) : (
+                        <div className="login">
+                            <input
+                                placeholder="user-name"
+                                onChange={(e) => setUsername(e.target.value)}
+                            />
+                            <button onClick={() => setUser(username)}>Login</button>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

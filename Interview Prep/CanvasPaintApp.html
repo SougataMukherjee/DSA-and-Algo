@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <button id="clearBtn">Clear Canvas</button>
+
+    <script>
+        const canvas = document.querySelector("#canvas");
+        const clearBtn = document.querySelector("#clearBtn");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+        let drawColor = "#29102D";
+        let lineWidth = 5;
+        let currentTool = "draw";
+
+        function getPosition(e) {
+            if (e.touches && e.touches.length > 0) {
+                return [e.touches[0].clientX,
+                e.touches[0].clientY];
+            }
+
+            return [e.clientX,
+            e.clientY];
+        }
+
+        function startDrawing(e) {
+            isDrawing = true;
+            [lastX,
+                lastY] = getPosition(e);
+            ctx.beginPath();
+            ctx.arc(lastX, lastY, lineWidth / 2, 0, Math.PI * 2);
+            ctx.fillStyle = drawColor;
+            ctx.fill();
+        }
+
+        function draw(e) {
+            if (!isDrawing) return;
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            [lastX,
+                lastY] = getPosition(e);
+            ctx.lineTo(lastX, lastY);
+            ctx.strokeStyle = drawColor;
+            ctx.lineWidth = lineWidth;
+            ctx.lineCap = "round";
+            ctx.lineJoin = "round";
+            ctx.stroke();
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        canvas.addEventListener("mousedown", startDrawing);
+        canvas.addEventListener("mousemove", draw);
+        canvas.addEventListener("mouseup", stopDrawing);
+        clearBtn.addEventListener("click", clearCanvas);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .App {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Load React and Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // Destructure needed React features
+        const { createContext, useState, useContext } = React;
+
+        // Create context
+        const QuizContext = createContext();
+
+        // Start Component
+        function Start() {
+            const { setStart } = useContext(QuizContext);
+            return (
+                <div style={{
+                    width: "100%",
+                    height: "100vh",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                }}>
+                    <button
+                        style={{
+                            border: "2px solid orange",
+                            padding: "10px 20px",
+                            fontSize: "20px",
+                            borderRadius: "5px",
+                            cursor: "pointer"
+                        }}
+                        onClick={() => setStart(true)}
+                    >
+                        Start Quiz
+                    </button>
+                </div>
+            );
+        }
+
+        // Quiz Component
+        function Quiz() {
+            const { setStart, setExit } = useContext(QuizContext);
+            const [currentQuestion, setCurrentQuestion] = useState(0);
+
+            const questions = [
+                {
+                    question: "What is 2 + 2?",
+                    options: ["3", "4", "5", "6"],
+                    answer: "4"
+                },
+                {
+                    question: "What is the capital of France?",
+                    options: ["London", "Berlin", "Paris", "Madrid"],
+                    answer: "Paris"
+                }
+            ];
+
+            const handleNext = () => {
+                if (currentQuestion < questions.length - 1) {
+                    setCurrentQuestion(currentQuestion + 1);
+                } else {
+                    setStart(false);
+                    setExit(true);
+                }
+            };
+
+            const handleQuit = () => {
+                setStart(false);
+                setExit(false);
+            };
+
+            return (
+                <div style={{ padding: '20px' }}>
+                    <h1>Question {currentQuestion + 1}/{questions.length}</h1>
+                    <h2>{questions[currentQuestion].question}</h2>
+                    <div style={{ margin: '20px 0' }}>
+                        {questions[currentQuestion].options.map((option, index) => (
+                            <div key={index} style={{ margin: '10px' }}>
+                                <button
+                                    style={{
+                                        padding: '8px 16px',
+                                        fontSize: '16px',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    {option}
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                    <div>
+                        <button
+                            onClick={handleNext}
+                            style={{
+                                padding: '8px 16px',
+                                margin: '0 10px',
+                                fontSize: '16px',
+                                cursor: 'pointer'
+                            }}
+                        >
+                            {currentQuestion < questions.length - 1 ? 'Next' : 'Finish'}
+                        </button>
+                        <button
+                            onClick={handleQuit}
+                            style={{
+                                padding: '8px 16px',
+                                margin: '0 10px',
+                                fontSize: '16px',
+                                cursor: 'pointer',
+                                backgroundColor: '#ff4444',
+                                color: 'white',
+                                border: 'none'
+                            }}
+                        >
+                            Quit Quiz
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+
+        // Result Component
+        function Result() {
+            const { setStart, setExit } = useContext(QuizContext);
+
+            const handleRestart = () => {
+                setStart(true);
+                setExit(false);
+            };
+
+            const handleReturn = () => {
+                setStart(false);
+                setExit(false);
+            };
+
+            return (
+                <div style={{ padding: '20px' }}>
+                    <h1>Quiz Completed!</h1>
+                    <p>Your score: 100%</p>
+                    <div style={{ marginTop: '20px' }}>
+                        <button
+                            onClick={handleRestart}
+                            style={{
+                                padding: '10px 20px',
+                                margin: '0 10px',
+                                fontSize: '16px',
+                                cursor: 'pointer',
+                                backgroundColor: '#4CAF50',
+                                color: 'white',
+                                border: 'none',
+                                borderRadius: '5px'
+                            }}
+                        >
+                            Restart Quiz
+                        </button>
+                        <button
+                            onClick={handleReturn}
+                            style={{
+                                padding: '10px 20px',
+                                margin: '0 10px',
+                                fontSize: '16px',
+                                cursor: 'pointer',
+                                backgroundColor: '#2196F3',
+                                color: 'white',
+                                border: 'none',
+                                borderRadius: '5px'
+                            }}
+                        >
+                            Return to Start
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+
+        // Main App Component
+        function App() {
+            const [start, setStart] = useState(false);
+            const [exit, setExit] = useState(false);
+
+            return (
+                <div className="App">
+                    <QuizContext.Provider value={{ start, exit, setStart, setExit }}>
+                        {!start && !exit && <Start />}
+                        {start && !exit && <Quiz />}
+                        {exit && <Result />}
+                    </QuizContext.Provider>
+                </div>
+            );
+        }
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

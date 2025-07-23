@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Tabs Example</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    <bootstrap cdn />
+    <script type="text/babel">
+        const App = () => {
+            const isStyle = {
+                fontSize: "16px",
+                color: "blue"
+            };
+            const getCustomStyle = (left, width, height, background) => ({
+                marginLeft: left,
+                width: width,
+                height: height,
+                background: background,
+            });
+            function getAppStyle() {
+                const appStyle = {
+                    color: "white",
+                    fontSize: "10px",
+                };
+                return appStyle;
+            }
+            const customStyle = getCustomStyle("10px", "100px", "30px", "coral");
+            const restStyle = getCustomStyle("10px", "100px", "50px", "orange");
+
+            const combinedStyle = {
+
+                ...(true ? restStyle : customStyle),
+                ...getAppStyle(),
+            };
+
+
+            return (
+                <div style={combinedStyle}>
+                    <p style={{
+                        ...isStyle,
+                        ...(true
+                            ? { ...isStyle, background: "gray" }
+                            : { ...isStyle, background: "black", color: "white" })
+                    }}
+                    >Combined styles applied to this div.</p>
+                </div >
+            );
+        };
+
+        const main = ReactDOM.createRoot(document.getElementById("root"));
+        main.render(<App />);
+    </script>
+</body>
+
+</html>

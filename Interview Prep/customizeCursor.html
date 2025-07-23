@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Tabs Example</title>
+</head>
+<style>
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        min-height: 100vh;
+        align-items: center;
+        margin: auto;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        flex: 1;
+    }
+
+    .cursor {
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+        transition-property: background, transform;
+        transform-origin: 100% 100%;
+        z-index: -1;
+    }
+
+    .link-grow {
+        transform: scale(2);
+        background: black;
+    }
+
+    .hovered-link {
+        color: white;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    <bootstrap cdn />
+    <script type="text/babel">
+        const App = () => {
+            const { useState, useRef, useEffect } = React;
+            const mouseRef = useRef(null);
+            const navRef = useRef(null);
+            const [hoveredLi, setHoveredLi] = useState(null);
+
+            const handleMouseMove = (e) => {
+                if (
+                    e.clientX - navRef.current.getBoundingClientRect().left <
+                    navRef.current.getBoundingClientRect().width / 2
+                ) {
+                    console.log("you are in left");
+                } else {
+                    console.log("you are in right");
+                }
+                if (mouseRef.current) {
+                    mouseRef.current.style.top = e.pageY + "px";
+                    mouseRef.current.style.left = e.pageX + "px";
+                }
+            };
+
+            useEffect(() => {
+                if (navRef.current) {
+                    const liElements = Array.from(navRef.current.children);
+
+                    const handleMouseEnter = (index) => {
+                        setHoveredLi(index);
+                    };
+
+                    const handleMouseLeave = () => {
+                        setHoveredLi(null);
+                    };
+
+                    liElements.forEach((li, index) => {
+                        li.addEventListener("mouseenter", () => handleMouseEnter(index));
+                        li.addEventListener("mouseleave", handleMouseLeave);
+                    });
+                }
+            }, []);
+
+
+            return (
+                <div className="App" onMouseMove={handleMouseMove}>
+                    <div
+                        className={`cursor ${hoveredLi !== null ? "link-grow" : ""}`}
+                        ref={mouseRef}
+                    ></div>
+                    <nav>
+                        <ul className="nav-links" ref={navRef}>
+                            <li className={hoveredLi === 0 ? "hovered-link" : ""}>Home</li>
+                            <li className={hoveredLi === 1 ? "hovered-link" : ""}>Contact</li>
+                            <li className={hoveredLi === 2 ? "hovered-link" : ""}>Services</li>
+                        </ul>
+                    </nav>
+                </div>
+            );
+        };
+
+        const main = ReactDOM.createRoot(document.getElementById("root"));
+        main.render(<App />);
+    </script>
+</body>
+
+</html>

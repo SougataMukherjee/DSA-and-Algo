@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Tabs Example</title>
+    <style>
+        .dropdown-menu {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1rem;
+            background: #f8f9fa;
+        }
+
+        .dropdown-item {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    <script type="text/babel">
+        const { useState } = React;
+
+        function App() {
+            const [selectedOption, setSelectedOption] = useState(null);
+            const [activeButton, setActiveButton] = useState(null);
+
+            const options = [
+                { label: "Option 1", value: "option1" },
+                { label: "Option 2", value: "option2" },
+                { label: "Option 3", value: "option3" },
+                { label: "Option 4", value: "option4" },
+                { label: "Option 5", value: "option5" }
+            ];
+
+            const handleOptionSelect = (option) => {
+                setSelectedOption(option);
+                setActiveButton(option.label);
+            };
+
+            const getDropdownStyle = () => {
+                return {
+                    display: "flex",
+                    justifyContent: "space-evenly",
+                    background: selectedOption ? "red" : "yellow"
+                };
+            };
+
+            const getBlackBoxStyle = () => {
+                const marginLeft = selectedOption?.label.includes("1")
+                    ? "0%"
+                    : selectedOption?.label.includes("2")
+                        ? "20%"
+                        : selectedOption?.label.includes("3")
+                            ? "40%"
+                            : selectedOption?.label.includes("4")
+                                ? "60%"
+                                : "80%";
+
+                return {
+                    height: "30vh",
+                    width: "20vw",
+                    background: "black",
+                    marginLeft: marginLeft,
+                    transition: "width 1s, margin-left .5s",
+                    color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "2rem"
+                };
+            };
+
+            const dropdownStyle = getDropdownStyle();
+            const blackBoxStyle = getBlackBoxStyle();
+
+            return (
+                <>
+                    <div className="dropdown">
+                        <div className="dropdown-menu" style={dropdownStyle}>
+                            {options.map((option) => (
+                                <a
+                                    key={option.value}
+                                    className="dropdown-item"
+                                    style={{
+                                        textDecoration: activeButton === option.label ? "underline" : "none",
+                                        color: activeButton === option.label ? "white" : "black",
+                                        backgroundColor: activeButton === option.label ? "hotpink" : "",
+                                    }}
+                                    href="#"
+                                    onMouseEnter={() => handleOptionSelect(option)}
+                                    onClick={(e) => e.preventDefault()}
+                                >
+                                    {option.label}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                    {selectedOption && (
+                        <div style={blackBoxStyle}>{selectedOption.label}</div>
+                    )}
+                </>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

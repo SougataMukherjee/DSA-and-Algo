@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Tabs Example</title>
+</head>
+<style>
+    body {
+        background-color: #242333;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .seat {
+        background-color: #444451;
+        width: 1rem;
+        height: 1rem;
+        margin: 3px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .movie-container {
+        margin: 20px 0;
+    }
+
+    .movie-container select {
+        background-color: #fff;
+        border: 0;
+        border-radius: 5px;
+        font-size: 15px;
+        margin-left: 10px;
+        padding: 5px 15px 5px 15px;
+        appearance: none;
+    }
+
+    .seat.selected {
+        background-color: #6feaf6
+    }
+
+    .seat.occupied {
+        background-color: #fff
+    }
+
+    .seat:nth-of-type(2),
+    .seat:nth-last-of-type(3) {
+        margin-right: 1rem;
+    }
+
+    .seat:not(.occupied):hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+
+    .showcase {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: #777;
+        list-style: none;
+        display: flex;
+        justify-content: space-between
+    }
+
+    .showcase li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px;
+    }
+
+    .showcase li small {
+        margin-left: 10px;
+    }
+
+    .screen {
+        background-color: #fff;
+        height: 70px;
+        width: 100%;
+        margin: 15px 0px;
+        transform: rotateX(-45deg);
+        box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
+    }
+
+    .container {
+        perspective: 1000px;
+        margin-bottom: 30px
+    }
+
+    p.text {
+        margin: 5px 0
+    }
+
+    p.text span {
+        color: #6feaf6;
+    }
+</style>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    <bootstrap cdn />
+    <script type="text/babel">
+        const App = () => {
+            const { useRef, useState } = React;
+            const containerRef = useRef(null);
+            const seatRef = useRef(null);
+            const countRef = useRef(null);
+            const movieRef = useRef(null);
+            const [selectedSeat, setSelectedSeat] = useState(0);
+            let ticketPrice = movieRef.current?.value;
+            const updateSelectedCount = () => {
+                const selectedSeat = document.querySelectorAll(".row .seat.selected");
+
+                const selectedSeatCount = selectedSeat.length;
+                setSelectedSeat(selectedSeatCount);
+            };
+            const handleClick = (e) => {
+                if (
+                    e.target.className.includes("seat") &&
+                    !e.target.className.includes("occupied")
+                ) {
+                    e.target.classList.toggle("selected");
+                }
+                updateSelectedCount();
+            };
+            const handleChange = (e) => {
+                ticketPrice = e.target.value;
+                console.log(ticketPrice);
+                updateSelectedCount();
+            };
+            const seatRow = () => {
+                return (
+                    <div className="row" ref={seatRef}>
+                        <div className="seat occupied"></div>
+                        <div className="seat"></div>
+                        <div className="seat"></div>
+                        <div className="seat"></div>
+                        <div className="seat"></div>
+                        <div className="seat occupied"></div>
+                        <div className="seat "></div>
+                        <div className="seat occupied"></div>
+                    </div>
+                );
+            };
+
+            return (
+                <div className="App">
+                    <div className="movie-container">
+                        <label>pick a movie</label>
+                        <select id="movie" ref={movieRef} onChange={handleChange}>
+                            <option value="10">Avengers($10)</option>
+                            <option value="9">Agnipath($9)</option>
+                            <option value="15">Aviman($15)</option>
+                        </select>
+                    </div>
+                    <ul className="showcase">
+                        <li>
+                            <div className="seat"></div>
+                            <small>Na</small>
+                        </li>
+                        <li>
+                            <div className="seat selected"></div>
+                            <small>Selected</small>
+                        </li>
+                        <li>
+                            <div className="seat occupied"></div>
+                            <small>Occupied</small>
+                        </li>
+                    </ul>
+                    <div className="container" ref={containerRef} onClick={handleClick}>
+                        <div className="screen"></div>
+
+                        {seatRow()}
+                        {seatRow()}
+                        {seatRow()}
+                        {seatRow()}
+                        {seatRow()}
+                    </div>
+                    <p className="text">
+                        you have selected
+                        <span id="count" ref={countRef}>
+                            {selectedSeat}
+                        </span>{" "}
+                        seats and aplied for $
+                        <span id="count" ref={countRef}>
+                            {selectedSeat * ticketPrice}
+                        </span>{" "}
+                    </p>
+                </div>
+            );
+        };
+
+        const main = ReactDOM.createRoot(document.getElementById("root"));
+        main.render(<App />);
+    </script>
+</body>
+
+</html>

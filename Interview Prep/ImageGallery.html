@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Tabs Example</title>
+</head>
+<style>
+    .main {
+        font-family: sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: cursive;
+    }
+
+    img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        left: 50%;
+        top: -50px;
+        transform: translate(-50%);
+        position: absolute;
+    }
+
+    .testimonial-container {
+        width: 500px;
+        height: 100px;
+        background-color: slateblue;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        min-width: 400px;
+        padding: 70px 20px;
+        margin: 5px;
+        color: white;
+        position: relative;
+    }
+
+    .text::first-letter {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: brown;
+    }
+
+    .text {
+        padding-top: 1rem;
+        font-size: 1em;
+        color: #fff;
+        text-shadow: 0 0 20px #ff005b;
+    }
+
+    .test::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 45px;
+        left: 190px;
+        z-index: -1;
+        color: red;
+        filter: blur(10px);
+    }
+</style>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+    <bootstrap cdn />
+    <script type="text/babel">
+        const App = () => {
+            const { useEffect } = React
+            const testinomials = [
+                {
+                    name: "-Sami M",
+                    photoUrl:
+                        "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    text: "you are never too old to set another goal or to dream a new dream",
+                },
+                {
+                    name: "-Mimi",
+                    photoUrl:
+                        "https://images.pexels.com/photos/3283568/pexels-photo-3283568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    text: " to dream a new dream you are never too old to set another goal or",
+                },
+                {
+                    name: "-Namya N",
+                    photoUrl:
+                        "https://images.pexels.com/photos/2787341/pexels-photo-2787341.jpeg?auto=compress&cs=tinysrgb&w=600",
+                    text: "you are never  goal or to dream a new dream",
+                },
+            ];
+            useEffect(() => {
+                const imageEle = document.querySelector("img");
+                const textEle = document.querySelector(".text");
+                const nameEle = document.querySelector(".usename");
+                let idx = 0;
+                function updateTestimonial() {
+                    const { name, photoUrl, text } = testinomials[idx];
+                    imageEle.src = photoUrl;
+                    textEle.innerText = text;
+                    nameEle.innerText = name;
+                    idx++;
+                    console.log(imageEle.src);
+                    if (idx === testinomials.length) {//make it circular at last index
+                        idx = 0;
+                    }
+                    setTimeout(() => {
+                        updateTestimonial();//rest of time its call
+                    }, 2000);
+                }
+                updateTestimonial();//initial time call
+            }, []);
+
+
+            return (
+                <div className="main">
+                    <div className="testimonial-container">
+                        <img alt="" src="" />
+                        <p className="text"></p>
+                        <h4 className="usename"></h4>
+                    </div>
+                </div>
+            );
+        };
+
+        const main = ReactDOM.createRoot(document.getElementById("root"));
+        main.render(<App />);
+    </script>
+</body>
+
+</html>

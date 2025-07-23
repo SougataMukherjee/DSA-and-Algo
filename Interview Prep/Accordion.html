@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .accordion {
+            width: 100%;
+        }
+
+        .accordion-item {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .accordion-header {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 10px;
+        }
+
+
+        .accordion-item.open .accordion-content {
+            display: block;
+        }
+
+        .icon {
+            font-size: 20px;
+            margin-left: auto;
+            transform: rotate(90deg);
+            transition: all 0.2s ease;
+        }
+
+        .open .icon {
+            transform: rotate(-90deg);
+        }
+    </style>
+    <div class="accordion">
+        <details class="accordion-item">
+            <summary class="accordion-header">
+                Item 1
+                <span class="icon">→</span>
+            </summary>
+            <div class="accordion-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan neque condimentum leo
+                interdum, et gravida orci porttitor.
+            </div>
+        </details>
+        <details class="accordion-item">
+            <summary class="accordion-header">
+                Item 2
+                <span class="icon">→</span>
+            </summary>
+            <div class="accordion-content">
+                Aliquam erat volutpat. In a odio eu lacus varius malesuada. Nulla eu facilisis felis. Integer eu magna
+                vel risus tincidunt aliquet.
+            </div>
+        </details>
+        <details class="accordion-item">
+            <summary class="accordion-header">
+                Item 3
+                <span class="icon">→</span>
+            </summary>
+            <div class="accordion-content">
+                Curabitur varius magna in mauris mattis, ut sagittis orci sagittis. In vitae elementum tellus. Fusce sed
+                venenatis ipsum, in congue quam.
+            </div>
+        </details>
+    </div>
+    <script>
+        (function () {
+            'use strict'
+            const accordionItems = document.querySelectorAll(".accordion-item");
+
+            let openItem = null;
+
+            accordionItems.forEach(item =>
+                item.addEventListener("click", () => {
+                    if (openItem) {
+                        openItem.classList.toggle("open");
+                    }
+
+                    item.classList.toggle("open");
+                    openItem = item;
+                })
+            );
+        }
+        )()
+    </script>
+</body>
+
+</html>

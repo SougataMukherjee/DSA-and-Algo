@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="post-container"></div>
+    <div id="pagination"></div>
+    <script>
+        let currentPage = 1, limit = 5, totalItems = 42, totalPages = Math.ceil(totalItems / limit);
+
+        function fetchPosts(page) {
+            const container = document.getElementById("post-container");
+            container.innerHTML = '';
+            const start = (page - 1) * limit + 1;
+            const end = Math.min(start + limit - 1, totalItems);
+            container.innerHTML = '';
+            for (let i = start; i <= end; i++) {
+                const div = document.createElement("div");
+                div.textContent = `Post ${i}`;
+                container.appendChild(div);
+            }
+        }
+
+        function createPagination() {
+            const div = document.getElementById("pagination");
+            div.innerHTML = '';
+
+            const prev = document.createElement("button");
+            prev.textContent = "Previous";
+            prev.name = currentPage - 1;
+            prev.disabled = currentPage === 1;
+            prev.onclick = handlePageChange;
+
+            const current = document.createElement("button");
+            current.textContent = currentPage;
+            current.name = currentPage;
+            current.disabled = true;
+
+            const next = document.createElement("button");
+            next.textContent = "Next";
+            next.name = currentPage + 1;
+            next.disabled = currentPage === totalPages;
+            next.onclick = handlePageChange;
+
+            div.append(prev, current, next);
+        }
+
+        function handlePageChange(e) {
+            const page = +e.target.name;
+            if (page < 1 || page > totalPages) return;
+            currentPage = page;
+            fetchPosts(page);
+            createPagination();
+        }
+
+        fetchPosts(currentPage);
+        createPagination();
+    </script>
+</body>
+
+</html>

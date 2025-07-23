@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Context with CDN</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- React CDNs -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // Destructure React features from global React object
+        const { createContext, useState, useContext } = React;
+
+        // Create context
+        const MyContext = createContext();
+
+        // Color component
+        function Color(props) {
+            const { contextValue, updateContextValue } = props;
+            const handleClick = () => {
+                updateContextValue({
+                    ...contextValue,
+                    name: "HIII"
+                });
+            };
+            console.log(contextValue);
+            return (
+                <div>
+                    <p>{contextValue?.name}</p>
+                    <button onClick={handleClick}>Update Context Value</button>
+                </div>
+            );
+        }
+
+        // DropDown component
+        function DropDown() {
+            const { contextValue, updateContextValue } = useContext(MyContext);
+            return (
+                <div>
+                    <Color
+                        contextValue={contextValue}
+                        updateContextValue={updateContextValue}
+                    />
+                </div>
+            );
+        }
+
+        // App component
+        function App() {
+            const obj = {
+                name: "Hello, Context!",
+                value: 123
+            };
+            const [contextValue, setContextValue] = useState(obj);
+            const updateContextValue = (newValue) => {
+                setContextValue(newValue);
+            };
+
+            return (
+                <MyContext.Provider value={{ contextValue, updateContextValue }}>
+                    <DropDown />
+                </MyContext.Provider>
+            );
+        }
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

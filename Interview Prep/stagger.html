@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @keyframes flow {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .stagger-wrapper>* {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .stagger-wrapper.stagger>* {
+        animation: flow 0.7s cubic-bezier(0.5, 0, 0, 1.5) forwards;
+        animation-delay: 0s;
+    }
+</style>
+
+<body>
+    <div class="stagger-wrapper stagger">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+    </div>
+
+</body>
+
+</html>
