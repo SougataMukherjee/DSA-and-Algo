@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Form with CDN</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- React Bootstrap CSS (needed for components) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/react-bootstrap@2.9.0/dist/react-bootstrap.min.css">
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- React, ReactDOM, and Babel CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- React Bootstrap JS (must come after React) -->
+    <script src="https://cdn.jsdelivr.net/npm/react-bootstrap@2.9.0/dist/react-bootstrap.min.js" crossorigin></script>
+
+    <script type="text/babel">
+        // Now ReactBootstrap is available globally
+        const { Button, Alert } = ReactBootstrap;
+
+        function validate(values) {
+            const errors = {};
+            if (!values.email) {
+                errors.email = "Email is required";
+            } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+                errors.email = "Email is invalid";
+            }
+            if (!values.password) {
+                errors.password = "Password is required";
+            } else if (values.password.length < 6) {
+                errors.password = "Password must be 6 characters or longer";
+            }
+            return errors;
+        }
+
+        function App() {
+            const { useState } = React;
+            const [values, setValues] = useState({ email: "", password: "" });
+            const [errors, setErrors] = useState({ email: "", password: "" });
+            const [showAlert, setShowAlert] = useState(false);
+
+            const handleSubmit = (event) => {
+
+                if (event) event.preventDefault();
+                const validationErrors = validate(values);
+                setErrors(validationErrors);
+                if (Object.keys(validationErrors).length === 0) {
+                    setShowAlert(true);
+                    setTimeout(() => setShowAlert(false), 2000);
+                } else {
+                    setShowAlert(false);
+                }
+            };
+
+            const handleChange = (event) => {
+                // function validateEmail(email) {
+                // const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                // return regex.test(email);
+                // }
+
+                event.persist();
+                setValues((prev) => ({
+                    ...prev,
+                    [event.target.name]: event.target.value,
+                }));
+            };
+
+            return (
+                <div className="container mt-5" style={{ maxWidth: '500px' }}>
+                    <form onSubmit={handleSubmit}>
+                        {showAlert && (
+                            <Alert variant="success" dismissible onClose={() => setShowAlert(false)}>
+                                Form submitted successfully!
+                            </Alert>
+                        )}
+                        <div className="mb-3">
+                            <label htmlFor="email" className="form-label">Email</label>
+                            <input
+                                className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                                type="email"
+                                name="email"
+                                onChange={handleChange}
+                                value={values.email || ""}
+                            />
+                            {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="password" className="form-label">Password</label>
+                            <input
+                                className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+                                type="password"
+                                name="password"
+                                onChange={handleChange}
+                                value={values.password || ""}
+                            />
+                            {errors.password && <div className="invalid-feedback">{errors.password}</div>}
+                        </div>
+                        <Button variant="success" className="w-100" type="submit">
+                            Submit
+                        </Button>
+                    </form>
+                </div>
+            );
+        }
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

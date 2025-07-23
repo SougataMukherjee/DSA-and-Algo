@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent-Child Communication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .component {
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- React and Babel CDNs -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // Destructure React features we need
+        const { useRef, useState, forwardRef, useImperativeHandle } = React;
+
+        // Child Component with color changing functionality
+        const ChildComponentWithColor = forwardRef((props, ref) => {
+            const childRef = useRef();
+
+            const handleChangeParentBackgroundColor = () => {
+                props.changeParentBackgroundColor("lightblue");
+            };
+
+            const doSomethingInChild = () => {
+                if (childRef.current) {
+                    childRef.current.style.backgroundColor = "white";
+                }
+            };
+
+            // Expose child functions to parent via ref
+            useImperativeHandle(ref, () => ({
+                doSomethingInChild
+            }));
+
+            return (
+                <div ref={childRef} className="component" style={{ backgroundColor: "lightyellow" }}>
+                    <h2>Child Component (Color)</h2>
+                    <button onClick={handleChangeParentBackgroundColor}>
+                        Change Parent Color
+                    </button>
+                </div>
+            );
+        });
+
+        // Child Component with data passing functionality
+        function ChildComponentWithData({ data, parentFunc }) {
+            const [cdata, setcData] = useState("Child Data");
+
+            const onBtnClick = () => {
+                parentFunc(cdata);
+            };
+
+            return (
+                <div className="component" style={{ backgroundColor: "lightgreen" }}>
+                    <h2>Child Component (Data)</h2>
+                    <button onClick={onBtnClick}>
+                        Send Data to Parent
+                    </button>
+                    <div>Parent Data: {data}</div>
+                </div>
+            );
+        }
+
+        // Parent Component
+        function ParentComponent() {
+            const parentRef = useRef();
+            const childRef = useRef();
+            const [data, setData] = useState("Parent Data");
+
+            const changeParentBackgroundColor = (color) => {
+                parentRef.current.style.backgroundColor = color;
+            };
+
+            const handleButtonClick = () => {
+                if (childRef.current) {
+                    childRef.current.doSomethingInChild();
+                }
+            };
+
+            const parentFunc = (childData) => {
+                setData(childData);
+            };
+
+            return (
+                <div ref={parentRef} className="component" style={{ backgroundColor: "lightcoral" }}>
+                    <h1>Parent Component</h1>
+
+                    <div>
+                        <button onClick={handleButtonClick}>
+                            Change Child Color
+                        </button>
+                        <div>Child Data: {data}</div>
+                    </div>
+
+                    <ChildComponentWithColor
+                        changeParentBackgroundColor={changeParentBackgroundColor}
+                        ref={childRef}
+                    />
+
+                    <ChildComponentWithData
+                        data={data}
+                        parentFunc={parentFunc}
+                    />
+                </div>
+            );
+        }
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<ParentComponent />);
+    </script>
+</body>
+
+</html>

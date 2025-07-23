@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>React Tabs Example</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+  <bootstrap cdn />
+  <script type="text/babel">
+    const App = () => {
+      const { useRef, useState } = React
+      const [count, setCount] = useState(0);
+      const [countdown, setCountdown] = useState(20);
+      const timerRef = useRef(null);
+      const countdownRef = useRef(null);
+
+      const onStart = () => {
+        timerRef.current = setInterval(() => {
+          setCount((prev) => prev + 1);
+        }, 1000);
+      };
+
+      const onStop = () => {
+        clearInterval(timerRef.current);
+      };
+
+      const onCountDown = () => {
+        countdownRef.current = setInterval(() => {
+          setCountdown((prev) => {
+            if (prev === 1) {
+              clearInterval(countdownRef.current);
+              console.log("Time's up!");
+            }
+            return prev - 1;
+          });
+        }, 1000);
+      };
+
+
+      return (
+        <div className="App">
+          <div>
+            Counter: {count}
+            <button onClick={onStart}>Start</button>
+            <button onClick={onStop}>Stop</button>
+          </div>
+          <div>
+            Countdown: {countdown}
+            <button onClick={onCountDown}>CountDown</button>
+          </div>
+        </div>
+      );
+    };
+
+    const main = ReactDOM.createRoot(document.getElementById("root"));
+    main.render(<App />);
+  </script>
+</body>
+
+</html>

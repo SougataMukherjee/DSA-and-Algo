@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parent-Child Component Communication</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- React and Babel CDNs -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // Destructure React hooks
+        const { useState } = React;
+
+        // Child Component
+        function ChildComponent(props) {
+            const handleChildFunction = (key, value) => {
+                props.handleChildFunction("some argument");
+                if (key && value !== undefined) {
+                    props.updateData(key, value);
+                }
+            };
+
+            return (
+                <div style={{ border: '1px solid #ccc', padding: '20px', margin: '10px' }}>
+                    <h3>Child Component</h3>
+                    <p>Data from parent: {props?.data?.test}</p>
+                    <p>Number from parent: {props?.data?.a}</p>
+                    <p>Boolean from parent: {props?.data?.b ? "I'm true" : "I'm false"}</p>
+                    <p>Simple argument from parent: {props.data2}</p>
+
+                    <div style={{ display: 'flex', gap: '10px', marginTop: '20px' }}>
+                        <button onClick={() => handleChildFunction("test", "AJay")}>
+                            Update Test
+                        </button>
+                        <button onClick={() => handleChildFunction("a", 100)}>
+                            Update A
+                        </button>
+                        <button onClick={() => handleChildFunction("b", true)}>
+                            Update B
+                        </button>
+                        <button onClick={() => handleChildFunction()}>
+                            Just Update Arg
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+
+        // Parent Component
+        function ParentComponent() {
+            const [arg, setArg] = useState('123');
+            const [state, setState] = useState({
+                test: "TEST",
+                a: 0,
+                b: false
+            });
+
+            function updateData(key, value) {
+                setState(prevState => ({
+                    ...prevState,
+                    [key]: value
+                }));
+            }
+
+            const handleChildFunction = (arg) => {
+                setArg(arg);
+                console.log("Child function called with argument:", arg);
+            };
+
+            return (
+                <div style={{ padding: '20px', fontFamily: 'Arial' }}>
+                    <h1>Parent Component</h1>
+                    <p>Current state in parent:</p>
+                    <pre>{JSON.stringify(state, null, 2)}</pre>
+                    <p>Simple argument value: {arg}</p>
+
+                    <ChildComponent
+                        handleChildFunction={handleChildFunction}
+                        data={state}
+                        data2={arg}
+                        updateData={updateData}
+                    />
+                </div>
+            );
+        }
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<ParentComponent />);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Stepper</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .stepper-container {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .stepper {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .stepper::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #e0e0e0;
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+
+        .progress-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 2px;
+            background-color: transparent;
+            z-index: 2;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+        }
+
+        .step {
+            width: 30px;
+            height: 30px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            font-weight: bold;
+            z-index: 3;
+            transition: all 0.3s ease;
+        }
+
+        .step.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .step.invalid {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .step.completed {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .step-label {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .step-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .step-content.active {
+            display: block;
+        }
+
+        .success-message {
+            text-align: center;
+            padding: 40px 0;
+            display: none;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 60px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input.error {
+            border-color: #f44336;
+        }
+
+        .error-message {
+            color: #f44336;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .btn-next {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-next:hover {
+            background-color: #45a049;
+        }
+
+        .btn-prev {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .btn-prev:hover {
+            background-color: #e0e0e0;
+        }
+
+        .btn-reset {
+            background-color: #2196F3;
+            color: white;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .btn-reset:hover {
+            background-color: #0b7dda;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stepper-container">
+        <div class="stepper">
+            <div class="progress-line" id="progress-line"></div>
+            <div class="step active" id="step1">
+                <span>1</span>
+                <div class="step-label">Personal Info</div>
+            </div>
+            <div class="step" id="step2">
+                <span>2</span>
+                <div class="step-label">Contact Info</div>
+            </div>
+            <div class="step" id="step3">
+                <span>3</span>
+                <div class="step-label">Success</div>
+            </div>
+        </div>
+
+        <form id="stepper-form">
+            <div class="step-content active" id="step-content1">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error-message" id="name-error">Name is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="email-error">Please enter a valid email</div>
+                </div>
+            </div>
+
+            <div class="step-content" id="step-content2">
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                    <div class="error-message" id="address-error">Address is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+                </div>
+            </div>
+
+            <div class="step-content" id="step-content3">
+                <div class="success-message">
+                    <div class="success-icon">✓</div>
+                    <h2>Form Submitted Successfully!</h2>
+                    <p>Thank you for completing the form.</p>
+                    <button type="button" class="btn-reset" id="reset-btn">Start New Form</button>
+                </div>
+            </div>
+
+            <div class="button-group" id="form-buttons">
+                <button type="button" class="btn-prev" id="prev-btn" disabled>Previous</button>
+                <button type="button" class="btn-next" id="next-btn">Next</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const steps = document.querySelectorAll('.step');
+            const stepContents = document.querySelectorAll('.step-content');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const resetBtn = document.getElementById('reset-btn');
+            const progressLine = document.getElementById('progress-line');
+            const formButtons = document.getElementById('form-buttons');
+            const form = document.getElementById('stepper-form');
+            const formInputs = form.querySelectorAll('input');
+
+            let currentStep = 0;
+
+            // Update the stepper
+            function updateStepper() {
+                // Update step indicators
+                steps.forEach((step, index) => {
+                    if (index < currentStep) {
+                        step.classList.add('completed');
+                        step.classList.remove('active', 'invalid');
+                    } else if (index === currentStep) {
+                        step.classList.add('active');
+                        step.classList.remove('completed', 'invalid');
+                    } else {
+                        step.classList.remove('active', 'completed', 'invalid');
+                    }
+                });
+
+                // Update step contents
+                stepContents.forEach((content, index) => {
+                    if (index === currentStep) {
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
+
+                // Update buttons
+                prevBtn.disabled = currentStep === 0;
+
+                if (currentStep === steps.length - 1) {
+                    formButtons.style.display = 'none';
+                } else {
+                    formButtons.style.display = 'flex';
+                    nextBtn.textContent = currentStep === steps.length - 2 ? 'Submit' : 'Next';
+                }
+
+                // Update progress line
+                const progressWidth = (currentStep / (steps.length - 1)) * 100;
+                progressLine.style.width = `${progressWidth}%`;
+
+                // Set progress line color based on validation
+                const allValid = validateCurrentStep();
+                if (currentStep > 0) {
+                    progressLine.style.backgroundColor = allValid ? '#4CAF50' : '#f44336';
+                } else {
+                    progressLine.style.backgroundColor = 'transparent';
+                }
+            }
+
+            // Validate current step
+            function validateCurrentStep() {
+                let isValid = true;
+
+                if (currentStep === 0) {
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    if (name === '') {
+                        showError('name-error', 'Name is required');
+                        isValid = false;
+                    } else {
+                        hideError('name-error');
+                    }
+
+                    if (email === '' || !emailRegex.test(email)) {
+                        showError('email-error', 'Please enter a valid email');
+                        isValid = false;
+                    } else {
+                        hideError('email-error');
+                    }
+                } else if (currentStep === 1) {
+                    const address = document.getElementById('address').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const phoneRegex = /^\d{10,}$/;
+
+                    if (address === '') {
+                        showError('address-error', 'Address is required');
+                        isValid = false;
+                    } else {
+                        hideError('address-error');
+                    }
+
+                    if (phone === '' || !phoneRegex.test(phone)) {
+                        showError('phone-error', 'Please enter a valid phone number (at least 10 digits)');
+                        isValid = false;
+                    } else {
+                        hideError('phone-error');
+                    }
+                }
+
+                // Update current step indicator if invalid
+                if (!isValid && currentStep !== steps.length - 1) {
+                    steps[currentStep].classList.add('invalid');
+                    steps[currentStep].classList.remove('active');
+                } else {
+                    steps[currentStep].classList.remove('invalid');
+                    steps[currentStep].classList.add('active');
+                }
+
+                return isValid;
+            }
+
+            function showError(id, message) {
+                const errorElement = document.getElementById(id);
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+                errorElement.previousElementSibling.classList.add('error');
+            }
+
+            function hideError(id) {
+                const errorElement = document.getElementById(id);
+                errorElement.style.display = 'none';
+                errorElement.previousElementSibling.classList.remove('error');
+            }
+
+            // Reset form
+            function resetForm() {
+                form.reset();
+                currentStep = 0;
+                steps.forEach(step => {
+                    step.classList.remove('completed', 'invalid', 'active');
+                });
+                steps[0].classList.add('active');
+                updateStepper();
+            }
+
+            // Input validation on change
+            formInputs.forEach(input => {
+                input.addEventListener('input', function () {
+                    validateCurrentStep();
+                });
+            });
+
+            // Next button click handler
+            nextBtn.addEventListener('click', function () {
+                if (validateCurrentStep()) {
+                    if (currentStep < steps.length - 1) {
+                        currentStep++;
+                        updateStepper();
+                    }
+                }
+            });
+
+            // Previous button click handler
+            prevBtn.addEventListener('click', function () {
+                if (currentStep > 0) {
+                    // If going back from success step, reset form
+                    if (currentStep === steps.length - 1) {
+                        resetForm();
+                    } else {
+                        currentStep--;
+                        updateStepper();
+                    }
+                }
+            });
+
+            // Reset button click handler
+            resetBtn.addEventListener('click', resetForm);
+
+            // Initialize stepper
+            updateStepper();
+        });
+    </script>
+</body>
+
+</html>

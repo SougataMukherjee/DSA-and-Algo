@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Filter with React</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      width: 300px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .result-item {
+      padding: 8px;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+    }
+
+    .result-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .no-results {
+      padding: 8px;
+      color: #666;
+      text-align: center;
+    }
+
+    b {
+      color: #2196F3;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- React CDNs -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function SearchDemo() {
+      const [search, setSearch] = useState("");
+      const arr = ["Sam", "Sami", "Rupai", "Mmi", "Samuel", "Samantha", "Samurai"];
+
+      const handleItemClick = (value) => {
+        setSearch(value);
+      };
+
+      const filteredArr = arr.filter((val) => {
+        if (search === "") {
+          return val;
+        } else if (val.toLowerCase().includes(search.toLowerCase())) {
+          return val;
+        }
+        return false;
+      });
+
+      return (
+        <div className="container">
+          <input
+            type="text"
+            placeholder="Search names..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+
+          {filteredArr.length > 0 ? (
+            filteredArr.map((val) => {
+              const lowerVal = val.toLowerCase();
+              const lowerSearch = search.toLowerCase();
+              const index = lowerVal.indexOf(lowerSearch);
+
+              // If no match (shouldn't happen since we filtered), return the whole string
+              if (index === -1) {
+                return (
+                  <div key={val} className="result-item" onClick={() => handleItemClick(val)}>
+                    <p>{val}</p>
+                  </div>
+                );
+              }
+
+              const beforeStr = val.substring(0, index);
+              const matchStr = val.substring(index, index + search.length);
+              const afterStr = val.substring(index + search.length);
+
+              return (
+                <div key={val} className="result-item" onClick={() => handleItemClick(val)}>
+                  <p>
+                    {beforeStr}
+                    <b>{matchStr}</b>
+                    {afterStr}
+                  </p>
+                </div>
+              );
+            })
+          ) : (
+            <div className="no-results">
+              <p>No matches found</p>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    // Render the app
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<SearchDemo />);
+  </script>
+</body>
+
+</html>

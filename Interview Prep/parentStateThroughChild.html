@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parent-Child Communication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .component {
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- React CDNs -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // ChildComponent with forwardRef
+        const ChildComponent = React.forwardRef((props, ref) => {
+            const handleChangeParentBackgroundColor = () => {
+                props.changeParentBackgroundColor("lightblue");
+            };
+
+            const childRef = React.useRef();
+
+            const doSomethingInChild = () => {
+                if (childRef.current) {
+                    childRef.current.style.backgroundColor = "white";
+                }
+            };
+
+            React.useImperativeHandle(ref, () => ({
+                doSomethingInChild: () => doSomethingInChild()
+            }));
+
+            return (
+                <div ref={childRef} className="component" style={{ backgroundColor: 'lightgray' }}>
+                    <h2>Child Component</h2>
+                    <button onClick={handleChangeParentBackgroundColor}>Change Parent Color</button>
+                </div>
+            );
+        });
+
+        // ParentComponent
+        const ParentComponent = () => {
+            const parentRef = React.useRef();
+            const childRef = React.useRef();
+
+            const changeParentBackgroundColor = (color) => {
+                parentRef.current.style.backgroundColor = color;
+            };
+
+            const handleButtonClick = () => {
+                if (childRef.current) {
+                    childRef.current.doSomethingInChild();
+                }
+            };
+
+            return (
+                <div ref={parentRef} className="component" style={{ backgroundColor: 'lightyellow' }}>
+                    <h1>Parent Component</h1>
+                    <button onClick={handleButtonClick}>Change Child Color</button>
+                    <ChildComponent
+                        changeParentBackgroundColor={changeParentBackgroundColor}
+                        ref={childRef}
+                    />
+                </div>
+            );
+        };
+
+        // DataExchangeComponent
+        const DataExchangeComponent = () => {
+            const [data, setData] = React.useState("Parent");
+
+            const parentFunc = (childData) => {
+                setData(childData);
+            };
+
+            return (
+                <div className="component">
+                    <h1>Data Exchange Example</h1>
+                    <div>Parent Data: {data}</div>
+                    <DropDown data={data} setData={setData} parentFunc={parentFunc} />
+                </div>
+            );
+        };
+
+        // DropDown component
+        const DropDown = ({ data, parentFunc }) => {
+            const [cdata, setcData] = React.useState("Child");
+
+            const onBtnClick = () => {
+                parentFunc(cdata);
+            };
+
+            return (
+                <div className="component">
+                    <h2>Child Data Component</h2>
+                    <button onClick={onBtnClick}>Send Data to Parent</button>
+                    <div>Child Data: {data}</div>
+                </div>
+            );
+        };
+
+        // Main App
+        function App() {
+            return (
+                <div>
+                    <ParentComponent />
+                    <hr />
+                    <DataExchangeComponent />
+                </div>
+            );
+        }
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

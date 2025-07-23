@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Position Hook with React CDN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 80%;
+            height: 300px;
+            border: 2px dashed #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background-color: white;
+            position: relative;
+        }
+
+        .position-info {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .cursor {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- React CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // Destructure React hooks
+        const { useState, useEffect, useRef } = React;
+
+        // Custom hook to track mouse position
+        const useMousePosition = () => {
+            const [position, setPosition] = useState({
+                clientX: null,
+                clientY: null,
+                pageX: null,
+                pageY: null,
+            });
+
+            const elementRef = useRef(null);
+
+            useEffect(() => {
+                const updateMousePosition = (ev) => {
+                    setPosition({
+                        clientX: ev.clientX,
+                        clientY: ev.clientY,
+                        pageX: ev.pageX,
+                        pageY: ev.pageY,
+                    });
+                };
+
+                const element = elementRef.current;
+                if (element) {
+                    element.addEventListener("mousemove", updateMousePosition);
+                    element.addEventListener("mouseenter", updateMousePosition);
+                }
+
+                return () => {
+                    if (element) {
+                        element.removeEventListener("mousemove", updateMousePosition);
+                        element.removeEventListener("mouseenter", updateMousePosition);
+                    }
+                };
+            }, []); // Removed elementRef.current from dependencies as it's not needed
+
+            return { position, elementRef };
+        };
+
+        // Component that uses the custom hook
+        const MouseTracker = () => {
+            const { position, elementRef } = useMousePosition();
+
+            // Calculate cursor position relative to the container
+            const cursorStyle = {
+                display: position.clientX ? 'block' : 'none',
+                left: position.pageX + 'px',
+                top: position.pageY + 'px'
+            };
+
+            return (
+                <div>
+                    <h1>Mouse Position Tracker</h1>
+                    <div className="container" ref={elementRef}>
+                        <p>Move your mouse inside this container</p>
+                        <div className="cursor" style={cursorStyle}></div>
+                    </div>
+                    <div className="position-info">
+                        <h3>Mouse Position:</h3>
+                        <p>Client X: {position.clientX ?? 'N/A'}</p>
+                        <p>Client Y: {position.clientY ?? 'N/A'}</p>
+                        <p>Page X: {position.pageX ?? 'N/A'}</p>
+                        <p>Page Y: {position.pageY ?? 'N/A'}</p>
+                    </div>
+                </div>
+            );
+        };
+
+        // Main App component
+        const App = () => {
+            return (
+                <div>
+                    <MouseTracker />
+                </div>
+            );
+        };
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

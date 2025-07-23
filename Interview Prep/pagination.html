@@ -2,65 +2,142 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Pagination Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #f4f4f4;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .pagination button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .pagination button:hover {
+      background: #0056b3;
+    }
+
+    .pagination button.active {
+      background: #0056b3;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
-    <div id="post-container"></div>
-    <div id="pagination"></div>
-    <script>
-        let currentPage = 1, limit = 5, totalItems = 42, totalPages = Math.ceil(totalItems / limit);
+  <div id="root"></div>
 
-        function fetchPosts(page) {
-            const container = document.getElementById("post-container");
-            container.innerHTML = '';
-            const start = (page - 1) * limit + 1;
-            const end = Math.min(start + limit - 1, totalItems);
-            container.innerHTML = '';
-            for (let i = start; i <= end; i++) {
-                const div = document.createElement("div");
-                div.textContent = `Post ${i}`;
-                container.appendChild(div);
-            }
+  <!-- Load React and Babel -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    const App = () => {
+      const posts = [
+        {
+          id: 1,
+          title: "Ayesha",
+          body: "Ahmed",
+        },
+        {
+          id: 2,
+          title: "Sam",
+          body: "Ahmed",
+        },
+        {
+          id: 3,
+          title: "Poo",
+          body: "Ahmed",
+        },
+        {
+          id: 4,
+          title: "Ram",
+          body: "Ahmed",
+        },
+      ];
+
+      const [currentPage, setCurrentPage] = useState(1);
+      const postsPerPage = 2;
+
+      const getCurrentPosts = () => {
+        const startIndex = (currentPage - 1) * postsPerPage;
+        const endIndex = startIndex + postsPerPage;
+        return posts.slice(startIndex, endIndex);
+      };
+
+      const getPageNumbers = () => {
+        const totalPages = Math.ceil(posts.length / postsPerPage);
+        const pageNumbers = [];
+        for (let i = 1; i <= totalPages; i++) {
+          pageNumbers.push(i);
         }
+        return pageNumbers;
+      };
 
-        function createPagination() {
-            const div = document.getElementById("pagination");
-            div.innerHTML = '';
+      return (
+        <div>
+          <h1>Employee List</h1>
+          <ul>
+            {getCurrentPosts().map((post) => (
+              <li key={post.id}>
+                <strong>{post.title}</strong> - {post.body}
+              </li>
+            ))}
+          </ul>
+          <div className="pagination">
+            {getPageNumbers().map((number) => (
+              <button
+                key={number}
+                onClick={() => setCurrentPage(number)}
+                className={currentPage === number ? 'active' : ''}
+              >
+                {number}
+              </button>
+            ))}
+          </div>
+        </div>
+      );
+    };
 
-            const prev = document.createElement("button");
-            prev.textContent = "Previous";
-            prev.name = currentPage - 1;
-            prev.disabled = currentPage === 1;
-            prev.onclick = handlePageChange;
-
-            const current = document.createElement("button");
-            current.textContent = currentPage;
-            current.name = currentPage;
-            current.disabled = true;
-
-            const next = document.createElement("button");
-            next.textContent = "Next";
-            next.name = currentPage + 1;
-            next.disabled = currentPage === totalPages;
-            next.onclick = handlePageChange;
-
-            div.append(prev, current, next);
-        }
-
-        function handlePageChange(e) {
-            const page = +e.target.name;
-            if (page < 1 || page > totalPages) return;
-            currentPage = page;
-            fetchPosts(page);
-            createPagination();
-        }
-
-        fetchPosts(currentPage);
-        createPagination();
-    </script>
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
 </body>
 
 </html>

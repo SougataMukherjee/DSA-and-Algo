@@ -1096,3 +1096,15 @@ console.log(1 + true);
 3
 12
 2
+
+### Question 80: what will be the output?
+
+```js
+function add(a, b) {
+  return a + b; //first calculate and return 30+20
+}
+function higherOrder(a, addReference) {
+  return addReference(a, 20); // second return 50
+}
+console.log(higherOrder(30, add)); //50
+```

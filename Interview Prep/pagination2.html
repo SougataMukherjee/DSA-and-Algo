@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Pagination with CDN</title>
+    <!-- Material-UI CSS for Pagination component -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- React CDNs -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Material-UI CDNs -->
+    <script src="https://unpkg.com/@emotion/react@11/dist/emotion-react.umd.min.js"></script>
+    <script src="https://unpkg.com/@emotion/styled@11/dist/emotion-styled.umd.min.js"></script>
+    <script src="https://unpkg.com/@mui/material@5/umd/material-ui.development.js"></script>
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        .post-item {
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        const { Pagination } = MaterialUI;
+
+        function App() {
+            const [data, setData] = useState([]);
+            const [loading, setLoading] = useState(false);
+            const [page, setPage] = useState(1);
+            const url = "https://jsonplaceholder.typicode.com/posts";
+
+            const fetchData = async () => {
+                try {
+                    setLoading(true);
+                    const results = await axios.get(url);
+                    setData(results.data);
+                } catch (error) {
+                    console.error(error.message);
+                } finally {
+                    setTimeout(() => {
+                        setLoading(false);
+                    }, 1000);
+                }
+            };
+
+            useEffect(() => {
+                fetchData();
+            }, []);
+
+            const rowsPerPage = 5;
+            const startIndex = (page - 1) * rowsPerPage;
+            const endIndex = startIndex + rowsPerPage;
+            const displayedRows = data?.slice(startIndex, endIndex) || [];
+
+            const handleChangePage = (event, newPage) => {
+                setPage(newPage);
+            };
+
+            if (loading) {
+                return <div className="loading">Loading...</div>;
+            }
+
+            return (
+                <div>
+                    {displayedRows.map((userData) => (
+                        <div className="post-item" key={userData.id}>
+                            <strong>{userData.id}. {userData.title}</strong>
+                            <p>{userData.body}</p>
+                        </div>
+                    ))}
+                    <div className="pagination-container">
+                        <Pagination
+                            count={Math.ceil(data.length / rowsPerPage)}
+                            color="secondary"
+                            page={page}
+                            onChange={handleChangePage}
+                        />
+                    </div>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

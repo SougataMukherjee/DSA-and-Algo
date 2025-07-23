@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debounce Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    input {
+      padding: 8px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+
+    #debounce {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Debounce Example</h1>
+  <input type="text" placeholder="Type something...">
+  <span id="debounce">Debounced text will appear here</span>
+  <button id="btn">Click Me</button>
+
+  <script>
+    const input = document.querySelector("input");
+    const debounceText = document.getElementById("debounce");
+    const btn = document.getElementById("btn");
+
+    // Initialize button as disabled
+    btn.disabled = true;
+
+    input.addEventListener("input", (e) => {
+      Debounce(e.target.value);
+    });
+
+    function debounce(cb, delay = 1000) {
+      let timeOut;
+      return (...args) => {
+        clearTimeout(timeOut);
+        btn.disabled = true; // Disable button while typing
+        timeOut = setTimeout(() => {
+          cb(...args);
+        }, delay);
+      };
+    }
+
+    const Debounce = debounce((text) => {
+      debounceText.textContent = text || '(empty)';
+      btn.disabled = !text;
+    }, 500);
+
+    btn.addEventListener('click', () => {
+      alert(`You submitted: "${debounceText.textContent}"`);
+    });
+  </script>
+</body>
+
+</html>

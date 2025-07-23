@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle</title>
+    <style>
+        /* Default light theme */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --btn-bg: #f0f0f0;
+            --btn-text: #333333;
+        }
+
+        /* Dark theme variables */
+        .dark {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --btn-bg: #333333;
+            --btn-text: #f0f0f0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .theme-toggle {
+            background-color: var(--btn-bg);
+            color: var(--btn-text);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .theme-toggle:hover {
+            opacity: 0.9;
+        }
+
+        .content {
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Theme Toggle Example</h1>
+        <button id="toggle-theme-btn" class="theme-toggle">Toggle Theme</button>
+
+        <div class="content">
+            <p>This is a demonstration of light/dark theme toggling using vanilla JavaScript.</p>
+            <p>The theme preference will be saved in your browser's localStorage so it persists between visits.</p>
+            <p>Click the toggle button above to switch between light and dark modes.</p>
+        </div>
+    </div>
+
+    <script>
+        // Set the theme and save to localStorage
+        function setTheme(theme) {
+            document.body.classList.remove('dark', 'light');
+            document.body.classList.add(theme);
+            localStorage.setItem('theme', theme);
+
+            // Update button text
+            const btn = document.getElementById('toggle-theme-btn');
+            btn.textContent = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+        }
+
+        // Initialize theme
+        function initializeTheme() {
+            if (localStorage.getItem('theme')) {
+                setTheme(localStorage.getItem('theme'));
+            } else {
+                // Default to light theme if no preference is set
+                setTheme('light');
+            }
+        }
+
+        // Toggle between light and dark themes
+        function toggleTheme() {
+            const current = document.body.classList.contains('dark') ? 'light' : 'dark';
+            setTheme(current);
+        }
+
+        // Initialize theme when page loads
+        document.addEventListener('DOMContentLoaded', initializeTheme);
+
+        // Add click event to theme toggle button
+        document.getElementById('toggle-theme-btn').addEventListener('click', toggleTheme);
+    </script>
+</body>
+
+</html>
