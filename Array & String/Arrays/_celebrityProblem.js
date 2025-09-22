@@ -1,3 +1,5 @@
+//You are given two jugs with capacities x and y litres. You need to determine whether it is possible to measure exactly target litres of water using these two jugs. You can fill a jug completely, empty a jug, or pour water from one jug to the other until either the first jug is empty or the second jug is full.
+//Write a function to return true if the target can be measured and false otherwise.
 function celebrity(mat) {
   let n = mat.length; // Get the number of people in the party.
   let a = 0; // Initialize a pointer at the beginning of the party.

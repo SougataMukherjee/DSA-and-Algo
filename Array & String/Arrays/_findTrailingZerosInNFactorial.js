@@ -1,3 +1,4 @@
+//Based on the list you provided, the function findTrailingZeros(n) is designed to count the number of trailing zeros in the factorial of a number.
 //Input: 5 Output: 1 (5! = 5 × 4 × 3 × 2 × 1 = 120)
 function findTrailingZeros(n) {
   if (n < 0)

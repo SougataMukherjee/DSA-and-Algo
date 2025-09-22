@@ -1,3 +1,6 @@
+//find HCF/GCD(Highest common factor) and LCM(Least common multiple)
+//Input: a = 12, b = 18
+//Output: hcf=6, lcm=36
 class Solution {
   __gcd(a, b) {
     if (b === 0) return a;

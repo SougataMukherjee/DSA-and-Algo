@@ -1,3 +1,6 @@
+//Count the number of nonzero digits in a given positive integer n that evenly divide n.
+//Input: n = 2446 Output: 1
+
 function divisorSum(n) {
   let sum = 0;
 

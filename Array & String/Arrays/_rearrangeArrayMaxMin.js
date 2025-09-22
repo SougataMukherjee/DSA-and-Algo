@@ -1,3 +1,6 @@
+//Rearrange a sorted array into a wave array in-place, ensuring the lexicographically smallest order such that arr[1] >= arr[2] <= arr[3] >= arr[4] <= arr[5] ..
+//I.P arr[] = [1, 2, 3, 4, 5, 6]   O.P [2, 1, 4, 3, 6, 5]
+
 function rearrange(arr) {
   // Auxiliary array to hold modified array
   let temp = new Array(arr.length);

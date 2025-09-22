@@ -1,3 +1,5 @@
+//Write a program to find the average of the array elements excluding the smallest and the largest element.
+//I/P [1000, 2000, 3000, 4000] o/p 2500
 //Note: calculates the average salary excluding the minimum and maximum salary values
 const a = [1000, 2000, 3000, 4000];
 let sum = 0,

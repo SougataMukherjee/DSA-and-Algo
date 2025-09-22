@@ -1,3 +1,7 @@
+//Find the smallest number with the highest frequency in an array of numbers ranging from 0 to k-1.
+//Input: k = 3, arr[] = [2, 2, 1, 2]
+//Output: 2 (2 is the most frequent element)
+
 function maxRepeating(k, arr) {
   let n = arr.length;
   let hash = new Array(k).fill(0); // initialize array of size k with 0's

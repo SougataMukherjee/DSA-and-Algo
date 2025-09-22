@@ -1,3 +1,8 @@
+//Find the first element in an array that appears K times.
+//Given an array arr[] of size N and an integer K, the task is to find the first element that occurs exactly K times in the array. If no such element exists, return -1.
+
+//N = 7 ,arr[] = {1, 7, 4, 3, 4, 8, 7} ,K = 2
+
 function firstElementKTime(arr, k) {
   let n = arr.length;
 

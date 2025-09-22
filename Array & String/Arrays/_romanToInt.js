@@ -1,3 +1,5 @@
+//Convert a Roman numeral to an integer.
+//I.P s = "III" O.P 3
 function romanToInt(s) {
   let res = 0;
   const roman = {

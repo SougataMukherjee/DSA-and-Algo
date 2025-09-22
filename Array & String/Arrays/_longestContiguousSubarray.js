@@ -1,3 +1,7 @@
+//Find the longest contiguous subarray where the absolute difference between any two elements is less than or equal to 1.
+//Input: a = [1,1,2,2,4,4,5,5,5]
+//Output: 5 (The longest subarray is [4,4,5,5,5])
+
 function longestContiguousSubarray(a) {
   let maxLength = 0;
 

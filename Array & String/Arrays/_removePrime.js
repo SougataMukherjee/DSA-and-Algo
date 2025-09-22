@@ -1,3 +1,5 @@
+//Remove all prime numbers from a given array.
+
 function isPrime(num) {
   if (num < 2) return false; // Numbers less than 2 are not prime
   for (let i = 2; i <= Math.floor(num / 2); i++) {

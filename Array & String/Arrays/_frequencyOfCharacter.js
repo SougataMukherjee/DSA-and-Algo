@@ -1,3 +1,5 @@
+//Sort string based frequency of characters
+//Input "tree"  O/P "eert" or "eetr"  
 const frequencySort = function (s) {
   const frequency = s.split("").reduce((a, b) => {
     a[b] ? a[b]++ : (a[b] = 1);

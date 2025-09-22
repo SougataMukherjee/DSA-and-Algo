@@ -1,3 +1,6 @@
+//Given an array of bird observations, find the bird type that appears most frequently. If multiple bird types have the same frequency, return the smallest bird type ID.
+//I.P [1, 4, 4, 4, 5, 3]  O.P 4
+
 function migratoryBirdsObservation(arr) {
   let typeCount = [0, 0, 0, 0, 0]; // Array to store counts for types 1 to 5
   let maxCount = 0;

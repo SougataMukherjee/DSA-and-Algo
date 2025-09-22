@@ -1,3 +1,7 @@
+//find the maximum sum of the contiguous subarray.
+//Input: [1, -2, 3, 4, -1, 2, 1, -5, 4]
+//Output: 10 [3, 4, -1, 2, 1]
+
 function maximumSubarraySum(nums, k) {
   let maxSum = -Infinity;
   let n = nums.length;

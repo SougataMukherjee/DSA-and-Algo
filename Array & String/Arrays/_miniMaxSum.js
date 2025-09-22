@@ -1,3 +1,8 @@
+//Given an array of integers, find the minimum sum and the maximum sum that can be obtained by adding all but one element of the array.
+//I.P arr = [1,2,5,7,9]
+//O.P minimum sum = 1 + 2 + 5 + 7 = 15
+//O.P maximum sum = 2 + 5 + 7 + 9 = 23
+
 function miniMaxSum(arr) {
   arr.sort((a, b) => a - b);
   let min_sum = 0;

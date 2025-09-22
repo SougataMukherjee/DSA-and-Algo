@@ -1,3 +1,7 @@
+//Q find all the leaders in the array
+//Input: arr = [16, 17, 4, 3, 5, 2]
+//Output: [17, 5, 2]
+//Explanation: A leader is an element that is greater than all elements to its right. In the given array
 function leaders(a) {
   let n = a.length;
   let ans = [];

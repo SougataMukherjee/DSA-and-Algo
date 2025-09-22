@@ -1,3 +1,8 @@
+//Group anagrams from an array of strings while preserving their original order.
+//arr[] = ["act", "god", "cat", "dog", "tac"] 
+// O/P [["act", "cat", "tac"], ["god", "dog"]]
+
+
 function anagrams(arr) {
   let map = {};
 

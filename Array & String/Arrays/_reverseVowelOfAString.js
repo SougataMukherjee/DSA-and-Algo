@@ -1,3 +1,6 @@
+//reverse vowel of a string code
+//let s = ["h", "e", "l", "l", "o"]; O.P ["h", "o", "l", "l", "e"]
+
 let s = ["h", "e", "l", "l", "o"];
 let i = 0,
   j = s.length - 1;

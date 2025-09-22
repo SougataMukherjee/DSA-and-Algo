@@ -1,3 +1,8 @@
+//You are given N events, each with a unique start time, represented as [start_i, end_i]. For each event i, find the next event j with the smallest start time such that start_j ≥ end_i; if no such event exists, return -1.
+//events = [[start1, end1], [start2, end2], …] n = number of events
+//Input: events = [[1,2],[2,3],[3,4]], n = 3
+//Output: [1,2,-1]
+
 function findNextEvents(events, n) {
   let result = new Array(n);
 

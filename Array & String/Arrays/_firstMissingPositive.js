@@ -1,3 +1,8 @@
+//First Missing Positive
+//Description: Find the first missing positive integer in an unsorted integer array.
+//Example Input/Output from your list:
+//Input: arr[] = [2, 2]
+//Output: [1]
 function firstMissingPositive(nums) {
   const swap = (arr, i, j) => {
     [arr[i], arr[j]] = [arr[j], arr[i]];

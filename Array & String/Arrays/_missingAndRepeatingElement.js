@@ -1,3 +1,5 @@
+//Find the missing and repeating numbers in an unsorted array of integers from the range [1, n]
+//I.P arr[] = [2, 2] O.P [2, 1]
 function findTwoElement(arr) {
   let n = arr.length;
   let visited = new Array(n + 1).fill(false);

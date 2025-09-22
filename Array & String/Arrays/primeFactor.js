@@ -1,3 +1,6 @@
+//wap all prime factor of given number
+//Input: num = 15 Output: 3 5
+
 let i,
   j,
   num = 15,

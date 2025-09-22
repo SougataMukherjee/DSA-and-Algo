@@ -1,3 +1,7 @@
+//Rearrange each row of a square grid alphabetically. Check if all columns are also in ascending order; return "YES" if true, otherwise return "NO".
+//grid = ["ebacd", "fghij", "olmkn", "trpqs", "xywuv"]  O/P "YES"
+
+
 function gridChallenge(grid) {
   grid = grid.map((row) => row.split("").sort().join("")); // Sort each row alphabetically
 

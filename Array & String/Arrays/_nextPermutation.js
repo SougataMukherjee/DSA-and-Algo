@@ -1,3 +1,6 @@
+//Find the next lexicographically greater permutation of an integer array in-place using constant extra memory.
+//Input: nums = [1,2,3] Output: [1,3,2]
+
 function nextPermutation(nums) {
   const n = nums.length;
   let i = n - 2;

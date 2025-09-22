@@ -1,3 +1,5 @@
+//reverse a number
+//Input: num = 05 or -213  Output: 5 or -312
 let num = -312;
 let max = 2 ** 31 - 1; // safe integer limit.
 

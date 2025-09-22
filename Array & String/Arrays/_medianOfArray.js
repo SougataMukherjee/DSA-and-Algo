@@ -1,3 +1,10 @@
+//Median of an Array
+//Given an array of integers, find the median value.
+//If the array has an odd number of elements, the median is the middle element after sorting.
+//If the array has an even number of elements, the median is the average of the two middle elements after sorting.
+//I/P arr[] = [90, 100, 78, 89, 67]    O/P 89
+
+
 function findMedian(arr) {
   let n = arr.length;
 

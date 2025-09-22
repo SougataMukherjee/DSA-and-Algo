@@ -1,3 +1,6 @@
+//Check if a given string contains "hackerrank" as a subsequence while maintaining character order.
+//For each query, print "YES" if the string contains "hackerrank," otherwise print "NO".
+//I/P hereiamstackerrank O/P yes
 function hackerrankInString(s) {
   let index = 0;
   let target = "hackerrank";

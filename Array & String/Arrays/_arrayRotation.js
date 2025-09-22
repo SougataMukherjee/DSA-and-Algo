@@ -1,3 +1,17 @@
+//Rotate an array to the left by d positions.
+//Write a function to rotate the elements of an array to the left by d positions. After rotation, the order of the remaining elements should be preserved.
+
+//Input:
+
+//An integer array arr[]
+
+//An integer d – the number of positions to rotate
+
+//Output:
+
+//The array rotated left by d positions
+//Input:arr = [1, 2, 3, 4, 5, 6, 7]d = 2
+//Output:[3, 4, 5, 6, 7, 1, 2]
 function rotateArr(arr, d) {
   let n = arr.length;
 
